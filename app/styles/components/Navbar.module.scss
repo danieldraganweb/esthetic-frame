@@ -19,7 +19,12 @@
     a + a{
         margin-left: 20px;
     }
-
+    a{
+        text-decoration: none;
+        color: #000;
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
     a:hover{
       transform: scale(1.1);
       transition: all 0.2s ease-in-out;
@@ -59,7 +64,7 @@
 .logo{
     border: 2px solid $quaternary-color;
     width: 300px;
-    height: 150px;
+    height: 100px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -73,7 +78,6 @@
     h1{
         font-size: 1.5rem;
         font-weight: 300;
-        color: #000;
         text-align: center;
         padding: 10px;
     }
@@ -81,7 +85,7 @@
     h2{
         font-size: 1.1rem;
         font-weight: 400;
-        color: #000;
+        color: $primary-color;
         text-align: center;
         font-style: italic;
     }

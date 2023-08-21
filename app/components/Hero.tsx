@@ -10,7 +10,7 @@ function HeroSection() {
         <Image
           src="/Banner.jpg"
           alt="hero"
-          width={1100}
+          width={1200}
           height={700}
           sizes="100vw"
           priority={true}
