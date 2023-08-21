@@ -18,7 +18,7 @@
     width: 100%;
     max-width: 1100px;
     position: relative;
-    opacity: 0.6;
+    opacity: 0.9;
     border-radius: 1em;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     background-attachment: fixed;
@@ -44,7 +44,7 @@
     .hero-title{
         font-size: 3rem;
         font-weight: 600;
-        color: $primary-color;
+        color: $primary-accent-color;
         margin-bottom: 0.5em;
     }
 
