@@ -1,0 +1,92 @@
+@use './app/styles/base/_typography' as *;
+@use './app/styles/base/_variables' as *;
+@use './app/styles/utils/_mixins' as *;
+@use './app/styles/utils/_functions' as *;
+
+.navbar{
+    // border: 2px solid black;
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 5px;
+    margin: 0 auto;
+    position: relative;
+    font-family: $primary-font;
+    a + a{
+        margin-left: 20px;
+    }
+
+    button{
+        background-color: #000;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+    }
+}
+.navbar-links-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-basis: 30%;
+}
+.navbar-links-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-end;
+    flex-basis: 30%;
+}
+
+.logo{
+    border: 2px solid $quaternary-color;
+    width: 300px;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    background-color: $quinary-color;
+    letter-spacing: 3px;
+    flex-basis: 40%;
+    border-radius: 1em;
+
+    h1{
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: #000;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    h2{
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: #000;
+        text-align: center;
+        font-style: italic;
+    }
+}
+.logo__square{
+    width: 100px;
+    height: 100px;
+    border: 2px solid $quaternary-color;
+    margin: 0 auto;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 33%;
+    transform: rotate(45deg);
+}
+
