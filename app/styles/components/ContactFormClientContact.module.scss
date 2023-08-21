@@ -45,7 +45,7 @@
   
   .contact-form-button {
     padding: 0.8rem 1.2rem;
-    background-color: $primary-color;
+    background-color: lighten($color: $primary-color, $amount: 20%);
     color: $secondary-color;
     border: none;
     border-radius: 0.5rem;
@@ -54,5 +54,5 @@
   }
   
   .contact-form-button:hover {
-    background-color: lighten($primary-color, 30%);
+    background-color: darken($primary-color, 30%);
   }
