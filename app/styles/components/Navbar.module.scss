@@ -4,7 +4,6 @@
 @use './app/styles/utils/_functions' as *;
 
 .navbar{
-    // border: 2px solid black;
     width: 100%;
     max-width: 1100px;
     display: flex;
@@ -16,8 +15,19 @@
     margin: 0 auto;
     position: relative;
     font-family: $primary-font;
+    margin-top: 3.5em;
     a + a{
         margin-left: 20px;
+    }
+
+    a:hover{
+      transform: scale(1.1);
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+    }
+    a:active{
+        transform: scale(0.9);
+        transition: all 0.2s ease-in-out;
     }
 
     button{
@@ -76,17 +86,17 @@
         font-style: italic;
     }
 }
-.logo__square{
-    width: 100px;
-    height: 100px;
-    border: 2px solid $quaternary-color;
-    margin: 0 auto;
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-left: 33%;
-    transform: rotate(45deg);
-}
+// .logo__square{
+//     width: 100px;
+//     height: 100px;
+//     border: 2px solid $quaternary-color;
+//     margin: 0 auto;
+//     position: absolute;
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     justify-content: center;
+//     margin-left: 33%;
+//     // transform: rotate(45deg);
+// }
 
