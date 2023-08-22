@@ -64,7 +64,7 @@
 .logo{
     border: 2px solid $quaternary-color;
     width: 300px;
-    height: 100px;
+    height: 80px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -76,14 +76,14 @@
     border-radius: 1em;
 
     h1{
-        font-size: 1.5rem;
+        font-size: clamp($font-size-mobile, $font-size-desktop, 8vw);
         font-weight: 300;
         text-align: center;
         padding: 10px;
     }
     
     h2{
-        font-size: 1.1rem;
+        font-size: 1.1em;
         font-weight: 400;
         color: $primary-color;
         text-align: center;
@@ -100,7 +100,7 @@
 //     flex-direction: row;
 //     align-items: center;
 //     justify-content: center;
-//     margin-left: 33%;
+//     margin-left: 100px;
 //     // transform: rotate(45deg);
 // }
 
