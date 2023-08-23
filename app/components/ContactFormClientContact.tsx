@@ -20,9 +20,10 @@ function ContactFormClientContact() {
         className={styles["contact-form-input"]}
         name="firstName"
       />
-      <label htmlFor="firstName" className={styles["contact-form-label"]}>
-        First Name
-      </label>
+      <label
+        htmlFor="firstName"
+        className={styles["contact-form-label"]}
+      ></label>
       <input
         type="text"
         placeholder="Last Name (e.g. Doe)"
@@ -30,9 +31,10 @@ function ContactFormClientContact() {
         className={styles["contact-form-input"]}
         name="lastName"
       />
-      <label htmlFor="lastName" className={styles["contact-form-label"]}>
-        Last Name
-      </label>
+      <label
+        htmlFor="lastName"
+        className={styles["contact-form-label"]}
+      ></label>
       <input
         type="email"
         placeholder="Email (e.g. john.doe@example.com)"
@@ -40,9 +42,7 @@ function ContactFormClientContact() {
         className={styles["contact-form-input"]}
         name="email"
       />
-      <label htmlFor="email" className={styles["contact-form-label"]}>
-        Email
-      </label>
+      <label htmlFor="email" className={styles["contact-form-label"]}></label>
       <input
         type="tel"
         placeholder="Phone (e.g. +43 xxx xxx xxxx.)"
@@ -50,9 +50,7 @@ function ContactFormClientContact() {
         className={styles["contact-form-input"]}
         name="phone"
       />
-      <label htmlFor="phone" className={styles["contact-form-label"]}>
-        Phone
-      </label>
+      <label htmlFor="phone" className={styles["contact-form-label"]}></label>
       <Link href="/book">
         <button className={styles["contact-form-button"]}>
           Book a Consultation
