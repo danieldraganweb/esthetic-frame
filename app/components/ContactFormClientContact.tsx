@@ -15,32 +15,44 @@ function ContactFormClientContact() {
       </h1>
       <input
         type="text"
-        placeholder=" First Name"
+        placeholder="First Name (e.g. John)"
         required
         className={styles["contact-form-input"]}
+        name="firstName"
       />
-      <label htmlFor="text" className={styles["contact-form-label"]}></label>
+      <label htmlFor="firstName" className={styles["contact-form-label"]}>
+        First Name
+      </label>
       <input
         type="text"
-        placeholder="Last Name"
+        placeholder="Last Name (e.g. Doe)"
         required
         className={styles["contact-form-input"]}
+        name="lastName"
       />
-      <label htmlFor="text" className={styles["contact-form-label"]}></label>
+      <label htmlFor="lastName" className={styles["contact-form-label"]}>
+        Last Name
+      </label>
       <input
         type="email"
-        placeholder="Email"
+        placeholder="Email (e.g. john.doe@example.com)"
         required
         className={styles["contact-form-input"]}
+        name="email"
       />
-      <label htmlFor="email" className={styles["contact-form-label"]}></label>
+      <label htmlFor="email" className={styles["contact-form-label"]}>
+        Email
+      </label>
       <input
-        type="number"
-        placeholder="Phone"
+        type="tel"
+        placeholder="Phone (e.g. +43 xxx xxx xxxx.)"
         required
         className={styles["contact-form-input"]}
+        name="phone"
       />
-      <label htmlFor="number" className={styles["contact-form-label"]}></label>
+      <label htmlFor="phone" className={styles["contact-form-label"]}>
+        Phone
+      </label>
       <Link href="/book">
         <button className={styles["contact-form-button"]}>
           Book a Consultation
