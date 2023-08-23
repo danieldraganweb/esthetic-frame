@@ -15,18 +15,25 @@ function ContactFormClientContact() {
       </h1>
       <input
         type="text"
-        placeholder="Name"
+        placeholder=" First Name"
         required
         className={styles["contact-form-input"]}
       />
       <label htmlFor="text" className={styles["contact-form-label"]}></label>
       <input
         type="text"
-        placeholder="Email"
+        placeholder="Last Name"
         required
         className={styles["contact-form-input"]}
       />
       <label htmlFor="text" className={styles["contact-form-label"]}></label>
+      <input
+        type="email"
+        placeholder="Email"
+        required
+        className={styles["contact-form-input"]}
+      />
+      <label htmlFor="email" className={styles["contact-form-label"]}></label>
       <input
         type="number"
         placeholder="Phone"

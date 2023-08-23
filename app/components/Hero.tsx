@@ -16,7 +16,7 @@ function HeroSection() {
             sizes="100vw"
             priority={true}
             style={{
-              objectFit: "cover",
+              objectFit: "contain",
               borderRadius: "1em",
             }}
             className={styles["hero-image"]}

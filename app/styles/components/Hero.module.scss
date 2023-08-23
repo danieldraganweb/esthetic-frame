@@ -94,6 +94,13 @@
         margin-left: 2em;
     }
 
+    .hero-image{
+        width: 100%;
+        height: auto;
+        border-radius: 1em;
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    }
+
     .btn-container{
         display: flex;
         flex-direction: row;
