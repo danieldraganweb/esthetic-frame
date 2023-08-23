@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "../styles/components/Services.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import styles from "./Services.module.scss";
 
 function Services() {
   return (

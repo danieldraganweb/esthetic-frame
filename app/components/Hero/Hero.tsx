@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import styles from "../styles/components/Hero.module.scss";
+import styles from "./Hero.module.scss";
 import Link from "next/link";
 
 function HeroSection() {
