@@ -17,7 +17,7 @@ function Services() {
             priority={true}
             style={{
               objectFit: "contain",
-              borderRadius: "1em 1em 0 0",
+              borderRadius: "1em",
             }}
             className={styles["services-image"]}
           />
