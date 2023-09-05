@@ -39,13 +39,13 @@
 
     .logo{
 
-        margin-right: 0.3em;
+        margin-right: 0.7em;
         
         h1{
-            font-size: $font-size-desktop;   
+            font-size: $font-size-tablet; 
             font-weight: 400;
             text-align: center;
-            padding: 10px;
+            padding: 15px 0 0 0;
             
         }
         
@@ -55,6 +55,7 @@
             color: $primary-color;
             text-align: center;
             font-style: italic;
+            margin-bottom: 1em;
         }
     }
 
@@ -112,6 +113,20 @@
     margin-top: 3.5em;
     border: 1px solid $quaternary-color;
     border-radius: 1em;
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        flex-basis: 60%;}
+    li{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
     a + a{
         margin-left: 20px;
     }
@@ -129,6 +144,10 @@
     a:active{
         transform: scale(0.9);
         transition: all 0.2s ease-in-out;
+    }
+
+    .hamburger-container{
+        display: none;
     }
 
     button{
@@ -155,6 +174,10 @@
     align-items: center;
     justify-content: flex-end;
     flex-basis: 30%;
+
+    a+a{
+        margin-left: 20px;
+    }
 }
 
 .logo{
