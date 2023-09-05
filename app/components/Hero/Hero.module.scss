@@ -3,6 +3,93 @@
 @use './app/styles/utils/_mixins' as *;
 @use './app/styles/utils/_functions' as *;
 
+// Mobile first
+@media screen and (max-width: 500px){
+.hero-container{
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // border: 1px solid $quaternary-color;
+    margin: 0 auto;
+    border-radius: 1em;
+}
+
+.hero-image-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.hero-text-container{
+    display: flex;
+
+    .hero-title{
+        font-size: $font-size-desktop;
+        font-weight: 600;
+        color: $primary-accent-color;
+        margin: 0.5em 0 0.5em 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width:100%;
+        text-align: center;
+    }
+    .hero-subtitle{
+        font-size: $font-size-tablet;
+        font-weight: 400;
+        color: $primary-color;
+        margin-bottom: 0.5em;
+        width: 100%;
+        text-align: center;
+    }
+    
+    button+button{
+        margin-left: 20px;
+    }
+
+    button:hover{
+        transform: scale(1.1);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+    }
+
+    button:active{
+        transform: scale(0.9);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .hero-btn-1{
+        background-color: $primary-color;
+        color: $secondary-color;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        margin-top: 1em;
+        display: inline-block;
+        margin-left: 1.5em;
+    }
+
+    .hero-btn-2{
+        background-color: $secondary-color;
+        border: 1px solid $quaternary-color;
+        color: $primary-color;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        margin-top: 1em;
+        margin-left: 1em;
+    }
+   }
+}
+
+
+@media screen and (min-width: 768px) {
+    
 
 .hero-container{
     width: 100%;
@@ -83,6 +170,7 @@
         margin-left: 1em;
     }
    }
+}
 
     .hero-image-container{
         display: flex;
@@ -91,7 +179,7 @@
         align-items: center;
         width: 100%;
         flex-basis: 100%;
-        margin-left: 2em;
+        // margin-left: 2em;
     }
 
     .hero-image{
@@ -109,6 +197,4 @@
         justify-content: flex-start;
         flex-basis: 100%;
         margin-top: 1em;
-
-        
     }
