@@ -1,3 +1,4 @@
+
 @use './app/styles/base/_typography' as *;
 @use './app/styles/base/_variables' as *;
 @use './app/styles/utils/_mixins' as *;
@@ -13,33 +14,21 @@
     margin: 0 auto;
     padding: 0 1em;
 
-    a:hover{
-      transform: scale(1.1);
-      transition: all 0.2s ease-in-out;
-      cursor: pointer;
-    }
-    a:active{
-        transform: scale(0.9);
-        transition: all 0.2s ease-in-out;
-    }
+
 
     .navbar-button{
         background-color: #000;
         color: #ffffff;
-        padding: 5px 10px;
+        padding: 7px 10px;
         border: none;
         border-radius: 5px;
         font-size: 1.2rem;
-    }
-
-    li{
-        display: none;
     }
 }
 
     .logo{
 
-        margin-right: 0.7em;
+        margin-right:13px;
         
         h1{
             font-size: $font-size-tablet; 
@@ -78,20 +67,88 @@
         background-color: #ffffff;
         }
     }
-    .hamburger .bar , .hamburger:after , .hamburger:before{
-        content: '';
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: #000000;
-        margin: 7px 0px;
-        transition: 0.4s;    
-        }   
-
-    .hamburger:active .hamburger:after{
-        transform: rotate(-45deg) translate(-7px, 7px);
-        background-color: #000000;
+    .navLinks {
+        display: none;
+        flex-direction: column;
+        gap: 0.5em;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        font-size: $font-size-small;
+        margin-left: 1em;
+        letter-spacing: 0.05em;
+        color: $primary-color;
+        box-sizing: border-box;
+    
+        &.open {
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          background-color:$secondary-color;
+          position: fixed;
+          margin: 0 auto;
+          width: 100%;
+          max-width: 800px;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          justify-content: space-evenly;
+          align-items: center;
+          list-style: none;
+          margin-bottom: 0;
+          margin-top: 3em;
+          border-radius: 0.5em;
+          padding-left: 1em;
+          padding-right: 1em;
+          font-size: $font-size-small;
+          z-index: 9999;
+          padding-bottom: 15em;
+          padding-top: 7em;
+          height: 100vh;
         }
+        }
+      .navLinks a:hover {
+        color: $secondary-color;
+        transition: all 0.3s ease-in-out;
+          
+      }
+      
+      .navLinks a:active {
+        // color: $fourteenth-color;
+        transition: all 0.8s ease-in-out;
+      }
+    
+
+    .lineTop,
+    .lineMiddle,
+    .lineBottom {
+      fill: var(--button-color);
+      transition: transform 0.3s ease-in-out, opacity 0s ease-in-out;
+    }
+    
+    .lineTop {
+      transform-origin: 0.125rem -0.125rem;
+    }
+    .lineMiddle {
+      transform-origin: 0.125rem 0.125rem;
+    }
+    
+    .lineBottom {
+      transform-origin: 0.125rem -0.125rem;
+    }
+    
+    .burgerMenuButton[aria-expanded="true"] .lineTop {
+      transform: rotate(45deg) translate(1.50rem, -0.80rem);
+    }
+    
+    .burgerMenuButton[aria-expanded="true"] .lineMiddle {
+      opacity: 0;
+    }
+    
+    .burgerMenuButton[aria-expanded="true"] .lineBottom {
+      transform: rotate(-45deg) translate(-3rem, -0.80rem);
+    }
     
 
  
@@ -107,7 +164,6 @@
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    padding: 0 3em;
     margin: 0 auto;
     position: relative;
     font-family: $primary-font;
@@ -121,16 +177,14 @@
         justify-content: space-between;
         align-items: center;
         list-style: none;
-        flex-basis: 60%;}
+    }
     li{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
-    a + a{
-        margin-left: 20px;
-    }
+  
     a{
         text-decoration: none;
         color: #000;
@@ -141,6 +195,7 @@
       transform: scale(1.1);
       transition: all 0.2s ease-in-out;
       cursor: pointer;
+      color: $primary-color;
     }
     a:active{
         transform: scale(0.9);
@@ -158,8 +213,12 @@
         border: none;
         border-radius: 5px;
         font-size: 1.2rem;
-        margin-left: 1em;
+        margin: 1em;
     }
+}
+
+.navLinks{
+    gap: 1em;   
 }
 .navbar-links-left{
     display: flex;
@@ -167,19 +226,12 @@
     justify-content: space-between;
     align-items: flex-start;
     justify-content: flex-start;
-    flex-basis: 30%;
 }
 .navbar-links-right{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    justify-content: flex-end;
-    flex-basis: 30%;
-
-    li + li{
-        margin-left: 20px;
-    }
 }
 
 .logo{
@@ -193,7 +245,7 @@
     position: relative;
     // background-color: $quinary-color;
     letter-spacing: 3px;
-    flex-basis: 40%;
+    // flex-basis: 40%;
     border-radius: 1em;
 
     h1{
