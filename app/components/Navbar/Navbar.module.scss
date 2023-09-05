@@ -39,18 +39,19 @@
 
     .logo{
 
-        margin-right: 1em;
+        margin-right: 0.3em;
         
         h1{
-            font-size: $font-size-tablet;   
-            font-weight: 300;
+            font-size: $font-size-desktop;   
+            font-weight: 400;
             text-align: center;
             padding: 10px;
+            
         }
         
         h2{
             font-size: $font-size-mobile;
-            font-weight: 400;
+            font-weight: 600;
             color: $primary-color;
             text-align: center;
             font-style: italic;
