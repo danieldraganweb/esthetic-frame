@@ -63,17 +63,15 @@
 }
 
 @media screen and (min-width: 768px){
+
 .services-container{
     width: 100%;
-    max-width: 1200px;
+    max-width: 1100px;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    margin: 2em 0;
-    border: 2px solid $quaternary-color;
     box-sizing: border-box;
-    padding: 2em;
     gap: 2em;
     border-radius: 1em;
 }
@@ -85,11 +83,11 @@
 }
 
 .services-image{
-    width: 100%;
+    width: 97%;
     max-width: 1200px;
     height: auto;
     border-radius: 1em;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    // box-shadow: 0 0 10px rgba(0,0,0,0.5);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
