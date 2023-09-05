@@ -4,6 +4,66 @@
 @use './app/styles/utils/_functions' as *;
 
 .services-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    border: 1px solid $quaternary-color;
+    box-sizing: border-box;
+    border-radius: 1em; 
+}
+.services-image-container{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 50%;
+}
+
+.services-image{
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    border-radius: 1em;
+    // box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 1em;
+}
+.services-title-container{
+    flex-basis: 50%;
+    gap: 1em;
+    padding: 1em;
+
+    h1{
+        font-size: 1.2em;
+        font-weight: 600;
+        color: $primary-color;
+        margin-bottom: 0.5em;
+    }
+
+    p{
+        font-size: 1em;
+        font-weight: 400;
+        color: $primary-color;
+        margin-bottom: 0.5em;
+    }
+
+    a:hover{
+        transform: scale(1.1);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+    }
+    a:active{
+        transform: scale(0.9);
+        transition: all 0.2s ease-in-out;
+    }
+    a + a {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (min-width: 768px){
+.services-container{
     width: 100%;
     max-width: 1200px;
     display: flex;
@@ -65,4 +125,5 @@
     a + a {
         margin-left: 20px;
     }
+}
 }

@@ -11,9 +11,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // border: 1px solid $quaternary-color;
+    border: 1px solid $quaternary-color;
     margin: 0 auto;
     border-radius: 1em;
+    padding-bottom: 2em;
 }
 
 .hero-image-container{
@@ -98,7 +99,7 @@
     flex-direction: row;
     justify-content: space-between;
     border: 1px solid $quaternary-color;
-    padding: 2em 0;
+    padding: 2em;
     margin: 0 auto;
     border-radius: 1em;
   
