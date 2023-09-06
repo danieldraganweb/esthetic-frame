@@ -246,15 +246,38 @@
     opacity: 1;
   }
 
+  
+
 @media screen and (max-width: 500px) {
+    .footer{
+      font-size: 1.3em;
+    }
     
     .footerLinks{
-        display: inline-block;
-        flex-basis: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         width: 100%;
         margin: 0 auto;
-        margin: 0.5em  1em 0.5em 1em;
+        padding: 1em;
+        ul{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+
+        }
+
+        li{
+            font-size: 0.8em;
+        }
+        li+li{
+            margin-left: 0;
+        }
     }
+
+    
     .footerLinksItem{
         margin-bottom: 0;
         
