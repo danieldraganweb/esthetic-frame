@@ -19,7 +19,7 @@ function Services() {
             sizes="100vw"
             priority={true}
             style={{
-              objectFit: "contain",
+              objectFit: "cover",
               borderRadius: "1em",
             }}
             className={styles["services-image"]}
