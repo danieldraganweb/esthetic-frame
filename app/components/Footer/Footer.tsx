@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./Footer.module.scss";
+import InstagramSVG from "../SocialMedia/InstagramSVG";
 
 const Footer: React.FC = () => {
   return (
@@ -97,6 +98,7 @@ const Footer: React.FC = () => {
           <div className={styles.footerSocialText}>
             {/* <SocialSVG /> */}
             <p>Follow us on social media</p>
+            <InstagramSVG />
           </div>
         </div>
       </footer>
