@@ -10,7 +10,7 @@
     border: 1px solid $quaternary-color;
     border-radius: 1em;
     margin: 0 auto;
-    margin: 3em;
+    margin: 3em 0 2em 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +29,7 @@
     // border: 1px solid $quaternary-color;
     box-sizing: border-box;
     border-radius: 1em; 
-    // margin: 2em;
+    margin-bottom: 2em;
 }
 .services-image-container{
     display: flex;
