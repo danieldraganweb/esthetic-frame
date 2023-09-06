@@ -6,6 +6,9 @@ import styles from "./Services.module.scss";
 function Services() {
   return (
     <>
+      <div className={styles["services-title-container-1"]}>
+        <h1 className={styles["services-title-1"]}>Popular Services</h1>
+      </div>
       <div className={styles["services-container"]}>
         <div className={styles["services-image-container"]}>
           <Image
@@ -22,7 +25,7 @@ function Services() {
             className={styles["services-image"]}
           />
         </div>
-        <div className={styles["services-title-container"]}>
+        <div className={styles["services-title-container-2"]}>
           <Link href="/book">
             <h1 className={styles["services-title-2"]}>Eyebrow Microblading</h1>
             <p className={styles["services-subtitle-2"]}>
