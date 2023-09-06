@@ -128,11 +128,11 @@ function Navbar() {
             <ul className={styles.navLinks}>
               <li>
                 <Link
-                  href="/menu"
-                  key="menu"
+                  href="/services"
+                  key="services"
                   onClick={() => setMenuOpen(false)}
                 >
-                  <h1>Menu</h1>
+                  Services
                 </Link>
               </li>
               <li>
@@ -141,7 +141,7 @@ function Navbar() {
                   key="gallery"
                   onClick={() => setMenuOpen(false)}
                 >
-                  <h1>Gallery</h1>
+                  Gallery
                 </Link>
               </li>
               <li>
@@ -150,7 +150,7 @@ function Navbar() {
                   key="blog"
                   onClick={() => setMenuOpen(false)}
                 >
-                  <h1>Blog</h1>
+                  Blog
                 </Link>
               </li>
               <div className={styles["navbar-logo"]}>
@@ -162,7 +162,7 @@ function Navbar() {
                   key="about"
                   onClick={() => setMenuOpen(false)}
                 >
-                  <h1>About</h1>
+                  About
                 </Link>
               </li>
               <li>
@@ -171,7 +171,7 @@ function Navbar() {
                   key="contact"
                   onClick={() => setMenuOpen(false)}
                 >
-                  <h1>Contact</h1>
+                  Contact
                 </Link>
               </li>
               <li>
