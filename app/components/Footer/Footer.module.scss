@@ -1,0 +1,269 @@
+@use './app/styles/base/_typography' as *;
+@use './app/styles/base/_variables' as *;
+@use './app/styles/utils/_mixins' as *;
+@use './app/styles/utils/_functions' as *;
+
+.footer{
+    width: 100%;
+    max-width: 78rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $secondary-color;
+    color: $primary-color;
+    // padding: 1.5em;
+    text-align: center;
+    font-size: clamp(0.8rem, 1.5vw, 1.25rem);
+    font-weight: 100;
+    font-family: $primary-font;
+    border-top: 1px solid #eaeaea;
+    box-sizing: border-box;
+    
+    a{
+        color: #000000;
+        text-decoration: none;
+        align-items: center;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.1); 
+        }
+    }
+
+}
+
+.footerLinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+    width: 100%;
+    max-width: 78em;
+    margin: 0 auto;
+    background-color: $secondary-color; 
+    gap: 2em;
+    margin-top: 2em;
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 100%;
+        width: 100%;
+        max-width: 78em;
+        margin: 0 auto;
+        background-color: $secondary-color; 
+        gap: 2em;
+        margin-top: 2em;
+    }
+    li{
+        list-style: none;
+        font-size: clamp(0.8rem, 1.5vw, 1.25rem);
+        font-weight: 400;
+        font-family: $primary-font;
+        color: #000000;
+        margin-bottom: 1em;
+        text-align: center;
+        margin-top: 0.5em;
+    }
+
+    li+li{
+        margin-left: 2em;}
+}
+.footerLinksItem{
+    align-items: center;
+    max-width: 78em;
+    margin: 0 auto;
+    margin-bottom: 1em;
+
+}
+
+.footerSocial{
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-end;
+    align-items: center;
+    flex-basis: 100%;
+    width: 100%;
+    margin: 0 auto;
+    width: 100%;   
+    max-width: 78em; 
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.footerSocialText{
+
+ p{
+    font-size: clamp(0.8rem, 1.5vw, 1.25rem);
+    font-weight: 400;
+    font-family: $primary-font;
+    color: #000000;
+    margin-bottom: 1em;
+    text-align: center;
+    margin-top: 0.5em;
+ }
+}
+.emailLabel{
+    font-size: clamp(0.8rem, 1.5vw, 1.25rem);
+    font-weight: 400;
+    font-family: $primary-font;
+    color: #000000;
+    margin-bottom: 1em;
+    text-align: center;
+    margin-top: 0.5em;
+}
+.emailPlaceholder{
+    font-size: clamp(0.8rem, 1.5vw, 1.25rem);
+    font-weight: 400;
+    font-family: $primary-font;
+    color: #000000;
+}
+
+.footerSocialItem{
+    display: flex;
+    flex-direction: row;
+}
+
+.footerLegal{
+    width: 100%;
+    max-width: 78rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: $primary-font;
+    margin: 0 auto;
+    text-align: center;
+    font-size: clamp(0.8rem, 1.5vw, 1.25rem);
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.SVGcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto; 
+    margin-top: 1em;  
+    background-color: $secondary-color;
+    padding: 1em;
+    border-radius: 0.2em;
+}
+
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto; 
+    box-sizing: border-box;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.footerEmailInput{
+    width: 50%;
+    padding: 0.5rem;
+    border: 1px solid #000000;
+    font-size: 0.5rem;
+    font-weight: 400;
+    border-style: none;
+    box-sizing: border-box;
+    border-bottom: 1px solid #000000;
+    
+    &:focus{
+        outline: none;
+        font-size: clamp(0.8rem, 1.5vw, 1.25rem);
+        font-weight: 400;
+        svg{
+            display: none;
+        }
+    }
+}
+.footerEmailInput::placeholder{
+    font-size: clamp(0.8rem, 1.5vw, 1.25rem);   
+    font-weight: 400;
+    color: $primary-color;
+}
+
+.inputContainerBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 0.5em;
+    cursor: pointer;
+}
+.checkboxText{
+    font-size: $font-size-mobile;
+    font-weight: 400;
+    font-family: $primary-font;
+    color: #000000;
+    margin-left: 1em;
+}
+.checkbox-wrapper input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+  }
+  
+  .checkbox-wrapper *,
+    .checkbox-wrapper ::after,
+    .checkbox-wrapper ::before {
+    box-sizing: border-box;
+  }
+  
+  .checkbox-wrapper {
+    position: relative;
+    display: block;
+    overflow: hidden;
+  }
+  
+  .checkbox-wrapper .check {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .checkbox-wrapper .label svg {
+    vertical-align: middle; 
+  }
+  
+  .checkbox-wrapper .path1 {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    transition: .5s stroke-dashoffset;
+    opacity: 0;
+  }
+  
+  .checkbox-wrapper .check:checked + label svg g path {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+
+@media screen and (max-width: 500px) {
+    
+    .footerLinks{
+        display: inline-block;
+        flex-basis: 100%;
+        width: 100%;
+        margin: 0 auto;
+        margin: 0.5em  1em 0.5em 1em;
+    }
+    .footerLinksItem{
+        margin-bottom: 0;
+        
+    }
+}
+.inputContainerBtn{
+    margin-bottom: 1.5em;
+
+    &focus svg{
+       display: none;
+    }
+}
