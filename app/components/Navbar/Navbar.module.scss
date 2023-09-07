@@ -92,7 +92,7 @@
   }
 
 .logo{
-    width: 300px;
+    width: 200px;
     height: 60px;
     margin: 0 auto;
     display: flex;
@@ -103,9 +103,10 @@
     border-radius: 1em;
     font-family: $secondary-font;
     font-style: italic;
+    color: $primary-accent-color;
 
     h1{
-        font-size: 1.3em;
+        font-size: 1em;
         font-weight: 500;
         text-align: center;
     }
@@ -217,7 +218,7 @@
         }
 
         .logo{
-            width: 100%;
+            width: 400px;
             height: 80px;
             margin: 0 auto;
             display: flex;
@@ -227,6 +228,20 @@
             letter-spacing: 3px;
             border-radius: 1em;
             font-family: $secondary-font;
+
+            h1{
+              font-size: clamp(1.2em, 5vw, 1.8em);
+                font-weight: 500;
+                text-align: center;
+            }
+
+            h2{
+                font-size: 1em;
+                font-weight: 400;
+                color: $primary-color;
+                text-align: center;
+                font-style: italic;
+            }
           
         }
 
