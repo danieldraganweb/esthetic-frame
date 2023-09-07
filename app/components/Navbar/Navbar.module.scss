@@ -208,9 +208,10 @@
             margin: 0 auto;
         }
         .navLinks a:hover {
-            color: $primary-color;
             transition: all 0.3s ease-in-out;
-            transform: scale(1.1);
+            transform: scale(1.01);
+            color: $primary-accent-color;
+            cursor: pointer;
         }
 
         .navLinks a:active {

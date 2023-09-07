@@ -82,7 +82,7 @@ function Navbar() {
                   key="services"
                   onClick={() => setMenuOpen(false)}
                 >
-                  <h1>Services</h1>
+                  Services
                 </Link>
               </li>
               <li>
@@ -91,7 +91,7 @@ function Navbar() {
                   key="gallery"
                   onClick={() => setMenuOpen(false)}
                 >
-                  <h1>Gallery</h1>
+                  Gallery
                 </Link>
               </li>
               <li>
@@ -100,16 +100,16 @@ function Navbar() {
                   key="blog"
                   onClick={() => setMenuOpen(false)}
                 >
-                  <h1>Blog</h1>
+                  Blog
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/about"
+                  href="/about-us"
                   key="about"
                   onClick={() => setMenuOpen(false)}
                 >
-                  <h1>About</h1>
+                  About
                 </Link>
               </li>
               <li>
@@ -118,7 +118,7 @@ function Navbar() {
                   key="contact"
                   onClick={() => setMenuOpen(false)}
                 >
-                  <h1>Contact</h1>
+                  Contact
                 </Link>
               </li>
             </ul>
