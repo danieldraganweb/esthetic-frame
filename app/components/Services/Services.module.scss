@@ -10,7 +10,7 @@
     border: 1px solid $quaternary-color;
     border-radius: 1em;
     margin: 0 auto;
-    margin: 3em 0 2em 0;
+    margin: 0 0 2em 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +20,6 @@
         font-weight: 400;
         text-align: center;
         text-align: center;
-        
     }
 }
 .services-container{
@@ -53,6 +52,9 @@
     flex-basis: 50%;
     gap: 1em;
     // padding: 1em;
+    // .services-title-container-2 h1:active {
+    //     border-bottom-color: $primary-color;
+    //   }
 
     h1{
         font-size: 1.2em;
@@ -60,6 +62,14 @@
         color: $primary-color;
         margin-bottom: 0.5em;
     }
+    h1:active {
+        display: inline-block;
+        border-bottom: 2px solid $quaternary-color;
+        padding-bottom: 0.3em;
+        cursor: pointer;
+        margin: 0 auto;
+        margin-bottom: 0.2em;
+      }
 
     p{
         font-size: 1em;
@@ -72,13 +82,6 @@
         transform: scale(1.1);
         transition: all 0.2s ease-in-out;
         cursor: pointer;
-    }
-    a:active{
-        transform: scale(0.9);
-        transition: all 0.2s ease-in-out;
-    }
-    a + a {
-        margin-left: 20px;
     }
 }
 
