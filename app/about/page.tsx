@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./about.module.scss";
 import Image from "next/image";
+import Contact from "../components/Contact/Contact";
 
 function About() {
   return (
@@ -71,6 +72,7 @@ function About() {
             Ready to discover the Esthetic Frame experience? Scroll down to meet
             our team and learn about our journey.
           </p>
+          <Contact />
         </div>
       </main>
     </>
