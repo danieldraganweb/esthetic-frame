@@ -16,6 +16,7 @@ function About() {
               width={1920}
               height={1080}
               layout="responsive"
+              sizes="(max-width: 1920px) 100vw, 1920px"
             ></Image>
           </div>
           <p className={styles.description}>
