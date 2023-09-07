@@ -20,13 +20,14 @@ function About() {
               sizes="(max-width: 1920px) 100vw, 1920px"
             ></Image>
           </div>
-          <p className={styles.description}>
+          <h1>Discover Your Natural Radiance</h1>
+          <h2 className={styles.description}>
             At Esthetic Frame, we are more than just a Permanent Makeup studio;
             we are your dedicated partners in enhancing your natural beauty.
             Located in the heart of Vienna, our studio is where lasting elegance
             and confidence meet. We invite you to embark on a journey with us,
             where every visit leaves you feeling empowered and beautiful.
-          </p>
+          </h2>
           <ul className={styles.highlights}>
             <li>
               <h1>Expertise in Permanent Makeup:</h1>
@@ -61,6 +62,7 @@ function About() {
               </p>
             </li>
           </ul>
+          <h1>Discover Your Natural Radiance</h1>
           <p className={styles.description}>
             Discover Esthetic Frame, where artistry meets beauty and every visit
             is an opportunity to uncover your natural radiance. Our journey is
@@ -68,6 +70,7 @@ function About() {
           </p>
           {/* Add your visual element (image) here */}
           <div className={styles.visual}>{/* Image goes here */}</div>
+          <h1>Meet Our Team</h1>
           <p className={styles.description}>
             Ready to discover the Esthetic Frame experience? Scroll down to meet
             our team and learn about our journey.
