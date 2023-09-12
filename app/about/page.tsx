@@ -65,6 +65,7 @@ function About() {
               </p>
             </li>
           </ul>
+
           <h1>Discover Your Natural Radiance</h1>
           <p className={styles.description}>
             Discover Esthetic Frame, where artistry meets beauty and every visit
