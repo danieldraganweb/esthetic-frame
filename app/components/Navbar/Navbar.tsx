@@ -105,7 +105,7 @@ function Navbar() {
               </li>
               <li>
                 <Link
-                  href="/about-us"
+                  href="/about"
                   key="about"
                   onClick={() => setMenuOpen(false)}
                 >
