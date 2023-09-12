@@ -10,7 +10,7 @@ function Booking() {
         src="https://airtable.com/embed/appsz3SqYl4ft3Vqv/shrlxLSz6BoACMoeE?backgroundColor=teal"
         onWheel={() => {}}
         width="100%"
-        height="533"
+        height="1100px"
         style={{ background: "transparent", border: "1px solid #ccc" }}
       ></iframe>
     </div>
