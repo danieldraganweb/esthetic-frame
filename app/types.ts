@@ -19,4 +19,16 @@ export type BlogPostContent = {
       }>;
       name: string;
     };
+};
+  
+export type PriceListItem = {
+  id: string;
+  fields: {
+    TreatmentName: string;
+    Category: string;
+    Price: string;
+    Retouch: string;
+    Duration: number; // Add the Duration property here
+    BookingAvailability: string;
   };
+};
