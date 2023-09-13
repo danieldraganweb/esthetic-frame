@@ -11,10 +11,10 @@ const Blog = () => {
   // console.log(blogPosts);
   return (
     <div className={styles["blog-page"]}>
-      <h1>Blog</h1>
-      <p> {blogPosts.length} posts</p>
+      {/* <p> {blogPosts.length} posts</p> */}
       {/* <h1>Discover the latest jewlery trends on our blog</h1> */}
       <div className={styles["blog-container"]}>
+        <h1 className={styles["blog-title"]}>Blog</h1>
         {blogPosts.map((post: BlogPostContent) => (
           <div key={post.id} className={styles.article}>
             <Image
@@ -25,9 +25,10 @@ const Blog = () => {
               height={post.fields?.image[0].height}
               layout="responsive"
               style={{
-                borderRadius: "0.5em 0.5em 0 0",
+                borderRadius: "0.5em",
                 boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
               }}
+              sizes="(max-width: 1100px) 100vw, 600px"
             />
             <h2 className={styles["article-title"]}>{post.fields?.name}</h2>
             <p className={styles["article-date"]}>
