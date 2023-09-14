@@ -37,9 +37,9 @@ export type GalleryImage = {
   id: string;
   fields: {
     Name: string;
+    Category: string;
     image: Array<{
       Name: string;
-      Category: string;
       id: string;
       width: number;
       height: number;
