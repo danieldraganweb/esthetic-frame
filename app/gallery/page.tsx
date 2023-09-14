@@ -1,18 +1,33 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./gallery.module.scss";
 import { useGalleryImages } from "../hooks/useGalleryImages";
 import { GalleryImage } from "../types";
 import Image from "next/image";
 
-function Gallery() {
-  const images = useGalleryImages();
+type Props = {};
+
+function Gallery(props: Props) {
+  const [category, setCategory] = useState<string | undefined>();
+  const { images } = useGalleryImages();
+
+  const categories = Array.from(
+    new Set(images.map((image: GalleryImage) => image.fields.Category))
+  );
 
   return (
     <div className={styles["gallery-page"]}>
       <div className={styles["gallery-container"]}>
         <h1 className={styles["gallery-title"]}>Gallery</h1>
-        {images.images.map((image: GalleryImage) => (
+        <div className={styles["category-buttons"]}>
+          <button onClick={() => setCategory(undefined)}>All</button>
+          {categories.map((category) => (
+            <button key={category} onClick={() => setCategory(category)}>
+              {category}
+            </button>
+          ))}
+        </div>
+        {images.map((image: GalleryImage) => (
           <div key={image.id} className={styles.image}>
             <Image
               loading="lazy"
