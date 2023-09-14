@@ -121,7 +121,7 @@
         button{
             width: 14rem;
             font-size: $font-size-tablet;
-            padding: 0.7em 2.1rem;
+            padding: 0.7em 1rem;
             
         }
     }
@@ -145,7 +145,6 @@
             height: 20rem;
             border-radius: 1rem;
             object-fit: cover;
-            // margin-bottom: 1rem;
             cursor: pointer;
             transition: all 0.3s ease-in-out;
 

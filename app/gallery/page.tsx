@@ -21,7 +21,7 @@ function Gallery(props: Props) {
       <div className={styles["gallery-container"]}>
         <h1 className={styles["gallery-title"]}>Gallery</h1>
         <div className={styles["category-buttons"]}>
-          {/* <button onClick={() => setCategory(undefined)}>All</button> */}
+          <button onClick={() => setCategory(undefined)}>All</button>
           {categories.map((category) => (
             <button key={category} onClick={() => setCategory(category)}>
               {category}
@@ -32,24 +32,27 @@ function Gallery(props: Props) {
           <SvgHorizontalScrollIcon />
         </div>
         <div className={styles["image-container"]}>
-          {images.map((image: GalleryImage) => (
-            <div key={image.id} className={styles.image}>
-              <Image
-                loading="lazy"
-                src={image.fields?.image[0].url}
-                alt={image.fields?.Name}
-                width={image.fields?.image[0].width}
-                height={image.fields?.image[0].height}
-                // layout="responsive"
-                style={{
-                  borderRadius: "0.5em",
-                  boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
-                }}
-                sizes="(max-width: 1100px) 100vw, 600px"
-              />
-              {/* <h2 className={styles["image-title"]}>{image.fields?.Name}</h2> */}
-            </div>
-          ))}
+          {images
+            .filter(
+              (image: GalleryImage) =>
+                !category || image.fields.Category === category
+            )
+            .map((image: GalleryImage) => (
+              <div key={image.id} className={styles.image}>
+                <Image
+                  loading="lazy"
+                  src={image.fields?.image[0].url}
+                  alt={image.fields?.Name}
+                  width={image.fields?.image[0].width}
+                  height={image.fields?.image[0].height}
+                  style={{
+                    borderRadius: "0.5em",
+                    boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
+                  }}
+                  sizes="(max-width: 1100px) 100vw, 600px"
+                />
+              </div>
+            ))}
         </div>
       </div>
     </div>
