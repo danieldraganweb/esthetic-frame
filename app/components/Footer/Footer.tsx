@@ -2,43 +2,15 @@ import React from "react";
 import Link from "next/link";
 import styles from "./Footer.module.scss";
 import InstagramSVG from "../SocialMedia/InstagramSVG";
+import FacebookSVG from "../SocialMedia/FacebookSVG";
 
 const Footer: React.FC = () => {
   return (
     <>
       <footer className={styles.footer}>
-        <div className={styles.footerLinks}>
-          <ul>
-            <li>
-              <Link href="/" className={styles.footerLinksItem}>
-                Contact
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className={styles.footerLinksItem}>
-                Imprint
-              </Link>
-            </li>
-            <li>
-              <Link href="/terms-of-service" className={styles.footerLinksItem}>
-                Terms of Service
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className={styles.footerLinksItem}>
-                Privacy Policy
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className={styles.footerLinksItem}>
-                FAQ
-              </Link>
-            </li>
-          </ul>
-        </div>
         <div className={styles.footerSocial}>
           <label htmlFor="email" className={styles.emailLabel}>
-            Subscribe to the newsletter
+            Subscribe to our newsletter
           </label>
           <div className={styles.inputContainerBtn}>
             <label htmlFor="email" className={styles.emailPlaceholder}></label>
@@ -96,15 +68,49 @@ const Footer: React.FC = () => {
             </span>
           </div>
           <div className={styles.footerSocialText}>
-            {/* <SocialSVG /> */}
             <p>Follow us on social media</p>
-            <InstagramSVG />
+            <div className={styles.footerSocialIcons}>
+              <InstagramSVG />
+              <FacebookSVG />
+            </div>
+          </div>
+          <div className={styles.footerLinks}>
+            <ul>
+              <li>
+                <Link href="contact" className={styles.footerLinksItem}>
+                  GDPR
+                </Link>
+              </li>
+              <li>
+                <Link href="/" className={styles.footerLinksItem}>
+                  Imprint
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terms-of-service"
+                  className={styles.footerLinksItem}
+                >
+                  Terms of Service
+                </Link>
+              </li>
+              <li>
+                <Link href="privacy-policy" className={styles.footerLinksItem}>
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="FAQ" className={styles.footerLinksItem}>
+                  FAQ
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.footerLegal}>
+            <p>© 2023 ESTHETIC FRAME</p>
           </div>
         </div>
       </footer>
-      <div className={styles.footerLegal}>
-        <p>© 2023 ESTHETIC FRAME</p>
-      </div>
     </>
   );
 };
