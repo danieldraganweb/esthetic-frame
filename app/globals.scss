@@ -1,8 +1,8 @@
 @use './app/styles/base/_reset' as *;
-// @use './app/styles/base/_typography' as *;
-// @use './app/styles/base/_variables' as *;
-// @use './app/styles/utils/_mixins' as *;
-// @use './app/styles/utils/_functions' as *;
+@use './app/styles/base/_typography' as *;
+@use './app/styles/base/_variables' as *;
+@use './app/styles/utils/_mixins' as *;
+@use './app/styles/utils/_functions' as *;
 
 /* Other global styles */
 :root {
