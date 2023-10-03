@@ -37,10 +37,10 @@ const PriceList: React.FC = () => {
             </caption>
             <thead className={styles["price-list__thead"]}>
               <tr>
-                <th>Treatment</th>
-                <th>Price</th>
-                <th>Retouch</th>
-                <th>Duration</th>
+                <th>Erstbehandlung</th>
+                <th>Preise</th>
+                <th>Nachbehandlung*</th>
+                <th>Dauer</th>
               </tr>
             </thead>
             <tbody className={styles["price-list__tbody"]}>
@@ -58,6 +58,15 @@ const PriceList: React.FC = () => {
         <p className={styles["price-list__text"]}>
           *All prices are in Euro (€). All prices include VAT.
         </p>
+        <caption className={styles["price-list__caption_3"]}>
+          <p className={styles["price-list__text"]}>
+            *Die Nachbehandlung ist ein obligatorischer Bestandteil einer
+            Permanent-Make-up-Behandlung. Die Nachbehandlung muss 1-1,5 Monate
+            nach der ersten Behandlung durchgeführt werden. Eine Behandlung, die
+            mehr als 2 Monate später durchgeführt wird, wird als eine
+            Erstbehandlung bezahlt.
+          </p>
+        </caption>
       </main>
     </>
   );
