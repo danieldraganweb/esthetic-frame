@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Logo from "./Logo";
 import styles from "./Navbar.module.scss";
 import Link from "next/link";
+import disableScroll from "disable-scroll";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,9 +15,9 @@ function Navbar() {
   // Disable scrolling when menu is open
   useEffect(() => {
     if (menuOpen) {
-      document.body.classList.add("menu-open");
+      disableScroll.on();
     } else {
-      document.body.classList.remove("menu-open");
+      disableScroll.off();
     }
   }, [menuOpen]);
 
