@@ -90,13 +90,6 @@ function Services() {
           </button>
         </Link>
       </div>
-      <div className={styles["services-btn-container"]}>
-        <Link href="/services">
-          <button className={styles["services-button"]}>
-            View All Services
-          </button>
-        </Link>
-      </div>
     </>
   );
 }
