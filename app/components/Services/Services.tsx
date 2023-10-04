@@ -26,21 +26,21 @@ function Services() {
           />
         </div>
         <div className={styles["services-title-container-2"]}>
-          <Link href="/book">
+          <Link href="/services">
             <h1 className={styles["services-title-2"]}>Eyebrow Microblading</h1>
             <p className={styles["services-subtitle-2"]}>
               Achieve perfectly shaped eyebrows with our microblading services.
               We use the latest techniques to give you the best results.
             </p>
           </Link>
-          <Link href="/book">
+          <Link href="/services">
             <h1 className={styles["services-title-3"]}>Permanent Eyeliner</h1>
             <p className={styles["services-subtitle-3"]}>
               Get the look you want with our permanent eyeliner services. We
               offer a variety of styles and colors to suit your needs.
             </p>
           </Link>
-          <Link href="/book">
+          <Link href="/services">
             <h1 className={styles["services-title-4"]}>Lip Blushing</h1>
             <p className={styles["services-subtitle-4"]}>
               Our permanent lipstick services are perfect for those who want to
@@ -49,6 +49,13 @@ function Services() {
             </p>
           </Link>
         </div>
+      </div>
+      <div className={styles["services-btn-container"]}>
+        <Link href="/services">
+          <button className={styles["services-button"]}>
+            View All Services
+          </button>
+        </Link>
       </div>
     </>
   );
