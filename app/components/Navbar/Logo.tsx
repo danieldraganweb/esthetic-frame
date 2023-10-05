@@ -9,7 +9,7 @@ function LogoComponent() {
       <div className={styles.logo}>
         <Link href="/">
           <Image
-            src="/logo-3.png"
+            src="/logo.png"
             alt="logo"
             width={400}
             height={130}
