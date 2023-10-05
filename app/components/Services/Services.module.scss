@@ -10,13 +10,13 @@
   // border: 1px solid $quaternary-color;
   border-radius: 1em;
   margin: 0 auto;
-  margin: 0 0 2em 0;
+  // margin: 0 0 1em 0;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
 
   h1 {
-    font-size: $font-size-desktop-ultra-wide;
+    font-size: $font-size-desktop;
     font-weight: 400;
     text-align: center;
   }
@@ -24,23 +24,16 @@
 .services-container {
   display: flex;
   flex-direction: column;
-  // border: 1px solid $quaternary-color;
   box-sizing: border-box;
   border-radius: 1em;
   margin-bottom: 2em;
 }
-.services-image-container {
-  display: flex;
-  flex-direction: row;
-  flex-basis: 80%;
-}
 
 .services-image {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1100px;
   height: auto;
   border-radius: 1em;
-  // box-shadow: 0 0 10px rgba(0,0,0,0.5);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -48,11 +41,16 @@
   margin-bottom: 0.7em;
 }
 .services-title-container-2 {
-  flex-basis: 100%;
-  gap: 1em;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  gap: 2rem;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  // scroll-snap-type: x mandatory;
 
   h1 {
-    font-size: $font-size-desktop-wide;
+    font-size: $font-size-tablet;
     font-weight: 400;
     color: $primary-color;
     margin-bottom: 0.5em;
@@ -70,11 +68,11 @@
   }
 
   p {
-    font-size: $font-size-tablet;
+    font-size: $font-size-mobile;
     font-weight: 400;
     color: $primary-color;
     font-family: $primary-font;
-    margin-bottom: 1.5em;
+    // margin-bottom: 1.5em;
   }
 
   p + p {
@@ -89,40 +87,39 @@
     cursor: pointer;
   }
 }
-
-.services-btn-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 2em 0 0 0;
-  gap: 1em;
+.service-item {
   width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  margin-bottom: 2em;
+  height: auto;
+  border-radius: 1em;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 1em;
 
-  button {
-    font-size: $font-size-desktop;
-    font-weight: 400;
-    color: $secondary-color;
-    background-color: $primary-color;
-    // border: 1px solid $quaternary-color;
-    border-radius: 0.5em;
-    padding: 0.5em 1em;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    font-family: $primary-font;
+  img {
+    width: 100%;
+    height: 300px;
+    border-radius: 1em;
+    inline-size: 100%;
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-size: contain;
   }
+}
+
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+}
+.snaps-inline > * {
+  scroll-snap-align: center;
+  scroll-padding-inline: 1rem;
 }
 
 .services-btn-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 2em 0 0 0;
   gap: 1em;
   width: 100%;
   max-width: 1100px;
@@ -130,37 +127,7 @@
   margin-bottom: 2em;
 
   button {
-    font-size: $font-size-desktop;
-    font-weight: 400;
-    color: $primary-color;
-    background-color: $secondary-color;
-    border: 1px solid $quaternary-color;
-    border-radius: 0.2em;
-    padding: 0.5em 1em;
-    cursor: pointer;
-    font-family: $primary-font;
-  }
-
-  button:hover {
-    background-color: $primary-accent-color;
-    color: $secondary-color;
-  }
-}
-
-.services-btn-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 2em 0 0 0;
-  gap: 1em;
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  margin-bottom: 2em;
-
-  button {
-    font-size: $font-size-desktop;
+    font-size: $font-size-mobile;
     font-weight: 400;
     color: $primary-color;
     background-color: $secondary-color;
@@ -179,8 +146,12 @@
 
 @media screen and (min-width: 768px) {
   .services-btn-container {
-    margin-top: 3em;
+    button {
+      font-size: $font-size-tablet;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
   }
+
   .services-container {
     width: 100%;
     max-width: 1100px;
@@ -194,35 +165,43 @@
     // padding: 1em;
   }
   .services-title-container-2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    grid-auto-flow: column;
+    grid-auto-columns: 20%;
+    width: 100%;
+    max-width: 1100px;
+    gap: 9.5rem;
 
     h1 {
-      margin-bottom: 3em;
+      font-size: $font-size-desktop;
+    }
+
+    p {
+      font-size: $font-size-tablet;
+      // font-family: $primary-font;
     }
   }
+
   .service-item {
     display: flex;
     flex-direction: column;
     width: 350px;
     height: 500px;
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
     img {
       width: 100%;
       height: 300px;
       border-radius: 1em;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
     }
 
-    img:hover {
-      transform: scale(1.02);
-      transition: all 0.2s ease-in-out;
+    .img:hover {
+      // transform: scale(1.02);
+      // transition: all 0.2s ease-in-out;
       cursor: pointer;
     }
   }
@@ -231,22 +210,23 @@
     width: 100%;
     height: auto;
     border-radius: 1em;
-    // box-shadow: 0 0 10px rgba(0,0,0,0.5);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
+
   .services-title-container-1 {
     flex-basis: 100%;
     gap: 1em;
-    margin: 3em 0 2em 0;
+    margin: 3em 0 0 0;
     // background-color: $quinary-color;
 
     h1 {
       font-size: 2.2em;
       font-weight: 100;
       color: $primary-color;
+      padding-left: 0.2em;
     }
 
     // color: $primary-accent-color;
@@ -259,21 +239,11 @@
       margin: 0 auto;
       margin-bottom: 0.2em;
     }
-    p {
-      font-size: 1em;
-      font-weight: 400;
-      color: $primary-color;
-      margin-bottom: 0.5em;
-    }
 
     h1:hover {
-      transform: scale(1.1);
-      transition: all 0.2s ease-in-out;
+      // transform: scale(1.1);
+      // transition: all 0.2s ease-in-out;
       cursor: pointer;
-    }
-    a:active {
-      transform: scale(0.9);
-      transition: all 0.2s ease-in-out;
     }
 
     .services-title-container-2 {
@@ -285,6 +255,7 @@
         font-weight: 600;
         color: $primary-color;
         margin-bottom: 1em;
+        padding-left: 0.2em;
       }
       h1:active {
         display: inline-block;
@@ -300,11 +271,10 @@
         color: $primary-color;
         margin-bottom: 0.5em;
         font-family: $primary-font;
+        padding-left: 0.2em;
       }
 
       h1:hover {
-        transform: scale(1.02);
-        transition: all 0.2s ease-in-out;
         cursor: pointer;
         display: inline-block;
       }
