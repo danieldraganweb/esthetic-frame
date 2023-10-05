@@ -7,10 +7,8 @@
   padding: 15px 0;
   width: 100%;
   max-width: 1100px;
-  // border: 1px solid $quaternary-color;
   border-radius: 1em;
   margin: 0 auto;
-  // margin: 0 0 1em 0;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -107,12 +105,10 @@
   }
 }
 
-.snaps-inline {
-  scroll-snap-type: inline mandatory;
-}
 .snaps-inline > * {
   scroll-snap-align: center;
   scroll-padding-inline: 1rem;
+  scroll-snap-type: inline mandatory;
 }
 
 .services-btn-container {
@@ -231,10 +227,6 @@
       color: $primary-color;
       padding-left: 0.2em;
     }
-
-    // color: $primary-accent-color;
-
-    // color: $primary-accent-color;
 
     h1:active {
       display: inline-block;
