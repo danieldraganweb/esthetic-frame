@@ -1,255 +1,251 @@
-
-@use './app/styles/base/_typography' as *;
-@use './app/styles/base/_variables' as *;
-@use './app/styles/utils/_mixins' as *;
-@use './app/styles/utils/_functions' as *;
-
+@use "./app/styles/base/_typography" as *;
+@use "./app/styles/base/_variables" as *;
+@use "./app/styles/utils/_mixins" as *;
+@use "./app/styles/utils/_functions" as *;
 
 // Navbar mobile
 
-
-.navbar-button-container{
+.navbar-button-container {
   width: 15%;
 
-  button{
+  button {
     background-color: $primary-color;
     color: $secondary-color;
-    padding: 7px 12px;
+    padding: 8px 14px;
     border: none;
     border-radius: 5px;
     font-size: $font-size-mobile;
     font-family: $primary-font;
+  }
 }
-}
-.navbar-desktop{
-    display: none;
+.navbar-desktop {
+  display: none;
 }
 
-.navbar-mobile{
+.navbar-mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+
+  .logo {
+    width: 110px;
+    height: 75px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    letter-spacing: 3px;
+    border-radius: 1em;
+    font-family: $tertiary-font;
+    color: $primary-accent-color;
+
+    h1 {
+      font-size: 1.4em;
+      font-weight: 500;
+      text-align: center;
+      font-family: $secondary-font;
+    }
+
+    h2 {
+      font-size: 0.8em;
+      font-weight: 400;
+      color: $primary-color;
+      text-align: center;
+      font-style: italic;
+    }
+  }
+}
+.hamburger-container {
+  width: 7%;
+  margin-top: 1em;
+}
+
+.navLinks {
+  display: none;
+  flex-direction: column;
+  gap: 0.5em;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  font-size: $font-size-small;
+  margin-left: 1em;
+  letter-spacing: 0.05em;
+  color: $primary-color;
+  box-sizing: border-box;
+
+  &.open {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: $secondary-color;
+    position: fixed;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 0;
+    margin-top: 5rem;
+    border-radius: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: $font-size-small;
+    z-index: 9999;
+    padding-bottom: 15em;
+    padding-top: 7em;
+    height: 100vh;
+    scroll-behavior: smooth;
+  }
+}
+.navLinks a:hover {
+  color: $secondary-color;
+  cursor: pointer;
+}
+
+.navLinks a:active {
+  transition: all 0.8s ease-in-out;
+}
+
+.lineTop,
+.lineMiddle,
+.lineBottom {
+  fill: $primary-color;
+  transition: transform 0.3s ease-in-out, opacity 0s ease-in-out;
+}
+
+.lineTop {
+  transform-origin: 0.125rem -0.125rem;
+}
+.lineMiddle {
+  transform-origin: 0.125rem 0.125rem;
+}
+
+.lineBottom {
+  transform-origin: 0.125rem -0.125rem;
+}
+
+.burgerMenuButton[aria-expanded="true"] .lineTop {
+  transform: rotate(45deg) translate(1.5rem, -0.8rem);
+}
+
+.burgerMenuButton[aria-expanded="true"] .lineMiddle {
+  opacity: 0;
+}
+
+.burgerMenuButton[aria-expanded="true"] .lineBottom {
+  transform: rotate(-45deg) translate(-3rem, -0.8rem);
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-mobile {
+    display: none;
+  }
+  .hamburger-container {
+    display: none;
+  }
+  .navbar-desktop {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    height: 150px;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 1rem;
+    margin-top: 1.5em;
+    border: 1px solid $quaternary-color;
+    box-sizing: border-box;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    // font-family: $primary-font;
+    // background-color: $primary-color;
 
-    .logo{
-      width: 300px;
-      height: 60px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: relative;
-      letter-spacing: 3px;
-      border-radius: 1em;
-      font-family: $tertiary-font;
-      color: $primary-accent-color;
-  
-      h1{
-          font-size: 1.4em;
-          font-weight: 500;
-          text-align: center;
-          font-family: $secondary-font;
-      }
-      
-      h2{
-          font-size: 0.8em;
-          font-weight: 400;
-          color: $primary-color;
-          text-align: center;
-          font-style: italic;
-      }
+    button {
+      background-color: $primary-color;
+      color: $secondary-color;
+      padding: 7px 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: $font-size-tablet;
+    }
   }
-}
-.hamburger-container{
-  width: 7%;
-  margin-top: 0.2em;
-}
-
-.navLinks{
-    display: none;
-    flex-direction: column;
-    gap: 0.5em;
+  .navbar-links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     list-style: none;
     font-size: $font-size-small;
-    margin-left: 1em;
     letter-spacing: 0.05em;
     color: $primary-color;
     box-sizing: border-box;
-
-    &.open {
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      background-color:$secondary-color;
-      position: fixed;
-      margin: 0 auto;
-      width: 100%;
-      max-width: 800px;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      justify-content: space-evenly;
-      align-items: center;
-      list-style: none;
-      margin-bottom: 0;
-      margin-top: 3rem;
-      border-radius: 0.5em;
-      padding-left: 1em;
-      padding-right: 1em;
-      font-size: $font-size-small;
-      z-index: 9999;
-      padding-bottom: 15em;
-      padding-top: 7em;
-      height: 100vh;
-      scroll-behavior: smooth;
-    }
-    }
-  .navLinks a:hover {
-    color: $secondary-color;
     cursor: pointer;
-    
   }
-  
-  .navLinks a:active {
-    transition: all 0.8s ease-in-out;
+}
+.navLinks {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  font-size: $font-size-tablet;
+  margin-left: 1em;
+  letter-spacing: 0.05em;
+  color: $primary-color;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.navLinks a:hover {
+  // transition: all 0.3s ease-in-out;
+  color: $primary-accent-color;
+  cursor: pointer;
+}
+
+.navLinks a:active {
+  transition: all 0.8s ease-in-out;
+}
+
+.logo {
+  width: 300px;
+  height: 140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  letter-spacing: 3px;
+  border-radius: 1em;
+  font-family: $secondary-font;
+  margin-top: 0.28em;
+
+  h1 {
+    font-size: $font-size-desktop-ultra-wide;
+    font-weight: 400;
+    text-align: center;
+    font-family: $secondary-font;
+    color: $primary-accent-color;
   }
 
-
-    .lineTop,
-    .lineMiddle,
-    .lineBottom {
-      fill: $primary-color;
-      transition: transform 0.3s ease-in-out, opacity 0s ease-in-out;
-    }
-    
-    .lineTop {
-      transform-origin: 0.125rem -0.125rem;
-    }
-    .lineMiddle {
-      transform-origin: 0.125rem 0.125rem;
-    }
-    
-    .lineBottom {
-      transform-origin: 0.125rem -0.125rem;
-    }
-    
-    .burgerMenuButton[aria-expanded="true"] .lineTop {
-      transform: rotate(45deg) translate(1.50rem, -0.80rem);
-    }
-    
-    .burgerMenuButton[aria-expanded="true"] .lineMiddle {
-      opacity: 0;
-    }
-    
-    .burgerMenuButton[aria-expanded="true"] .lineBottom {
-      transform: rotate(-45deg) translate(-3rem, -0.80rem);
-    }
-
-@media screen and (min-width: 768px) {
-        .navbar-mobile{
-            display: none;
-        }
-        .hamburger-container{
-          display: none;
-        }
-        .navbar-desktop{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            max-width: 1100px;
-            margin: 0 auto;
-            margin-top: 1em;
-            border: 1px solid $quaternary-color;
-            box-sizing: border-box;
-            border-radius: 0.5em;
-            padding: 0.5em 1em;
-
-            button{
-              background-color: $primary-color;
-              color: $secondary-color;
-              padding: 7px 10px;
-              border: none;
-              border-radius: 5px;
-              font-size: $font-size-tablet;
-            }
-        }
-        .navbar-links{
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            list-style: none;
-            font-size: $font-size-small;
-            letter-spacing: 0.05em;
-            color: $primary-color;
-            box-sizing: border-box;
-            cursor: pointer;
-        } 
-      } 
-        .navLinks{
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            list-style: none;
-            font-size: $font-size-desktop;
-            margin-left: 1em;
-            letter-spacing: 0.05em;
-            color: $primary-color;
-            box-sizing: border-box;
-            margin: 0 auto;
-        }
-        .navLinks a:hover {
-            // transition: all 0.3s ease-in-out;
-            color: $primary-accent-color;
-            cursor: pointer;
-        }
-
-        .navLinks a:active {
-            transition: all 0.8s ease-in-out;
-        }
-
-        .logo{
-            width: 400px;
-            height: 80px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            letter-spacing: 3px;
-            border-radius: 1em;
-            font-family: $secondary-font;
-
-            h1{
-              font-size: $font-size-desktop-ultra-wide;
-                font-weight: 400;
-                text-align: center;
-                font-family: $secondary-font;
-                color: $primary-accent-color;
-            }
-
-            h2{
-                font-size: $font-size-desktop;
-                font-weight: 400;
-                color: $primary-color;
-                text-align: center;
-                font-style: italic;
-            }
-          
-        }
-
-      
-
-
+  h2 {
+    font-size: $font-size-desktop;
+    font-weight: 400;
+    color: $primary-color;
+    text-align: center;
+    font-style: italic;
+  }
+}
