@@ -1,45 +1,131 @@
-@use './app/styles/base/_typography' as *;
-@use './app/styles/base/_variables' as *;
-@use './app/styles/utils/_mixins' as *;
-@use './app/styles/utils/_functions' as *;
+@use "./app/styles/base/_typography" as *;
+@use "./app/styles/base/_variables" as *;
+@use "./app/styles/utils/_mixins" as *;
+@use "./app/styles/utils/_functions" as *;
 
-.contact-container{
-    display: flex;
-    flex-direction: column;
+// Mobile
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1100px;
+  text-align: center;
+  margin: 3em 0;
+  border: 1px solid $quinary-color;
+  border-radius: 1em;
+  background-color: $secondary-color;
+
+  h1 {
+    font-size: $font-size-desktop-wide;
+    font-weight: 500;
+    text-align: center;
+    color: $primary-accent-color;
+    margin: 0.5em;
+  }
+  h3 {
+    font-size: $font-size-mobile;
+    font-family: $primary-font;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 15px;
+  text-align: center;
+}
+.contact-info-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 15px;
+  text-align: center;
+  margin-bottom: 1em;
+
+  li + li {
+    margin-top: 1em;
+  }
+
+  h2 {
+    font-size: $font-size-mobile;
+    font-family: $primary-font;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    // margin: 1em 0;
+  }
+
+  p {
+    font-size: $font-size-mobile;
+    font-family: $primary-font;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    // margin: 1em 0;
+  }
+}
+.map-container {
+  border-radius: 1em;
+  width: 100%;
+  padding: 0.5em;
+
+  iframe {
+    border-radius: 1em;
+  }
+}
+
+//Desktop
+
+@media screen and (min-width: 768px) {
+  .contact-container {
+    color: $primary-color;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
     width: 100%;
     max-width: 1100px;
     text-align: center;
-    margin: 3em 0;
-    border: 1px solid $quinary-color;
+    margin: 3em 0 0 0;
+    border: 1px solid $quaternary-color;
     border-radius: 1em;
-    padding: 1em 0 0 0;
-    bottom: 0;
-    background-color: $secondary-color;
-    
+    // padding: 1em 0 0 0;
 
-    h1{
-        font-size: $font-size-desktop-ultra-wide;  
-        font-weight: 500;
-        text-align: center;
+    h1 {
+      font-size: $font-size-desktop-ultra-wide;
+      font-weight: 500;
+      text-align: center;
+      color: $primary-accent-color;
     }
-    h3{
-        font-size: $font-size-tablet;  
-        font-weight: 500;
-        text-align: center;
-        width: 100%;
-        margin: 0 auto;
-        margin: 1em 0;
-        
+    h3 {
+      font-size: $font-size-tablet;
+      font-weight: 500;
+      text-align: center;
+      width: 90%;
+      margin: 0 auto;
+      margin: 0.5em;
     }
-
-    h3+h3{
-        margin-top: 1em;
-    }
-}
-.contact-info{
+  }
+  .contact-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,10 +133,10 @@
     margin: 0 auto;
     width: 100%;
     max-width: 1100px;
-    padding: 0 15px;
+    // padding: 0 15px;
     text-align: center;
-}
-.contact-info-links{
+  }
+  .contact-info-links {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -58,95 +144,39 @@
     margin: 0 auto;
     width: 100%;
     max-width: 1100px;
-    padding: 0 15px;
     text-align: center;
     margin-bottom: 1em;
 
-    li+li{
-        margin-top: 1em;
+    li + li {
+      margin-top: 1em;
     }
-}
-.map-container{
+
+    h2 {
+      font-size: $font-size-tablet;
+      font-family: $primary-font;
+      font-weight: 400;
+      text-align: center;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    p {
+      font-size: $font-size-tablet;
+      font-family: $primary-font;
+      font-weight: 500;
+      text-align: center;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  .map-container {
     border-radius: 1em;
     width: 100%;
-    padding: 2em;
 
-    iframe{
-        border-radius: 1em;
+    iframe {
+      border-radius: 1em;
+      margin-right: 2em;
+      //   padding: 1em;
     }
-}
-
-//Desktop
-
-@media screen and (min-width: 768px) {
-    .contact-container{
-        color: $primary-color;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 auto;
-        width: 100%;
-        max-width: 1100px;
-        text-align: center;
-        margin: 3em 0;
-        border: 1px solid $quaternary-color;
-        border-radius: 1em;
-        padding: 1em 0 0 0;
-        
-
-        h1{
-            font-size: $font-size-desktop-ultra-wide;  
-            font-weight: 500;
-            text-align: center;
-            color: $primary-accent-color;
-        }
-        h3{
-            font-size: $font-size-tablet;  
-            font-weight: 500;
-            text-align: center;
-            width: 70%;
-            margin: 0 auto;
-            margin: 1em 0;
-            
-        }
-
-        // h3+h3{
-        //     margin-top: 1em;
-        // }
-    }
-    .contact-info{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        width: 100%;
-        max-width: 1100px;
-        // padding: 0 15px;
-        text-align: center;
-    }
-    .contact-info-links{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 auto;
-        width: 100%;
-        max-width: 1100px;
-        padding: 0 15px;
-        text-align: center;
-        margin-bottom: 1em;
-
-        li+li{
-            margin-top: 1em;
-        }
-    }
-    .map-container{
-        border-radius: 1em;
-        width: 100%;
-
-        iframe{
-            border-radius: 1em;
-        }
-    }
+  }
 }
