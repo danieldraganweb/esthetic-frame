@@ -68,6 +68,24 @@
   margin-top: 0.3em;
 }
 
+.navbar-social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 0.5em;
+
+  li + li {
+    margin-left: 1em;
+  }
+
+  // svg {
+  //   width: 1.5em;
+  //   height: 1.5em;
+  // }
+}
+
 .navLinks {
   display: none;
   flex-direction: column;
@@ -105,7 +123,7 @@
     font-size: $font-size-small;
     z-index: 9999;
     padding-bottom: 15em;
-    padding-top: 7em;
+    padding-top: 5em;
     height: 100vh;
     scroll-behavior: smooth;
   }
