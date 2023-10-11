@@ -36,15 +36,15 @@ function Contact() {
                     <g
                       id="页面-1"
                       stroke="none"
-                      stroke-width="1"
+                      strokeWidth="1"
                       fill="none"
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                     >
                       {" "}
                       <g
                         id="Contact"
                         transform="translate(-576.000000, 0.000000)"
-                        fill-rule="nonzero"
+                        fillRule="nonzero"
                       >
                         {" "}
                         <g
