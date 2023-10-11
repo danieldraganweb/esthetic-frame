@@ -10,8 +10,8 @@ function FacebookSVG() {
       >
         <svg
           fill="#000000"
-          width="1.3em"
-          height="1.3em"
+          width="1.9em"
+          height="1.9em"
           viewBox="-9.5 0 32 32"
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"

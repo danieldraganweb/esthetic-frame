@@ -4,6 +4,8 @@ import Logo from "./Logo";
 import styles from "./Navbar.module.scss";
 import Link from "next/link";
 import disableScroll from "disable-scroll";
+import InstagramSVG from "../SocialMedia/InstagramSVG";
+import FacebookSVG from "../SocialMedia/FacebookSVG";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -122,6 +124,14 @@ function Navbar() {
                   Contact
                 </Link>
               </li>
+              <div className={styles["navbar-social"]}>
+                <li>
+                  <InstagramSVG />
+                </li>
+                <li>
+                  <FacebookSVG />
+                </li>
+              </div>
             </ul>
           )}
         </div>
