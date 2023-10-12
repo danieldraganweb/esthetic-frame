@@ -33,6 +33,19 @@ function About() {
                     beauty, where passion meets precision and the art of
                     transformation knows no bounds.
                   </h1>
+                  <div className={styles["star-logo"]}>
+                    <Image
+                      src="/1-star logo.png"
+                      alt="Team Member 1"
+                      width={100}
+                      height={100}
+                      // layout="responsive"
+                      sizes="(max-width: 500px) 100vw, 500px"
+                      loading="lazy"
+                    ></Image>
+                    <h1>Kamila Stetsenko</h1>
+                    <p>Permanent Make-up Academy Artist Graduate</p>
+                  </div>
                 </div>
               </div>
               <div className={styles["team-member"]}>

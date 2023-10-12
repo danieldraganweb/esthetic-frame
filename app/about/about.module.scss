@@ -93,6 +93,20 @@
   }
 }
 
+.star-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 2em;
+  img {
+    width: 3.5em;
+    height: 3.5em;
+  }
+}
+
 //Desktop
 
 @media screen and (min-width: 768px) {
@@ -189,6 +203,35 @@
     }
     li {
       margin-bottom: 1.5em;
+    }
+  }
+
+  .star-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    img {
+      width: 5.5em;
+      height: 5.5em;
+      margin: 3em 0 0 0;
+    }
+
+    h1 {
+      font-size: $font-size-desktop;
+      margin: 0.5em 0;
+      color: $primary-accent-color;
+      text-align: center;
+    }
+    p {
+      margin-bottom: 1.5em;
+      font-size: $font-size-mobile;
+      text-align: center;
+      letter-spacing: 0.05em;
+      width: 90%;
+      margin: 0 auto;
     }
   }
 }
