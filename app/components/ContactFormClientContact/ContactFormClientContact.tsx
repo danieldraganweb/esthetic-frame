@@ -35,7 +35,7 @@ function ContactFormClientContact() {
           </h1>
           <input
             type="text"
-            placeholder="First Name (e.g. John)"
+            placeholder="First Name (e.g. Maria)"
             required
             className={styles["contact-form-input"]}
             name="firstName"
@@ -46,7 +46,7 @@ function ContactFormClientContact() {
           ></label>
           <input
             type="text"
-            placeholder="Last Name (e.g. Doe)"
+            placeholder="Last Name (e.g. Musterfrau)"
             required
             className={styles["contact-form-input"]}
             name="lastName"
@@ -57,7 +57,7 @@ function ContactFormClientContact() {
           ></label>
           <input
             type="email"
-            placeholder="Email (e.g. john.doe@example.com)"
+            placeholder="Email (e.g. maria.musterfrau@example.com)"
             required
             className={styles["contact-form-input"]}
             name="email"
