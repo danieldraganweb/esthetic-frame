@@ -3,18 +3,11 @@ import styles from "./styles/loading.module.scss";
 
 const Loading: React.FC = () => {
   return (
-    <div className={styles.container}>
-      <div className={styles.loader}>
-        <span></span>
-      </div>
-      <div className={styles.loader}>
-        <span></span>
-      </div>
-      <div className={styles.loader}>
-        <i></i>
-      </div>
-      <div className={styles.loader}>
-        <i></i>
+    <div className={styles.frame}>
+      <div className={styles.center}>
+        <div className={styles["dot-1"]}></div>
+        <div className={styles["dot-2"]}></div>
+        <div className={styles["dot-3"]}></div>
       </div>
     </div>
   );
