@@ -11,11 +11,14 @@ const table = Airtable.base(
 // hook
 export function useBlogPosts() {
   const [blogPosts, setBlogPosts] = useState<BlogPostContent[]>([]);
+  const [loading, setLoading] = useState(false);
 
   // fetcher
   const getAllBlogPosts = async () => {
+    setLoading(true);
     const records = await table.select().all();
     setBlogPosts(records as any);
+    setLoading(false);
     console.log(records);
   };
 
@@ -25,5 +28,5 @@ export function useBlogPosts() {
   }, []);
 
   // export
-  return { blogPosts };
+  return { blogPosts, loading };
 }

@@ -133,6 +133,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
 
     // display: grid;
     // grid-auto-flow: column; /* Change the value to "row" */
@@ -156,7 +158,7 @@
     border: 1px solid $quaternary-color;
     margin-bottom: 2em;
     border-radius: 0.5rem;
-    width: 20%;
+    width: 30%;
 
     h2 {
       font-size: $font-size-tablet;
