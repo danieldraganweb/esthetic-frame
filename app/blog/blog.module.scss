@@ -33,14 +33,18 @@
 
   img {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 400px;
+    object-fit: cover;
     border-radius: 0.5rem;
     background: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 0.7em;
+  }
+
+  img:hover {
+    cursor: pointer;
   }
 
   p {
@@ -73,6 +77,12 @@
     padding: 0 0 0.3em 0.5em;
     font-family: $primary-font;
   }
+}
+
+.article:hover {
+  transform: scale(1.02);
+  transition: transform 0.5s ease;
+  border-radius: 0.5em;
 }
 
 .blog-caption {
