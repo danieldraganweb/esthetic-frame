@@ -24,7 +24,7 @@ const Blog = () => {
                 alt={post.fields?.name}
                 width={post.fields?.image[0].width}
                 height={post.fields?.image[0].height}
-                // layout="responsive"
+                // layout="eager"
                 style={{
                   borderRadius: "0.5em 0.5em 0 0",
                   boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
