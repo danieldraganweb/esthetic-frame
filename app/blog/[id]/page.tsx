@@ -35,7 +35,7 @@ const Post = () => {
                   alt={post?.fields?.name ?? ""}
                   width={post?.fields?.image[0].width}
                   height={post?.fields?.image[0].height}
-                  // layout="responsive"
+                  // layout="lazy"
                   style={{
                     boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
                   }}
@@ -72,14 +72,12 @@ const Post = () => {
                 </li>
               </Link>
             ))}
-            {/* <div
-              className={`${styles["blog-sidebar-contact"]} ${styles["my-custom-class"]}`}
-            >
-              <Contact />
-            </div> */}
           </ul>
         </div>
       </main>
+      <div className={`${styles["custom-contact"]}`}>
+        <Contact />
+      </div>
     </>
   );
 };
