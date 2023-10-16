@@ -31,7 +31,25 @@ const Blog = () => {
                 }}
                 sizes="(max-width: 1100px) 100vw, 600px"
               />
-              <h2 className={styles["article-title"]}>{post.fields?.name}</h2>
+              <Link href={`/blog/${post.id}`} passHref>
+                <Image
+                  loading="lazy"
+                  src={post.fields?.image[0].url}
+                  alt={post.fields?.name}
+                  width={post.fields?.image[0].width}
+                  height={post.fields?.image[0].height}
+                  // layout="responsive"
+                  style={{
+                    borderRadius: "0.5em 0.5em 0 0",
+                    boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
+                  }}
+                  sizes="(max-width: 1100px) 100vw, 600px"
+                />
+                <h2 className={styles["article-title"]}>{post.fields?.name}</h2>
+                <p className={styles["article-date"]}>
+                  Published on {post.fields?.published}
+                </p>
+              </Link>
               <p className={styles["article-date"]}>
                 Published on {post.fields?.published}
               </p>
