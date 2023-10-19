@@ -7,8 +7,9 @@
 .navbar {
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 0.5rem;
+  padding: 0 0.2rem;
 }
+
 .navbar-button-container {
   button {
     width: 100%;
@@ -16,11 +17,13 @@
     color: $secondary-color;
     padding: 8px 14px;
     border: none;
-    border-radius: 5px;
+    border-radius: 1.5em;
     font-size: $font-size-mobile;
     font-family: $primary-font;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
 }
+
 .navbar-desktop {
   display: none;
 }
@@ -34,8 +37,8 @@
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 1rem;
-  margin-top: 0.5em;
-  margin-bottom: 1em;
+  // margin-top: 0.5em;
+  // margin-bottom: 1em;
 
   .logo {
     width: 150px;
@@ -67,8 +70,7 @@
 }
 
 .hamburger-container {
-  width: 7%;
-  margin-top: 0.3em;
+  margin-top: 0.7em;
 }
 
 .navbar-social {
@@ -79,7 +81,7 @@
   width: 100%;
   gap: 0.5em;
 
-  li + li {
+  li+li {
     margin-left: 1em;
   }
 }
@@ -146,6 +148,7 @@
 .lineTop {
   transform-origin: 0.125rem -0.125rem;
 }
+
 .lineMiddle {
   transform-origin: 0.125rem 0.125rem;
 }
@@ -168,17 +171,20 @@
 
 //Tablet
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   .navbar {
     padding: 0 1rem;
     box-sizing: border-box;
   }
+
   .navbar-mobile {
     display: none;
   }
+
   .hamburger-container {
     display: none;
   }
+
   .navbar-desktop {
     display: flex;
     flex-direction: row;
@@ -188,7 +194,7 @@
     height: 150px;
     max-width: 1100px;
     margin: 0 auto;
-    margin-top: 1.5em;
+    margin-top: 1em;
     border: 1px solid $quaternary-color;
     box-sizing: border-box;
     border-radius: 0.5em;
@@ -199,14 +205,16 @@
     button {
       background-color: $primary-color;
       color: $secondary-color;
-      padding: 5px 8px;
+      padding: 8px 14px;
       border: none;
-      border-radius: 5px;
+      border-radius: 1.5em;
       font-size: $font-size-mobile;
       width: 100%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
   }
 }
+
 .navbar-links {
   width: 100%;
   max-width: 1100px;
@@ -237,17 +245,19 @@
     a {
       font-size: $font-size-mobile;
     }
-
-    .navLinks a:hover {
-      // transition: all 0.3s ease-in-out;
-      color: $primary-accent-color;
-      cursor: pointer;
-    }
-
-    .navLinks a:active {
-      transition: all 0.8s ease-in-out;
-    }
   }
+
+  .navLinks a:hover {
+    // transition: all 0.3s ease-in-out;
+    color: $primary-accent-color;
+    cursor: pointer;
+  }
+
+  .navLinks a:active {
+    transition: all 0.8s ease-in-out;
+  }
+
+
   .logo {
     width: 200px;
     height: 110px;
@@ -278,17 +288,20 @@
 
 //Desktop
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1024px) {
   .navbar {
     padding: 0 1rem;
     box-sizing: border-box;
   }
+
   .navbar-mobile {
     display: none;
   }
+
   .hamburger-container {
     display: none;
   }
+
   .navbar-desktop {
     display: flex;
     flex-direction: row;
@@ -332,12 +345,14 @@
         font-family: $secondary-font;
       }
     }
+
     button {
       background-color: $primary-color;
       color: $secondary-color;
       padding: 7px 15px;
       border: none;
-      border-radius: 5px;
+      border-radius: 1.5em;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       font-size: $font-size-tablet;
       width: 100%;
     }
@@ -374,15 +389,24 @@
         font-size: $font-size-tablet;
       }
 
-      .navLinks a:hover {
-        // transition: all 0.3s ease-in-out;
-        color: $primary-accent-color;
-        cursor: pointer;
-      }
 
-      .navLinks a:active {
-        transition: all 0.8s ease-in-out;
-      }
+    }
+
+    .navLinks a:hover {
+
+      color: $primary-accent-color;
+      cursor: pointer;
+    }
+
+    .navLinks li:hover {
+      color: $primary-accent-color;
+      cursor: pointer;
+      transform: scale(1.1);
+      // transition: all 0.3s ease-in-out;
+    }
+
+    .navLinks a:active {
+      transition: all 0.8s ease-in-out;
     }
   }
 }
