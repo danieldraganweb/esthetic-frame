@@ -85,7 +85,7 @@ function Navbar() {
                   key="services"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Services
+                  Leistungen
                 </Link>
               </li>
               <li>
@@ -94,7 +94,7 @@ function Navbar() {
                   key="gallery"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Gallery
+                  Galerie
                 </Link>
               </li>
               <li>
@@ -112,7 +112,7 @@ function Navbar() {
                   key="about"
                   onClick={() => setMenuOpen(false)}
                 >
-                  About
+                  Über uns
                 </Link>
               </li>
               <li>
@@ -121,7 +121,7 @@ function Navbar() {
                   key="contact"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Contact
+                  Kontakt
                 </Link>
               </li>
               <div className={styles["navbar-social"]}>
@@ -145,7 +145,7 @@ function Navbar() {
                   key="services"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Services
+                  Leistungen
                 </Link>
               </li>
               <li>
@@ -154,7 +154,7 @@ function Navbar() {
                   key="gallery"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Gallery
+                  Galerie
                 </Link>
               </li>
               <li>
@@ -175,7 +175,7 @@ function Navbar() {
                   key="about"
                   onClick={() => setMenuOpen(false)}
                 >
-                  About
+                  Über uns
                 </Link>
               </li>
               <li>
@@ -184,12 +184,12 @@ function Navbar() {
                   key="contact"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Contact
+                  Kontakt
                 </Link>
               </li>
               <li>
                 <Link href="/book">
-                  <button className={styles["navbar-button"]}>Book</button>
+                  <button className={styles["navbar-button"]}>Buchen</button>
                 </Link>
               </li>
             </ul>
