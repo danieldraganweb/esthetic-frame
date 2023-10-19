@@ -4,173 +4,61 @@
 @use "./app/styles/utils/_functions" as *;
 
 // Mobile first
-@media screen and (max-width: 500px) {
-  .hero-container {
-    width: 100%;
-    max-width: 1100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    // border: 1px solid $quaternary-color;
-    margin: 0 auto;
-    border-radius: 1em;
-    padding-bottom: 2em;
-  }
 
-  .hero-image-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .hero-text-container {
-    display: flex;
-
-    .hero-title {
-      font-size: $font-size-desktop-wide;
-      font-weight: 400;
-      color: $primary-accent-color;
-      margin: 0.5em 0 0.5em 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      text-align: center;
-    }
-    .hero-subtitle {
-      font-size: 1rem;
-      font-weight: 400;
-      color: $primary-color;
-      margin-bottom: 0.5em;
-      width: 95%;
-      text-align: center;
-      font-family: $primary-font;
-      margin: 0 auto;
-    }
-
-    button + button {
-      margin-left: 20px;
-    }
-
-    button:hover {
-      transform: scale(1.1);
-      transition: all 0.2s ease-in-out;
-      cursor: pointer;
-    }
-
-    button:active {
-      transform: scale(0.9);
-      transition: all 0.2s ease-in-out;
-    }
-
-    .hero-btn-1 {
-      background-color: $secondary-color;
-      color: $primary-color;
-      border: 1px solid $quaternary-color;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-size: 1.2rem;
-      margin-top: 1em;
-      display: inline-block;
-      margin-left: 1.65em;
-      font-family: $primary-font;
-    }
-
-    .hero-btn-2 {
-      background-color: $primary-color;
-      color: $secondary-color;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-size: 1.2rem;
-      margin-top: 1em;
-      margin-left: 1em;
-      font-family: $primary-font;
-    }
-  }
+.hero-container {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid $quaternary-color;
+  margin: 0 auto;
+  border-radius: 0.5em;
+  margin-bottom: 2em;
 }
 
-@media screen and (min-width: 768px) {
-  .hero-container {
-    width: 100%;
-    max-width: 1100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    // border: 1px solid $quaternary-color;
-    // padding: 2em;
-    margin: 0 auto;
-    border-radius: 1em;
-  }
+.hero-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  background-color: lighten($quaternary-color, $amount: 10%);
+  border-radius: 0.5em;
+  border-top: none;
 
-  .hero-text-container {
+  .hero-title {
+    font-size: $font-size-desktop-wide;
+    font-weight: 400;
+    color: $primary-accent-color;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    flex-basis: 100%;
-    margin-left: 3em;
-    padding: 0 1em;
+    max-width: 768px;
+    text-align: start;
+    box-sizing: border-box;
+    margin-top: 0.5em;
+    padding: 0 0.2em;
+  }
 
-    .hero-title {
-      font-size: 5rem;
-      font-weight: 400;
-      color: $primary-accent-color;
-      margin-bottom: 0.5em;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-start;
-      width: 100%;
-    }
-
-    .hero-subtitle {
-      font-size: $font-size-desktop-wide;
-      font-weight: 300;
-      color: $primary-color;
-      margin-bottom: 0.5em;
-      width: 100%;
-      font-family: $primary-font;
-    }
-
-    button + button {
-      margin-left: 20px;
-    }
-
-    button:hover {
-      transform: scale(1.1);
-      transition: all 0.2s ease-in-out;
-      cursor: pointer;
-    }
-
-    button:active {
-      transform: scale(0.9);
-      transition: all 0.2s ease-in-out;
-    }
-
-    .hero-btn-1 {
-      background-color: $secondary-color;
-      color: $primary-color;
-      border: 1px solid $quaternary-color;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-size: 1.8rem;
-      margin-top: 1em;
-      font-family: $primary-font;
-    }
-
-    .hero-btn-2 {
-      background-color: $primary-color;
-      color: $secondary-color;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-size: 1.8rem;
-      margin-top: 1em;
-      margin-left: 1em;
-      font-family: $primary-font;
-    }
+  .hero-subtitle {
+    font-size: clamp($font-size-mobile, 1vw, $font-size-desktop-wide);
+    font-weight: 100;
+    color: $primary-color;
+    margin-bottom: 0.5em;
+    width: 100%;
+    max-width: 768px;
+    text-align: start;
+    font-family: $primary-font;
+    margin: 0 auto;
+    margin-top: 1em;
+    text-wrap: wrap;
+    padding: 0 0.5em;
   }
 }
 
@@ -178,24 +66,312 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   width: 100%;
-  flex-basis: 100%;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5em 0.5em 0 0;
+  }
 }
 
-.hero-image {
-  width: 100%;
-  height: auto;
-  border-radius: 1em;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
-}
-
-.btn-container {
+.hero-button-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  justify-content: flex-start;
-  flex-basis: 100%;
-  margin-top: 1em;
+  width: 100%;
+  margin: 1em 0;
+  padding: 0 1em;
+  gap: 1em;
+
+  button:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  button:active {
+    transform: scale(0.9);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .hero-btn-1 {
+
+    background-color: lighten($primary-color, $amount: 20%);
+    color: $secondary-color;
+    border-radius: 1.5em;
+    font-size: clamp(0.7rem, 1vw, 1rem);
+    display: inline-block;
+    font-family: $primary-font;
+    box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+    padding: 1em 2.5em 1em 2.5em;
+  }
+
+  .hero-btn-2 {
+    background-color: $secondary-color;
+    color: $primary-color;
+    border: 1px solid $quaternary-color;
+    border-radius: 1.5em;
+    font-size: clamp(0.7rem, 1vw, 1rem);
+    display: inline-block;
+    font-family: $primary-font;
+    font-weight: 400;
+    margin: 1em 0;
+    box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+    padding: 1em 2.5em 1em 2.5em;
+  }
+}
+
+
+
+
+@include respond(md) {
+  .hero-section {
+    width: 100%;
+    max-width: 1100px;
+    box-sizing: border-box;
+    // margin: 0 3em;
+    // padding: 0 1em;
+    // border: 3px solid red;
+  }
+
+  .hero-container {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    margin: 0 auto;
+    border-radius: 0.5em;
+    margin-bottom: 2em;
+    gap: 2em;
+  }
+
+  .hero-text-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    flex-basis: 50%;
+    max-width: 1024px;
+    box-sizing: border-box;
+    background-color: $secondary-color;
+    margin-bottom: 0px;
+    border-radius: 0.5em;
+    border-top: none;
+
+    .hero-title {
+      font-size: clamp($font-size-desktop-ultra-ultra-wide, 5vw, $font-size-desktop-ultra-ultra-ultra-ultra-wide);
+      font-weight: 400;
+      color: $primary-accent-color;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1100px;
+      text-align: start;
+      box-sizing: border-box;
+      // margin-top: 0.5em;
+      padding: 0 0.2em;
+    }
+
+    .hero-subtitle {
+      font-size: clamp($font-size-tablet, 1vw, $font-size-desktop-ultra-ultra-ultra-wide);
+      font-weight: 100;
+      color: $primary-color;
+      margin-bottom: 0.5em;
+      width: 100%;
+      max-width: 768px;
+      text-align: start;
+      font-family: $primary-font;
+      margin: 0 auto;
+      margin-top: 1em;
+      text-wrap: wrap;
+      padding: 0 1em;
+    }
+  }
+
+  .hero-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    flex-basis: 50%;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.5em;
+    }
+  }
+
+  .hero-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin: 1em 0 0 0;
+    padding: 0 0 0 1em;
+    gap: 1em;
+
+
+
+    .hero-btn-1 {
+
+      background-color: lighten($primary-color, $amount: 20%);
+      color: $secondary-color;
+      border-radius: 4.5em;
+      font-size: clamp($font-size-mobile, 1vw, $font-size-desktop-wide);
+      display: inline-block;
+      font-family: $primary-font;
+      box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+      padding: 1em 2.5em 1em 2.5em;
+    }
+
+    .hero-btn-1:hover {
+      transform: scale(1.02);
+      background-color: $primary-color;
+      cursor: pointer;
+    }
+
+    .hero-btn-1 {
+      transform: scale(1.01);
+      // transition: all 0.2s ease-out;
+    }
+
+    .hero-btn-2 {
+      background-color: $secondary-color;
+      color: $primary-color;
+      border: 1px solid $quaternary-color;
+      border-radius: 4.5em;
+      font-size: clamp($font-size-mobile, 1vw, $font-size-desktop-wide);
+      display: inline-block;
+      font-family: $primary-font;
+      font-weight: 400;
+      margin: 1em 0;
+      box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+      padding: 1em 2.5em 1em 2.5em;
+    }
+
+    .hero-btn-2:hover {
+      transform: scale(1.02);
+      background-color: lighten($quaternary-color, $amount: 10%);
+      cursor: pointer;
+    }
+
+    .hero-btn-2 {
+      transform: scale(1.01);
+      // transition: all 0.2s ease-out;
+    }
+  }
+}
+
+@include respond(xl) {
+  .hero-section {
+    width: 100%;
+    padding: none;
+  }
+
+  .hero-container {
+    width: 100%;
+    max-width: 1100px;
+    gap: 2em;
+  }
+
+  .hero-text-container {
+    border-top: none;
+
+    .hero-title {
+      font-size: clamp($font-size-desktop-ultra-ultra-ultra-ultra-wide, 1vw, $font-size-desktop-ultra-ultra-ultra-ultra-wide);
+      // margin-top: 0.5em;
+      padding: 0 0.2em;
+    }
+
+    .hero-subtitle {
+      font-size: clamp($font-size-tablet, 1vw, $font-size-desktop-ultra-ultra-ultra-wide);
+
+    }
+  }
+
+  .hero-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    flex-basis: 50%;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.5em;
+    }
+  }
+
+  .hero-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin: 1em 0 0 0;
+    padding: 0 0 0 1em;
+    gap: 1em;
+
+
+
+    .hero-btn-1 {
+      background-color: lighten($primary-color, $amount: 20%);
+      color: $secondary-color;
+      border-radius: 4.5em;
+      font-size: clamp($font-size-mobile, 1vw, $font-size-desktop-wide);
+      display: inline-block;
+      font-family: $primary-font;
+      box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+      padding: 1em 2.5em 1em 2.5em;
+    }
+
+    .hero-btn-1:hover {
+      transform: scale(1.02);
+      background-color: $primary-color;
+      cursor: pointer;
+    }
+
+    .hero-btn-1 {
+      transform: scale(1.01);
+      // transition: all 0.2s ease-out;
+    }
+
+    .hero-btn-2 {
+      background-color: $secondary-color;
+      color: $primary-color;
+      border: 1px solid $quaternary-color;
+      border-radius: 4.5em;
+      font-size: clamp($font-size-mobile, 1vw, $font-size-desktop-wide);
+      display: inline-block;
+      font-family: $primary-font;
+      font-weight: 400;
+      margin: 1em 0;
+      box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+      padding: 1em 2.5em 1em 2.5em;
+    }
+
+    .hero-btn-2:hover {
+      transform: scale(1.02);
+      background-color: lighten($quaternary-color, $amount: 10%);
+      cursor: pointer;
+    }
+
+    .hero-btn-2 {
+      transform: scale(1.01);
+      // transition: all 0.2s ease-out;
+    }
+  }
 }
