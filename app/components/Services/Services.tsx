@@ -7,7 +7,7 @@ import ScrollHorizontalIcon from "../SvgHorizontalScrollIcon";
 function Services() {
   return (
     <>
-      <main>
+      <main className={styles["services-main"]}>
         <div className={styles["services-title-container-1"]}>
           <h1 className={styles["services-title-1"]}>
             Beliebte Dienstleistungen
@@ -21,10 +21,11 @@ function Services() {
                   <Image
                     src="/services1.jpg"
                     alt="services"
-                    width={500}
-                    height={500}
-                    sizes="100vw"
+                    width={358}
+                    height={300}
+                    sizes="(max-width: 300px) 100vw, 300px"
                     priority={true}
+                    // layout="responsive"
                     style={{
                       objectFit: "cover",
                       borderRadius: "1em",
@@ -32,12 +33,12 @@ function Services() {
                     className={styles["services-image"]}
                   />
                   <h1 className={styles["services-title-2"]}>
-                    Eyebrow Microblading
+                    Augenbrauen Microblading
                   </h1>
                   <p className={styles["services-subtitle-2"]}>
-                    Achieve perfectly shaped eyebrows with our microblading
-                    services. We use the latest techniques to give you the best
-                    results.
+                    Erreichen Sie perfekt geformte Augenbrauen mit unseren
+                    Microblading-Services. Wir verwenden die neuesten Techniken,
+                    um Ihnen die besten Ergebnisse zu bieten.
                   </p>
                 </Link>
               </div>
@@ -46,10 +47,11 @@ function Services() {
                   <Image
                     src="/services4.jpg"
                     alt="services"
-                    width={500}
-                    height={500}
-                    sizes="100vw"
+                    width={358}
+                    height={300}
+                    sizes="(max-width: 300px) 100vw, 300px"
                     priority={true}
+                    // layout="responsive"
                     style={{
                       objectFit: "cover",
                       borderRadius: "1em",
@@ -57,11 +59,12 @@ function Services() {
                     className={styles["services-image"]}
                   />
                   <h1 className={styles["services-title-3"]}>
-                    Permanent Eyeliner
+                    Permanenter Eyeliner
                   </h1>
                   <p className={styles["services-subtitle-3"]}>
-                    Get the look you want with our permanent eyeliner services.
-                    We offer a variety of styles and colors to suit your needs.
+                    Erzielen Sie den gewünschten Look mit unseren permanenten
+                    Eyeliner-Services. Wir bieten eine Vielzahl von Stilen und
+                    Farben, um Ihren Bedürfnissen gerecht zu werden.
                   </p>
                 </Link>
               </div>
@@ -70,9 +73,9 @@ function Services() {
                   <Image
                     src="/services3.jpg"
                     alt="services"
-                    width={500}
-                    height={500}
-                    sizes="100vw"
+                    width={358}
+                    height={300}
+                    sizes="(max-width: 300px) 100vw, 300px"
                     priority={true}
                     style={{
                       objectFit: "cover",
@@ -80,11 +83,11 @@ function Services() {
                     }}
                     className={styles["services-image"]}
                   />
-                  <h1 className={styles["services-title-4"]}>Lip Blushing</h1>
+                  <h1 className={styles["services-title-4"]}>Lippenblush</h1>
                   <p className={styles["services-subtitle-4"]}>
-                    Our permanent lipstick services are perfect for those who
-                    want to have a natural-looking pout without the hassle of
-                    applying makeup every day.
+                    Unsere permanenten Lippenstift-Services sind perfekt für
+                    diejenigen, die einen natürlichen Kussmund ohne die Mühe des
+                    täglichen Schminkens haben möchten.
                   </p>
                 </Link>
               </div>
@@ -93,9 +96,9 @@ function Services() {
                   <Image
                     src="/services2.jpg"
                     alt="services"
-                    width={500}
-                    height={500}
-                    sizes="100vw"
+                    width={358}
+                    height={300}
+                    sizes="(max-width: 300px) 100vw, 300px"
                     priority={true}
                     style={{
                       objectFit: "cover",
@@ -104,12 +107,12 @@ function Services() {
                     className={styles["services-image"]}
                   />
                   <h1 className={styles["services-title-4"]}>
-                    Eyebrow Pigmentation
+                    Augenbrauenpigmentierung
                   </h1>
                   <p className={styles["services-subtitle-4"]}>
-                    Our permanent eyebrows pigmentation services are perfect for
-                    those who want to have a natural-looking pout without the
-                    hassle of applying makeup every day.
+                    Unsere permanenten Augenbrauenpigmentierungs-Services sind
+                    perfekt für diejenigen, die natürliche Augenbrauen ohne die
+                    Mühe des täglichen Schminkens haben möchten.
                   </p>
                 </Link>
               </div>
@@ -118,10 +121,11 @@ function Services() {
                   <Image
                     src="/services5.jpg"
                     alt="services"
-                    width={500}
-                    height={500}
-                    sizes="100vw"
+                    width={358}
+                    height={300}
+                    sizes="(max-width: 1100px) 100vw, 600px"
                     priority={true}
+                    // layout="responsive"
                     style={{
                       objectFit: "cover",
                       borderRadius: "1em",
@@ -129,24 +133,25 @@ function Services() {
                     className={styles["services-image"]}
                   />
                   <h1 className={styles["services-title-4"]}>
-                    Eyelashes Microblading
+                    Wimpern-Microblading
                   </h1>
                   <p className={styles["services-subtitle-4"]}>
-                    Our permanent eyelashes microblading services offers a
-                    variety of styles and colors to suit your needs.
+                    Unsere permanenten Wimpern-Microblading-Services bieten eine
+                    Vielzahl von Stilen und Farben, um Ihren Bedürfnissen
+                    gerecht zu werden.
                   </p>
                 </Link>
               </div>
             </div>
           </div>
-        </div>
-        <div className={styles["services-btn-container"]}>
           <ScrollHorizontalIcon />
-          <Link href="/services">
-            <button className={styles["services-button"]}>
-              Alle Dienstleistungen
-            </button>
-          </Link>
+          <div className={styles["services-btn-container"]}>
+            <Link href="/services">
+              <button className={styles["services-button"]}>
+                Alle Dienstleistungen
+              </button>
+            </Link>
+          </div>
         </div>
       </main>
     </>

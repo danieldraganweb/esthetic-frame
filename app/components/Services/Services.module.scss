@@ -7,37 +7,71 @@
   padding: 15px 0;
   width: 100%;
   max-width: 1100px;
-  border-radius: 1em;
+  border-radius: 0.5em;
   margin: 0 auto;
   display: flex;
   justify-content: left;
   align-items: center;
+  border: 1px solid $quaternary-color;
+  // background-color: $quinary-color;
+  margin-bottom: 1em;
 
   h1 {
-    font-size: $font-size-desktop;
+    font-size: clamp($font-size-tablet, 1vw, $font-size-desktop);
     font-weight: 400;
     text-align: center;
+    padding-left: 0.3em;
   }
 }
+
 .services-container {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   border-radius: 1em;
   margin-bottom: 2em;
+
+  svg {
+    margin: 0 auto;
+    margin-top: 0.5em;
+  }
+
+  ::-webkit-scrollbar {
+    background-color: $quinary-color;
+    width: 100%;
+    height: 0.5em;
+    border-radius: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $quaternary-color;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $quinary-color;
+    border-radius: 1em;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $quaternary-color;
+  }
+
+  .snaps-inline>* {
+    scroll-snap-align: center;
+    scroll-padding-inline: 1rem;
+    scroll-snap-type: inline mandatory;
+  }
 }
 
-.services-image {
-  width: 100%;
-  max-width: 1100px;
-  height: auto;
-  border-radius: 1em;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-bottom: 0.7em;
+.snaps-inline>* {
+  scroll-snap-align: center;
+  scroll-padding-inline: 1rem;
+  scroll-snap-type: inline mandatory;
 }
+
 .services-title-container-2 {
   display: grid;
   grid-auto-flow: column;
@@ -52,7 +86,9 @@
     font-weight: 400;
     color: $primary-color;
     margin-bottom: 0.5em;
+    padding-left: 0.2em;
   }
+
   h1:active {
     display: inline-block;
     padding-bottom: 0.3em;
@@ -66,18 +102,17 @@
   }
 
   p {
-    font-size: $font-size-mobile;
-    font-weight: 400;
+    font-size: clamp(1rem, 1.5vw, 2.5rem);
+    font-weight: 100;
     color: $primary-color;
-    font-family: $primary-font;
-    // margin-bottom: 1.5em;
+    font-family: $secondary-font;
+    margin-bottom: 1.5em;
+    line-height: 1.3;
+    width: 95%;
+    padding-left: 0.2em;
   }
 
-  p + p {
-    margin-bottom: 2.5em;
-  }
-
-  p + p {
+  p+p {
     margin-bottom: 2.5em;
   }
 
@@ -85,10 +120,11 @@
     cursor: pointer;
   }
 }
+
 .service-item {
   width: 100%;
   height: auto;
-  border-radius: 1em;
+  border-radius: 0.5em;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -102,14 +138,11 @@
     inline-size: 100%;
     // box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     background-size: contain;
+    margin-bottom: 0.7em;
   }
 }
 
-.snaps-inline > * {
-  scroll-snap-align: center;
-  scroll-padding-inline: 1rem;
-  scroll-snap-type: inline mandatory;
-}
+
 
 .services-btn-container {
   display: flex;
@@ -122,61 +155,147 @@
   margin: 0 auto;
   margin-bottom: 2em;
 
+
   button {
-    font-size: $font-size-mobile;
-    font-weight: 400;
-    color: $primary-color;
     background-color: $secondary-color;
+    color: $primary-color;
     border: 1px solid $quaternary-color;
-    border-radius: 0.2em;
-    padding: 0.5em 1em;
-    cursor: pointer;
+    border-radius: 4.5em;
+    font-size: clamp($font-size-mobile, 1vw, $font-size-desktop-wide);
+    display: inline-block;
     font-family: $primary-font;
+    font-weight: 400;
+    margin: 1em 0;
+    box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+    padding: 1em 2.5em 1em 2.5em;
   }
 
-  button:hover {
-    background-color: $primary-accent-color;
-    color: $secondary-color;
+  .button:hover {
+    transform: scale(1.02);
+    background-color: lighten($quaternary-color, $amount: 10%);
+    cursor: pointer;
   }
+
+  .button:active {
+    transform: scale(1.01);
+    // transition: all 0.2s ease-out;
+  }
+
 }
 
-// Desktop
+// Tablet
 
-@media screen and (min-width: 768px) {
-  .services-btn-container {
-    button {
-      font-size: $font-size-tablet;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    }
+@include respond(sm) {
+  .services-main {
+    background-color: $secondary-color;
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    margin: 0 auto;
+    // padding: 0 1em;
+    padding: 0 1em;
   }
 
   .services-container {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1200px;
     display: flex;
     flex-direction: row;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     align-items: center;
-    box-sizing: border-box;
-    gap: 2em;
-    border-radius: 1em;
-    // padding: 1em;
+
+    // padding: 1em 0 1em 0;
+
+    ::-webkit-scrollbar {
+      background-color: $quinary-color;
+      width: 100%;
+      height: 0.5em;
+
+
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: $quaternary-color;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: $quinary-color;
+      border-radius: 1em;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: $quaternary-color;
+    }
+
+    .snaps-inline>* {
+      scroll-snap-align: center;
+      scroll-padding-inline: 1rem;
+      scroll-snap-type: inline mandatory;
+    }
   }
-  .services-title-container-2 {
-    grid-auto-flow: column;
-    grid-auto-columns: 20%;
+
+  .services-title-container-1 {
     width: 100%;
     max-width: 1100px;
-    gap: 9.5rem;
+    margin: 0 0 1em 0;
+    border: 1px solid $quaternary-color;
+    // background-color: $quinary-color;
+    border-radius: 0.5em;
+    padding: 1em 0.5em;
 
     h1 {
-      font-size: $font-size-desktop;
+      font-size: clamp($font-size-desktop-wide, 2vw, $font-size-desktop-wide);
+      font-weight: 100;
+      color: $primary-color;
+      padding-left: 0.5em;
+      cursor: default;
+    }
+  }
+
+  .services-title-container-2 {
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 35%;
+    gap: 1em;
+    overflow-x: scroll;
+    overscroll-behavior-inline: contain;
+
+
+    h1 {
+      font-size: clamp($font-size-desktop, 1vw, $font-size-desktop-wide);
+      font-weight: 400;
+      color: $primary-color;
+      margin-bottom: 0.5em;
+      padding-left: 0.2em;
+    }
+
+    h1:active {
+      display: inline-block;
+      border-bottom: 2px solid $quaternary-color;
+      padding-bottom: 0.3em;
+      cursor: pointer;
+      margin: 0 auto;
+    }
+
+    h1:hover {
+      cursor: pointer;
+      display: inline-block;
     }
 
     p {
-      font-size: $font-size-tablet;
-      // font-family: $primary-font;
+      font-size: clamp(1.125rem, 1vw, 2.5rem);
+      font-weight: 400;
+      color: $primary-color;
+      margin-bottom: 0.5em;
+      font-family: $secondary-font;
+      padding-left: 0.2em;
+      line-height: 1.5;
     }
   }
 
@@ -185,7 +304,8 @@
     flex-direction: column;
     width: 350px;
     height: 500px;
-    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 1em;
+
 
     img {
       width: 100%;
@@ -194,93 +314,112 @@
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: cover;
+      // box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.3);
+
     }
 
     .img:hover {
-      // transform: scale(1.02);
-      // transition: all 0.2s ease-in-out;
       cursor: pointer;
     }
   }
 
-  .services-image {
-    width: 100%;
-    height: auto;
-    border-radius: 1em;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  .services-btn-container {
+
+    button {
+      background-color: $secondary-color;
+      color: $primary-color;
+      border: 1px solid $quaternary-color;
+      border-radius: 4.5em;
+      font-size: clamp($font-size-mobile, 1vw, $font-size-desktop-wide);
+      display: inline-block;
+      font-family: $primary-font;
+      font-weight: 400;
+      margin: 1em 0;
+      box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+      padding: 1em 2.5em 1em 2.5em;
+      cursor: pointer;
+    }
+
+    button:hover {
+      transform: scale(1.02);
+      background-color: $quinary-color;
+      cursor: pointer;
+    }
   }
-  .services-title-container-1 {
-    flex-basis: 100%;
+}
+
+// Desktop
+
+@include respond(xl) {
+  .services-main {
+    background-color: $secondary-color;
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 1em;
+  }
+
+  .services-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    // padding: 1em 0 1em 0;
+
+    .snaps-inline>* {
+      scroll-snap-align: center;
+      scroll-padding-inline: 1rem;
+      scroll-snap-type: inline mandatory;
+    }
   }
 
   .services-title-container-1 {
-    flex-basis: 100%;
-    gap: 1em;
-    margin: 3em 0 0 0;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 0 1em 0;
+    border: 1px solid $quaternary-color;
     // background-color: $quinary-color;
+    border-radius: 0.5em;
+    padding: 1em 0.5em;
 
     h1 {
-      font-size: 2.2em;
+      font-size: clamp($font-size-desktop, 2vw, $font-size-desktop-wide);
       font-weight: 100;
       color: $primary-color;
-      padding-left: 0.2em;
-    }
-
-    h1:active {
-      display: inline-block;
-      border-bottom: 12px solid $quaternary-color;
-      padding-bottom: 0.3em;
-      cursor: pointer;
-      margin: 0 auto;
-      margin-bottom: 0.2em;
-    }
-
-    h1:hover {
-      // transform: scale(1.1);
-      // transition: all 0.2s ease-in-out;
-      cursor: pointer;
-    }
-
-    .services-title-container-2 {
-      flex-basis: 100%;
-      gap: 1em;
-
-      h1 {
-        h1 {
-          font-size: 1.8em;
-          font-weight: 600;
-          color: $primary-color;
-          margin-bottom: 1em;
-          padding-left: 0.2em;
-        }
-        h1:active {
-          display: inline-block;
-          border-bottom: 2px solid $quaternary-color;
-          padding-bottom: 0.3em;
-          cursor: pointer;
-          margin: 0 auto;
-        }
-
-        p {
-          p {
-            font-size: 1.2em;
-            font-weight: 400;
-            color: $primary-color;
-            margin-bottom: 0.5em;
-            font-family: $primary-font;
-            padding-left: 0.2em;
-          }
-
-          h1:hover {
-            cursor: pointer;
-            display: inline-block;
-          }
-        }
-      }
+      padding-left: 0.5em;
+      cursor: default;
     }
   }
+
+  .services-title-container-2 {
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 35%;
+    gap: 1em;
+    overflow-x: scroll;
+    overscroll-behavior-inline: contain;
+  }
+}
+
+// Desktop Wide
+
+@include respond(2xl) {
+  .services-main {
+    background-color: $secondary-color;
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 1em;
+  }
+
 }
