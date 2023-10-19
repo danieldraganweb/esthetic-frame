@@ -27,11 +27,11 @@
   max-width: 100%;
   box-sizing: border-box;
   background-color: lighten($quaternary-color, $amount: 10%);
-  border-radius: 0.5em;
+  border-radius: 0 0 0.5em 0.5em;
   border-top: none;
 
   .hero-title {
-    font-size: $font-size-desktop-wide;
+    font-size: $font-size-desktop;
     font-weight: 400;
     color: $primary-accent-color;
     display: flex;
@@ -43,12 +43,12 @@
     text-align: start;
     box-sizing: border-box;
     margin-top: 0.5em;
-    padding: 0 0.2em;
+    padding: 0 0.25em;
   }
 
   .hero-subtitle {
-    font-size: clamp($font-size-mobile, 1vw, $font-size-desktop-wide);
-    font-weight: 100;
+    font-size: clamp($font-size-mobile, 1vw, $font-size-desktop);
+    font-weight: 400;
     color: $primary-color;
     margin-bottom: 0.5em;
     width: 100%;
@@ -85,19 +85,8 @@
   padding: 0 1em;
   gap: 1em;
 
-  button:hover {
-    transform: scale(1.1);
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-  }
-
-  button:active {
-    transform: scale(0.9);
-    transition: all 0.2s ease-in-out;
-  }
 
   .hero-btn-1 {
-
     background-color: lighten($primary-color, $amount: 20%);
     color: $secondary-color;
     border-radius: 1.5em;
@@ -123,17 +112,12 @@
   }
 }
 
-
-
-
 @include respond(md) {
   .hero-section {
     width: 100%;
     max-width: 1100px;
     box-sizing: border-box;
-    // margin: 0 3em;
-    // padding: 0 1em;
-    // border: 3px solid red;
+    padding: 0 1rem;
   }
 
   .hero-container {
@@ -276,7 +260,7 @@
 @include respond(xl) {
   .hero-section {
     width: 100%;
-    padding: none;
+    padding: 0;
   }
 
   .hero-container {
