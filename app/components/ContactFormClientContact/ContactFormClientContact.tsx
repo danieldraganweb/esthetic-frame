@@ -64,9 +64,7 @@ function ContactFormClientContact() {
             className={styles["contact-form-label"]}
           ></label>
           <Link href="/book">
-            <button className={styles["contact-form-button"]}>
-              Einen Beratungstermin vereinbaren
-            </button>
+            <button className={styles["contact-form-button"]}>Buchen</button>
           </Link>
         </div>
       </main>
