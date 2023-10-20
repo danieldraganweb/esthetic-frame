@@ -4,26 +4,30 @@
 @use "./app/styles/utils/_functions" as *;
 
 .contact-form-main {
-  background-color: $quinary-color;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   width: 100%;
   max-width: 1100px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
 }
 
-.contact-form-image-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 1rem;
-  }
+.contact-form-main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 0.5rem;
+  background: url(/contact-bg.jpg);
+  opacity: 0.60;
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .contact-form-container {
@@ -34,25 +38,26 @@
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  background-color: $quinary-color;
   border-radius: 1rem;
 }
 
 .contact-form-title {
-  font-size: $font-size-desktop-wide;
+  font-size: clamp($font-size-desktop, 1.5vw, $font-size-desktop-wide);
   font-weight: 400;
   margin-bottom: 1rem;
-  color: $primary-accent-color;
+  color: $primary-color;
   text-align: center;
 }
 
 .contact-form-subtitle {
-  font-size: $font-size-x-small;
+  font-size: clamp($font-size-mobile-wide, 1.5vw, $font-size-tablet);
   margin-bottom: 1rem;
   color: $primary-color;
   text-align: center;
-  padding: 0 1rem;
-  font-family: $primary-font;
+  padding: 0 4rem;
+  font-family: $secondary-font;
+  line-height: 1.5;
+  font-weight: 100;
 }
 
 .contact-form-input {
@@ -63,37 +68,62 @@
   border-radius: 0.5rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
   background-color: $secondary-color;
+  font-family: $primary-font;
+  font-size: clamp($font-size-mobile-wide, 1.5vw, $font-size-tablet);
 }
 
 .contact-form-label {
-  font-size: 1rem;
+  font-size: clamp($font-size-mobile-wide, 1.5vw, $font-size-tablet);
   margin-bottom: 0.5rem;
 }
 
 .contact-form-button {
-  padding: 0.8rem 1.2rem;
-  background-color: $primary-color;
+  display: inline block;
+  background-color: lighten($primary-color, $amount: 20%);
   color: $secondary-color;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 1.5em;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
+  font-size: clamp($font-size-mobile-wide, 1.5vw, $font-size-tablet);
+  font-family: $primary-font;
+  box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+  padding: 1em 2.5em 1em 2.5em;
+  margin: 2em 0 1em 0;
 }
 
 .contact-form-button:hover {
   background-color: darken($primary-color, 30%);
 }
 
-@media screen and (min-width: 768px) {
+@include respond(md) {
   .contact-form-main {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    background-color: $quinary-color;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 1100px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
   }
+
+  .contact-form-main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 0.5rem;
+    background: url(/contact-bg.jpg);
+    opacity: 0.80;
+    z-index: -1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
   .contact-form-container {
     width: 100%;
     max-width: 1100px;
@@ -101,23 +131,27 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
-    background-color: $quinary-color;
+    padding: 1rem;
     border-radius: 1rem;
   }
 
   .contact-form-title {
-    font-size: $font-size-desktop-ultra-ultra-wide;
+    font-size: clamp($font-size-desktop, 1.5vw, $font-size-desktop-wide);
     font-weight: 400;
     margin-bottom: 1rem;
-    color: $primary-accent-color;
+    color: $primary-color;
+    text-align: center;
   }
 
   .contact-form-subtitle {
-    font-size: $font-size-tablet;
-    margin-bottom: 3rem;
+    font-size: clamp($font-size-mobile-wide, 1.5vw, $font-size-tablet);
+    margin-bottom: 1rem;
     color: $primary-color;
-    // padding: 0 4rem;
+    text-align: center;
+    padding: 0 4rem;
+    font-family: $secondary-font;
+    line-height: 1.5;
+    font-weight: 100;
   }
 
   .contact-form-input {
@@ -128,28 +162,142 @@
     border-radius: 0.5rem;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
     background-color: $secondary-color;
+    font-family: $primary-font;
+    font-size: clamp($font-size-mobile-wide, 1.5vw, $font-size-tablet);
   }
 
   .contact-form-label {
-    font-size: $font-size-desktop-wide;
+    font-size: clamp($font-size-mobile-wide, 1.5vw, $font-size-tablet);
     margin-bottom: 0.5rem;
   }
 
   .contact-form-button {
-    padding: 0.8rem 1.2rem;
-    background-color: $secondary-color;
-    color: $primary-color;
+    display: inline block;
+    background-color: lighten($primary-color, $amount: 20%);
+    color: $secondary-color;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 1.5em;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
-    margin-top: 3rem;
+    font-size: clamp($font-size-mobile-wide, 1.5vw, $font-size-tablet);
     font-family: $primary-font;
+    box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+    padding: 1em 2.5em 1em 2.5em;
+    margin: 2em 0 1em 0;
   }
 
   .contact-form-button:hover {
-    background-color: $primary-accent-color;
+    background-color: darken($primary-color, 30%);
+  }
+}
+
+// Tablet Wide
+
+@include respond(md) {
+  .contact-form-main {
+    padding: 2rem 8rem;
+    margin: 0 1em;
+  }
+
+  .contact-form-main {
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 1100px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+  }
+
+  .contact-form-main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 0.5rem;
+    background: url(/contact-bg.jpg);
+    opacity: 0.60;
+    z-index: -1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .contact-form-title {
+    font-size: clamp($font-size-desktop-ultra-wide, 1.5vw, $font-size-desktop-ultra-ultra-wide);
+
+  }
+
+  .contact-form-subtitle {
+    font-size: clamp($font-size-mobile-wide, 1.5vw, $font-size-tablet);
+
+  }
+
+  .contact-form-input {
+
+    font-size: clamp($font-size-mobile-wide, 1.5vw, $font-size-tablet);
+  }
+
+  .contact-form-label {
+    font-size: clamp($font-size-mobile-wide, 1.5vw, $font-size-tablet);
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-form-button {
+    display: inline block;
+    background-color: lighten($primary-color, $amount: 20%);
     color: $secondary-color;
+    border: none;
+    border-radius: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    font-size: clamp($font-size-mobile-wide, 1.5vw, $font-size-tablet);
+    font-family: $primary-font;
+    box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+    padding: 1em 2.5em 1em 2.5em;
+    margin: 2em 0 1em 0;
+  }
+
+  .contact-form-button:hover {
+    background-color: darken($primary-color, 30%);
+  }
+}
+
+// Desktop
+
+@include respond(xl) {
+  .contact-form-main {
+    padding: 2rem 8rem;
+    margin: 0 1em;
+  }
+
+  .contact-form-main {
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 1100px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+  }
+
+  .contact-form-main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 0.5rem;
+    background: url(/contact-bg.jpg);
+    opacity: 0.60;
+    z-index: -1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
