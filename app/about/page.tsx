@@ -14,24 +14,23 @@ function About() {
                 <Image
                   src="/team-member-1.jpg"
                   alt="Team Member 1"
-                  width={335}
-                  height={500}
-                  // layout="responsive"
+                  width={380}
+                  height={577}
                   sizes="(max-width: 500px) 100vw, 500px"
                   loading="eager"
-                  // style={{
-                  //   borderRadius: "50%",
-                  //   objectFit: "cover",
-                  // }}
                 ></Image>
                 <div className={styles["team-member-hero"]}>
                   <h1 className={styles.description}>
-                    I&rsquo;m Alexandra Ivan, founder and permanent makeup
-                    artist at Esthetic Frame. I&rsquo;m so excited to share my
-                    journey with you and I can&rsquo;t wait to help you discover
-                    your natural radiance. Welcome to the world of timeless
-                    beauty, where passion meets precision and the art of
-                    transformation knows no bounds.
+                    Ich bin Alexandra Ivan, Gründerin und Permanent
+                    Make-up-Künstlerin bei Esthetic Frame. Ich freue mich sehr,
+                    meine Reise mit Ihnen zu teilen, und ich kann es kaum
+                    erwarten, Ihnen zu helfen, Ihre natürliche Strahlkraft zu
+                    entdecken.
+                  </h1>
+                  <h1>
+                    Willkommen in der Welt zeitloser Schönheit, wo Leidenschaft
+                    auf Präzision trifft und die Kunst der Verwandlung keine
+                    Grenzen kennt.
                   </h1>
                   <div className={styles["star-logo"]}>
                     <Image
@@ -44,7 +43,7 @@ function About() {
                       loading="lazy"
                     ></Image>
                     <h1>Kamila Stetsenko</h1>
-                    <p>Permanent Make-up Academy Artist Graduate</p>
+                    <p>Absolvent der Permanent Make-up-Akademie</p>
                   </div>
                 </div>
               </div>
@@ -52,59 +51,66 @@ function About() {
                 <ul>
                   <li>
                     <p className={styles.description}>
-                      With over five years of experience in the world of
-                      cosmetics, my journey has been nothing short of
-                      enchanting. It all began with a deep-rooted passion for
-                      beauty, particularly when it comes to the exquisite canvas
-                      of the face. If there&rsquo;s one thing that has always
-                      fascinated me, it&rsquo;s the incredible power of eyebrows
-                      to enhance one&rsquo;s natural beauty.
+                      &nbsp;&nbsp;Mit über fünf Jahren Erfahrung in der Welt der
+                      Kosmetik war meine Reise nichts weniger als bezaubernd.
+                      Alles begann mit einer tief verwurzelten Leidenschaft für
+                      Schönheit, insbesondere wenn es um die exquisite Leinwand
+                      des Gesichts geht. Wenn es etwas gibt, das mich immer
+                      fasziniert hat, dann ist es die unglaubliche Kraft von
+                      Augenbrauen, die die natürliche Schönheit eines Menschen
+                      unterstreichen.
                     </p>
                   </li>
                   <li>
                     <p className={styles.description}>
-                      In my quest for excellence, I sought knowledge from the
-                      very best. Elena Copaceanu, a renowned figure in the field
-                      of permanent makeup artistry in Romania, became my mentor.
-                      Under her expert guidance, I honed my skills and developed
-                      a deep understanding of the art, particularly in the realm
-                      of the natural style. Elena&rsquo;s influence on my work
-                      has been invaluable, and I&rsquo;m proud to say that I
-                      carry forward her legacy in every hair stroke I make.
+                      &nbsp;&nbsp;In meinem Streben nach Exzellenz suchte ich
+                      Wissen bei den Besten. Elena Copaceanu, eine renommierte
+                      Persönlichkeit auf dem Gebiet der Permanent Make-up-Kunst
+                      in Rumänien, wurde meine Mentorin. Unter ihrer
+                      fachkundigen Anleitung schärfte ich meine Fähigkeiten und
+                      entwickelte ein tiefes Verständnis für die Kunst,
+                      insbesondere im Bereich des natürlichen Stils. Elenas
+                      Einfluss auf meine Arbeit war von unschätzbarem Wert, und
+                      ich bin stolz darauf zu sagen, dass ich ihr Erbe in jedem
+                      einzelnen Haarstrich fortführe.
                     </p>
                   </li>
                   <li>
                     <p className={styles.description}>
-                      But the journey didn&rsquo;t stop there. The pursuit of
-                      perfection is relentless, and I knew there was more to
-                      explore. This led me to a global endeavor, as I joined the
-                      prestigious Sviato Academy, renowned worldwide for its
-                      excellence in permanent makeup artistry. Here, I&rsquo;ve
-                      had the privilege of learning from some of the best in the
-                      business, gaining insights and techniques that are not
-                      just innovative but also ensure that your beauty remains
-                      timeless.
+                      &nbsp;&nbsp;Aber die Reise endete hier nicht. Die
+                      Verfolgung der Perfektion ist unermüdlich, und ich wusste,
+                      dass es noch mehr zu erkunden gab. Dies führte mich zu
+                      einem globalen Unternehmen, als ich der angesehenen Sviato
+                      Academy beitrat, die weltweit für ihre Exzellenz in der
+                      Permanent Make-up-Kunst bekannt ist. Hier hatte ich das
+                      Privileg, von einigen der Besten der Branche zu lernen,
+                      Erkenntnisse und Techniken zu gewinnen, die nicht nur
+                      innovativ sind, sondern auch sicherstellen, dass Ihre
+                      Schönheit zeitlos bleibt.
                     </p>
                   </li>
                   <li>
                     <p className={styles.description}>
-                      For me, permanent makeup isn&rsquo;t just a job;
-                      it&rsquo;s an art, a calling, and a commitment to
-                      enhancing your natural allure. With every client I work
-                      with, I strive for quality, precision, and a
-                      transformation that leaves you feeling like the best
-                      version of yourself. Welcome to my world of permanent
-                      makeup, where beauty is my top priority, and your face
-                      becomes the canvas upon which I create masterpieces. I
-                      can&rsquo;t wait to embark on this journey with you,
-                      making your beauty truly everlasting.
+                      &nbsp;&nbsp;Für mich ist Permanent Make-up nicht nur ein
+                      Beruf; es ist eine Kunst, eine Berufung und ein
+                      Engagement, um Ihre natürliche Anziehung zu steigern. Mit
+                      jedem Kunden, den ich betreue, strebe ich nach Qualität,
+                      Präzision und einer Verwandlung, die Sie fühlen lässt, wie
+                      die beste Version Ihrer selbst. Willkommen in meiner Welt
+                      des Permanent Make-up, in der Schönheit oberste Priorität
+                      hat und Ihr Gesicht zur Leinwand wird, auf der ich
+                      Meisterwerke schaffe. Ich kann es kaum erwarten, diese
+                      Reise mit Ihnen anzutreten und Ihre Schönheit wirklich
+                      unvergänglich zu machen.
                     </p>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          <Contact />
+          <div className={styles["contact-container"]}>
+            <Contact />
+          </div>
         </div>
       </main>
     </>
