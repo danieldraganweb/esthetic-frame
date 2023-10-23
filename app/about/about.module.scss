@@ -26,13 +26,13 @@
 
   h1 {
     font-size: $font-size-desktop;
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
     color: $primary-accent-color;
     text-align: center;
   }
 
   li {
-    margin-bottom: 1.5em;
+    margin-bottom: 0.5em;
   }
 }
 
@@ -78,7 +78,7 @@
   margin-bottom: 1em;
 
   h1 {
-    margin-bottom: 1em;
+    margin-bottom: 0.3em;
     line-height: 1.5;
     letter-spacing: normal;
     text-align: center;
@@ -128,9 +128,7 @@
   }
 }
 
-
-
-//Desktop
+//Tablet
 
 @include respond(sm) {
   .about-container {
@@ -161,7 +159,7 @@
     }
 
     li {
-      margin-bottom: 1.5em;
+      margin-bottom: 0.5em;
     }
   }
 
@@ -286,7 +284,7 @@
     }
 
     li {
-      margin-bottom: 1.5em;
+      margin-bottom: 0.5em;
     }
   }
 
@@ -362,7 +360,7 @@
     }
 
     p {
-      line-height: 1.5;
+      line-height: 1;
       letter-spacing: normal;
       text-align: center;
       text-justify: center;
@@ -415,7 +413,7 @@
     }
 
     li {
-      margin-bottom: 1.5em;
+      margin-bottom: 0.5em;
     }
   }
 
@@ -546,7 +544,7 @@
     }
 
     li {
-      margin-bottom: 1.5em;
+      margin-bottom: 0.5em;
     }
   }
 
