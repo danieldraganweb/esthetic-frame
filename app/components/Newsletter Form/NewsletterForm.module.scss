@@ -1,0 +1,32 @@
+@use "./app/styles/base/_typography" as *;
+@use "./app/styles/base/_variables" as *;
+@use "./app/styles/utils/_mixins" as *;
+@use "./app/styles/utils/_functions" as *;
+
+// Mobile first
+
+.newsletter-form-container {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    // border: 1px solid $quaternary-color;
+    margin: 0 auto;
+    border-radius: 0.5em;
+    margin: 2em 0;
+
+}
+
+
+
+.newsletter-form-iframe {
+    width: 100%;
+    border: none;
+    border-radius: 0.5em;
+
+    // iframe {
+
+    // }
+}

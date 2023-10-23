@@ -198,7 +198,7 @@
 @include respond(md) {
   .contact-form-main {
     padding: 2rem 8rem;
-    margin: 0 1em;
+    // margin: 0 1em;
   }
 
   .contact-form-main {
@@ -275,7 +275,7 @@
 @include respond(xl) {
   .contact-form-main {
     padding: 2rem 8rem;
-    margin: 0 1em;
+    margin: 0 auto;
   }
 
   .contact-form-main {
@@ -309,7 +309,7 @@
 @include respond(2xl) {
   .contact-form-main {
     padding: 2rem 5rem;
-    margin: 0 1em;
+    // margin: 0 1em;
   }
 
   .contact-form-main {

@@ -3,12 +3,16 @@ import Link from "next/link";
 import styles from "./Footer.module.scss";
 import InstagramSVG from "../SocialMedia/InstagramSVG";
 import FacebookSVG from "../SocialMedia/FacebookSVG";
+import NewsletterForm from "../Newsletter Form/NewsletterForm";
 
 const Footer: React.FC = () => {
   return (
     <>
       <footer className={styles.footer}>
         <div className={styles.footerSocial}>
+          {/* <div className={styles["newsletter-form-iframe"]}>
+            <NewsletterForm />
+          </div> */}
           <label htmlFor="email" className={styles.emailLabel}>
             Subscribe to our newsletter
           </label>
