@@ -32,6 +32,14 @@ function HeroSection() {
                 Erlebe die Bequemlichkeit und das Selbstbewusstsein eines
                 makellosen Make-ups, das den ganzen Tag, jeden Tag hält!
               </p>
+              <p
+                className={styles["hero-subtitle"]}
+                style={{ fontStyle: "italic" }}
+              >
+                &ldquo;Ich glaube, dass alle Frauen ohne Make-up hübsch sind und
+                mit dem richtigen Make-up auch sehr selbstbewusst wirken
+                können.&rdquo; - Bobbi Brown
+              </p>
               <div className={styles["hero-button-container"]}>
                 <Link href="/book">
                   <button className={styles["hero-btn-1"]}>Jetzt Buchen</button>
