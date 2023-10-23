@@ -3,7 +3,7 @@
 @use './app/styles/utils/_mixins' as *;
 @use './app/styles/utils/_functions' as *;
 
-.book-container{
+.book-container {
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
@@ -15,10 +15,14 @@
     margin-bottom: 3em;
 
 
-    iframe{
+    .airtable-embed {
         border: none;
         border-radius: 0.5em;
         text-align: center;
+        background-color: $quaternary-color;
+        border-radius: 0.5em;
+        border: 1px solid $quaternary-color;
+
     }
-    
+
 }
