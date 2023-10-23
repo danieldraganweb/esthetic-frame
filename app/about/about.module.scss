@@ -3,14 +3,7 @@
 @use "./app/styles/utils/_mixins" as *;
 @use "./app/styles/utils/_functions" as *;
 
-.about-image-container {
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 0.5em;
-  }
-}
+
 .about-container {
   display: flex;
   flex-direction: column;
@@ -37,20 +30,9 @@
     color: $primary-accent-color;
     text-align: center;
   }
-  p {
+
+  li {
     margin-bottom: 1.5em;
-    font-size: $font-size-mobile;
-    text-align: center;
-    letter-spacing: 0.05em;
-    font-family: $primary-font;
-  }
-  li + li {
-    margin-bottom: 1.5em;
-  }
-  a {
-    color: $primary-color;
-    text-decoration: none;
-    font-weight: bold;
   }
 }
 
@@ -60,9 +42,19 @@
   justify-content: center;
 }
 
+.team-member-container {
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5em;
+  }
+}
+
 .team-image-container {
   width: 100%;
   height: 100%;
+
   img {
     width: 100%;
     height: 100%;
@@ -70,30 +62,33 @@
     border-radius: 0.5em;
     margin-bottom: 1em;
   }
+
   h1 {
     font-size: $font-size-tablet;
     margin-bottom: 0.5em;
     color: $primary-accent-color;
     text-align: center;
+    font-style: italic;
   }
 }
 
-.team-member {
-  p {
-    margin-bottom: 1.5em;
-    font-size: $font-size-mobile;
-    text-align: justify;
-    text-justify: newspaper;
-  }
-}
+
 
 .team-member-hero {
+  margin-bottom: 1em;
+
   h1 {
     margin-bottom: 1em;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    text-justify: center;
+    font-family: $secondary-font;
   }
 }
 
 .star-logo {
+  margin-top: 2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -101,28 +96,54 @@
   width: 100%;
   height: auto;
   margin-bottom: 2em;
+
   img {
     width: 3.5em;
     height: 3.5em;
   }
+
+  p {
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    text-justify: center;
+    font-family: $secondary-font;
+    font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
+  }
 }
+
+.team-member {
+  width: 100%;
+  max-width: 1100px;
+
+  .description {
+    width: 100%;
+    margin: 0 auto;
+    text-align: justify;
+    text-justify: newspaper;
+    font-family: $secondary-font;
+    line-height: 1.6;
+    letter-spacing: normal;
+    font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
+  }
+}
+
+
 
 //Desktop
 
-@media screen and (min-width: 768px) {
+@include respond(sm) {
   .about-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    margin: 0 auto;
     width: 100%;
     max-width: 1100px;
-    margin: 0 auto;
-    margin-top: 1em;
-    // border: 1px solid $quaternary-color;
     box-sizing: border-box;
     border-radius: 0.5em;
-    padding: 1em 0;
+    padding: 1em;
     margin-bottom: 1em;
     // background-color: $quinary-color;
     color: $primary-color;
@@ -131,46 +152,159 @@
     box-sizing: border-box;
     cursor: pointer;
     text-align: center;
+
     h1 {
-      font-size: $font-size-desktop-wide;
-      margin-bottom: 0.5em;
+      font-size: $font-size-desktop;
+      margin-bottom: 1.5em;
       color: $primary-accent-color;
       text-align: center;
     }
-    p {
-      margin-bottom: 0.5em;
-      font-size: $font-size-tablet;
-      text-align: center;
-      letter-spacing: 0.05em;
-      width: 90%;
-      margin: 0 auto;
-    }
-    li + li {
-      margin-bottom: 2.5em;
-    }
-    a {
-      color: $primary-color;
-      text-decoration: none;
-      font-weight: bold;
+
+    li {
+      margin-bottom: 1.5em;
     }
   }
-  .about-image-container {
+
+  .team-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .team-member-container {
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 0.5em;
+    }
+  }
+
+  .team-image-container {
     width: 100%;
     height: 100%;
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       border-radius: 0.5em;
+      margin-bottom: 1em;
+    }
+
+    h1 {
+      font-size: $font-size-tablet;
+      margin-bottom: 0.5em;
+      color: $primary-accent-color;
+      text-align: center;
+      font-style: italic;
+    }
+  }
+
+
+
+  .team-member-hero {
+    margin-bottom: 1em;
+
+    h1 {
+      margin-bottom: 1em;
+      line-height: 1.5;
+      letter-spacing: normal;
+      text-align: center;
+      text-justify: center;
+      font-family: $secondary-font;
+    }
+  }
+
+  .star-logo {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2em;
+
+    img {
+      width: 3.5em;
+      height: 3.5em;
+    }
+
+    p {
+      line-height: 1.5;
+      letter-spacing: normal;
+      text-align: center;
+      text-justify: center;
+      font-family: $secondary-font;
+      font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
+    }
+  }
+
+  .team-member {
+    width: 100%;
+    max-width: 1100px;
+
+    .description {
+      width: 100%;
+      margin: 0 auto;
+      text-align: justify;
+      text-justify: newspaper;
+      font-family: $secondary-font;
+      line-height: 1.6;
+      letter-spacing: normal;
+      font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
+    }
+  }
+}
+
+@include respond(md) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1100px;
+    box-sizing: border-box;
+    border-radius: 0.5em;
+    padding: 1em;
+    margin-bottom: 1em;
+    color: $primary-color;
+    font-size: $font-size-small;
+    letter-spacing: 0.05em;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+
+    h1 {
+      font-size: $font-size-desktop;
+      margin-bottom: 1.5em;
+      color: $primary-accent-color;
+      text-align: center;
+    }
+
+    li {
       margin-bottom: 1.5em;
     }
   }
 
-  .hero {
-    p {
-      margin-bottom: 1.5em;
+  .team-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .team-member-container {
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 0.5em;
     }
   }
+
   .team-image-container {
     width: 100%;
     height: 100%;
@@ -178,60 +312,340 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 1em;
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
+
     img {
       width: 50%;
-      object-fit: contain;
-      background-position: center;
+      height: auto;
+      object-fit: cover;
       border-radius: 0.5em;
+      margin-bottom: 1em;
     }
+
     h1 {
-      font-size: $font-size-desktop-wide;
+      font-size: clamp($font-size-tablet, 1vw, $font-size-desktop);
       margin-bottom: 0.5em;
       color: $primary-accent-color;
       text-align: center;
+      padding: 0 1em;
+      font-style: italic;
     }
   }
 
-  .team-member {
-    .description {
-      width: 100%;
-      margin: 0 auto;
-      text-align: justify;
-      text-justify: newspaper;
-    }
-    li {
-      margin-bottom: 1.5em;
+  .team-member-hero {
+    margin-bottom: 1em;
+
+    .description h1 {
+      margin-bottom: 1em;
+      line-height: 1.5;
+      letter-spacing: normal;
+      text-align: center;
+      text-justify: center;
+      font-family: $secondary-font;
+      font-size: clamp($font-size-tablet, 1vw, $font-size-desktop);
     }
   }
 
   .star-logo {
+    margin-top: 2em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: auto;
+    margin-bottom: 2em;
+
     img {
-      width: 5.5em;
-      height: 5.5em;
-      margin: 3em 0 0 0;
+      width: 3.5em;
+      height: 3.5em;
     }
 
+    p {
+      line-height: 1.5;
+      letter-spacing: normal;
+      text-align: center;
+      text-justify: center;
+      font-family: $secondary-font;
+      font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
+    }
+  }
+
+  .team-member {
+    width: 100%;
+    max-width: 1100px;
+
+    .description {
+      width: 100%;
+      margin: 0 auto;
+      text-align: justify;
+      text-justify: newspaper;
+      font-family: $secondary-font;
+      line-height: 1.6;
+      letter-spacing: normal;
+      font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
+    }
+  }
+}
+
+@include respond(xl) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1100px;
+    box-sizing: border-box;
+    border-radius: 0.5em;
+    padding: 2em 0;
+    margin-bottom: 1em;
+    color: $primary-color;
+    font-size: $font-size-small;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+
     h1 {
-      font-size: $font-size-desktop;
-      margin: 0.5em 0;
+      font-size: clamp($font-size-desktop, 1vw, $font-size-desktop-wide);
+      margin-bottom: 1.5em;
       color: $primary-accent-color;
       text-align: center;
     }
-    p {
+
+    li {
       margin-bottom: 1.5em;
-      font-size: $font-size-mobile;
+    }
+  }
+
+  .team-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .team-member-container {
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 0.5em;
+    }
+  }
+
+  .team-image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+    gap: 2em;
+
+    img {
+      width: 50%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 0.5em;
+      margin-bottom: 1em;
+    }
+
+    h1 {
+      font-size: clamp($font-size-desktop, 1vw, $font-size-desktop-wide);
+      margin-bottom: 0.5em;
+      color: $primary-accent-color;
       text-align: center;
-      letter-spacing: 0.05em;
-      width: 90%;
+      padding: 0 1em;
+      font-style: italic;
+      text-wrap: wrap;
+    }
+  }
+
+  .team-member-hero {
+    margin-bottom: 1em;
+
+    .description h1 {
+      margin-bottom: 1em;
+      line-height: 1.5;
+      letter-spacing: normal;
+      text-align: center;
+      text-justify: center;
+      font-family: $secondary-font;
+      font-size: clamp($font-size-desktop, 1vw, $font-size-desktop-wide);
+    }
+  }
+
+  .star-logo {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2em;
+
+    img {
+      width: 4.5em;
+      height: 4.5em;
+    }
+
+    p {
+      line-height: 1.5;
+      letter-spacing: normal;
+      text-align: center;
+      text-justify: center;
+      font-family: $secondary-font;
+      font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
+    }
+  }
+
+  .team-member {
+    width: 100%;
+    max-width: 1100px;
+
+    .description {
+      width: 100%;
       margin: 0 auto;
+      text-align: justify;
+      text-justify: newspaper;
+      font-family: $secondary-font;
+      line-height: 2;
+      letter-spacing: normal;
+      font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
+    }
+  }
+}
+
+@include respond(2xl) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1100px;
+    box-sizing: border-box;
+    border-radius: 0.5em;
+    padding: 2em 0;
+    margin-bottom: 1em;
+    color: $primary-color;
+    font-size: $font-size-small;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+
+    h1 {
+      font-size: clamp($font-size-desktop, 1vw, $font-size-desktop-wide);
+      margin-bottom: 1.5em;
+      color: $primary-accent-color;
+      text-align: center;
+    }
+
+    li {
+      margin-bottom: 1.5em;
+    }
+  }
+
+  .team-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .team-member-container {
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 0.5em;
+    }
+  }
+
+  .team-image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+    gap: 2em;
+
+    img {
+      width: 50%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 0.5em;
+      margin-bottom: 1em;
+    }
+
+    h1 {
+      font-size: clamp($font-size-desktop, 1vw, $font-size-desktop-wide);
+      margin-bottom: 0.5em;
+      color: $primary-accent-color;
+      text-align: center;
+      padding: 0 1em;
+      font-style: italic;
+      text-wrap: wrap;
+    }
+  }
+
+  .team-member-hero {
+    margin-bottom: 1em;
+
+    .description h1 {
+      margin-bottom: 1em;
+      line-height: 1.5;
+      letter-spacing: normal;
+      text-align: center;
+      text-justify: center;
+      font-family: $secondary-font;
+      font-size: clamp($font-size-desktop, 1vw, $font-size-desktop-wide);
+    }
+  }
+
+  .star-logo {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2em;
+
+    img {
+      width: 4.5em;
+      height: 4.5em;
+    }
+
+    p {
+      line-height: 1.5;
+      letter-spacing: normal;
+      text-align: center;
+      text-justify: center;
+      font-family: $secondary-font;
+      font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
+    }
+  }
+
+  .team-member {
+    width: 100%;
+    max-width: 1100px;
+
+    .description {
+      width: 100%;
+      margin: 0 auto;
+      text-align: justify;
+      text-justify: newspaper;
+      font-family: $secondary-font;
+      line-height: 2;
+      letter-spacing: normal;
+      font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
     }
   }
 }
