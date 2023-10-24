@@ -2,12 +2,7 @@ import React from "react";
 import NewsletterForm from "../components/Newsletter Form/NewsletterForm";
 import styles from "../components/Newsletter Form/NewsletterForm.module.scss";
 
-interface Props {
-  title: string;
-  content: string;
-}
-
-const NewsletterPage: React.FC<Props> = ({ title, content }) => {
+const NewsletterPage: React.FC = () => {
   return (
     <div className={styles["newsletter-form"]}>
       <div className={styles["newsletter-form-text"]}>
