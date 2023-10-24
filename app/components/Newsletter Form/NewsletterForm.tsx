@@ -6,7 +6,7 @@ const NewsletterForm = () => {
   return (
     <div className={styles["newsletter-form-container"]}>
       <Iframe
-        url="https://airtable.com/embed/appsz3SqYl4ft3Vqv/shrnxnmjMaizQmjTF?backgroundColor=white"
+        url="https://airtable.com/embed/appsz3SqYl4ft3Vqv/shrnxnmjMaizQmjTF?backgroundColor=teal"
         width="100%"
         height="650px"
         id="myId"

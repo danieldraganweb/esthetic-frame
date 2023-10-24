@@ -7,18 +7,45 @@ function ContactFormClientContact() {
     <>
       <main className={styles["contact-form-main"]}>
         <div className={styles["contact-form-container"]}>
-          <h1 className={styles["contact-form-title"]}>
-            Nicht sicher, wonach Sie suchen?
-          </h1>
-          <p className={styles["contact-form-subtitle"]}>
-            Lassen Sie uns Ihnen die perfekte Lösung für Ihre
-            Schönheitsbedürfnisse finden.
-          </p>
-          <p className={styles["contact-form-subtitle"]}>
-            Hinterlassen Sie Ihre Kontaktdaten, und wir melden uns so bald wie
-            möglich bei Ihnen.
-          </p>
-          <input
+          <div className={styles["contact-form-text"]}>
+            <h1 className={styles["contact-form-title"]}>
+              Nicht sicher, wonach Sie suchen?
+            </h1>
+            <p className={styles["contact-form-subtitle"]}>
+              Lassen Sie uns Ihnen die perfekte Lösung für Ihre
+              Schönheitsbedürfnisse finden.
+            </p>
+            <p className={styles["contact-form-subtitle"]}>
+              Hinterlassen Sie Ihre Kontaktdaten, und wir melden uns so bald wie
+              möglich bei Ihnen.
+            </p>
+          </div>
+          <div className={styles["contact-form-iframe"]}>
+            <iframe
+              className="iframe"
+              src="https://airtable.com/embed/appsz3SqYl4ft3Vqv/shrSso6d5RwjPg0rq?backgroundColor=teal"
+              frameBorder={0}
+              onWheel={() => {}}
+              width="100%"
+              height="1020px"
+              style={{
+                background: "transparent",
+                border: "none",
+                borderRadius: "0.5em",
+                // overflow: "hidden",
+              }}
+            ></iframe>
+          </div>
+        </div>
+      </main>
+    </>
+  );
+}
+
+export default ContactFormClientContact;
+
+{
+  /* <input
             type="text"
             placeholder="Vorname (e.g. Maria)"
             required
@@ -64,11 +91,5 @@ function ContactFormClientContact() {
           ></label>
           <Link href="/book">
             <button className={styles["contact-form-button"]}>Buchen</button>
-          </Link>
-        </div>
-      </main>
-    </>
-  );
+          </Link> */
 }
-
-export default ContactFormClientContact;

@@ -11,7 +11,7 @@ function ContactPage() {
     <>
       <main className={styles["contact-main"]}>
         <div className={styles["about-container"]}>
-          <div className={styles["contact-hero"]}>
+          {/* <div className={styles["contact-hero"]}>
             <h1 className={styles.title}> Welcome to Esthetic Frame!</h1>
             <p>-Your Permanent Makeup Studio in Vienna-</p>
             <p>
@@ -20,7 +20,7 @@ function ContactPage() {
             <p>Monday - Friday: 9:00 - 18:00</p>
             <p>Saturday: 9:00 - 15:00</p>
             <p>Sunday: Closed</p>
-          </div>
+          </div> */}
           <div className={styles["about-image-container"]}>
             <Image
               src="/about.jpg"
