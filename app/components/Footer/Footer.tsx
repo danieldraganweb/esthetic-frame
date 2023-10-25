@@ -4,8 +4,11 @@ import styles from "./Footer.module.scss";
 import InstagramSVG from "../SocialMedia/InstagramSVG";
 import FacebookSVG from "../SocialMedia/FacebookSVG";
 import Contact from "../Contact/Contact";
+import WhatsappSVG from "../SocialMedia/WhatsappSVG";
+import MessengerSVG from "../SocialMedia/MessengerSVG";
 
 const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <>
       <footer className={styles.footer}>
@@ -19,6 +22,8 @@ const Footer: React.FC = () => {
           <div className={styles.footerSocialIcons}>
             <InstagramSVG />
             <FacebookSVG />
+            <WhatsappSVG />
+            <MessengerSVG />
           </div>
         </div>
         <div className={styles.footerLinks}>
@@ -43,18 +48,11 @@ const Footer: React.FC = () => {
             </li>
           </ul>
         </div>
-        <div className={styles["contact-hero"]}>
-          <h1 className={styles.title}> </h1>
-          {/* <p>-Ihr Permanent Make-up Studio in Wien-</p> */}
-          <p>
-            <strong>Öffnungszeiten:</strong>
-          </p>
-          <p>Montag - Freitag: 9:00 - 18:00</p>
-          <p>Samstag: 9:00 - 15:00</p>
-          <p>Sonntag: Geschlossen</p>
-        </div>
         <div className={styles.footerLegal}>
-          <p>© 2023 ESTHETIC FRAME</p>
+          <p>ESTHETIC FRAME</p>
+          <p>
+            <strong>© {currentYear} - Alle Rechte vorbehalten</strong>
+          </p>
         </div>
       </footer>
     </>
