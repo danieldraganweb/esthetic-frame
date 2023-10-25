@@ -88,16 +88,27 @@
   align-items: center;
   width: 100%;
   gap: 0.5em;
+  padding: 1em;
+  margin-top: 3em;
 
   li+li {
     margin-left: 1em;
+
+    // svg {
+    //   width: 1.5em;
+    //   height: 1.5em;
+    //   fill: $primary-color;
+    //   transition: all 0.3s ease-in-out;
+    // }
+
   }
+
 }
 
 .navLinks {
   display: none;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 3em;
   justify-content: space-between;
   align-items: center;
   list-style: none;
@@ -124,13 +135,13 @@
     align-items: center;
     list-style: none;
     margin-bottom: 0;
-    margin-top: 6.5rem;
+    margin-top: 8.5rem;
     border-radius: 0.5em;
     padding-left: 1em;
     padding-right: 1em;
     font-size: $font-size-small;
     z-index: 9999;
-    padding-bottom: 15em;
+    padding-bottom: 7em;
     padding-top: 5em;
     height: 100vh;
     scroll-behavior: smooth;

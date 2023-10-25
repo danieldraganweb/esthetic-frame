@@ -6,6 +6,8 @@ import Link from "next/link";
 import disableScroll from "disable-scroll";
 import InstagramSVG from "../SocialMedia/InstagramSVG";
 import FacebookSVG from "../SocialMedia/FacebookSVG";
+import WhatsappSVG from "../SocialMedia/WhatsappSVG";
+import MessengerSVG from "../SocialMedia/MessengerSVG";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -130,6 +132,12 @@ function Navbar() {
                 </li>
                 <li>
                   <FacebookSVG />
+                </li>
+                <li>
+                  <WhatsappSVG />
+                </li>
+                <li>
+                  <MessengerSVG />
                 </li>
               </div>
             </ul>
