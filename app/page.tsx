@@ -12,7 +12,6 @@ export default function Home() {
         <HeroSection />
         <Services />
         <ContactFormClientContact />
-        <Contact />
       </main>
     </>
   );

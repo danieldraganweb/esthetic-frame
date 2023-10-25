@@ -71,9 +71,6 @@ const PriceList: React.FC = () => {
             Erstbehandlung bezahlt.
           </p>
         </span>
-        <section>
-          <Contact />
-        </section>
       </main>
     </>
   );

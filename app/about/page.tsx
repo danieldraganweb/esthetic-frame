@@ -42,7 +42,7 @@ function About() {
                       sizes="(max-width: 500px) 100vw, 500px"
                       loading="lazy"
                     ></Image>
-                    <h1>Kamila Stetsenko</h1>
+                    <h1>Sviato Academy</h1>
                     <p>Absolvent der Permanent Make-up-Akademie</p>
                   </div>
                 </div>
@@ -107,9 +107,6 @@ function About() {
                 </ul>
               </div>
             </div>
-          </div>
-          <div className={styles["contact-container"]}>
-            <Contact />
           </div>
         </div>
       </main>
