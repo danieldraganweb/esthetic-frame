@@ -11,16 +11,6 @@ function ContactPage() {
     <>
       <main className={styles["contact-main"]}>
         <div className={styles["about-container"]}>
-          {/* <div className={styles["contact-hero"]}>
-            <h1 className={styles.title}> Welcome to Esthetic Frame!</h1>
-            <p>-Your Permanent Makeup Studio in Vienna-</p>
-            <p>
-              <strong>Opening Hours:</strong>
-            </p>
-            <p>Monday - Friday: 9:00 - 18:00</p>
-            <p>Saturday: 9:00 - 15:00</p>
-            <p>Sunday: Closed</p>
-          </div> */}
           <div className={styles["about-image-container"]}>
             <Image
               src="/about.jpg"
@@ -28,7 +18,7 @@ function ContactPage() {
               width={390}
               height={266}
               layout="responsive"
-              sizes="(max-width: 1100px) 100vw, 1920px"
+              sizes="(max-width: 1250px) 100vw, 1250px"
             ></Image>
 
             <ul className={styles.highlights}>
