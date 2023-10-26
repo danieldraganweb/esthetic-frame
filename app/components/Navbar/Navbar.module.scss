@@ -7,7 +7,6 @@
 .navbar {
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 0.2rem;
 }
 
 .navbar-button-container {
@@ -75,6 +74,13 @@
       margin-top: 0.28em;
     }
   }
+
+  svg {
+    width: 1.5em;
+    height: 1.5em;
+    fill: $primary-color;
+    transition: all 0.3s ease-in-out;
+  }
 }
 
 .hamburger-container {
@@ -94,12 +100,7 @@
   li+li {
     margin-left: 1em;
 
-    // svg {
-    //   width: 1.5em;
-    //   height: 1.5em;
-    //   fill: $primary-color;
-    //   transition: all 0.3s ease-in-out;
-    // }
+
 
   }
 
@@ -135,7 +136,7 @@
     align-items: center;
     list-style: none;
     margin-bottom: 0;
-    margin-top: 6rem;
+    margin-top: 5.5rem;
     border-radius: 0.5em;
     padding-left: 1em;
     padding-right: 1em;
@@ -149,12 +150,13 @@
 }
 
 .navLinks a:hover {
-  color: $secondary-color;
+  color: $primary-accent-color;
   cursor: pointer;
 }
 
 .navLinks a:active {
   transition: all 0.8s ease-in-out;
+  color: $primary-accent-color;
 }
 
 .lineTop,
@@ -194,9 +196,16 @@
   .navbar {
     padding: 0 1rem;
     box-sizing: border-box;
+    width: 100%;
+    max-width: 1100px;
+    box-sizing: border-box;
   }
 
   .navbar-mobile {
+    display: none;
+  }
+
+  .navbar-social {
     display: none;
   }
 
@@ -249,7 +258,7 @@
   max-width: 1100px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   list-style: none;
   letter-spacing: 0.05em;
@@ -264,7 +273,7 @@
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    // font-size: $font-size-mobile;
+    font-size: $font-size-mobile;
     margin-left: 1em;
     letter-spacing: 0.05em;
     color: $primary-color;
@@ -288,7 +297,7 @@
 
 
   .logo {
-    width: 200px;
+    width: 150px;
     height: 110px;
     margin: 0 auto;
     display: flex;
@@ -319,7 +328,7 @@
 
 @include respond(xl) {
   .navbar {
-    padding: 0 1rem;
+    padding: 0;
     box-sizing: border-box;
   }
 
