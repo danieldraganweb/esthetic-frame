@@ -15,17 +15,7 @@ const Footer: React.FC = () => {
         <div className={styles.footerContact}>
           <Contact />
         </div>
-        <div className={styles.footerSocial}>
-          <div className={styles.footerSocialText}>
-            <h1>Liken und folgen Sie uns!</h1>
-          </div>
-          <div className={styles.footerSocialIcons}>
-            <InstagramSVG />
-            <FacebookSVG />
-            <WhatsappSVG />
-            <MessengerSVG />
-          </div>
-        </div>
+
         <div className={styles.footerLinks}>
           <ul>
             <li>
@@ -48,7 +38,18 @@ const Footer: React.FC = () => {
             </li>
           </ul>
         </div>
+        <div className={styles.footerSocial}>
+          <div className={styles.footerSocialText}>
+            <h1>Liken und folgen Sie uns!</h1>
+          </div>
+        </div>
         <div className={styles.footerLegal}>
+          <div className={styles.footerSocialIcons}>
+            <InstagramSVG />
+            <FacebookSVG />
+            <WhatsappSVG />
+            <MessengerSVG />
+          </div>
           <p>ESTHETIC FRAME</p>
           <p>
             <strong>© {currentYear} - Alle Rechte vorbehalten</strong>
