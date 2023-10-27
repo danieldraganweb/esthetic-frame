@@ -1,0 +1,1057 @@
+@use "./app/styles/base/_typography" as *;
+@use "./app/styles/base/_variables" as *;
+@use "./app/styles/utils/_mixins" as *;
+@use "./app/styles/utils/_functions" as *;
+
+.blog-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1100px;
+    margin-top: 2em;
+
+
+
+    ::-webkit-scrollbar {
+        background-color: $quinary-color;
+        width: 100%;
+        height: 0.5em;
+        border-radius: 5px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: $quaternary-color;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: $quinary-color;
+        border-radius: 1em;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: $quaternary-color;
+    }
+}
+
+.blog-title-container {
+    width: 100%;
+    max-width: 1100px;
+    margin-bottom: 1em;
+    border-radius: 0.5rem;
+
+    h1 {
+        font-size: clamp($font-size-tablet, 1vw, $font-size-desktop);
+        font-weight: 500;
+        text-align: center;
+        padding: 1em 0.3em;
+    }
+
+    p {
+        font-size: clamp($font-size-mobile, 1vw, $font-size-desktop);
+        font-weight: 400;
+        text-align: center;
+        padding: 0.5em 0.3em;
+    }
+}
+
+.blog-scroll-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 1em;
+    border-radius: 0.5rem;
+    gap: 2em;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-align: center;
+    scroll-padding-inline: 1rem;
+    scroll-snap-type: x mandatory;
+
+
+    button {
+        background-color: $secondary-color;
+        color: $primary-color;
+        border: 1px solid $quaternary-color;
+        border-radius: 1.8em;
+        font-size: clamp($font-size-mobile-wide, 1vw, $font-size-desktop-wide);
+        font-family: $primary-font;
+        font-weight: 400;
+        margin: 1em 0;
+        box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+        padding: 0.5em 1.5em 0.5em 1.5em;
+    }
+
+    button:hover {
+        transform: scale(1.02);
+        background-color: lighten($quaternary-color, $amount: 10%);
+        cursor: pointer;
+    }
+
+    button:active {
+        transform: scale(1.02);
+        background-color: $quinary-color;
+        cursor: pointer;
+    }
+}
+
+.blog-container {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    gap: 2.2em;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    align-self: start;
+    scroll-snap-align: center;
+    scroll-padding-inline: 0rem;
+    scroll-snap-type: x mandatory;
+    padding: 2em 0.5em;
+
+    img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        background: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 0.7em;
+    }
+
+    img:hover {
+        cursor: pointer;
+    }
+
+    p {
+        font-size: $font-size-mobile;
+        font-family: $primary-font;
+        font-weight: 400;
+        text-align: justify;
+        text-justify: inter-word;
+        text-wrap: wrap;
+        margin-bottom: 1em;
+    }
+}
+
+.article {
+    border: 1px solid $quaternary-color;
+    margin-bottom: 2em;
+    border-radius: 0.5rem;
+    width: 100%;
+    scroll-snap-align: center;
+    overscroll-behavior-inline: contain;
+    opacity: 1;
+
+    &:first-child {
+        grid-column-start: 0;
+        margin-left: 0;
+        // margin-right: 1.1em;
+        padding-left: 0;
+    }
+
+    &:last-child {
+        grid-column-end: 1;
+        // margin-left: 1.1em;
+        margin-right: 0;
+        padding-right: 0;
+
+        &:hover {
+            &~.article:not(:hover) {
+                opacity: 0.75;
+            }
+        }
+    }
+
+    h2 {
+        font-size: $font-size-tablet;
+        font-weight: 500;
+        text-align: start;
+        width: 100%;
+        max-width: 1100px;
+        padding: 0 0 0.3em 0.3em;
+        margin: 0.5em 0 1em 0;
+    }
+
+    p {
+        padding: 0 0 0.3em 0.5em;
+        font-family: $primary-font;
+    }
+
+    &:hover {
+        transform: scale(1.02);
+        cursor: pointer;
+
+        img {
+            // transform: scale(1.1);
+        }
+
+        &~.article:not(:hover) {
+            opacity: 0.75;
+        }
+
+        &.first-article~.article:first-child,
+        &.last-article~.article:last-child {
+            opacity: 1;
+        }
+    }
+}
+
+.blog-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 1em;
+    margin-bottom: 2em;
+
+    h1 {
+        font-size: $font-size-tablet;
+        font-weight: 500;
+        text-align: center;
+        margin: 1em 0;
+    }
+
+    p {
+        font-size: $font-size-mobile;
+        font-weight: 400;
+        text-align: justify;
+        text-justify: inter-word;
+        text-wrap: wrap;
+        // margin: 3em 0;
+    }
+}
+
+.blog-btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 1em;
+    margin-bottom: 2em;
+
+    button {
+        background-color: $secondary-color;
+        color: $primary-color;
+        border: 1px solid $quaternary-color;
+        border-radius: 4.5em;
+        font-size: clamp($font-size-mobile-wide, 1vw, $font-size-desktop-wide);
+        display: inline-block;
+        font-family: $primary-font;
+        font-weight: 400;
+        margin: 1em 0;
+        box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+        padding: 1em 2.5em 1em 2.5em;
+        display: inline-block;
+    }
+
+    button:hover {
+        transform: scale(1.02);
+        background-color: lighten($quaternary-color, $amount: 10%);
+        cursor: pointer;
+    }
+
+
+}
+
+@include respond(xs) {
+    .blog-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1100px;
+        margin-top: 2em;
+
+        h1 {
+            font-size: clamp($font-size-tablet, 1vw, $font-size-desktop);
+            font-weight: 500;
+            text-align: left;
+            padding: 0.3em;
+            width: 100%;
+            max-width: 1100px;
+            border-radius: 0.5rem;
+        }
+    }
+
+    .blog-container {
+        width: 100%;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 100%;
+        gap: 2.2em;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        align-self: start;
+        scroll-snap-align: center;
+        scroll-padding-inline: 1rem;
+        scroll-snap-type: x mandatory;
+
+        img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            background: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: 0.7em;
+        }
+
+        img:hover {
+            cursor: pointer;
+        }
+
+        p {
+            font-size: $font-size-mobile;
+            font-family: $primary-font;
+            font-weight: 400;
+            text-align: justify;
+            text-justify: inter-word;
+            text-wrap: wrap;
+            margin-bottom: 1em;
+        }
+    }
+
+    .blog-title-container {
+        width: 100%;
+        max-width: 1100px;
+        margin-bottom: 1em;
+        border-radius: 0.5rem;
+
+        h1 {
+            font-size: clamp($font-size-tablet, 1vw, $font-size-desktop);
+            font-weight: 500;
+            text-align: center;
+            padding: 1em 0.3em;
+        }
+
+        p {
+            font-size: clamp($font-size-mobile, 1vw, $font-size-desktop);
+            font-weight: 400;
+            text-align: center;
+            padding: 0.5em 0.3em;
+        }
+    }
+
+    .blog-scroll-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        margin-top: 1em;
+        border-radius: 0.5rem;
+        gap: 2em;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scroll-snap-align: center;
+        scroll-padding-inline: 1rem;
+        scroll-snap-type: x mandatory;
+
+
+        button {
+            background-color: $secondary-color;
+            color: $primary-color;
+            border: 1px solid $quaternary-color;
+            border-radius: 1.8em;
+            font-size: clamp($font-size-mobile-wide, 1vw, $font-size-desktop-wide);
+            font-family: $primary-font;
+            font-weight: 400;
+            margin: 1em 0;
+            box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+            padding: 0.5em 1.5em 0.5em 1.5em;
+        }
+
+        button:hover {
+            transform: scale(1.02);
+            background-color: lighten($quaternary-color, $amount: 10%);
+            cursor: pointer;
+        }
+
+        button:active {
+            transform: scale(1.02);
+            background-color: $quinary-color;
+            cursor: pointer;
+        }
+    }
+
+    .article {
+        border: 1px solid $quaternary-color;
+        margin-bottom: 2em;
+        border-radius: 0.5rem;
+        width: 100%;
+
+        h2 {
+            font-size: $font-size-tablet;
+            font-weight: 500;
+            text-align: start;
+            width: 100%;
+            max-width: 1100;
+        }
+    }
+}
+
+//Tablet
+
+@include respond(sm) {
+    .blog-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1100px;
+        // padding: 0 1em;
+        margin-top: 2em;
+    }
+
+    .blog-container {
+        width: 100%;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 50%;
+        gap: 1em;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+
+        p {
+            font-size: $font-size-mobile;
+            font-family: $primary-font;
+            font-weight: 400;
+            text-align: justify;
+            text-justify: inter-word;
+            text-wrap: wrap;
+            margin-bottom: 1em;
+        }
+    }
+
+    .blog-title-container {
+        width: 100%;
+        max-width: 1100px;
+        margin-bottom: 1em;
+        border-radius: 0.5rem;
+
+        h1 {
+            font-size: clamp($font-size-tablet, 1vw, $font-size-desktop);
+            font-weight: 500;
+            text-align: center;
+            padding: 1em 0.3em;
+        }
+
+        p {
+            font-size: clamp($font-size-mobile, 1vw, $font-size-desktop);
+            font-weight: 400;
+            text-align: center;
+            padding: 0.5em 0.3em;
+        }
+    }
+
+    .blog-scroll-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        margin-top: 1em;
+        border-radius: 0.5rem;
+        gap: 2em;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scroll-snap-align: center;
+        scroll-padding-inline: 1rem;
+        scroll-snap-type: x mandatory;
+
+
+        button {
+            background-color: $secondary-color;
+            color: $primary-color;
+            border: 1px solid $quaternary-color;
+            border-radius: 1.8em;
+            font-size: clamp($font-size-mobile-wide, 1vw, $font-size-desktop-wide);
+            font-family: $primary-font;
+            font-weight: 400;
+            margin: 1em 0;
+            box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+            padding: 0.5em 1.5em 0.5em 1.5em;
+        }
+
+        button:hover {
+            transform: scale(1.02);
+            background-color: lighten($quaternary-color, $amount: 10%);
+            cursor: pointer;
+        }
+
+        button:active {
+            transform: scale(1.02);
+            background-color: $quinary-color;
+            cursor: pointer;
+        }
+    }
+
+    .article {
+        border: 1px solid $quaternary-color;
+        margin-bottom: 2em;
+        border-radius: 0.5rem;
+        width: 100%;
+
+        h2 {
+            font-size: $font-size-tablet;
+            font-weight: 500;
+            text-align: start;
+            width: 100%;
+            max-width: 1100px;
+            padding: 0 0 0.3em 0.3em;
+            margin: 0.5em 0 1em 0;
+        }
+
+        p {
+            padding: 0 0 0.3em 0.5em;
+            font-family: $primary-font;
+        }
+
+
+    }
+
+    .blog-caption {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1100px;
+        padding: 0 1em;
+        margin-bottom: 2em;
+
+        h1 {
+            font-size: $font-size-tablet;
+            font-weight: 500;
+            text-align: center;
+            margin: 1em 0;
+        }
+
+        p {
+            font-size: $font-size-mobile;
+            font-weight: 400;
+            text-align: justify;
+            text-justify: inter-word;
+            text-wrap: wrap;
+            // margin: 3em 0;
+        }
+    }
+}
+
+//Tablet Wide
+
+@include respond(md) {
+    .blog-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1100px;
+        padding: 0 1em;
+        margin-top: 2em;
+
+
+    }
+
+    .blog-container {
+        width: 100%;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 48%;
+        gap: 1.5em;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+
+        p {
+            font-size: $font-size-mobile;
+            font-family: $primary-font;
+            font-weight: 400;
+            text-align: justify;
+            text-justify: inter-word;
+            text-wrap: wrap;
+            margin-bottom: 1em;
+        }
+    }
+
+    .blog-title-container {
+        width: 100%;
+        max-width: 1100px;
+        margin-bottom: 1em;
+        border-radius: 0.5rem;
+
+        h1 {
+            font-size: clamp($font-size-desktop-wide, 1vw, $font-size-desktop-ultra-wide);
+            font-weight: 500;
+            text-align: center;
+            padding: 1em 0.3em;
+        }
+
+        p {
+            font-size: clamp($font-size-mobile-wide, 1vw, $font-size-desktop);
+            font-weight: 400;
+            text-align: center;
+            padding: 0.5em 0.3em;
+        }
+    }
+
+    .blog-scroll-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        margin-top: 1em;
+        border-radius: 0.5rem;
+        gap: 2em;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scroll-snap-align: center;
+        scroll-padding-inline: 1rem;
+        scroll-snap-type: x mandatory;
+
+
+        button {
+            background-color: $secondary-color;
+            color: $primary-color;
+            border: 1px solid $quaternary-color;
+            border-radius: 1.8em;
+            font-size: clamp($font-size-mobile-wide, 1vw, $font-size-desktop-wide);
+            font-family: $primary-font;
+            font-weight: 400;
+            margin: 1em 0;
+            box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+            padding: 1em 2.5em 1em 2.5em;
+        }
+
+        button:hover {
+            transform: scale(1.02);
+            background-color: lighten($quaternary-color, $amount: 10%);
+            cursor: pointer;
+        }
+
+        button:active {
+            transform: scale(1.02);
+            background-color: $quinary-color;
+            cursor: pointer;
+        }
+    }
+
+    .article {
+        border: 1px solid $quaternary-color;
+        margin-bottom: 2em;
+        border-radius: 0.5rem;
+        width: 100%;
+
+        h2 {
+            font-size: $font-size-tablet;
+            font-weight: 500;
+            text-align: start;
+            width: 100%;
+            max-width: 1100px;
+            padding: 0 0 0.3em 0.3em;
+            margin: 0.5em 0 1em 0;
+        }
+
+        p {
+            padding: 0 0 0.3em 0.5em;
+            font-family: $primary-font;
+        }
+    }
+
+    .blog-caption {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1100px;
+        padding: 0 1em;
+        margin-bottom: 2em;
+
+        h1 {
+            font-size: $font-size-tablet;
+            font-weight: 500;
+            text-align: center;
+            margin: 1em 0;
+        }
+
+        p {
+            font-size: $font-size-mobile;
+            font-weight: 400;
+            text-align: justify;
+            text-justify: inter-word;
+            text-wrap: wrap;
+            // margin: 3em 0;
+        }
+    }
+}
+
+//Desktop
+
+@include respond (lg) {
+
+    .blog-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1100px;
+        padding: 0 1em;
+        margin-top: 2em;
+
+    }
+
+    .blog-container {
+        width: 100%;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 31.5%;
+        gap: 1.8em;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+
+        p {
+            font-size: $font-size-mobile;
+            font-family: $primary-font;
+            font-weight: 400;
+            text-align: justify;
+            text-justify: inter-word;
+            text-wrap: wrap;
+            margin-bottom: 1em;
+        }
+    }
+
+    .blog-title-container {
+        width: 100%;
+        max-width: 1100px;
+        margin-bottom: 1em;
+        border-radius: 0.5rem;
+
+        h1 {
+            font-size: clamp($font-size-desktop-ultra-wide, 1vw, $font-size-desktop-ultra-ultra-wide);
+            font-weight: 500;
+            text-align: center;
+            padding: 1em 0.3em;
+        }
+
+        p {
+            font-size: clamp($font-size-mobile-wide, 1vw, $font-size-desktop);
+            font-weight: 400;
+            text-align: center;
+            padding: 0.5em 0.3em;
+        }
+    }
+
+    .blog-scroll-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        margin-top: 1em;
+        border-radius: 0.5rem;
+        gap: 2em;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scroll-snap-align: center;
+        scroll-padding-inline: 1rem;
+        scroll-snap-type: x mandatory;
+
+
+        button {
+            background-color: $secondary-color;
+            color: $primary-color;
+            border: 1px solid $quaternary-color;
+            border-radius: 1.8em;
+            font-size: clamp($font-size-mobile-wide, 1vw, $font-size-desktop-wide);
+            font-family: $primary-font;
+            font-weight: 400;
+            margin: 1em 0;
+            box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+            padding: 1em 2.5em 1em 2.5em;
+        }
+
+        button:hover {
+            transform: scale(1.02);
+            background-color: lighten($quaternary-color, $amount: 10%);
+            cursor: pointer;
+        }
+
+        button:active {
+            transform: scale(1.02);
+            background-color: $quinary-color;
+            cursor: pointer;
+        }
+    }
+
+    .article {
+        border: 1px solid $quaternary-color;
+        margin-bottom: 2em;
+        border-radius: 0.5rem;
+        width: 100%;
+
+        h2 {
+            font-size: $font-size-tablet;
+            font-weight: 500;
+            text-align: start;
+            width: 100%;
+            max-width: 1100
+        }
+
+        p {
+            padding: 0 0 0.3em 0.5em;
+            font-family: $primary-font;
+        }
+    }
+
+    .blog-caption {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1100px;
+        padding: 0 1em;
+        margin-bottom: 2em;
+
+        h1 {
+            font-size: $font-size-tablet;
+            font-weight: 500;
+            text-align: center;
+            margin: 1em 0;
+        }
+
+        p {
+            font-size: $font-size-mobile;
+            font-weight: 400;
+            text-align: justify;
+            text-justify: inter-word;
+            text-wrap: wrap;
+            // margin: 3em 0;
+        }
+    }
+
+    .blog-btn-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1100px;
+        padding: 0 1em;
+        margin-bottom: 2em;
+
+        button {
+            background-color: $secondary-color;
+            color: $primary-color;
+            border: 1px solid $quaternary-color;
+            border-radius: 4.5em;
+            font-size: clamp($font-size-mobile-wide, 1vw, $font-size-desktop-wide);
+            display: inline-block;
+            font-family: $primary-font;
+            font-weight: 400;
+            margin: 1em 0;
+            box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+            padding: 1em 2.5em 1em 2.5em;
+            display: inline-block;
+        }
+
+        button:hover {
+            transform: scale(1.02);
+            background-color: $quinary-color;
+            cursor: pointer;
+        }
+
+
+    }
+}
+
+//Desktop Wide
+
+@include respond (xl) {
+    .blog-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1100px;
+        padding: 0;
+        margin-top: 2em;
+
+    }
+
+    .blog-container {
+        width: 100%;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 31.5%;
+        gap: 1.8em;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+
+        p {
+            font-size: $font-size-mobile;
+            font-family: $primary-font;
+            font-weight: 400;
+            text-align: justify;
+            text-justify: inter-word;
+            text-wrap: wrap;
+            margin-bottom: 1em;
+        }
+    }
+
+    .blog-title-container {
+        width: 100%;
+        max-width: 1100px;
+        margin-bottom: 2em;
+        border-radius: 0.5rem;
+
+        h1 {
+            font-size: clamp($font-size-desktop-ultra-ultra-wide, 1vw, $font-size-desktop-ultra-ultra-ultra-wide);
+            font-weight: 500;
+            text-align: center;
+            padding: 1em 0.3em;
+        }
+
+        p {
+            font-size: clamp($font-size-tablet, 1vw, $font-size-desktop);
+            font-weight: 400;
+            text-align: center;
+            padding: 0.5em 0.3em;
+        }
+    }
+
+    .blog-scroll-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        margin-top: 1em;
+        border-radius: 0.5rem;
+        gap: 2em;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scroll-snap-align: center;
+        scroll-padding-inline: 1rem;
+        scroll-snap-type: x mandatory;
+
+
+        button {
+            background-color: $secondary-color;
+            color: $primary-color;
+            border: 1px solid $quaternary-color;
+            border-radius: 1.8em;
+            font-size: clamp($font-size-mobile-wide, 1vw, $font-size-desktop-wide);
+            font-family: $primary-font;
+            font-weight: 400;
+            margin: 1em 0;
+            box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+            padding: 1em 2.5em 1em 2.5em;
+        }
+
+        button:hover {
+            transform: scale(1.02);
+            background-color: lighten($quaternary-color, $amount: 10%);
+            cursor: pointer;
+        }
+
+        button:active {
+            transform: scale(1.02);
+            background-color: $quinary-color;
+            cursor: pointer;
+        }
+    }
+
+    .article {
+        border: 1px solid $quaternary-color;
+        margin-bottom: 2em;
+        border-radius: 0.5rem;
+        width: 100%;
+
+        h2 {
+            font-size: $font-size-tablet;
+            font-weight: 500;
+            text-align: start;
+            width: 100%;
+            max-width: 1100;
+        }
+
+        p {
+            padding: 0 0 0.3em 0.5em;
+            font-family: $primary-font;
+        }
+
+        .blog-caption {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1100px;
+            padding: 0 1em;
+            margin-bottom: 2em;
+
+            h1 {
+                font-size: $font-size-tablet;
+                font-weight: 500;
+                text-align: center;
+                margin: 1em 0;
+            }
+
+            p {
+                font-size: $font-size-mobile;
+                font-weight: 400;
+                text-align: justify;
+                text-justify: inter-word;
+                text-wrap: wrap;
+                // margin: 3em 0;
+            }
+        }
+    }
+}
