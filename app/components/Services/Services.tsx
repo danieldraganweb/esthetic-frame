@@ -1,10 +1,17 @@
 import React from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Services.module.scss";
 import ScrollHorizontalIcon from "../SvgHorizontalScrollIcon";
 
 function Services() {
+  const [formOpen, setFormOpen] = useState(false);
+
+  const toggleForm = () => {
+    setFormOpen(!formOpen);
+  };
+
   return (
     <>
       <main className={styles["services-main"]}>

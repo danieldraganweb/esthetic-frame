@@ -33,13 +33,47 @@
 .contact-form-container {
   width: 100%;
   max-width: 1100px;
-  height: 1330px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 2em 1rem;
   border-radius: 1rem;
+
+}
+
+.contact-form-button {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: $primary-color;
+  font-size: clamp($font-size-mobile, 1vw, $font-size-desktop-wide);
+
+  button {
+    background-color: $secondary-color;
+    color: $primary-color;
+    border: 1px solid $quaternary-color;
+    border-radius: 1.7em;
+    font-size: clamp($font-size-mobile, 1vw, $font-size-desktop-wide);
+    display: inline-block;
+    font-family: $primary-font;
+    font-weight: 400;
+    margin: 1em 0;
+    box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+    padding: 1em 2.5em 1em 2.5em;
+    display: inline-block;
+  }
+
+  button:hover {
+    transform: scale(1.02);
+    background-color: $quinary-color;
+    cursor: pointer;
+  }
+
 }
 
 .contact-form-iframe {
@@ -49,16 +83,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // padding: 3em;
+  padding: 0;
 
   iframe {
     width: 100%;
-    height: 100%;
+    height: 1050px;
+    margin-top: 1em;
   }
 }
 
 .contact-form-text {
   width: 100%;
+  height: auto;
   padding: 1rem;
 }
 
@@ -81,48 +117,14 @@
   font-weight: 100;
 }
 
-// .contact-form-input {
-//   width: 100%;
-//   padding: 0.9rem;
-//   margin-bottom: 1rem;
-//   border: none;
-//   border-radius: 0.5rem;
-//   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
-//   background-color: $secondary-color;
-//   font-family: $primary-font;
-//   font-size: clamp($font-size-mobile-wide, 1.5vw, $font-size-tablet);
-// }
 
-// .contact-form-label {
-//   font-size: clamp($font-size-mobile-wide, 1.5vw, $font-size-tablet);
-//   margin-bottom: 0.5rem;
-// }
-
-.contact-form-button {
-  display: inline block;
-  background-color: $secondary-color;
-  color: $primary-color;
-  border: 1px solid $quaternary-color;
-  border-radius: 1.5em;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-  font-size: clamp($font-size-mobile-wide, 1.5vw, $font-size-tablet);
-  font-family: $primary-font;
-  box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
-  padding: 1em 2.5em 1em 2.5em;
-  margin: 1em 0 0.5em 0;
-}
-
-.contact-form-button:hover {
-  background-color: $quinary-color;
-  color: $primary-color;
-}
 
 @include respond(md) {
   .contact-form-main {
     border-radius: 0.5rem;
     width: 100%;
     max-width: 1100px;
+    height: auto;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -149,12 +151,11 @@
   .contact-form-container {
     width: 100%;
     max-width: 1100px;
-    height: 1376px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 5rem 13rem;
     border-radius: 1rem;
   }
 
@@ -169,7 +170,7 @@
 
     iframe {
       width: 100%;
-      height: 100%;
+      height: 1000px;
     }
   }
 
@@ -207,11 +208,10 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
-    height: 1350px;
+    height: auto;
     border-radius: 0.5rem;
-    width: 100%;
     max-width: 1100px;
     background-position: center;
     background-size: cover;
@@ -225,8 +225,8 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 1300px;
-    padding: 6em 8em;
+    height: auto;
+    // padding: 6em 8em;
   }
 
   .contact-form-iframe {
@@ -294,7 +294,7 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 1126px;
+    height: auto;
     border-radius: 0.5rem;
     width: 100%;
     max-width: 1100px;
@@ -306,11 +306,11 @@
 
   .contact-form-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: stretch;
     align-items: center;
     width: 100%;
-    height: 1000px;
+    height: auto;
     padding: 0;
   }
 
@@ -349,22 +349,6 @@
     background-repeat: no-repeat;
   }
 
-  .contact-form-iframe {
-    width: 100%;
-    height: 100%;
-    height: 1300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-  }
-
-  .iframe {
-    width: 100%;
-    // height: 1600px;
-  }
-
   .contact-form-text {
     width: 100%;
     padding: 1rem;
@@ -372,7 +356,7 @@
 
   .contact-form-iframe {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -380,7 +364,7 @@
 
     iframe {
       width: 100%;
-      height: 100%;
+      height: 1000px;
     }
   }
 
