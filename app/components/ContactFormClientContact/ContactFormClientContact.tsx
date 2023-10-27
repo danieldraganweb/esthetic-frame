@@ -1,8 +1,25 @@
-import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./ContactFormClientContact.module.scss";
 
 function ContactFormClientContact() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+
+    if (menuOpen) {
+      const button = document.querySelector("contact-form-button");
+      if (button) {
+        button.textContent = "Kontaktformular anzeigen";
+      }
+    } else {
+      const button = document.querySelector("contact-form-button");
+      if (button) {
+        button.textContent = "Kontaktformular schließen";
+      }
+    }
+  };
+
   return (
     <>
       <main className={styles["contact-form-main"]}>
@@ -20,21 +37,30 @@ function ContactFormClientContact() {
               möglich bei Ihnen.
             </p>
           </div>
-          <div className={styles["contact-form-iframe"]}>
-            <iframe
-              className="iframe"
-              src="https://airtable.com/embed/appsz3SqYl4ft3Vqv/shrSso6d5RwjPg0rq?backgroundColor=teal"
-              frameBorder={0}
-              onWheel={() => {}}
-              width="100%"
-              height="1020px"
-              style={{
-                background: "transparent",
-                border: "none",
-                borderRadius: "0.5em",
-                // overflow: "hidden",
-              }}
-            ></iframe>
+          <div className={styles["contact-form-button"]}>
+            <button onClick={toggleMenu} id="contact-form-button">
+              {menuOpen
+                ? "Kontaktformular schließen"
+                : "Kontaktformular anzeigen"}
+            </button>
+            {menuOpen && (
+              <div className={styles["contact-form-iframe"]}>
+                <iframe
+                  className="iframe"
+                  src="https://airtable.com/embed/appsz3SqYl4ft3Vqv/shrSso6d5RwjPg0rq?backgroundColor=teal"
+                  frameBorder={0}
+                  onWheel={() => {}}
+                  width="100%"
+                  height="1020px"
+                  style={{
+                    background: "transparent",
+                    border: "none",
+                    borderRadius: "0.5em",
+                    // overflow: "hidden",
+                  }}
+                ></iframe>
+              </div>
+            )}
           </div>
         </div>
       </main>
@@ -43,53 +69,3 @@ function ContactFormClientContact() {
 }
 
 export default ContactFormClientContact;
-
-{
-  /* <input
-            type="text"
-            placeholder="Vorname (e.g. Maria)"
-            required
-            className={styles["contact-form-input"]}
-            name="firstName"
-          />
-          <label
-            htmlFor="firstName"
-            className={styles["contact-form-label"]}
-          ></label>
-          <input
-            type="text"
-            placeholder="Nachname (e.g. Musterfrau)"
-            required
-            className={styles["contact-form-input"]}
-            name="lastName"
-          />
-          <label
-            htmlFor="lastName"
-            className={styles["contact-form-label"]}
-          ></label>
-          <input
-            type="email"
-            placeholder="Email (e.g. maria.musterfrau@example.com)"
-            required
-            className={styles["contact-form-input"]}
-            name="email"
-          />
-          <label
-            htmlFor="email"
-            className={styles["contact-form-label"]}
-          ></label>
-          <input
-            type="tel"
-            placeholder="Telefon (e.g. +43 xxx xxx xxxx.)"
-            required
-            className={styles["contact-form-input"]}
-            name="phone"
-          />
-          <label
-            htmlFor="phone"
-            className={styles["contact-form-label"]}
-          ></label>
-          <Link href="/book">
-            <button className={styles["contact-form-button"]}>Buchen</button>
-          </Link> */
-}
