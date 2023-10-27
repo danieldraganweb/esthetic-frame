@@ -4,161 +4,217 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./Services.module.scss";
 import ScrollHorizontalIcon from "../SvgHorizontalScrollIcon";
+import CubeSVG from "../CubeSVG";
 
 function Services() {
-  const [formOpen, setFormOpen] = useState(false);
+  const handleScrollLeft = () => {
+    const container = document.getElementById("services-scroll-container");
+    if (container) {
+      const snapWidth = container.scrollWidth / container.childElementCount;
+      container.scrollLeft -= snapWidth + 16;
+    }
+  };
 
-  const toggleForm = () => {
-    setFormOpen(!formOpen);
+  const handleScrollRight = () => {
+    const container = document.getElementById("services-scroll-container");
+    if (container) {
+      const snapWidth = container.scrollWidth / container.childElementCount;
+      container.scrollLeft += snapWidth + 16;
+    }
   };
 
   return (
     <>
       <main className={styles["services-main"]}>
         <div className={styles["services-title-container-1"]}>
-          <h1 className={styles["services-title-1"]}>
-            Beliebte Dienstleistungen
-          </h1>
+          <div className={styles["service-section"]}>
+            <h1 className={styles["section-title"]}>
+              Enthülle deine wahre Schönheit mit unseren Dienstleistungen
+            </h1>
+            <h2 className={styles["section-description"]}>
+              Erlebe die transformative Kraft unserer Permanent
+              Make-up-Dienstleistungen.
+            </h2>
+            <h2 className={styles["section-description"]}>
+              Unser Team von Experten wird deine natürlichen Merkmale verbessern
+              und dir einen makellosen und langanhaltenden Look verleihen.
+            </h2>
+            <ul className={styles["service-list"]}>
+              <li className={styles["service-list-item"]}>
+                <CubeSVG />
+                <h3 className={styles["section-option"]}>
+                  Steigere dein Selbstvertrauen mit natürlichen Ergebnissen
+                </h3>
+              </li>
+              <li className={styles["service-list-item"]}>
+                <CubeSVG />
+                <h3 className={styles["section-option"]}>
+                  Erreiche mühelose Schönheit mit unseren Expertentechniken
+                </h3>
+              </li>
+              <li className={styles["service-list-item"]}>
+                <CubeSVG />
+                <h3 className={styles["section-option"]}>
+                  Spare Zeit und sieh jeden Tag großartig aus
+                </h3>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className={styles["services-container"]}>
-          <div className={styles["snaps-inline"]}>
-            <div className={styles["services-title-container-2"]}>
-              <div className={styles["service-item"]}>
-                <Link href="/services">
-                  <Image
-                    src="/services1.jpg"
-                    alt="services"
-                    width={358}
-                    height={300}
-                    sizes="(max-width: 300px) 100vw, 300px"
-                    priority={true}
-                    // layout="responsive"
-                    style={{
-                      objectFit: "cover",
-                      borderRadius: "1em",
-                    }}
-                    className={styles["services-image"]}
-                  />
-                  <h1 className={styles["services-title-2"]}>
-                    Augenbrauen Microblading
-                  </h1>
-                  <p className={styles["services-subtitle-2"]}>
-                    Erreichen Sie perfekt geformte Augenbrauen mit unseren
-                    Microblading-Services. Wir verwenden die neuesten Techniken,
-                    um Ihnen die besten Ergebnisse zu bieten.
-                  </p>
-                </Link>
-              </div>
-              <div className={styles["service-item"]}>
-                <Link href="/services">
-                  <Image
-                    src="/services4.jpg"
-                    alt="services"
-                    width={358}
-                    height={300}
-                    sizes="(max-width: 300px) 100vw, 300px"
-                    priority={true}
-                    // layout="responsive"
-                    style={{
-                      objectFit: "cover",
-                      borderRadius: "1em",
-                    }}
-                    className={styles["services-image"]}
-                  />
-                  <h1 className={styles["services-title-3"]}>
-                    Permanenter Eyeliner
-                  </h1>
-                  <p className={styles["services-subtitle-3"]}>
-                    Erzielen Sie den gewünschten Look mit unseren permanenten
-                    Eyeliner-Services. Wir bieten eine Vielzahl von Stilen und
-                    Farben, um Ihren Bedürfnissen gerecht zu werden.
-                  </p>
-                </Link>
-              </div>
-              <div className={styles["service-item"]}>
-                <Link href="/services">
-                  <Image
-                    src="/services3.jpg"
-                    alt="services"
-                    width={358}
-                    height={300}
-                    sizes="(max-width: 300px) 100vw, 300px"
-                    priority={true}
-                    style={{
-                      objectFit: "cover",
-                      borderRadius: "1em",
-                    }}
-                    className={styles["services-image"]}
-                  />
-                  <h1 className={styles["services-title-4"]}>Lippenblush</h1>
-                  <p className={styles["services-subtitle-4"]}>
-                    Unsere permanenten Lippenstift-Services sind perfekt für
-                    diejenigen, die einen natürlichen Kussmund ohne die Mühe des
-                    täglichen Schminkens haben möchten.
-                  </p>
-                </Link>
-              </div>
-              <div className={styles["service-item"]}>
-                <Link href="/services">
-                  <Image
-                    src="/services2.jpg"
-                    alt="services"
-                    width={358}
-                    height={300}
-                    sizes="(max-width: 300px) 100vw, 300px"
-                    priority={true}
-                    style={{
-                      objectFit: "cover",
-                      borderRadius: "1em",
-                    }}
-                    className={styles["services-image"]}
-                  />
-                  <h1 className={styles["services-title-4"]}>
-                    Augenbrauenpigmentierung
-                  </h1>
-                  <p className={styles["services-subtitle-4"]}>
-                    Unsere permanenten Augenbrauenpigmentierungs-Services sind
-                    perfekt für diejenigen, die natürliche Augenbrauen ohne die
-                    Mühe des täglichen Schminkens haben möchten.
-                  </p>
-                </Link>
-              </div>
-              <div className={styles["service-item"]}>
-                <Link href="/services">
-                  <Image
-                    src="/services5.jpg"
-                    alt="services"
-                    width={358}
-                    height={300}
-                    sizes="(max-width: 1100px) 100vw, 600px"
-                    priority={true}
-                    // layout="responsive"
-                    style={{
-                      objectFit: "cover",
-                      borderRadius: "1em",
-                    }}
-                    className={styles["services-image"]}
-                  />
-                  <h1 className={styles["services-title-4"]}>
-                    Wimpern-Microblading
-                  </h1>
-                  <p className={styles["services-subtitle-4"]}>
-                    Unsere permanenten Wimpern-Microblading-Services bieten eine
-                    Vielzahl von Stilen und Farben, um Ihren Bedürfnissen
-                    gerecht zu werden.
-                  </p>
-                </Link>
-              </div>
+        <div className={styles["services-container"]} id="services-container">
+          <div
+            className={styles["services-title-container-2"]}
+            id="services-scroll-container"
+          >
+            <div className={styles["service-item"]}>
+              <Link href="/services">
+                <Image
+                  src="/services1.jpg"
+                  alt="services"
+                  width={358}
+                  height={300}
+                  sizes="(max-width: 300px) 100vw, 300px"
+                  priority={true}
+                  // layout="responsive"
+                  style={{
+                    objectFit: "cover",
+                    borderRadius: "1em",
+                  }}
+                  className={styles["services-image"]}
+                />
+                <h1 className={styles["services-title-2"]}>
+                  Augenbrauen Microblading
+                </h1>
+                <p className={styles["services-subtitle-2"]}>
+                  Erreichen Sie perfekt geformte Augenbrauen mit unseren
+                  Microblading-Services. Wir verwenden die neuesten Techniken,
+                  um Ihnen die besten Ergebnisse zu bieten.
+                </p>
+              </Link>
+            </div>
+            <div className={styles["service-item"]}>
+              <Link href="/services">
+                <Image
+                  src="/services4.jpg"
+                  alt="services"
+                  width={358}
+                  height={300}
+                  sizes="(max-width: 300px) 100vw, 300px"
+                  priority={true}
+                  // layout="responsive"
+                  style={{
+                    objectFit: "cover",
+                    borderRadius: "1em",
+                  }}
+                  className={styles["services-image"]}
+                />
+                <h1 className={styles["services-title-3"]}>
+                  Permanenter Eyeliner
+                </h1>
+                <p className={styles["services-subtitle-3"]}>
+                  Erzielen Sie den gewünschten Look mit unseren permanenten
+                  Eyeliner-Services. Wir bieten eine Vielzahl von Stilen und
+                  Farben, um Ihren Bedürfnissen gerecht zu werden.
+                </p>
+              </Link>
+            </div>
+            <div className={styles["service-item"]}>
+              <Link href="/services">
+                <Image
+                  src="/services3.jpg"
+                  alt="services"
+                  width={358}
+                  height={300}
+                  sizes="(max-width: 300px) 100vw, 300px"
+                  priority={true}
+                  style={{
+                    objectFit: "cover",
+                    borderRadius: "1em",
+                  }}
+                  className={styles["services-image"]}
+                />
+                <h1 className={styles["services-title-4"]}>Lippenblush</h1>
+                <p className={styles["services-subtitle-4"]}>
+                  Unsere permanenten Lippenstift-Services sind perfekt für
+                  diejenigen, die einen natürlichen Kussmund ohne die Mühe des
+                  täglichen Schminkens haben möchten.
+                </p>
+              </Link>
+            </div>
+            <div className={styles["service-item"]}>
+              <Link href="/services">
+                <Image
+                  src="/services2.jpg"
+                  alt="services"
+                  width={358}
+                  height={300}
+                  sizes="(max-width: 300px) 100vw, 300px"
+                  priority={true}
+                  style={{
+                    objectFit: "cover",
+                    borderRadius: "1em",
+                  }}
+                  className={styles["services-image"]}
+                />
+                <h1 className={styles["services-title-4"]}>
+                  Augenbrauenpigmentierung
+                </h1>
+                <p className={styles["services-subtitle-4"]}>
+                  Unsere permanenten Augenbrauenpigmentierungs-Services sind
+                  perfekt für diejenigen, die natürliche Augenbrauen ohne die
+                  Mühe des täglichen Schminkens haben möchten.
+                </p>
+              </Link>
+            </div>
+            <div className={styles["service-item"]}>
+              <Link href="/services">
+                <Image
+                  src="/services5.jpg"
+                  alt="services"
+                  width={358}
+                  height={300}
+                  sizes="(max-width: 1100px) 100vw, 600px"
+                  priority={true}
+                  // layout="responsive"
+                  style={{
+                    objectFit: "cover",
+                    borderRadius: "1em",
+                  }}
+                  className={styles["services-image"]}
+                />
+                <h1 className={styles["services-title-4"]}>
+                  Wimpern-Microblading
+                </h1>
+                <p className={styles["services-subtitle-4"]}>
+                  Unsere permanenten Wimpern-Microblading-Services bieten eine
+                  Vielzahl von Stilen und Farben, um Ihren Bedürfnissen gerecht
+                  zu werden.
+                </p>
+              </Link>
             </div>
           </div>
+        </div>
+        <div className={styles["services-scroll-container"]}>
+          <button
+            className={styles["services-scroll-button"]}
+            onClick={handleScrollLeft}
+          >
+            {"<"}
+          </button>
           <ScrollHorizontalIcon />
-          <div className={styles["services-btn-container"]}>
-            <Link href="/services">
-              <button className={styles["services-button"]}>
-                Alle Dienstleistungen
-              </button>
-            </Link>
-          </div>
+          <button
+            className={styles["services-scroll-button"]}
+            onClick={handleScrollRight}
+          >
+            {">"}
+          </button>
+        </div>
+        <div className={styles["services-btn-container"]}>
+          <Link href="/services">
+            <button className={styles["services-button"]}>
+              Alle Dienstleistungen
+            </button>
+          </Link>
         </div>
       </main>
     </>
