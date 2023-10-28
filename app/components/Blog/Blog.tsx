@@ -1,13 +1,13 @@
 "use client";
-import Link from "next/link";
 import React, { useState, useRef } from "react";
 import styles from "./Blog.module.scss";
 import { useBlogPosts } from "../../hooks/useAllBlogPosts";
 import { BlogPostContent } from "../../types";
 import Image from "next/image";
 import ScrollHorizontalIcon from "../SvgHorizontalScrollIcon";
+import Link from "next/link";
 
-const BlogComponent = () => {
+const BlogComponent: React.FC = () => {
   const { blogPosts } = useBlogPosts();
 
   const limitedBlogPosts = blogPosts.slice(0, 6);
