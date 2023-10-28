@@ -33,12 +33,11 @@ function Services() {
             </h1>
             <h2 className={styles["section-description"]}>
               Erlebe die transformative Kraft unserer Permanent
-              Make-up-Dienstleistungen.
+              Make-up-Dienstleistungen. Unser Team von Experten wird deine
+              natürlichen Merkmale verbessern und dir einen makellosen und
+              langanhaltenden Look verleihen.
             </h2>
-            <h2 className={styles["section-description"]}>
-              Unser Team von Experten wird deine natürlichen Merkmale verbessern
-              und dir einen makellosen und langanhaltenden Look verleihen.
-            </h2>
+            {/* <h2 className={styles["section-description"]}></h2> */}
             <ul className={styles["service-list"]}>
               <li className={styles["service-list-item"]}>
                 <CubeSVG />
