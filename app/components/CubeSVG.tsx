@@ -13,7 +13,7 @@ const CubeSVG = () => {
       viewBox="0 0 612 612"
       xmlSpace="preserve"
       stroke="#FFE3E1"
-      stroke-width="0.0061200000000000004"
+      strokeWidth="0.0061200000000000004"
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
