@@ -1,4 +1,3 @@
-"use client";
 import React, { useState, useRef } from "react";
 import styles from "./Blog.module.scss";
 import { useBlogPosts } from "../../hooks/useAllBlogPosts";
@@ -12,26 +11,19 @@ const BlogComponent: React.FC = () => {
 
   const limitedBlogPosts = blogPosts.slice(0, 6);
 
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const blogContainerRef = useRef<HTMLDivElement>(null);
-
   const handleScrollLeft = () => {
-    if (blogContainerRef.current) {
-      const snapWidth =
-        blogContainerRef.current.scrollWidth /
-        blogContainerRef.current.childElementCount;
-      blogContainerRef.current.scrollLeft -= snapWidth + 16;
-      setScrollPosition(blogContainerRef.current.scrollLeft);
+    const container = document.getElementById("blog-scroll-container");
+    if (container) {
+      const snapWidth = container.scrollWidth / container.childElementCount;
+      container.scrollLeft -= snapWidth + 16;
     }
   };
 
   const handleScrollRight = () => {
-    if (blogContainerRef.current) {
-      const snapWidth =
-        blogContainerRef.current.scrollWidth /
-        blogContainerRef.current.childElementCount;
-      blogContainerRef.current.scrollLeft += snapWidth + 16;
-      setScrollPosition(blogContainerRef.current.scrollLeft);
+    const container = document.getElementById("blog-scroll-container");
+    if (container) {
+      const snapWidth = container.scrollWidth / container.childElementCount;
+      container.scrollLeft += snapWidth + 16;
     }
   };
 
@@ -44,7 +36,7 @@ const BlogComponent: React.FC = () => {
         <p>Hier finden Sie die neuesten Trends und Tipps rund um das Thema</p>
         <p>Permanent Make-up und Microblading</p>
       </div>
-      <div className={styles["blog-container"]} ref={blogContainerRef}>
+      <div className={styles["blog-container"]} id="blog-scroll-container">
         {limitedBlogPosts.map((post: BlogPostContent) => (
           <div key={post.id} className={styles.article}>
             <Link href={`/blog/${post.id}`} passHref>
@@ -58,7 +50,7 @@ const BlogComponent: React.FC = () => {
                   borderRadius: "0.5em 0.5em 0 0",
                   boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
                 }}
-                sizes="(max-width: 600px) 100vw, 600px"
+                sizes="(max-width: 1100px) 100vw, 600px"
               />
               <h2 className={styles["article-title"]}>{post.fields?.name}</h2>
               <p className={styles["article-date"]}>
@@ -72,7 +64,6 @@ const BlogComponent: React.FC = () => {
         <button
           className={styles["blog-scroll-button"]}
           onClick={handleScrollLeft}
-          disabled={scrollPosition === 0}
         >
           {"<"}
         </button>
@@ -80,14 +71,6 @@ const BlogComponent: React.FC = () => {
         <button
           className={styles["blog-scroll-button"]}
           onClick={handleScrollRight}
-          disabled={
-            !!(
-              blogContainerRef.current &&
-              scrollPosition ===
-                blogContainerRef.current.scrollWidth -
-                  blogContainerRef.current.clientWidth
-            )
-          }
         >
           {">"}
         </button>
