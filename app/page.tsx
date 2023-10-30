@@ -10,10 +10,10 @@ export default function Home() {
   return (
     <>
       <main className={styles.main}>
-        <HeroSection />
-        <Services />
-        <ContactFormClientContact />
-        <BlogComponent />
+        <HeroSection className={styles.hero} />
+        <Services className={styles.services} />
+        <ContactFormClientContact className={styles.contactForm} />
+        <BlogComponent className={styles.blog} />
       </main>
     </>
   );

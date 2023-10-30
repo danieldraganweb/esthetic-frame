@@ -6,7 +6,7 @@ import Image from "next/image";
 import ScrollHorizontalIcon from "../SvgHorizontalScrollIcon";
 import Link from "next/link";
 
-const BlogComponent: React.FC = () => {
+const BlogComponent: React.FC<{ className?: string }> = () => {
   const { blogPosts } = useBlogPosts();
 
   const limitedBlogPosts = blogPosts.slice(0, 6);

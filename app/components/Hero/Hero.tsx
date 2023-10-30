@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./Hero.module.scss";
 import Link from "next/link";
 
-function HeroSection() {
+const HeroSection: React.FC<{ className?: string }> = () => {
   return (
     <>
       <main className={styles["hero-section"]}>
@@ -56,6 +56,6 @@ function HeroSection() {
       </main>
     </>
   );
-}
+};
 
 export default HeroSection;
