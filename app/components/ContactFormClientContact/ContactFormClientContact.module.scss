@@ -22,7 +22,7 @@
   bottom: 0;
   left: 0;
   border-radius: 0.5rem;
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(/contact-bg2.jpg);
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(/contact-bg.jpg);
   opacity: 0.75;
   z-index: -1;
   background-position: center;
@@ -95,7 +95,7 @@
 .contact-form-text {
   width: 100%;
   height: auto;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .contact-form-title {
@@ -104,6 +104,7 @@
   margin-bottom: 1rem;
   color: $primary-color;
   text-align: center;
+  text-wrap: nowrap;
 }
 
 .contact-form-subtitle {
@@ -140,7 +141,7 @@
     bottom: 0;
     left: 0;
     border-radius: 0.5rem;
-    background: url(/contact-bg.jpg);
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(/contact-bg.jpg);
     opacity: 0.75;
     z-index: -1;
     background-position: center;
@@ -258,7 +259,7 @@
     bottom: 0;
     left: 0;
     border-radius: 0.5rem;
-    background: url(/contact-bg.jpg);
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(/contact-bg.jpg);
     opacity: 0.75;
     z-index: -1;
     background-position: center;
@@ -341,7 +342,7 @@
     bottom: 0;
     left: 0;
     border-radius: 0.5rem;
-    background: url(/contact-bg.jpg);
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(/contact-bg.jpg);
     opacity: 0.75;
     z-index: -1;
     background-position: center;
