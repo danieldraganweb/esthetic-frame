@@ -33,7 +33,7 @@ const BlogComponent: React.FC<{ className?: string }> = () => {
         <h1 className={styles["blog-title"]}>
           Entdecken Sie die neuesten Trends
         </h1>
-        <p>Hier finden Sie die neuesten Trends und Tipps rund um das Thema</p>
+        <p>Hier finden Sie die neuesten Trends und Tipps rund um das</p>
         <p>Permanent Make-up und Microblading</p>
       </div>
       <div className={styles["blog-container"]} id="blog-scroll-container">
