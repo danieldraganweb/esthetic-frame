@@ -11,16 +11,19 @@ function ContactPage() {
     <>
       <main className={styles["contact-main"]}>
         <div className={styles["about-container"]}>
+          <h1 className={styles["about-title"]}>
+            Willkommen bei Esthetic Frame.
+          </h1>
+          <h1 className={styles["about-title"]}>Wir freuen uns auf Sie!</h1>
           <div className={styles["about-image-container"]}>
             <Image
               src="/about.jpg"
               alt="About"
-              width={390}
-              height={266}
+              width={1038}
+              height={707}
               layout="responsive"
-              sizes="(max-width: 1250px) 100vw, 1250px"
+              sizes="(max-width: 1100px) 100vw, 1100px"
             ></Image>
-
             <ul className={styles.highlights}>
               <li className={styles["hero"]}>
                 <h1>Discover Your Natural Radiance</h1>
@@ -86,26 +89,7 @@ function ContactPage() {
           </div>
         </div>
         <section className={styles["contact-form-section"]}>
-          <Contact />
           <ContactFormClientContact />
-          <div className={styles["newsletter-form"]}>
-            <div className={styles["newsletter-form-text"]}>
-              <h1>Newsletter</h1>
-              <p>
-                Bleiben Sie auf dem Laufenden mit den neuesten Nachrichten und
-                Angeboten von Esthetic Frame.
-              </p>
-              <p>
-                Bleiben Sie informiert und verpassen Sie keine Neuigkeiten!
-                Melden Sie sich für unseren Newsletter an, um die neuesten
-                Schönheitstipps, exklusive Angebote und mehr direkt in Ihrem
-                Posteingang zu erhalten.
-              </p>
-            </div>
-            <div className={styles["newsletter-form-iframe"]}>
-              <NewsletterForm />
-            </div>
-          </div>
         </section>
       </main>
     </>

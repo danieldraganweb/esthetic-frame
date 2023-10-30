@@ -1,6 +1,7 @@
 import React from "react";
 import NewsletterForm from "../components/Newsletter Form/NewsletterForm";
-import styles from "../components/Newsletter Form/NewsletterForm.module.scss";
+import styles from "./Newsletter.module.scss";
+import Image from "next/image";
 
 const NewsletterPage: React.FC = () => {
   return (
@@ -17,8 +18,19 @@ const NewsletterPage: React.FC = () => {
           exklusive Angebote und mehr direkt in Ihrem Posteingang zu erhalten.
         </p>
       </div>
-      <div className={styles["newsletter-form-iframe"]}>
+      <div className={styles["newsletter-form-container"]}>
         <NewsletterForm />
+
+        <div>
+          <Image
+            src="/newsletter.jpg"
+            alt="Newsletter"
+            width={433}
+            height={650}
+            layout="responsive"
+            sizes="(max-width: 1100px) 100vw, 1100px"
+          ></Image>
+        </div>
       </div>
     </div>
   );
