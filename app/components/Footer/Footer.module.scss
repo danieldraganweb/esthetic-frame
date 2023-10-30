@@ -17,6 +17,8 @@
     margin: 0 auto;
     box-sizing: border-box;
     margin-top: 1em;
+    border-radius: 0.5em;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(/contact-bg2.jpg);
 }
 
 .footerSocial {
@@ -110,10 +112,10 @@
 .footerLinks {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     margin-top: 3rem;
-    text-align: left;
+    text-align: center;
     width: 100%;
     gap: 1em;
     border-top: 2px solid $quaternary-color;
@@ -133,7 +135,7 @@
 
     ul {
 
-        text-align: left;
+        text-align: center;
     }
 
     a:hover {
@@ -184,7 +186,7 @@
         box-sizing: border-box;
         width: 100%;
         text-align: center;
-        padding: 0;
+        padding: 0 7em;
 
 
     }
