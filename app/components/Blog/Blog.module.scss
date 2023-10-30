@@ -50,14 +50,15 @@
         font-size: clamp($font-size-desktop, 1vw, $font-size-desktop-ultra-wide);
         font-weight: 500;
         text-align: center;
-        padding: 1em 0.3em;
+        padding: 1em 0;
+        text-wrap: nowrap;
     }
 
     p {
         font-size: clamp($font-size-mobile-wide, 1vw, $font-size-desktop);
         font-weight: 400;
         text-align: center;
-        padding: 0.5em 0.3em;
+        padding: 0.5em 0;
     }
 }
 
