@@ -1,16 +1,17 @@
 import Link from "next/link";
 import React from "react";
+import styles from "../Footer/Footer.module.scss";
 
 function FacebookSVG() {
   return (
-    <div>
+    <div className={styles.footerSocialIconsItem}>
       <Link
         href="https://www.facebook.com/profile.php?id=100090236323668"
         target="_blank"
       >
         <svg
-          width="44px"
-          height="44px"
+          width="24px"
+          height="24px"
           viewBox="126.445 2.281 589 589"
           xmlns="http://www.w3.org/2000/svg"
           fill="#ffffff"
@@ -31,6 +32,7 @@ function FacebookSVG() {
           </g>
         </svg>
       </Link>
+      <h1>Facebook</h1>
     </div>
   );
 }

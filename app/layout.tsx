@@ -41,7 +41,7 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="en"
+      lang="de"
       className={`${cormorant_garamond.variable} ${roboto.variable} ${cinzel_decorative.variable}`}
     >
       <body>

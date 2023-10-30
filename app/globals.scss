@@ -6,9 +6,8 @@
 
 /* Other global styles */
 :root {
-  --max-width: var(--max-content-width);
-  --border-radius: var(--default-border-radius);
-  --font-mono: var(--monospace-font-stack);
+  background-color: $secondary-color;
+  color: $primary-color;
 }
 
 html,
@@ -19,12 +18,5 @@ body {
 }
 
 body {
-  color: var(--foreground-color);
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      var(--background-end-color)
-    )
-    var(--background-start-color);
+  margin: 0 auto;
 }
-

@@ -126,7 +126,7 @@ function Navbar() {
                   Kontakt
                 </Link>
               </li>
-              <div className={styles["navbar-social"]}>
+              {/* <div className={styles["navbar-social"]}>
                 <li>
                   <InstagramSVG />
                 </li>
@@ -139,7 +139,7 @@ function Navbar() {
                 <li>
                   <MessengerSVG />
                 </li>
-              </div>
+              </div> */}
             </ul>
           )}
         </div>

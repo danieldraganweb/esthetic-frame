@@ -1,18 +1,18 @@
 import React from "react";
 import Link from "next/link";
-import styles from "../Navbar/Navbar.module.scss";
+import styles from "../Footer/Footer.module.scss";
 
 function MessengerSVG() {
   return (
-    <div className={styles.MessengerSVG}>
+    <div className={styles.footerSocialIconsItem}>
       <Link
         href="https://wa.me/+4368120562535"
         target="_blank"
         rel="noopener noreferrer"
       >
         <svg
-          height="44px"
-          width="44px"
+          height="24px"
+          width="24px"
           version="1.1"
           id="Layer_1"
           xmlns="http://www.w3.org/2000/svg"
@@ -50,6 +50,7 @@ function MessengerSVG() {
           </g>
         </svg>
       </Link>
+      <h1>Messenger</h1>
     </div>
   );
 }

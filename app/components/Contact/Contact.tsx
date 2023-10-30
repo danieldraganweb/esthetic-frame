@@ -1,149 +1,70 @@
 import React from "react";
 import styles from "./Contact.module.scss";
+import PhoneSVG from "../PhoneSVG";
+import EmailSVG from "../EmailSVG";
+import LocationSVG from "../LocationSVG";
+import Link from "next/link";
+import Image from "next/image";
 
 function Contact() {
   return (
     <>
       <div className={styles["contact-container"]}>
         <div className={styles["contact-info"]}>
-          <h1>Kontaktiere Uns</h1>
-          <h3>Wir würden gerne von Ihnen hören!</h3>
-          <h3>
-            Fühlen Sie sich frei, uns bei Fragen oder Anliegen zu kontaktieren
-            oder um einen Termin zu vereinbaren.
-          </h3>
+          <div className={styles["contact-info-text-image"]}>
+            <div className={styles["contact-info-text"]}>
+              <h1>Kontaktiere Uns</h1>
+              <h3>Wir würden gerne von Ihnen hören!</h3>
+              <h3>
+                Wir interessieren uns immer für das Feedback unserer Kunden,
+                damit wir unseren Service verbessern können. Zögern Sie nicht,
+                uns bei Fragen oder Anliegen zu kontaktieren oder einen Termin
+                zu vereinbaren.
+              </h3>
+              <h3> Wir freuen uns auf Ihre Nachricht!</h3>
+            </div>
+          </div>
           <div className={styles["contact-info-links"]}>
             <ul>
+              <h1 className={styles.title}>
+                {" "}
+                <strong>Kontakt</strong>
+              </h1>
               <li>
-                <svg
-                  width="24px"
-                  height="24px"
-                  viewBox="-0.54 0 31.251 31.251"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="#000000"
-                >
-                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    {" "}
-                    <g id="phone" transform="translate(-1201.175 -255.404)">
-                      {" "}
-                      <path
-                        id="Path_41"
-                        data-name="Path 41"
-                        d="M1208.194,256.541c.291.03.565.049.836.089a1.122,1.122,0,0,1,1.005.727c.288.839.569,1.681.832,2.528.37,1.188.685,2.395,1.094,3.569a1.874,1.874,0,0,1-.459,2.007c-.562.623-1.174,1.2-1.78,1.783a1.129,1.129,0,0,0-.292,1.475,19.935,19.935,0,0,0,6.762,8.144c.775.524,1.591.991,2.412,1.443a1.052,1.052,0,0,0,1.48-.245q1.223-1.211,2.435-2.431a1.133,1.133,0,0,1,1.646-.254c1.875,1.112,3.728,2.264,5.6,3.387a1,1,0,0,1,.523,1.186,20.241,20.241,0,0,1-.793,2.633,4.161,4.161,0,0,1-2.05,1.919,7.508,7.508,0,0,1-6.616.659c-1.53-.607-3.023-1.312-4.512-2.018a23.42,23.42,0,0,1-8.416-7.078,36.6,36.6,0,0,1-4.738-7.922,9.865,9.865,0,0,1-.523-7.235,7.911,7.911,0,0,1,3.227-4.125A2.809,2.809,0,0,1,1208.194,256.541Z"
-                        fill="#FFE3E1"
-                        stroke="#000000"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="0.51251"
-                      ></path>{" "}
-                    </g>{" "}
-                  </g>
-                </svg>
-                <h2>Telefon</h2>
-                <p>+4368120562535</p>
+                <div className={styles["contact-info-links-phone"]}>
+                  <PhoneSVG />
+                </div>
+                <div className={styles["contact-info-links-phone-text"]}>
+                  <h2>Telefon</h2>
+                  <Link href="tel:+4368120562535"> +4368120562535</Link>
+                </div>
               </li>
               <li>
-                <svg
-                  height="26px"
-                  width="26px"
-                  version="1.1"
-                  id="Layer_1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlnsXlink="http://www.w3.org/1999/xlink"
-                  viewBox="0 0 503.467 503.467"
-                  xmlSpace="preserve"
-                  fill="#000000"
-                  stroke="#000000"
-                  strokeWidth="0.00503467"
-                >
-                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
+                <div className={styles["contact-info-links-email"]}>
+                  <EmailSVG />
+                </div>
+                <div className={styles["contact-info-links-email-text"]}>
+                  <h2>E-mail</h2>
+                  <Link href="estheticframe@proton.me" target="_blank">
                     {" "}
-                    <path
-                      style={{ fill: "#FFD0A1" }}
-                      d="M321.707,256.853L498.347,396.8c-3.413,14.507-17.067,25.6-33.28,25.6H38.4 c-15.36,0-28.16-10.24-32.427-23.893L181.76,256l0,0l45.227,35.84c0,0,12.8,11.093,25.6,11.093s25.6-11.093,25.6-11.093 L321.707,256.853z M499.2,115.2L321.707,256.853l-43.52,34.987c0,0-12.8,11.093-25.6,11.093c-12.8,0-25.6-11.093-25.6-11.093 L181.76,256l0,0L4.267,115.2c0-18.773,15.36-34.133,34.133-34.133h426.667C483.84,81.067,499.2,96.427,499.2,115.2 M499.2,115.2 v273.067c0,3.413,0,5.973-0.853,8.533l-176.64-139.947L499.2,115.2z M180.907,256L5.12,398.507 c-0.853-3.413-1.707-6.827-1.707-10.24V115.2L180.907,256z"
-                    ></path>{" "}
-                    <path
-                      style={{ fill: "#51565F;" }}
-                      d="M465.067,426.667H38.4c-21.333,0-38.4-17.067-38.4-38.4v-230.4c0-2.56,1.707-4.267,4.267-4.267 s4.267,1.707,4.267,4.267v230.4c0,16.213,13.653,29.867,29.867,29.867h426.667c16.213,0,29.867-13.653,29.867-29.867v-230.4 c0-2.56,1.707-4.267,4.267-4.267c2.56,0,4.267,1.707,4.267,4.267v230.4C503.467,409.6,486.4,426.667,465.067,426.667z M465.067,375.467c-0.853,0-1.707,0-2.56-0.853L343.04,280.747c-0.853-0.853-1.707-1.707-1.707-3.413c0-0.853,0-1.707,0.853-2.56 c1.707-1.707,4.267-2.56,5.973-0.853l119.467,93.867c0.853,0.853,1.707,1.707,1.707,3.413c0,0.853,0,1.707-0.853,2.56 C467.627,374.613,465.92,375.467,465.067,375.467z M38.4,375.467c-0.853,0-2.56-0.853-3.413-1.707s-0.853-1.707-0.853-2.56 c0-0.853,0.853-2.56,1.707-3.413l119.467-93.867c1.707-1.707,4.267-0.853,5.973,0.853c0.853,0.853,0.853,1.707,0.853,2.56 c0,0.853-0.853,2.56-1.707,3.413L40.96,374.613C40.107,375.467,39.253,375.467,38.4,375.467z M251.733,307.2 c-13.653,0-28.16-11.947-28.16-11.947L1.707,118.613C0.853,117.76,0,116.907,0,115.2c0-21.333,17.067-38.4,38.4-38.4h426.667 c21.333,0,38.4,17.067,38.4,38.4c0,1.707-0.853,2.56-1.707,3.413L279.893,296.107C279.893,296.107,266.24,307.2,251.733,307.2z M8.533,113.493l220.16,175.787c0,0,11.947,10.24,23.04,10.24s23.04-9.387,23.04-9.387l220.16-175.787 c-0.853-15.36-13.653-28.16-29.867-28.16H38.4C22.187,85.333,9.387,97.28,8.533,113.493z"
-                    ></path>{" "}
-                  </g>
-                </svg>
-                <h2>E-mail</h2>
-                <p>estheticframe@proton.me</p>
+                    estheticframe@proton.me
+                  </Link>
+                </div>
               </li>
               <li>
-                <svg
-                  version="1.0"
-                  id="Layer_1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlnsXlink="http://www.w3.org/1999/xlink"
-                  width="24px"
-                  height="24px"
-                  viewBox="0 0 64 64"
-                  enableBackground="new 0 0 64 64"
-                  xmlSpace="preserve"
-                  fill="#000000"
-                  stroke="#000000"
-                  strokeWidth="0.00064"
-                >
-                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
+                <div className={styles["contact-info-links-location"]}>
+                  <LocationSVG />
+                </div>
+                <div className={styles["contact-info-links-location-text"]}>
+                  <h2>Adresse</h2>
+                  <Link
+                    href="https://www.google.com/maps/place/Esthetic+Frame+by+Alexandra+Ivan+@Wellbeing,+Alserbachstraße+5,+1090+Wien,+Austria/@48.2252483,16.3559411,17z/data=!4m15!1m8!3m7!1s0x476d07c9024eaf13:0x12a0eeb8a91ed08!2sAlserbachstraße+5,+1090+Wien,+Austria!8m2!3d48.2252483!4d16.3559411!10e3!16s%2Fg%2F11b8v4drby!3m5!1s0x476d07acca53354b:0xc288f4e3766f27e3!8m2!3d48.2252483!4d16.3559411!16s%2Fg%2F11ksb9ftqg"
+                    target="_blank"
+                  >
                     {" "}
-                    <g>
-                      {" "}
-                      <g>
-                        {" "}
-                        <path
-                          fill="#394240"
-                          d="M32,0C18.745,0,8,10.745,8,24c0,5.678,2.502,10.671,5.271,15l17.097,24.156C30.743,63.686,31.352,64,32,64 s1.257-0.314,1.632-0.844L50.729,39C53.375,35.438,56,29.678,56,24C56,10.745,45.255,0,32,0z M48.087,39h-0.01L32,61L15.923,39 h-0.01C13.469,35.469,10,29.799,10,24c0-12.15,9.85-22,22-22s22,9.85,22,22C54,29.799,50.281,35.781,48.087,39z"
-                        ></path>{" "}
-                        <path
-                          fill="#394240"
-                          d="M32,14c-5.523,0-10,4.478-10,10s4.477,10,10,10s10-4.478,10-10S37.523,14,32,14z M32,32 c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S36.418,32,32,32z"
-                        ></path>{" "}
-                        <path
-                          fill="#394240"
-                          d="M32,10c-7.732,0-14,6.268-14,14s6.268,14,14,14s14-6.268,14-14S39.732,10,32,10z M32,36 c-6.627,0-12-5.373-12-12s5.373-12,12-12s12,5.373,12,12S38.627,36,32,36z"
-                        ></path>{" "}
-                      </g>{" "}
-                      <g>
-                        {" "}
-                        <path
-                          fill="#F76D57"
-                          d="M32,12c-6.627,0-12,5.373-12,12s5.373,12,12,12s12-5.373,12-12S38.627,12,32,12z M32,34 c-5.522,0-10-4.477-10-10s4.478-10,10-10s10,4.477,10,10S37.522,34,32,34z"
-                        ></path>{" "}
-                        <path
-                          fill="#F76D57"
-                          d="M32,2c-12.15,0-22,9.85-22,22c0,5.799,3.469,11.469,5.913,15h0.01L32,61l16.077-22h0.01 C50.281,35.781,54,29.799,54,24C54,11.85,44.15,2,32,2z M32,38c-7.732,0-14-6.268-14-14s6.268-14,14-14s14,6.268,14,14 S39.732,38,32,38z"
-                        ></path>{" "}
-                      </g>{" "}
-                      <path
-                        opacity="0.2"
-                        fill="#231F20"
-                        d="M32,12c-6.627,0-12,5.373-12,12s5.373,12,12,12s12-5.373,12-12S38.627,12,32,12z M32,34 c-5.522,0-10-4.477-10-10s4.478-10,10-10s10,4.477,10,10S37.522,34,32,34z"
-                      ></path>{" "}
-                    </g>{" "}
-                  </g>
-                </svg>
-                <h2>Standort</h2>
-                <p>Alserbachstraße 5, Wien, 1010</p>
+                    Alserbachstraße 5, 1010, Wien
+                  </Link>
+                </div>
               </li>
             </ul>
             <div className={styles["contact-hero"]}>

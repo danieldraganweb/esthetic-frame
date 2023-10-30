@@ -1,14 +1,14 @@
 import React from "react";
 import Link from "next/link";
-import styles from "../Navbar/Navbar.module.scss";
+import styles from "../Footer/Footer.module.scss";
 
 function InstagramSVG() {
   return (
-    <div className={styles.InstagramSVG}>
+    <div className={styles.footerSocialIconsItem}>
       <Link href="https://www.instagram.com/esthetic_frame/" target="_blank">
         <svg
-          width="44px"
-          height="44px"
+          width="24px"
+          height="24px"
           viewBox="0 0 1024 1024"
           xmlns="http://www.w3.org/2000/svg"
           fill="#ffffff"
@@ -38,6 +38,7 @@ function InstagramSVG() {
           </g>
         </svg>
       </Link>
+      <h1>Instagram</h1>
     </div>
   );
 }

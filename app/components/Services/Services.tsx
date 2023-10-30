@@ -6,7 +6,7 @@ import styles from "./Services.module.scss";
 import ScrollHorizontalIcon from "../SvgHorizontalScrollIcon";
 import CubeSVG from "../CubeSVG";
 
-function Services() {
+const Services: React.FC<{ className?: string }> = () => {
   const handleScrollLeft = () => {
     const container = document.getElementById("services-scroll-container");
     if (container) {
@@ -218,6 +218,6 @@ function Services() {
       </main>
     </>
   );
-}
+};
 
 export default Services;

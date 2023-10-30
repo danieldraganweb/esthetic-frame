@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./ContactFormClientContact.module.scss";
 
-function ContactFormClientContact() {
+const ContactFormClientContact: React.FC<{ className?: string }> = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -66,6 +66,6 @@ function ContactFormClientContact() {
       </main>
     </>
   );
-}
+};
 
 export default ContactFormClientContact;
