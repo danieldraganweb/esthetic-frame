@@ -1,16 +1,27 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./blog.module.scss";
 import { useBlogPosts } from "../hooks/useAllBlogPosts";
 import { BlogPostContent, BlogPost } from "../types";
 import Image from "next/image";
 import Link from "next/link";
+import Loading from "../loading";
 
 const Blog = () => {
   const { blogPosts } = useBlogPosts();
 
-  // const [loading, setLoading] = useState(true);
-  console.log(blogPosts);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (blogPosts.length > 0) {
+      setLoading(false);
+    }
+  }, [blogPosts]);
+
+  if (loading) {
+    return <Loading />;
+  }
+
   return (
     <div className={styles["blog-page"]}>
       <h1 className={styles["blog-title"]}>Blog</h1>
@@ -42,4 +53,5 @@ const Blog = () => {
     </div>
   );
 };
+
 export default Blog;
