@@ -118,12 +118,6 @@ function Navbar() {
                   href="/contact"
                   key="contact"
                   onClick={() => setMenuOpen(false)}
-                  // style={
-                  //   {
-                  //     borderBottom: "1px solid black",
-                  //     paddingBottom: "0.5rem",
-                  //   } as React.CSSProperties
-                  // }
                 >
                   Kontakt
                 </Link>
