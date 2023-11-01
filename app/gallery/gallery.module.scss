@@ -24,7 +24,7 @@
     // padding: 0 1em;
     text-align: center;
     // box-shadow: 0 0 0.5em rgba($primary-color, 0.1);
-    padding: 1em;
+    padding: 0 1em;
     ;
 
     h1 {
@@ -135,7 +135,7 @@
 
 
     h1 {
-        font-size: clamp($font-size-tablet, 2vw, $font-size-tablet);
+        font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
         color: $primary-color;
         font-family: $secondary-font;
         border-bottom: 1px solid $quaternary-color;
