@@ -1,12 +1,48 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import styles from "../Footer/Footer.module.scss";
+declare global {
+  interface Window {
+    fbAsyncInit: any;
+    FB: any;
+  }
+}
 
 function MessengerSVG() {
+  useEffect(() => {
+    window.fbAsyncInit = function () {
+      window.FB.init({
+        xfbml: true,
+        version: "v18.0",
+      });
+    };
+
+    (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s) as HTMLScriptElement;
+      js.id = id;
+      js.src = "https://connect.facebook.net/de_DE/sdk/xfbml.customerchat.js";
+      if (fjs && fjs.parentNode) {
+        fjs.parentNode.insertBefore(js, fjs);
+      }
+    })(document, "script", "facebook-jssdk");
+  }, []);
+
+  useEffect(() => {
+    const chatbox = document.getElementById("fb-customer-chat");
+    if (chatbox) {
+      chatbox.setAttribute("page_id", "103574185998288");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    }
+  }, []);
+
   return (
     <div className={styles.footerSocialIconsItem}>
       <Link
-        href="https://wa.me/+4368120562535"
+        href="https://www.facebook.com/103574185998288"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -51,6 +87,8 @@ function MessengerSVG() {
         </svg>
       </Link>
       <h1>Messenger</h1>
+      <div id="fb-root"></div>
+      <div id="fb-customer-chat" className="fb-customerchat"></div>
     </div>
   );
 }

@@ -14,8 +14,8 @@ function About() {
                 <Image
                   src="/team-member-1.jpg"
                   alt="Team Member 1"
-                  width={380}
-                  height={577}
+                  width={500}
+                  height={750}
                   sizes="(max-width: 500px) 100vw, 500px"
                   loading="eager"
                 ></Image>

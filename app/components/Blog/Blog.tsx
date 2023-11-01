@@ -28,61 +28,69 @@ const BlogComponent: React.FC<{ className?: string }> = () => {
   };
 
   return (
-    <div className={styles["blog-page"]}>
-      <div className={styles["blog-title-container"]}>
-        <h1 className={styles["blog-title"]}>
-          Entdecken Sie die neuesten Trends
-        </h1>
-        <p>Hier finden Sie die neuesten Trends und Tipps rund um das</p>
-        <p>Permanent Make-up und Microblading</p>
-      </div>
-      <div className={styles["blog-container"]} id="blog-scroll-container">
-        {limitedBlogPosts.map((post: BlogPostContent) => (
-          <div key={post.id} className={styles.article}>
-            <Link href={`/blog/${post.id}`} passHref>
-              <Image
-                loading="eager"
-                src={post.fields?.image[0].url}
-                alt={post.fields?.name}
-                width={post.fields?.image[0].width}
-                height={post.fields?.image[0].height}
-                style={{
-                  borderRadius: "0.5em 0.5em 0 0",
-                  boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
-                }}
-                sizes="(max-width: 1100px) 100vw, 600px"
-              />
-              <h2 className={styles["article-title"]}>{post.fields?.name}</h2>
-              <p className={styles["article-date"]}>
-                Published on {post.fields?.published}
-              </p>
+    <>
+      <main className={styles["blog-main"]}>
+        <div className={styles["blog-page"]}>
+          <div className={styles["blog-title-container"]}>
+            <h1 className={styles["blog-title"]}>
+              Entdecken Sie die neuesten Trends
+            </h1>
+            <p>
+              Hier finden Sie die neuesten Trends und Tipps rund um das
+              Permanent Make-up und Microblading
+            </p>
+          </div>
+          <div className={styles["blog-container"]} id="blog-scroll-container">
+            {limitedBlogPosts.map((post: BlogPostContent) => (
+              <div key={post.id} className={styles.article}>
+                <Link href={`/blog/${post.id}`} passHref>
+                  <Image
+                    loading="eager"
+                    src={post.fields?.image[0].url}
+                    alt={post.fields?.name}
+                    width={post.fields?.image[0].width}
+                    height={post.fields?.image[0].height}
+                    style={{
+                      borderRadius: "0.5em 0.5em 0 0",
+                      boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
+                    }}
+                    sizes="(max-width: 1100px) 100vw, 600px"
+                  />
+                  <h2 className={styles["article-title"]}>
+                    {post.fields?.name}
+                  </h2>
+                  <p className={styles["article-date"]}>
+                    Published on {post.fields?.published}
+                  </p>
+                </Link>
+              </div>
+            ))}
+          </div>
+          <div className={styles["blog-scroll-container"]}>
+            <button
+              className={styles["blog-scroll-button"]}
+              onClick={handleScrollLeft}
+            >
+              {"<"}
+            </button>
+            <ScrollHorizontalIcon />
+            <button
+              className={styles["blog-scroll-button"]}
+              onClick={handleScrollRight}
+            >
+              {">"}
+            </button>
+          </div>
+          <div className={styles["blog-btn-container"]}>
+            <Link href="/blog" passHref>
+              <button className={styles["blog-button"]}>
+                Alle Beiträge anzeigen
+              </button>
             </Link>
           </div>
-        ))}
-      </div>
-      <div className={styles["blog-scroll-container"]}>
-        <button
-          className={styles["blog-scroll-button"]}
-          onClick={handleScrollLeft}
-        >
-          {"<"}
-        </button>
-        <ScrollHorizontalIcon />
-        <button
-          className={styles["blog-scroll-button"]}
-          onClick={handleScrollRight}
-        >
-          {">"}
-        </button>
-      </div>
-      <div className={styles["blog-btn-container"]}>
-        <Link href="/blog" passHref>
-          <button className={styles["blog-button"]}>
-            Alle Beiträge anzeigen
-          </button>
-        </Link>
-      </div>
-    </div>
+        </div>
+      </main>
+    </>
   );
 };
 

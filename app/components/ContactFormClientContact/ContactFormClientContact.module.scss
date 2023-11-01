@@ -99,7 +99,7 @@
 }
 
 .contact-form-title {
-  font-size: clamp($font-size-desktop, 1.5vw, $font-size-desktop-wide);
+  font-size: clamp($font-size-tablet, 1.5vw, $font-size-desktop);
   font-weight: 400;
   margin-bottom: 1rem;
   color: $primary-color;
