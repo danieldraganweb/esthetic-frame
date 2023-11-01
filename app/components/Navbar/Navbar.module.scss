@@ -7,6 +7,13 @@
 .navbar {
   margin: 0 auto;
   box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0 auto;
+  background-color: $secondary-color;
+  z-index: 1000;
+
 }
 
 .navbar-button-container {
@@ -46,6 +53,22 @@
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 1rem;
+  animation: fade-in 1.5s ease-in-out;
+  translate: all 0.3s ease-in-out;
+  position: relative;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translate(0, -3rem);
+    }
+
+    to {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+
+  }
 
   .logo {
     width: 150px;
@@ -55,10 +78,9 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
-    letter-spacing: 3px;
     border-radius: 1em;
     font-family: $secondary-font;
-    margin-top: 0.28em;
+    margin-top: 0;
 
     img {
       width: 150px;
@@ -73,6 +95,8 @@
       font-family: $secondary-font;
       margin-top: 0.28em;
     }
+
+
   }
 
   svg {
@@ -87,21 +111,7 @@
     width: 12%;
   }
 
-  .navbar-social {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 0.5em;
-    padding: 1em;
-    margin-top: 3em;
 
-    // li+li {
-    //   margin-left: 1em;
-    // }
-
-  }
 
 
   .navLinks {
@@ -116,6 +126,28 @@
     letter-spacing: 0.05em;
     color: $primary-color;
     box-sizing: border-box;
+    // animation: fade-in-top 1.5s ease-in-out;
+
+    li {
+      font-size: clamp($font-size-tablet, 1vw, $font-size-desktop-wide);
+      padding-bottom: 0.5em;
+      animation: fade-in-top 1.5s forwards;
+      border-bottom: 1px solid $primary-color;
+
+
+    }
+
+    @keyframes fade-in-top {
+      from {
+        opacity: 0;
+        transform: translateY(-20%);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
     &.open {
       box-sizing: border-box;
@@ -132,8 +164,7 @@
       right: 0;
       justify-content: space-evenly;
       align-items: center;
-      list-style: none;
-      margin-bottom: 0;
+      // margin-bottom: 0;
       margin-top: 5.5rem;
       border-radius: 0.5em;
       padding-left: 1em;
@@ -144,7 +175,13 @@
       padding-top: 3em;
       height: 100vh;
       scroll-behavior: smooth;
+      // animation: fade-in-top 1.5s ease-in-out;
+
     }
+
+
+
+
   }
 
   .navLinks a:hover {
@@ -193,12 +230,19 @@
 
 @include respond(md) {
   .navbar {
-    padding: 0 1rem;
+    margin: 0 auto;
     box-sizing: border-box;
+    position: fixed;
+    top: 0;
     width: 100%;
-    max-width: 1100px;
-    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: $secondary-color;
+    padding: 0 1rem;
+    z-index: 1000;
+
   }
+
+
 
   .navbar-mobile {
     display: none;
@@ -222,7 +266,7 @@
     max-width: 1100px;
     margin: 0 auto;
     margin-top: 1em;
-    border: 1px solid $quaternary-color;
+    // border: 1px solid $quaternary-color;
     box-sizing: border-box;
     border-radius: 0.5em;
     padding: 0.5em 1em;
@@ -264,6 +308,7 @@
   color: $primary-color;
   box-sizing: border-box;
   cursor: pointer;
+  animation: fade-in-top 1.5s ease-in-out;
 
   .navLinks {
     width: 100%;
@@ -280,7 +325,21 @@
     margin: 0 auto;
 
     a {
-      font-size: $font-size-mobile;
+      font-size: clamp($font-size-tablet, 1vw, $font-size-desktop-wide);
+      padding-bottom: 0.5em;
+      animation: fade-in-top 1.5s;
+
+      @keyframes fade-in-top {
+        from {
+          opacity: 0;
+          transform: translatey(-100%);
+        }
+
+        to {
+          opacity: 1;
+          transform: translatey(0);
+        }
+      }
     }
   }
 
@@ -349,7 +408,7 @@
     max-width: 1100px;
     margin: 0 auto;
     margin-top: 1em;
-    border: 1px solid $quaternary-color;
+    // border: 1px solid $quaternary-color;
     box-sizing: border-box;
     border-radius: 0.5em;
     padding: 0.5em 1em;
