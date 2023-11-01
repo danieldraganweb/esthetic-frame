@@ -3,6 +3,18 @@
 @use "./app/styles/utils/_mixins" as *;
 @use "./app/styles/utils/_functions" as *;
 
+
+.blog-main {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // padding: 0 1em;
+}
+
 .blog-page {
     display: flex;
     flex-direction: column;
@@ -47,7 +59,7 @@
     border-radius: 0.5rem;
 
     h1 {
-        font-size: clamp($font-size-desktop, 1vw, $font-size-desktop-ultra-wide);
+        font-size: clamp($font-size-tablet, 1.5vw, $font-size-desktop);
         font-weight: 500;
         text-align: center;
         padding: 1em 0;
@@ -58,7 +70,7 @@
         font-size: clamp($font-size-mobile-wide, 1vw, $font-size-desktop);
         font-weight: 400;
         text-align: center;
-        padding: 0.5em 0;
+        padding: 0 2.5em;
     }
 }
 

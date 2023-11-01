@@ -2,9 +2,7 @@
 import React from "react";
 import styles from "./contact.module.scss";
 import ContactFormClientContact from "../components/ContactFormClientContact/ContactFormClientContact";
-import Contact from "../components/Contact/Contact";
 import Image from "next/image";
-import NewsletterForm from "../components/Newsletter Form/NewsletterForm";
 
 function ContactPage() {
   return (
