@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { usePriceList } from "../hooks/useAllTreatmentsPricelist";
 import styles from "./services.module.scss";
 import Loading from "../loading";
+import ContactFormClientContact from "../components/ContactFormClientContact/ContactFormClientContact";
 
 const secondsToTimeFormat = (seconds: number) => {
   if (isNaN(seconds)) {
@@ -69,6 +70,7 @@ const PriceList: React.FC = () => {
             </div>
           </div>
         ))}
+        <ContactFormClientContact />
       </main>
     </>
   );
