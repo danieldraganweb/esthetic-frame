@@ -76,7 +76,7 @@
 }
 
 .price-list__caption_2 h2 {
-  font-size: clamp($font-size-mobile, 5vw, $font-size-desktop);
+  font-size: clamp($font-size-mobile-wide, 5vw, $font-size-desktop);
   color: $primary-color;
 }
 
@@ -117,7 +117,7 @@
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  padding: 1em;
+  padding: 0.5em;
   border-radius: 0.5em;
   box-shadow: 0 0 0.5em rgba($primary-color, 0.1);
   transition: all 0.3s ease-in-out;
@@ -128,7 +128,9 @@
   -ms-user-select: none;
   user-select: none;
   // border: 1px solid $quaternary-color;
-  font-size: 0.3em;
+  margin-bottom: 1em;
+  // color: lighten($color: rgba($primary-color, 0.35), $amount: 0.8);
+  // font-size: 0.3em;
 }
 
 .price-list__thead {
@@ -138,7 +140,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: darken($color: rgba($primary-color, 0.1), $amount: 0);
+  // background-color: darken($color: rgba($primary-color, 0.1), $amount: 0);
   // background-color: lighten($color: rgba($primary-color, 0.35), $amount: 0.8);
   color: $primary-color;
   padding: 1.5em;
@@ -147,13 +149,13 @@
   h1 {
     width: 100%;
     text-align: center;
-    padding: 1.5em 0;
+    padding: 1.5em 1em;
     border-radius: 0.5em;
     box-shadow: 0 0 0.5em rgba($primary-color, 0.1);
     transition: all 0.3s ease-in-out;
-    font-size: 0.55rem;
+    font-size: 0.60rem;
     background-color: darken($color: rgba($primary-color, 0.1), $amount: 0);
-    color: $secondary-color;
+    color: $primary-color;
 
     &:hover {
       box-shadow: 0 0 0.5em rgba(rgba($primary-color, 0.3), 0.2);
@@ -182,7 +184,7 @@
 
   h1 {
     width: 100%;
-    font-size: clamp(0.5em, 5vw, 1.5em);
+    font-size: 0.60rem;
     padding: 0.5em;
     text-align: center;
     padding: 1.5em;
@@ -218,7 +220,7 @@
   }
 
   .price-list__caption_2 {
-    margin-top: 2em;
+    margin: 2em 0;
 
 
     h2 {
