@@ -3,13 +3,16 @@ import styles from "./styles/loading.module.scss";
 
 const Loading: React.FC = () => {
   return (
-    <div className={styles.frame}>
-      <div className={styles.center}>
-        <div className={styles["dot-1"]}></div>
-        <div className={styles["dot-2"]}></div>
-        <div className={styles["dot-3"]}></div>
+    <main className={styles["loading"]}>
+      <div className={styles["wrapper"]}>
+        <div className={styles["circle"]}></div>
+        <div className={styles["circle"]}></div>
+        <div className={styles["circle"]}></div>
+        <div className={styles["shadow"]}></div>
+        <div className={styles["shadow"]}></div>
+        <div className={styles["shadow"]}></div>
       </div>
-    </div>
+    </main>
   );
 };
 

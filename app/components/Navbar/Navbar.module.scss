@@ -153,7 +153,8 @@
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      background-color: $secondary-color;
+      // background-color: $secondary-color;
+      background-color: rgba($secondary-color, 1);
       position: fixed;
       margin: 0 auto;
       width: 100%;
