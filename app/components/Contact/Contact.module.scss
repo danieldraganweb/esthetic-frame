@@ -14,15 +14,12 @@
   width: 100%;
   max-width: 1100px;
   text-align: left;
-  // margin: 3em 0;
-  border: 1px solid $quinary-color;
-  border-radius: 0.5em;
+  // border-radius: 0.5em;
   background-color: $secondary-color;
   margin-bottom: 2em;
-  padding-top: 1em;
-  margin-top: 1em;
+  padding: 1em;
   // background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(/contact-bg2.jpg);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  // box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
   h1 {
     font-size: clamp($font-size-desktop, 3vw, $font-size-desktop-wide);
@@ -56,7 +53,7 @@
   margin: 0 auto;
   width: 100%;
   max-width: 1100px;
-  padding: 0 1em;
+  // padding: 0 1em;
   text-align: center;
 }
 
@@ -136,7 +133,7 @@
 .map-container {
   border-radius: 0.5em;
   width: 100%;
-  padding: 0.5em;
+  // padding: 0.5em;
 
   iframe {
     border-radius: 0.5em;
@@ -227,7 +224,7 @@
   .map-container {
     border-radius: 0.5em;
     width: 100%;
-    padding: 0.5em;
+    padding: 0;
 
     iframe {
       border-radius: 0.5em;
@@ -247,6 +244,8 @@
 
   @include respond(md) {
     .contact-container {
+      padding-top: 2em;
+
       h1 {
         font-size: clamp($font-size-desktop, 3vw, $font-size-desktop-wide);
       }
@@ -293,7 +292,7 @@
     .map-container {
       border-radius: 0.5em;
       width: 100%;
-      padding: 0.5em;
+      padding: 0;
 
       iframe {
         border-radius: 0.5em;
@@ -316,14 +315,14 @@
   .contact-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     max-width: 1100px;
-    padding: 2em;
-    // margin: 0 2em;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    width: 94%;
-    max-width: 1100px;
-    margin-top: 2em;
+
 
 
 
@@ -353,7 +352,7 @@
   }
 
   .contact-info {
-    padding-top: 1em;
+    padding: 5em 1em 2em;
     width: 100%;
     max-width: 1100px;
     display: flex;
@@ -415,10 +414,10 @@
   .map-container {
     border-radius: 0.5em;
     width: 100%;
-    padding: 2em;
+    padding: 0;
 
     iframe {
-      border-radius: 0.5em;
+      border-radius: 0.5em 0.5em 0 0;
     }
   }
 

@@ -7,7 +7,6 @@ import Contact from "../Contact/Contact";
 import WhatsappSVG from "../SocialMedia/WhatsappSVG";
 import MessengerSVG from "../SocialMedia/MessengerSVG";
 import NewsletterForm from "../Newsletter Form/NewsletterForm";
-import CubeSVG from "../CubeSVG";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
