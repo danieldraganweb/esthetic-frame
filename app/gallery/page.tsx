@@ -8,7 +8,7 @@ import disableScroll from "disable-scroll";
 import OpenMenuSVG from "../components/OpenMenuSVG";
 import CloseMenuSVG from "../components/CloseMenuSVG";
 import { useMediaQuery } from "react-responsive";
-import Loading from "../components/Loading/loading";
+import Loading from "../components/Loading/Loading";
 import ImageModal from "../components/ImageModal/ImageModal";
 
 type Props = {};
@@ -136,7 +136,7 @@ function Gallery(props: Props) {
                       borderRadius: "0.5em",
                       boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
                     }}
-                    sizes="(max-width: 600px) 100vw, 600px"
+                    sizes="(max-width: 600px) 100dvw, 600px"
                   />
                 </div>
               ))}
