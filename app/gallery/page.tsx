@@ -8,7 +8,7 @@ import disableScroll from "disable-scroll";
 import OpenMenuSVG from "../components/OpenMenuSVG";
 import CloseMenuSVG from "../components/CloseMenuSVG";
 import { useMediaQuery } from "react-responsive";
-import Loading from "../components/Loading/Loading";
+// import Loading from "../components/Loading/Loading";
 import ImageModal from "../components/ImageModal/ImageModal";
 
 type Props = {};
@@ -111,11 +111,6 @@ function Gallery(props: Props) {
               )
               .map((image: GalleryImage) => (
                 <div key={image.id} className={styles.image}>
-                  {!loadedImages[image.id] && (
-                    <div className={styles.loader}>
-                      <Loading />
-                    </div>
-                  )}
                   <Image
                     onClick={() => setSelectedImage(image)}
                     onLoad={() =>
