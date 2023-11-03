@@ -126,7 +126,7 @@ function Gallery(props: Props) {
                     onLoad={() =>
                       setLoadedImages((prev) => ({ ...prev, [image.id]: true }))
                     }
-                    loading="lazy"
+                    // loading="lazy"
                     src={image.fields?.image[0].url}
                     alt={image.fields?.Name}
                     width={image.fields?.image[0].width}
