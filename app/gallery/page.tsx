@@ -58,12 +58,7 @@ function Gallery(props: Props) {
         />
       )}
 
-      <main
-        className={styles["wrapper"]}
-        onLoad={() => {
-          <Loading />;
-        }}
-      >
+      <main className={styles["wrapper"]}>
         <div className={styles["gallery-container"]}>
           <div className={styles["sidebar-container"]}>
             <div className={styles["gallery-title-container"]}>
@@ -129,8 +124,8 @@ function Gallery(props: Props) {
                     loading="lazy"
                     src={image.fields?.image[0].url}
                     alt={image.fields?.Name}
-                    width={image.fields?.image[0].width}
-                    height={image.fields?.image[0].height}
+                    width={image.fields?.image[0].width * (300 / 600)}
+                    height={image.fields?.image[0].height * (300 / 600)}
                     className={styles["image"]}
                     style={{
                       borderRadius: "0.5em",
