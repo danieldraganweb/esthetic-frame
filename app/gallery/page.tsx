@@ -8,7 +8,7 @@ import disableScroll from "disable-scroll";
 import OpenMenuSVG from "../components/OpenMenuSVG";
 import CloseMenuSVG from "../components/CloseMenuSVG";
 import { useMediaQuery } from "react-responsive";
-import Loading from "../components/Loading/Loading";
+import Loading from "../components/Loading/loading";
 import ImageModal from "../components/ImageModal/ImageModal";
 
 type Props = {};
