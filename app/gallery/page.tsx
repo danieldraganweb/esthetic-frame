@@ -8,7 +8,8 @@ import disableScroll from "disable-scroll";
 import OpenMenuSVG from "../components/OpenMenuSVG";
 import CloseMenuSVG from "../components/CloseMenuSVG";
 import { useMediaQuery } from "react-responsive";
-import LoadingImage from "../components/Loading/LoadingImage";
+import Loading from "../components/Loading/Loading";
+import ImageModal from "../components/ImageModal/ImageModal";
 
 type Props = {};
 
@@ -28,17 +29,41 @@ function Gallery(props: Props) {
 
   // Disable scrolling when sidebar is open
   useEffect(() => {
-    if (isSidebarOpen && !isDesktopOrLaptop) {
+    if (isSidebarOpen) {
       disableScroll.on();
     } else {
       disableScroll.off();
     }
-  }, [isSidebarOpen, isDesktopOrLaptop]);
+  }, [isSidebarOpen]);
   const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({});
+  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
+  useEffect(() => {
+    if (selectedImage) {
+      disableScroll.on();
+    } else {
+      disableScroll.off();
+    }
+  }, [selectedImage]);
 
   return (
     <>
-      <main className={styles["wrapper"]}>
+      {selectedImage && (
+        <ImageModal
+          image={selectedImage}
+          onClose={() => setSelectedImage(null)}
+          images={images}
+          selectedIndex={images.findIndex(
+            (image) => image.id === selectedImage.id
+          )}
+        />
+      )}
+
+      <main
+        className={styles["wrapper"]}
+        onLoad={() => {
+          <Loading />;
+        }}
+      >
         <div className={styles["gallery-container"]}>
           <div className={styles["sidebar-container"]}>
             <div className={styles["gallery-title-container"]}>
@@ -93,10 +118,11 @@ function Gallery(props: Props) {
                 <div key={image.id} className={styles.image}>
                   {!loadedImages[image.id] && (
                     <div className={styles.loader}>
-                      <LoadingImage />
+                      <Loading />
                     </div>
                   )}
                   <Image
+                    onClick={() => setSelectedImage(image)}
                     onLoad={() =>
                       setLoadedImages((prev) => ({ ...prev, [image.id]: true }))
                     }
