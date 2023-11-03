@@ -8,7 +8,7 @@ import disableScroll from "disable-scroll";
 import OpenMenuSVG from "../components/OpenMenuSVG";
 import CloseMenuSVG from "../components/CloseMenuSVG";
 import { useMediaQuery } from "react-responsive";
-// import Loading from "../components/Loading/Loading";
+import Loading from "../components/Loading/Loading";
 import ImageModal from "../components/ImageModal/ImageModal";
 
 type Props = {};
@@ -58,7 +58,12 @@ function Gallery(props: Props) {
         />
       )}
 
-      <main className={styles["wrapper"]}>
+      <main
+        className={styles["wrapper"]}
+        onLoad={() => {
+          <Loading />;
+        }}
+      >
         <div className={styles["gallery-container"]}>
           <div className={styles["sidebar-container"]}>
             <div className={styles["gallery-title-container"]}>
@@ -111,6 +116,11 @@ function Gallery(props: Props) {
               )
               .map((image: GalleryImage) => (
                 <div key={image.id} className={styles.image}>
+                  {!loadedImages[image.id] && (
+                    <div className={styles.loader}>
+                      <Loading />
+                    </div>
+                  )}
                   <Image
                     onClick={() => setSelectedImage(image)}
                     onLoad={() =>
@@ -119,8 +129,8 @@ function Gallery(props: Props) {
                     loading="lazy"
                     src={image.fields?.image[0].url}
                     alt={image.fields?.Name}
-                    width={image.fields?.image[0].width * (300 / 600)}
-                    height={image.fields?.image[0].height * (300 / 600)}
+                    width={image.fields?.image[0].width}
+                    height={image.fields?.image[0].height}
                     className={styles["image"]}
                     style={{
                       borderRadius: "0.5em",
