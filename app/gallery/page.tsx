@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import styles from "./gallery.module.scss";
+import styles from "../gallery/gallery.module.scss";
 import { useGalleryImages } from "../hooks/useGalleryImages";
 import { GalleryImage } from "../types";
 import Image from "next/image";
@@ -11,7 +11,9 @@ import { useMediaQuery } from "react-responsive";
 import Loading from "../components/Loading/Loading";
 import ImageModal from "../components/ImageModal/ImageModal";
 
-type Props = {};
+type Props = {
+  images: GalleryImage[];
+};
 
 function Gallery(props: Props) {
   const isDesktopOrLaptop = useMediaQuery({ minWidth: 1224 });
@@ -126,7 +128,6 @@ function Gallery(props: Props) {
                     onLoad={() =>
                       setLoadedImages((prev) => ({ ...prev, [image.id]: true }))
                     }
-                    // loading="lazy"
                     src={image.fields?.image[0].url}
                     alt={image.fields?.Name}
                     width={image.fields?.image[0].width}

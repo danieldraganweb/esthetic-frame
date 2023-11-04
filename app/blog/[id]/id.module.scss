@@ -13,6 +13,7 @@
   max-width: 1100px;
   padding: 0 1em;
 }
+
 .blog-page {
   display: flex;
   flex-direction: column;
@@ -34,6 +35,7 @@
     border-radius: 0.5rem;
     padding: 0 1em;
   }
+
 }
 
 .blog-container {
@@ -61,14 +63,27 @@
   }
 
   p {
-    font-size: $font-size-mobile;
-    font-family: $primary-font;
-    text-align: justify;
+    font-size: $font-size-mobile-wide;
+    font-family: $secondary-font;
+    text-align: left;
     text-justify: inter-word;
     text-wrap: wrap;
     margin-bottom: 2em;
-    line-height: 1.5;
+    line-height: 1.7;
+    // text-indent: 1em;
   }
+}
+
+.blog-description {
+
+  font-size: $font-size-mobile-wide;
+  font-family: $secondary-font;
+  text-align: left;
+  text-justify: inter-word;
+  text-wrap: wrap;
+  margin-bottom: 2em;
+  line-height: 1.7;
+  text-indent: 1em;
 }
 
 .article-title {
@@ -84,10 +99,16 @@
   margin-bottom: 1em;
   border-radius: 0.5rem;
   padding: 0 0.5em;
+
+  p {
+    text-align: left;
+    padding: 0;
+  }
+
 }
 
 .article-content {
-  padding: 0 0.5em;
+  // padding: 0 0.5em;
   font-family: $primary-font;
   font-size: clamp(0.8rem, 1.5vw, 0.99rem);
   font-weight: 400;
@@ -130,12 +151,15 @@
     cursor: pointer;
     // transition: transform 0.5s ease-in;
   }
+
   p {
     margin-bottom: 2em;
   }
+
   p:hover {
     cursor: pointer;
   }
+
   h2 {
     font-size: $font-size-desktop;
     text-align: start;
@@ -147,6 +171,7 @@
     margin-bottom: 1em;
   }
 }
+
 .custom-contact {
   padding: 1em;
 }
@@ -160,6 +185,7 @@
     align-items: flex-start;
     gap: 2rem;
     margin-top: 2em;
+
     // padding: 0 2em;
     img {
       width: 100%;
@@ -172,9 +198,10 @@
       margin-bottom: 0.7em;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
+
     p {
-      font-size: $font-size-mobile;
-      font-family: $primary-font;
+      font-size: $font-size-mobile-wide;
+      font-family: $secondary-font;
       // font-weight: 400;
       text-align: justify;
       text-justify: inter-word;
@@ -189,6 +216,7 @@
     display: flex;
     flex-direction: column;
   }
+
   .article-title {
     font-size: $font-size-desktop;
     margin-bottom: 0.3em;
@@ -196,6 +224,7 @@
     padding: 0.5em;
     //   margin-left: 0.3em;
   }
+
   .article-date {
     font-size: $font-size-tablet;
     font-weight: 400;
@@ -203,9 +232,10 @@
     border-radius: 0.5rem;
     padding: 0 0.5em;
   }
+
   .article-content {
     padding: 0 0.5em;
-    font-family: $primary-font;
+    font-family: $secondary-font;
     font-size: $font-size-tablet;
     font-weight: 400;
     text-align: justify;
@@ -245,12 +275,15 @@
     cursor: pointer;
     // transition: transform 0.5s ease-in;
   }
+
   p {
     margin-bottom: 2em;
   }
+
   p:hover {
     cursor: pointer;
   }
+
   h2 {
     font-size: $font-size-desktop;
     text-align: start;
@@ -262,6 +295,7 @@
     margin-bottom: 1em;
   }
 }
+
 .custom-contact {
   border: none;
 }
@@ -288,6 +322,7 @@
       align-items: center;
     }
   }
+
   .blog-container {
     flex-direction: column;
     justify-content: space-between;
@@ -322,6 +357,7 @@
       display: flex;
       flex-direction: column;
     }
+
     .article-title {
       font-size: $font-size-desktop-ultra-wide;
       margin-bottom: 0.3em;
@@ -330,6 +366,7 @@
       text-align: left;
       //   margin-left: 0.3em;
     }
+
     .article-date {
       font-size: $font-size-mobile;
       font-weight: 400;
@@ -338,11 +375,12 @@
       // padding: 0 0.5em;
       font-family: $primary-font;
     }
+
     .article-content {
       padding-right: 1em;
-      font-family: $primary-font;
-      font-size: clamp(0.6rem, 1.5vw, 0.99rem);
-      text-align: justify;
+      font-family: $secondary-font;
+      font-size: clamp($font-size-mobile, 1.5vw, $font-size-tablet);
+      text-align: left;
       text-justify: inter-word;
       text-wrap: wrap;
       margin-bottom: 2em;
@@ -350,6 +388,7 @@
       font-weight: 100;
     }
   }
+
   .blog-sidebar {
     width: 40%;
     height: 100%;
@@ -380,12 +419,15 @@
       cursor: pointer;
       // transition: transform 0.5s ease-in;
     }
+
     p {
       margin-bottom: 2em;
     }
+
     p:hover {
       cursor: pointer;
     }
+
     h2 {
       font-size: $font-size-desktop;
       text-align: start;
@@ -418,26 +460,30 @@
       max-width: 1100px;
       border-radius: 0.5rem;
     }
+
     h2 {
       font-size: $font-size-tablet;
-      text-align: center;
+      text-align: left;
       text-wrap: wrap;
       width: 100%;
       color: $primary-color;
       width: 100%;
       margin-bottom: 0.5em;
+      padding-left: 0.5em;
     }
+
     p {
-      font-size: $font-size-tablet;
+      font-size: $font-size-mobile;
       font-family: $primary-font;
       // font-weight: 400;
-      text-align: center;
+      text-align: left;
       text-justify: inter-word;
       text-wrap: wrap;
       // margin-bottom: 2em;
       line-height: 1.5;
-      padding: 0 1em;
+      padding-left: 0.8em;
     }
+
     iframe {
       width: 100%;
       border-radius: 1rem;
@@ -448,6 +494,7 @@
       padding: 1rem;
     }
   }
+
   .blog-hero {
     display: flex;
     flex-direction: row;
