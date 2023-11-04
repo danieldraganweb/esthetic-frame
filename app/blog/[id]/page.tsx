@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 import Loading from "@/app/loading";
 import Link from "next/link";
-import Contact from "@/app/components/Contact/Contact";
+import Blog from "../../components/Blog/Blog";
 
 const Post = () => {
   const { blogPosts, loading } = useBlogPosts();
@@ -57,7 +57,7 @@ const Post = () => {
             </div>
           </div>
         </div>
-        <div className={styles["blog-sidebar"]}>
+        {/* <div className={styles["blog-sidebar"]}>
           <h2>All Blog Posts</h2>
           <ul>
             {titles.map((title, index) => (
@@ -73,10 +73,10 @@ const Post = () => {
               </Link>
             ))}
           </ul>
-        </div>
+        </div> */}
       </main>
       <div className={`${styles["custom-contact"]}`}>
-        <Contact />
+        <Blog />
       </div>
     </>
   );
