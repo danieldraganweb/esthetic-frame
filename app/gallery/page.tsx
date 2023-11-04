@@ -11,9 +11,7 @@ import { useMediaQuery } from "react-responsive";
 // import Loading from "../components/Loading/Loading";
 import ImageModal from "../components/ImageModal/ImageModal";
 
-type Props = {
-  images: GalleryImage[];
-};
+type Props = {};
 
 function Gallery(props: Props) {
   const isDesktopOrLaptop = useMediaQuery({ minWidth: 1224 });
