@@ -44,7 +44,7 @@ const Blog = () => {
                   borderRadius: "0.5em 0.5em 0 0",
                   boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
                 }}
-                sizes="(max-width: 1100px) 100vw, 600px"
+                // sizes="(max-width: 500px) 100vw, 600px"
               />
               <h2 className={styles["article-title"]}>{post.fields?.name}</h2>
               <p className={styles["article-date"]}>

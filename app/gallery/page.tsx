@@ -128,14 +128,21 @@ function Gallery(props: Props) {
                     }
                     src={image.fields?.image[0].url}
                     alt={image.fields?.Name}
-                    width={image.fields?.image[0].width}
-                    height={image.fields?.image[0].height}
+                    width={300}
+                    height={300}
                     className={styles["image"]}
                     style={{
                       borderRadius: "0.5em",
                       boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
                     }}
-                    sizes="(max-width: 600px) 100dvw, 600px"
+                    blurDataURL={image.fields?.image[0].thumbnails.small.url}
+                    placeholder="blur"
+
+                    // loader={({ src, width, quality }) => {
+                    //   return `${src}?w=${width}&q=${quality || 75}`;
+                    // }}
+                    // sizes="(max-width: 600px) 100vw, 600px"
+                    // unoptimized
                   />
                 </div>
               ))}
