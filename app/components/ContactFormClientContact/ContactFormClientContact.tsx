@@ -40,15 +40,14 @@ const ContactFormClientContact: React.FC<{ className?: string }> = () => {
           <div className={styles["contact-form-button"]}>
             <button onClick={toggleMenu} id="contact-form-button">
               {menuOpen
-                ? "Kontaktformular schließen"
-                : "Kontaktformular anzeigen"}
+                ? "Kontaktformular Schließen"
+                : "Kontaktformular Anzeigen"}
             </button>
             {menuOpen && (
               <div className={styles["contact-form-iframe"]}>
                 <iframe
                   className="iframe"
                   src="https://airtable.com/embed/appsz3SqYl4ft3Vqv/shrSso6d5RwjPg0rq?backgroundColor=teal"
-                  frameBorder={0}
                   onWheel={() => {}}
                   width="100%"
                   height="1020px"

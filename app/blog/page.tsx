@@ -34,6 +34,7 @@ const Blog = () => {
           <div key={post.id} className={styles.article}>
             <Link href={`/blog/${post.id}`} passHref>
               <Image
+                unoptimized={true}
                 loading="lazy"
                 src={post.fields?.image[0].url}
                 alt={post.fields?.name}

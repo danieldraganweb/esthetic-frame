@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./about.module.scss";
 import Image from "next/image";
-import Contact from "../components/Contact/Contact";
 
 function About() {
   return (
@@ -16,11 +15,15 @@ function About() {
                   alt="Team Member 1"
                   width={500}
                   height={750}
-                  sizes="(max-width: 500px) 100vw, 500px"
-                  loading="eager"
+                  // sizes="(max-width: 500px) 100vw, 500px"
+                  loading="lazy"
+                  blurDataURL="/team-member-1.jpg"
+                  placeholder="blur"
+                  unoptimized={true}
+                  // layout="responsive"
                 ></Image>
                 <div className={styles["team-member-hero"]}>
-                  <h1 className={styles.description}>
+                  <h1>
                     Ich bin Alexandra Ivan, Gründerin und Permanent
                     Make-up-Künstlerin bei Esthetic Frame. Ich freue mich sehr,
                     meine Reise mit Ihnen zu teilen, und ich kann es kaum
