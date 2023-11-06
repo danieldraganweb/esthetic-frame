@@ -74,7 +74,7 @@
     font-family: $secondary-font;
     text-indent: 1em;
     font-style: italic;
-    font-weight: 400;
+    font-weight: 500;
     color: $primary-accent-color;
     font-size: clamp($font-size-tablet, 1vw, $font-size-desktop);
   }
@@ -182,8 +182,8 @@
     margin-bottom: 2em;
 
     img {
-      width: 3.5em;
-      height: 3.5em;
+      width: 2.5em;
+      height: 2.5em;
     }
 
     p {
@@ -275,7 +275,7 @@
     h1 {
       font-size: clamp($font-size-tablet, 1vw, $font-size-desktop);
       margin-bottom: 0.5em;
-      color: $primary-accent-color;
+      // color: $primary-accent-color;
       text-align: center;
       padding: 0 1em;
       font-style: italic;
@@ -309,8 +309,8 @@
     margin-bottom: 2em;
 
     img {
-      width: 3.5em;
-      height: 3.5em;
+      width: 2em;
+      height: 2em;
     }
 
     p {
@@ -356,6 +356,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
   .team-member-container {
@@ -386,9 +387,9 @@
     }
 
     h1 {
-      font-size: clamp($font-size-tablet, 1vw, $font-size-desktop);
+      font-size: clamp($font-size-desktop, 1vw, $font-size-desktop-wide);
       margin-bottom: 0.5em;
-      color: $primary-accent-color;
+      // color: $primary-accent-color;
       text-align: center;
       padding: 0 1em;
       font-style: italic;
@@ -424,8 +425,8 @@
     margin-bottom: 2em;
 
     img {
-      width: 4.5em;
-      height: 4.5em;
+      width: 2.5em;
+      height: 2.5em;
     }
 
     h1 {
@@ -492,7 +493,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1em;
-    gap: 5em;
+    gap: 4em;
 
     img {
       width: 40%;
@@ -505,11 +506,10 @@
     h1 {
       font-size: clamp($font-size-desktop-wide, 1vw, $font-size-desktop-ultra-wide);
       margin-bottom: 0.5em;
-      color: $primary-accent-color;
+      // color: $primary-accent-color;
       text-align: center;
-      padding: 0 1em;
+      padding: 0;
       font-style: italic;
-      text-wrap: wrap;
     }
   }
 
@@ -541,8 +541,8 @@
     margin-bottom: 2em;
 
     img {
-      width: 4.5em;
-      height: 4.5em;
+      width: 3em;
+      height: 3em;
     }
 
     h1 {
@@ -571,7 +571,7 @@
       font-family: $secondary-font;
       line-height: 2;
       letter-spacing: normal;
-      font-size: clamp($font-size-mobile-wide, 5vw, $font-size-tablet);
+      font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
     }
   }
 }
