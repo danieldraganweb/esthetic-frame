@@ -30,6 +30,7 @@ const Post = () => {
             <section>
               <div className={styles["blog-hero"]}>
                 <Image
+                  unoptimized={true}
                   loading="eager"
                   src={post?.fields?.image[0].url ?? ""}
                   alt={post?.fields?.name ?? ""}
@@ -39,7 +40,7 @@ const Post = () => {
                   style={{
                     boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
                   }}
-                  sizes="(max-width: 1100px) 100vw, 600px"
+                  // sizes="(max-width: 1100px) 100vw, 600px"
                 />
                 <h2 className={styles["article-title"]}>
                   {post?.fields?.name}

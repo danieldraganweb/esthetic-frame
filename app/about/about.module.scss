@@ -22,15 +22,8 @@
   letter-spacing: 0.05em;
   box-sizing: border-box;
   cursor: pointer;
-  text-align: center;
+  // text-align: center;
 
-
-  h1 {
-    font-size: $font-size-desktop;
-    margin-bottom: 1em;
-    color: $primary-accent-color;
-    text-align: center;
-  }
 
   li {
     margin-bottom: 0.5em;
@@ -65,13 +58,6 @@
     margin-bottom: 1em;
   }
 
-  h1 {
-    font-size: $font-size-tablet;
-    margin-bottom: 0.5em;
-    color: $primary-accent-color;
-    text-align: center;
-    font-style: italic;
-  }
 }
 
 
@@ -81,11 +67,16 @@
 
   h1 {
     margin-bottom: 0.3em;
-    line-height: 1.5;
+    line-height: 1.7;
     letter-spacing: normal;
-    text-align: center;
-    text-justify: center;
+    text-align: left;
+    text-justify: left;
     font-family: $secondary-font;
+    text-indent: 1em;
+    font-style: italic;
+    font-weight: 400;
+    color: $primary-accent-color;
+    font-size: clamp($font-size-tablet, 1vw, $font-size-desktop);
   }
 }
 
@@ -121,7 +112,7 @@
   .description {
     width: 100%;
     margin: 0 auto;
-    text-align: justify;
+    text-align: left;
     text-justify: newspaper;
     font-family: $secondary-font;
     line-height: 1.6;
@@ -130,35 +121,12 @@
   }
 }
 
-//Tablet
+//Tablet-Small
 
 @include respond(sm) {
   .about-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1100px;
-    box-sizing: border-box;
-    border-radius: 0.5em;
-    padding: 1em;
-    margin-bottom: 1em;
-    // background-color: $quinary-color;
-    color: $primary-color;
-    font-size: $font-size-small;
-    letter-spacing: 0.05em;
-    box-sizing: border-box;
-    cursor: pointer;
-    text-align: center;
 
-    h1 {
-      font-size: $font-size-desktop;
-      margin-bottom: 1.5em;
-      color: $primary-accent-color;
-      text-align: center;
-    }
 
     li {
       margin-bottom: 0.5em;
@@ -191,14 +159,6 @@
       border-radius: 0.5em;
       margin-bottom: 1em;
     }
-
-    h1 {
-      font-size: $font-size-tablet;
-      margin-bottom: 0.5em;
-      color: $primary-accent-color;
-      text-align: center;
-      font-style: italic;
-    }
   }
 
 
@@ -207,12 +167,7 @@
     margin-bottom: 1em;
 
     h1 {
-      margin-bottom: 1em;
-      line-height: 1.5;
-      letter-spacing: normal;
-      text-align: center;
-      text-justify: center;
-      font-family: $secondary-font;
+      font-size: clamp($font-size-tablet, 2vw, $font-size-desktop);
     }
   }
 
@@ -248,8 +203,8 @@
     .description {
       width: 100%;
       margin: 0 auto;
-      text-align: justify;
-      text-justify: newspaper;
+      text-align: left;
+      // text-justify: newspaper;
       font-family: $secondary-font;
       line-height: 1.6;
       letter-spacing: normal;
@@ -269,7 +224,7 @@
     max-width: 1100px;
     box-sizing: border-box;
     border-radius: 0.5em;
-    padding: 1em;
+    // padding: 1em;
     margin-bottom: 1em;
     color: $primary-color;
     font-size: $font-size-small;
@@ -277,13 +232,6 @@
     box-sizing: border-box;
     cursor: pointer;
     text-align: center;
-
-    h1 {
-      font-size: $font-size-desktop;
-      margin-bottom: 1.5em;
-      color: $primary-accent-color;
-      text-align: center;
-    }
 
     li {
       margin-bottom: 0.5em;
@@ -333,16 +281,18 @@
   }
 
   .team-member-hero {
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 
-    .description h1 {
+    h1 {
       margin-bottom: 1em;
       line-height: 1.5;
       letter-spacing: normal;
-      text-align: center;
-      text-justify: center;
+      text-align: left;
+      text-justify: left;
       font-family: $secondary-font;
-      font-size: clamp($font-size-tablet, 1vw, $font-size-desktop);
+      letter-spacing: normal;
+      padding: 0 2rem;
+      font-size: clamp($font-size-mobile-wide, 2vw, $font-size-tablet);
     }
   }
 
@@ -378,8 +328,7 @@
     .description {
       width: 100%;
       margin: 0 auto;
-      text-align: justify;
-      text-justify: newspaper;
+      text-align: left;
       font-family: $secondary-font;
       line-height: 1.6;
       letter-spacing: normal;
@@ -391,28 +340,9 @@
 @include respond(xl) {
   .about-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1100px;
-    box-sizing: border-box;
-    border-radius: 0.5em;
-    padding: 2em 0;
-    margin-bottom: 1em;
-    color: $primary-color;
-    font-size: $font-size-small;
-    box-sizing: border-box;
-    cursor: pointer;
-    text-align: center;
 
-    h1 {
-      font-size: clamp($font-size-desktop, 1vw, $font-size-desktop-wide);
-      margin-bottom: 1.5em;
-      color: $primary-accent-color;
-      text-align: center;
-    }
+
+
 
     li {
       margin-bottom: 0.5em;
@@ -442,7 +372,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1em;
-    gap: 2em;
+    gap: 1rem;
 
     img {
       width: 50%;
@@ -464,16 +394,20 @@
   }
 
   .team-member-hero {
-    margin-bottom: 1em;
+    margin: 2rem 0;
 
-    .description h1 {
+    h1 {
       margin-bottom: 1em;
       line-height: 1.5;
       letter-spacing: normal;
-      text-align: center;
-      text-justify: center;
+      text-align: left;
+      text-justify: left;
       font-family: $secondary-font;
+      letter-spacing: normal;
+
       font-size: clamp($font-size-desktop, 1vw, $font-size-desktop-wide);
+      width: 100%;
+      padding: 0 1rem;
     }
   }
 
@@ -490,6 +424,11 @@
     img {
       width: 4.5em;
       height: 4.5em;
+    }
+
+    h1 {
+      font-size: clamp($font-size-desktop, 1vw, $font-size-desktop-wide);
+      text-align: center;
     }
 
     p {
@@ -509,8 +448,8 @@
     .description {
       width: 100%;
       margin: 0 auto;
-      text-align: justify;
-      text-justify: newspaper;
+      text-align: left;
+      text-justify: left;
       font-family: $secondary-font;
       line-height: 2;
       letter-spacing: normal;
@@ -522,28 +461,6 @@
 @include respond(2xl) {
   .about-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1100px;
-    box-sizing: border-box;
-    border-radius: 0.5em;
-    padding: 2em 0;
-    margin-bottom: 1em;
-    color: $primary-color;
-    font-size: $font-size-small;
-    box-sizing: border-box;
-    cursor: pointer;
-    text-align: center;
-
-    h1 {
-      font-size: clamp($font-size-desktop, 1vw, $font-size-desktop-wide);
-      margin-bottom: 1.5em;
-      color: $primary-accent-color;
-      text-align: center;
-    }
 
     li {
       margin-bottom: 0.5em;
@@ -584,7 +501,7 @@
     }
 
     h1 {
-      font-size: clamp($font-size-desktop, 1vw, $font-size-desktop-wide);
+      font-size: clamp($font-size-desktop-wide, 1vw, $font-size-desktop-ultra-wide);
       margin-bottom: 0.5em;
       color: $primary-accent-color;
       text-align: center;
@@ -595,16 +512,19 @@
   }
 
   .team-member-hero {
-    margin-bottom: 1em;
+    margin: 2em 0;
 
-    .description h1 {
+    h1 {
       margin-bottom: 1em;
       line-height: 1.5;
       letter-spacing: normal;
-      text-align: center;
-      text-justify: center;
+      text-align: left;
+      text-justify: left;
       font-family: $secondary-font;
+      letter-spacing: normal;
       font-size: clamp($font-size-desktop, 1vw, $font-size-desktop-wide);
+      width: 100%;
+      padding: 0 1rem;
     }
   }
 
@@ -621,6 +541,10 @@
     img {
       width: 4.5em;
       height: 4.5em;
+    }
+
+    h1 {
+      text-align: center;
     }
 
     p {
@@ -640,12 +564,12 @@
     .description {
       width: 100%;
       margin: 0 auto;
-      text-align: justify;
+      text-align: left;
       text-justify: newspaper;
       font-family: $secondary-font;
       line-height: 2;
       letter-spacing: normal;
-      font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
+      font-size: clamp($font-size-mobile-wide, 5vw, $font-size-tablet);
     }
   }
 }

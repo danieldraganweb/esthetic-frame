@@ -12,8 +12,8 @@ const HeroSection: React.FC<{ className?: string }> = () => {
             <Image
               src="/Hero.jpg"
               alt="Permanent Make-up lady photo"
-              width={368}
-              height={533}
+              width={518}
+              height={777}
               priority={true}
               layout="responsive"
               sizes="(max-width: 1100px) 100vw, 600px"

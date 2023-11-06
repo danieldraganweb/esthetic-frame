@@ -126,6 +126,9 @@ function Gallery(props: Props) {
                     onLoad={() =>
                       setLoadedImages((prev) => ({ ...prev, [image.id]: true }))
                     }
+                    onLoadingComplete={() =>
+                      setLoadedImages((prev) => ({ ...prev, [image.id]: true }))
+                    }
                     src={image.fields?.image[0].url}
                     alt={image.fields?.Name}
                     width={300}
@@ -137,12 +140,11 @@ function Gallery(props: Props) {
                     }}
                     blurDataURL={image.fields?.image[0].thumbnails.small.url}
                     placeholder="blur"
-
                     // loader={({ src, width, quality }) => {
                     //   return `${src}?w=${width}&q=${quality || 75}`;
                     // }}
                     // sizes="(max-width: 600px) 100vw, 600px"
-                    // unoptimized
+                    unoptimized
                   />
                 </div>
               ))}
