@@ -42,8 +42,11 @@ function About() {
                       width={100}
                       height={100}
                       // layout="responsive"
-                      sizes="(max-width: 500px) 100vw, 500px"
+                      // sizes="(max-width: 500px) 100vw, 500px"
                       loading="lazy"
+                      blurDataURL="/1-star logo.png"
+                      placeholder="blur"
+                      unoptimized={true}
                     ></Image>
                     <h1>Sviato Academy</h1>
                     <p>Absolvent der Permanent Make-up-Akademie</p>

@@ -69,7 +69,7 @@ const Services: React.FC<{ className?: string }> = () => {
               <Link href="/services">
                 <Image
                   unoptimized={true}
-                  src="/services1.jpg"
+                  src="/services1.webp"
                   alt="services"
                   width={358}
                   height={300}
@@ -81,6 +81,8 @@ const Services: React.FC<{ className?: string }> = () => {
                     borderRadius: "1em",
                   }}
                   className={styles["services-image"]}
+                  blurDataURL="/services5.jpg"
+                  placeholder="blur"
                 />
                 <h1 className={styles["services-title-2"]}>
                   Augenbrauen Microblading
@@ -96,7 +98,7 @@ const Services: React.FC<{ className?: string }> = () => {
               <Link href="/services">
                 <Image
                   unoptimized={true}
-                  src="/services4.jpg"
+                  src="/services4.webp"
                   alt="services"
                   width={358}
                   height={300}
@@ -108,6 +110,8 @@ const Services: React.FC<{ className?: string }> = () => {
                     borderRadius: "1em",
                   }}
                   className={styles["services-image"]}
+                  blurDataURL="/services5.jpg"
+                  placeholder="blur"
                 />
                 <h1 className={styles["services-title-3"]}>
                   Permanenter Eyeliner
@@ -123,7 +127,7 @@ const Services: React.FC<{ className?: string }> = () => {
               <Link href="/services">
                 <Image
                   unoptimized={true}
-                  src="/services3.jpg"
+                  src="/services3.webp"
                   alt="services"
                   width={358}
                   height={300}
@@ -134,6 +138,8 @@ const Services: React.FC<{ className?: string }> = () => {
                     borderRadius: "1em",
                   }}
                   className={styles["services-image"]}
+                  blurDataURL="/services5.jpg"
+                  placeholder="blur"
                 />
                 <h1 className={styles["services-title-4"]}>Lippenblush</h1>
                 <p className={styles["services-subtitle-4"]}>
@@ -147,7 +153,7 @@ const Services: React.FC<{ className?: string }> = () => {
               <Link href="/services">
                 <Image
                   unoptimized={true}
-                  src="/services2.jpg"
+                  src="/services2.webp"
                   alt="services"
                   width={358}
                   height={300}
@@ -158,6 +164,8 @@ const Services: React.FC<{ className?: string }> = () => {
                     borderRadius: "1em",
                   }}
                   className={styles["services-image"]}
+                  blurDataURL="/services5.jpg"
+                  placeholder="blur"
                 />
                 <h1 className={styles["services-title-4"]}>
                   Augenbrauenpigmentierung
@@ -173,7 +181,7 @@ const Services: React.FC<{ className?: string }> = () => {
               <Link href="/services">
                 <Image
                   unoptimized={true}
-                  src="/services5.jpg"
+                  src="/services5.webp"
                   alt="services"
                   width={358}
                   height={300}
@@ -185,6 +193,8 @@ const Services: React.FC<{ className?: string }> = () => {
                     borderRadius: "1em",
                   }}
                   className={styles["services-image"]}
+                  blurDataURL="/services5.jpg"
+                  placeholder="blur"
                 />
                 <h1 className={styles["services-title-4"]}>
                   Wimpern-Microblading
