@@ -10,17 +10,21 @@ const HeroSection: React.FC<{ className?: string }> = () => {
         <div className={styles["hero-container"]}>
           <div className={styles["hero-image-container"]}>
             <Image
+              unoptimized={true}
               src="/Hero.jpg"
               alt="Permanent Make-up lady photo"
               width={518}
               height={777}
               priority={true}
               layout="responsive"
-              sizes="(max-width: 1100px) 100vw, 600px"
+              blurDataURL="/Hero.jpg"
+              placeholder="blur"
+              // sizes="(max-width: 1100px) 100vw, 600px"
               style={{
                 objectFit: "contain",
               }}
               className={styles["hero-image"]}
+              loading="eager"
             />
           </div>
           <div className={styles["hero-text-container"]}>
