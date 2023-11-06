@@ -76,6 +76,23 @@
     color: $primary-color;
   }
 
+  button:active {
+    transform: scale(0.98);
+    background: $secondary-color;
+    color: $primary-color;
+  }
+
+  button:disabled {
+    background: $secondary-color;
+    color: $primary-color;
+    cursor: not-allowed;
+  }
+
+  button:visited {
+    background: url(/contact-bg3.jpg);
+
+  }
+
 }
 
 .contact-form-iframe {
