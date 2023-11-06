@@ -57,7 +57,10 @@ const BlogComponent: React.FC<{ className?: string }> = () => {
                       borderRadius: "0.5em 0.5em 0 0",
                       boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
                     }}
-                    sizes="(max-width: 1100px) 100vw, 600px"
+                    blurDataURL="/team-member-1.jpg"
+                    placeholder="blur"
+                    unoptimized={true}
+                    // sizes="(max-width: 1100px) 100vw, 600px"
                   />
                   <h2 className={styles["article-title"]}>
                     {post.fields?.name}

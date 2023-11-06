@@ -66,7 +66,7 @@ const Services: React.FC<{ className?: string }> = () => {
             id="services-scroll-container"
           >
             <div className={styles["service-item"]}>
-              <Link href="/services">
+              <Link href="/blog/recyyGJSEBJMxaej5">
                 <Image
                   unoptimized={true}
                   src="/services1.webp"
@@ -95,7 +95,7 @@ const Services: React.FC<{ className?: string }> = () => {
               </Link>
             </div>
             <div className={styles["service-item"]}>
-              <Link href="/services">
+              <Link href="/blog/receoeTflSkGKMvhK">
                 <Image
                   unoptimized={true}
                   src="/services4.webp"
@@ -124,7 +124,7 @@ const Services: React.FC<{ className?: string }> = () => {
               </Link>
             </div>
             <div className={styles["service-item"]}>
-              <Link href="/services">
+              <Link href="/blog/recsJXpKwrkjRcw6F">
                 <Image
                   unoptimized={true}
                   src="/services3.webp"
@@ -150,7 +150,7 @@ const Services: React.FC<{ className?: string }> = () => {
               </Link>
             </div>
             <div className={styles["service-item"]}>
-              <Link href="/services">
+              <Link href="/blog/recc4cc4FS25E1Wvq">
                 <Image
                   unoptimized={true}
                   src="/services2.webp"
@@ -178,7 +178,7 @@ const Services: React.FC<{ className?: string }> = () => {
               </Link>
             </div>
             <div className={styles["service-item"]}>
-              <Link href="/services">
+              <Link href="/blog/recuYQwh3EmWpKOVE">
                 <Image
                   unoptimized={true}
                   src="/services5.webp"
