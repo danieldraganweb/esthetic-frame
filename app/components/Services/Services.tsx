@@ -68,6 +68,7 @@ const Services: React.FC<{ className?: string }> = () => {
             <div className={styles["service-item"]}>
               <Link href="/services">
                 <Image
+                  unoptimized={true}
                   src="/services1.jpg"
                   alt="services"
                   width={358}
@@ -94,6 +95,7 @@ const Services: React.FC<{ className?: string }> = () => {
             <div className={styles["service-item"]}>
               <Link href="/services">
                 <Image
+                  unoptimized={true}
                   src="/services4.jpg"
                   alt="services"
                   width={358}
@@ -120,6 +122,7 @@ const Services: React.FC<{ className?: string }> = () => {
             <div className={styles["service-item"]}>
               <Link href="/services">
                 <Image
+                  unoptimized={true}
                   src="/services3.jpg"
                   alt="services"
                   width={358}
@@ -143,6 +146,7 @@ const Services: React.FC<{ className?: string }> = () => {
             <div className={styles["service-item"]}>
               <Link href="/services">
                 <Image
+                  unoptimized={true}
                   src="/services2.jpg"
                   alt="services"
                   width={358}
@@ -168,6 +172,7 @@ const Services: React.FC<{ className?: string }> = () => {
             <div className={styles["service-item"]}>
               <Link href="/services">
                 <Image
+                  unoptimized={true}
                   src="/services5.jpg"
                   alt="services"
                   width={358}
