@@ -39,8 +39,8 @@ function About() {
                     <Image
                       src="/1-star logo.png"
                       alt="Team Member 1"
-                      width={100}
-                      height={100}
+                      width={150}
+                      height={150}
                       // layout="responsive"
                       // sizes="(max-width: 500px) 100vw, 500px"
                       loading="lazy"
