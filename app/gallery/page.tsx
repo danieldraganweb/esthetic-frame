@@ -37,17 +37,17 @@ function Gallery(props: Props) {
   }, [isSidebarOpen]);
   const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({});
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
-  useEffect(() => {
-    if (selectedImage) {
-      disableScroll.on();
-    } else {
-      disableScroll.off();
-    }
-  }, [selectedImage]);
+  // useEffect(() => {
+  //   if (selectedImage) {
+  //     disableScroll.on();
+  //   } else {
+  //     disableScroll.off();
+  //   }
+  // }, [selectedImage]);
 
   return (
     <>
-      {selectedImage && (
+      {/* {selectedImage && (
         <ImageModal
           image={selectedImage}
           onClose={() => setSelectedImage(null)}
@@ -56,7 +56,7 @@ function Gallery(props: Props) {
             (image) => image.id === selectedImage.id
           )}
         />
-      )}
+      )} */}
 
       <main
         className={styles["wrapper"]}
@@ -140,10 +140,6 @@ function Gallery(props: Props) {
                     }}
                     blurDataURL={image.fields?.image[0].thumbnails.small.url}
                     placeholder="blur"
-                    // loader={({ src, width, quality }) => {
-                    //   return `${src}?w=${width}&q=${quality || 75}`;
-                    // }}
-                    // sizes="(max-width: 600px) 100vw, 600px"
                     unoptimized
                   />
                 </div>

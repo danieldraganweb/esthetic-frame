@@ -20,7 +20,10 @@ function ContactPage() {
               width={1038}
               height={707}
               layout="responsive"
-              sizes="(max-width: 1100px) 100vw, 1100px"
+              // sizes="(max-width: 1100px) 100vw, 1100px"
+              unoptimized={true}
+              blurDataURL="/about.jpg"
+              placeholder="blur"
             ></Image>
             <ul className={styles.highlights}>
               <li className={styles["hero"]}>

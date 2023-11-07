@@ -24,11 +24,13 @@ const Blog = () => {
 
   return (
     <div className={styles["blog-page"]}>
-      <h1 className={styles["blog-title"]}>Blog</h1>
-      <p className={styles["blog-description"]}>
-        Hier finden Sie die neuesten Trends und Tipps rund um das Permanent
-        Make-up und Microblading
-      </p>
+      <div className={styles["blog-header"]}>
+        <h1 className={styles["blog-title"]}>Blog</h1>
+        <p>
+          Hier finden Sie die neuesten Trends und Tipps rund um das Permanent
+          Make-up und Microblading
+        </p>
+      </div>
       <div className={styles["blog-container"]}>
         {blogPosts.map((post: BlogPostContent) => (
           <div key={post.id} className={styles.article}>
