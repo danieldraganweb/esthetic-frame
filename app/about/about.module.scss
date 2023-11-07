@@ -497,7 +497,7 @@
     gap: 4em;
 
     img {
-      width: 32%;
+      width: 37%;
       height: auto;
       object-fit: cover;
       border-radius: 0.5em;
@@ -522,8 +522,8 @@
       margin-bottom: 1em;
       line-height: 1.5;
       letter-spacing: normal;
-      text-align: left;
-      text-justify: left;
+      text-align: center;
+      text-justify: center;
       font-family: $secondary-font;
       letter-spacing: normal;
       font-size: clamp($font-size-desktop, 1vw, $font-size-desktop-ultra-wide);
@@ -534,14 +534,14 @@
   }
 
   .star-logo {
-    margin-top: 2em;
+    // margin-top: 2em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: auto;
-    margin-bottom: 2em;
+    // margin-bottom: 2em;
 
     img {
       width: 3em;
