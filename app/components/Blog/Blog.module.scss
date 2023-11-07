@@ -55,15 +55,16 @@
 .blog-title-container {
     width: 100%;
     max-width: 1100px;
-    margin-bottom: 1em;
+    // margin-bottom: 1em;
     border-radius: 0.5rem;
 
     h1 {
         font-size: clamp($font-size-tablet, 1.5vw, $font-size-desktop);
         font-weight: 500;
         text-align: center;
-        padding: 1em 0;
-        text-wrap: nowrap;
+        padding: 1em 0 0 0;
+        line-height: 2;
+        // text-wrap: nowrap;
     }
 
     p {
@@ -964,14 +965,14 @@
     .blog-title-container {
         width: 100%;
         max-width: 1100px;
-        margin-bottom: 2em;
+        margin-top: 2em;
         border-radius: 0.5rem;
 
         h1 {
             font-size: clamp($font-size-desktop-ultra-wide, 1vw, $font-size-desktop-ultra-ultra-ultra-wide);
             font-weight: 500;
             text-align: center;
-            padding: 1em 0.3em;
+            padding: 1em 0 0.3em 0;
         }
 
         p {

@@ -18,7 +18,7 @@
   width: 100%;
 
   h1 {
-    font-size: clamp($font-size-desktop, 5vw, $font-size-desktop-ultra-wide);
+    font-size: clamp($font-size-desktop, 5vw, $font-size-desktop-wide);
     font-weight: 500;
     text-align: center;
     border: 1px solid $quaternary-color;
@@ -153,7 +153,7 @@
 
   .blog-header {
     h1 {
-      font-size: clamp($font-size-desktop, 5vw, $font-size-desktop-ultra-wide);
+      font-size: clamp($font-size-desktop, 5vw, $font-size-desktop-wide);
       font-weight: 500;
       text-align: center;
       // border: 1px solid $quaternary-color;
@@ -222,7 +222,7 @@
 
   .blog-header {
     h1 {
-      font-size: clamp($font-size-desktop, 5vw, $font-size-desktop-ultra-wide);
+      font-size: clamp($font-size-desktop, 5vw, $font-size-desktop-wide);
       font-weight: 500;
       text-align: center;
       // border: 1px solid $quaternary-color;
@@ -389,7 +389,7 @@
 
   .blog-header {
     h1 {
-      font-size: clamp($font-size-desktop, 5vw, $font-size-desktop-ultra-wide);
+      font-size: clamp($font-size-desktop, 5vw, $font-size-desktop-wide);
       font-weight: 500;
       text-align: center;
       // border: 1px solid $quaternary-color;
@@ -497,7 +497,7 @@
 @include respond(2xl) {
   .blog-header {
     h1 {
-      font-size: clamp($font-size-desktop, 5vw, $font-size-desktop-ultra-wide);
+      font-size: clamp($font-size-desktop, 5vw, $font-size-desktop-wide);
       font-weight: 500;
       text-align: center;
       border: 1px solid $quaternary-color;
