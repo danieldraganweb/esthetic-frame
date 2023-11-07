@@ -48,7 +48,7 @@ const HeroSection: React.FC<{ className?: string }> = () => {
                 <Link href="/book">
                   <button className={styles["hero-btn-1"]}>Jetzt Buchen</button>
                 </Link>
-                <Link href="/services">
+                <Link href="/blog">
                   <button className={styles["hero-btn-2"]}>
                     Weitere Informationen
                   </button>

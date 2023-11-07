@@ -19,7 +19,7 @@ export function useBlogPosts() {
     const records = await table.select().all();
     setBlogPosts(records as any);
     setLoading(false);
-    console.log(records);
+    // console.log(records);
   };
 
   // load on mount

@@ -16,7 +16,7 @@ export function useGalleryImages() {
   const getAllImages = async () => {
     const records = await table.select().all();
     setAllImages(records as any);
-    console.log(records);
+    // console.log(records);
   };
 
   // load on mount
