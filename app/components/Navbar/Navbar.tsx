@@ -178,9 +178,11 @@ function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link href="/book">
-                  <button className={styles["navbar-button"]}>Buchen</button>
-                </Link>
+                <div className={styles["navbar-button-container"]}>
+                  <Link href="/book">
+                    <button className={styles["navbar-button"]}>Buchen</button>
+                  </Link>
+                </div>
               </li>
             </ul>
           </div>
