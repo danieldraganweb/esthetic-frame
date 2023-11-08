@@ -1,0 +1,17 @@
+@use "./app/styles/base/_typography" as *;
+@use "./app/styles/base/_variables" as *;
+@use "./app/styles/utils/_mixins" as *;
+@use "./app/styles/utils/_functions" as *;
+
+
+.cookie-policy {
+    a {
+        color: $primary-color;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

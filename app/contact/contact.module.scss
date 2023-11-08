@@ -57,11 +57,12 @@
   p {
     margin-bottom: 1.5em;
     font-size: $font-size-mobile-wide;
-    text-align: justify;
+    text-align: left;
     font-family: $primary-font;
     line-height: 1.5;
     letter-spacing: normal;
     font-family: $secondary-font;
+    line-height: 1.7;
   }
 
   li+li {
@@ -192,14 +193,14 @@
     p {
       margin-bottom: 1.5em;
       font-size: $font-size-tablet;
-      text-align: justify;
+      text-align: left;
       font-family: $primary-font;
       line-height: 1.5;
       letter-spacing: normal;
       font-family: $secondary-font;
-      width: 75%;
-      text-align: center;
+      width: 85%;
       margin: 0 auto;
+      text-indent: 1rem;
     }
 
     li+li {
