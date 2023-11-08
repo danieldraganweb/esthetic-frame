@@ -19,6 +19,7 @@
     "eslint-config-next": "13.4.16",
     "next": "^14.0.1",
     "react": "18.2.0",
+    "react-cookie-consent": "^9.0.0",
     "react-dom": "18.2.0",
     "react-iframe": "^1.8.5",
     "react-pdf": "^7.5.1",

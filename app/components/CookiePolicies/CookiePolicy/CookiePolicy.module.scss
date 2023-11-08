@@ -1,0 +1,61 @@
+@use "./app/styles/base/_typography" as *;
+@use "./app/styles/base/_variables" as *;
+@use "./app/styles/utils/_mixins" as *;
+@use "./app/styles/utils/_functions" as *;
+
+
+.cookie-policy-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $secondary-color;
+    color: $secondary-color;
+    text-align: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.CookieConsent {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #2b373b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    z-index: 1000;
+
+    .button {
+        color: #4e503b;
+        font-size: $font-size-mobile-wide;
+        text-decoration: none;
+        margin-left: 10px;
+        padding: 20px 10px;
+        font-family: $primary-font;
+    }
+}
+
+.CookieConsent__message {
+    float: left;
+    width: 80%;
+    margin: 0;
+    padding: 0;
+    font-size: $font-size-mobile-wide;
+    font-family: $primary-font;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-top: 0;
+    color: #fff;
+}
+
+.CookieConsent::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.CookieConsent a {
+    color: #3c08e8;
+}
