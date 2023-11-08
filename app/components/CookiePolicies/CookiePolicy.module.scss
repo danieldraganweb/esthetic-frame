@@ -5,10 +5,14 @@
 
 
 .cookie-policy {
+    width: 100%;
+    height: auto;
+
     a {
         color: $primary-color;
         text-decoration: none;
         cursor: pointer;
+        transition: all 0.2s ease-in-out;
 
         &:hover {
             text-decoration: underline;

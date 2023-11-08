@@ -7,19 +7,33 @@ const CookiePolicyAlert: React.FC = () => {
   return (
     <div className={styles["cookie-policy"]}>
       <CookieConsent
+        contentClasses="cookie-policy-content"
         location="bottom"
         buttonText="Ich akzeptiere"
         cookieName="myCookie"
-        style={{ background: "#1877F2", fontSize: "15px", textAlign: "center" }}
+        style={{
+          background: "#1877F2",
+          fontSize: "12px",
+          textAlign: "left",
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "space-evenly",
+          justifyContent: "center",
+          padding: "10px 20px",
+          width: "100%",
+          fontFamily: "Roboto sans-serif",
+          height: "auto",
+        }}
         buttonStyle={{
           color: "#000000",
-          fontSize: "18px",
+          fontSize: "16px",
           backgroundColor: "#ffffff",
           borderRadius: "25px",
           padding: "10px 20px",
           fontFamily: "Roboto sans-serif",
           letterSpacing: "0.5px",
           cursor: "pointer",
+          display: "inline-block",
         }}
         expires={150}
       >
