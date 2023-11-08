@@ -191,7 +191,8 @@
     cursor: pointer;
   }
 
-  .navLinks a:active {
+  .navLinks a:active,
+  .navLinks li:focus {
     transition: all 0.8s ease-in-out;
     color: $primary-accent-color;
   }
@@ -346,9 +347,11 @@
   }
 
   .navLinks a:hover {
-    // transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in;
     color: $primary-accent-color;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-0.2em);
   }
 
   .navLinks a:active {
@@ -467,14 +470,15 @@
     }
 
     .button:hover {
-      transform: scale(1.02);
-      background-color: $primary-color;
+      transform: scale(1.12);
+      background-color: $secondary-color;
       cursor: pointer;
+      border: 1px solid $primary-color;
     }
 
     .button:active {
       transform: scale(1.01);
-      // transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
     }
 
     .navLinks {
@@ -499,16 +503,20 @@
     .navLinks a:hover {
       color: $primary-accent-color;
       cursor: pointer;
+      // transform: translateY(-0.2em);
+
     }
 
     .navLinks li:hover {
       color: $primary-accent-color;
       cursor: pointer;
-      transform: scale(1.1);
+      transform: translateY(-0.2em);
+      transition: all 0.8s ease-in-out;
     }
 
     .navLinks a:active {
-      transition: all 0.8s ease-in-out;
+      transition: all 0.8s ease-in;
+      transform: translateY(0.2em);
     }
   }
 }
