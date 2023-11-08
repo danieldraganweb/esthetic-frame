@@ -271,30 +271,24 @@
       border-radius: 0.5em;
       margin-bottom: 1em;
     }
-
-    h1 {
-      font-size: clamp($font-size-tablet, 1vw, $font-size-desktop);
-      margin-bottom: 0.5em;
-      // color: $primary-accent-color;
-      text-align: center;
-      padding: 0 1em;
-      font-style: italic;
-    }
   }
 
   .team-member-hero {
-    margin-bottom: 1rem;
+    margin: 5rem 0 1rem 0;
 
     h1 {
       margin-bottom: 1em;
-      line-height: 1.5;
+      line-height: 1.7;
       letter-spacing: normal;
       text-align: left;
       text-justify: left;
       font-family: $secondary-font;
       letter-spacing: normal;
       padding: 0;
-      font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
+      font-size: clamp($font-size-tablet, 1vw, $font-size-desktop);
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 1rem;
     }
   }
 
@@ -302,10 +296,9 @@
     margin-top: 2em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center !important;
     align-items: center;
     width: 100%;
-    height: auto;
     margin-bottom: 2em;
 
     img {
@@ -313,11 +306,14 @@
       height: 2em;
     }
 
+    h1 {
+      font-size: clamp($font-size-tablet, 1vw, $font-size-desktop);
+      text-align: center;
+    }
+
     p {
-      line-height: 1;
       letter-spacing: normal;
       text-align: center;
-      text-justify: center;
       font-family: $secondary-font;
       font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
     }

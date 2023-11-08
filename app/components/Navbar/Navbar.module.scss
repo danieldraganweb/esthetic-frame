@@ -187,14 +187,15 @@
   }
 
   .navLinks a:hover {
+    transition: all 0.3s ease-in;
     color: $primary-accent-color;
     cursor: pointer;
+    transition: all 0.3s ease-in;
+    transform: translateY(-0.2em);
   }
 
-  .navLinks a:active,
-  .navLinks li:focus {
+  .navLinks a:active {
     transition: all 0.8s ease-in-out;
-    color: $primary-accent-color;
   }
 
   .lineTop,
@@ -304,14 +305,37 @@
   max-width: 1100px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   list-style: none;
   letter-spacing: 0.05em;
   color: $primary-color;
   box-sizing: border-box;
   cursor: pointer;
-  animation: fade-in-top 1.5s ease-in-out;
+
+
+  button {
+    background-color: lighten($primary-color, $amount: 20%);
+    color: $secondary-color;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 1.5em;
+    box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+    font-size: $font-size-mobile-wide;
+    width: 100%;
+  }
+
+  .button:hover {
+    transform: scale(1.12);
+    background-color: $secondary-color;
+    cursor: pointer;
+    border: 1px solid $primary-color;
+  }
+
+  .button:active {
+    transform: scale(1.01);
+    transition: all 0.2s ease-out;
+  }
 
   .navLinks {
     width: 100%;
@@ -320,47 +344,41 @@
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    font-size: $font-size-mobile;
-    margin-left: 1em;
     letter-spacing: 0.05em;
     color: $primary-color;
     box-sizing: border-box;
     margin: 0 auto;
 
     a {
-      font-size: clamp($font-size-tablet, 1vw, $font-size-desktop-wide);
-      padding-bottom: 0.5em;
-      animation: fade-in-top 1.5s;
-
-      @keyframes fade-in-top {
-        from {
-          opacity: 0;
-          transform: translatey(-100%);
-        }
-
-        to {
-          opacity: 1;
-          transform: translatey(0);
-        }
-      }
+      font-size: $font-size-mobile-wide;
     }
+
+
   }
 
   .navLinks a:hover {
-    transition: all 0.3s ease-in;
     color: $primary-accent-color;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    transform: translateY(-0.2em);
+    // transform: translateY(-0.2em);
+
   }
 
-  .navLinks a:active {
+  .navLinks li:hover {
+    color: $primary-accent-color;
+    cursor: pointer;
+    transform: translateY(-0.2em);
     transition: all 0.8s ease-in-out;
   }
 
+  .navLinks a:active {
+    transition: all 0.8s ease-in;
+    transform: translateY(0.2em);
+  }
+
+
 
   .logo {
-    width: 150px;
+    width: 200px;
     height: 110px;
     margin: 0 auto;
     display: flex;

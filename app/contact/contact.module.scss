@@ -47,8 +47,8 @@
   text-align: center;
 
   h1 {
-    font-size: $font-size-tablet;
-    margin-bottom: 0.5em;
+    font-size: $font-size-mobile-wide;
+    margin-bottom: 1em;
     color: $primary-accent-color;
     text-align: center;
     font-style: italic;
@@ -183,7 +183,7 @@
     margin-top: 2em;
 
     h1 {
-      font-size: $font-size-desktop-ultra-wide;
+      font-size: $font-size-desktop-wide;
       margin-bottom: 0.5em;
       color: $primary-accent-color;
       text-align: center;
@@ -192,6 +192,7 @@
 
     p {
       margin-bottom: 1.5em;
+
       font-size: $font-size-tablet;
       text-align: left;
       font-family: $primary-font;

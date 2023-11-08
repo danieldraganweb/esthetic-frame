@@ -51,6 +51,8 @@ export default function RootLayout({
           src="https://cdn-cookieyes.com/client_data/d28c0f4d8bfb96a1cace6550/script.js"
           strategy="lazyOnload"
         />
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body>
         <Navbar />

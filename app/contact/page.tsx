@@ -12,7 +12,6 @@ function ContactPage() {
           <h1 className={styles["about-title"]}>
             Willkommen bei Esthetic Frame!
           </h1>
-          <h1 className={styles["about-title"]}>Wir freuen uns auf Sie!</h1>
           <div className={styles["about-image-container"]}>
             <Image
               src="/about.jpg"
@@ -25,6 +24,7 @@ function ContactPage() {
               blurDataURL="/about.jpg"
               placeholder="blur"
             ></Image>
+            <h1 className={styles["about-title"]}>Wir freuen uns auf Sie!</h1>
             <ul className={styles.highlights}>
               <li className={styles["hero"]}>
                 <h1>Entdecken Sie Ihre natürliche Ausstrahlung</h1>
