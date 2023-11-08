@@ -7,6 +7,7 @@ import {
 } from "next/font/google";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import Script from "next/script";
 
 const cormorant_garamond = Cormorant_Garamond({
   subsets: ["latin"],
@@ -44,6 +45,13 @@ export default function RootLayout({
       lang="de"
       className={`${cormorant_garamond.variable} ${roboto.variable} ${cinzel_decorative.variable}`}
     >
+      <head>
+        <Script
+          id="cookieyes"
+          type="text/javascript"
+          src="https://cdn-cookieyes.com/client_data/d28c0f4d8bfb96a1cace6550/script.js"
+        ></Script>
+      </head>
       <body>
         <Navbar />
         {children}
