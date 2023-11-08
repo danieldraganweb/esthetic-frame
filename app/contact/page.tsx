@@ -10,7 +10,7 @@ function ContactPage() {
       <main className={styles["contact-main"]}>
         <div className={styles["about-container"]}>
           <h1 className={styles["about-title"]}>
-            Willkommen bei Esthetic Frame.
+            Willkommen bei Esthetic Frame!
           </h1>
           <h1 className={styles["about-title"]}>Wir freuen uns auf Sie!</h1>
           <div className={styles["about-image-container"]}>
@@ -27,63 +27,68 @@ function ContactPage() {
             ></Image>
             <ul className={styles.highlights}>
               <li className={styles["hero"]}>
-                <h1>Discover Your Natural Radiance</h1>
+                <h1>Entdecken Sie Ihre natürliche Ausstrahlung</h1>
                 <p>
-                  At Esthetic Frame, we are more than just a Permanent Makeup
-                  studio; we are your dedicated partners in enhancing your
-                  natural beauty. Located in the heart of Vienna, our studio is
-                  where lasting elegance and confidence meet. We invite you to
-                  embark on a journey with us, where every visit leaves you
-                  feeling empowered and beautiful.
+                  Bei Esthetic Frame sind wir mehr als nur ein Permanent-Make-up
+                  Studio; Wir sind Ihr engagierter Partner bei der Verbesserung
+                  Ihrer natürliche Schönheit. Unser Studio liegt im Herzen von
+                  Wien wo dauerhafte Eleganz und Selbstvertrauen
+                  aufeinandertreffen. Wir laden Sie dazu ein Begeben Sie sich
+                  mit uns auf eine Reise, auf der Sie jeder Besuch zurücklässt
+                  sich gestärkt und schön fühlen.
                 </p>
               </li>
               <li>
-                <h1>Expertise in Permanent Makeup</h1>
+                <h1>Fachkompetenz im Bereich Permanent Make-up</h1>
                 <p>
-                  Our team of skilled artists possesses a deep understanding of
-                  Permanent Makeup techniques, ensuring that every stroke and
-                  detail enhances your features naturally.
+                  Unser Team aus erfahrenen Künstlern verfügt über ein tiefes
+                  Verständnis für Permanente Make-up-Techniken, die
+                  sicherstellen, dass jeder Strich und Details betonen Ihre
+                  Gesichtszüge auf natürliche Weise.
                 </p>
               </li>
               <li>
-                <h1>Safe and Quality Products</h1>
+                <h1>Sichere und hochwertige Produkte</h1>
                 <p>
-                  We prioritize your well-being, which is why we use only the
-                  highest quality, safe, and non-allergenic pigments and
-                  materials.
+                  Ihr Wohlbefinden steht für uns an erster Stelle, deshalb
+                  verwenden wir ausschließlich die höchste Qualität, sichere und
+                  nicht allergene Pigmente und Materialien.
                 </p>
               </li>
               <li>
-                <h1>Welcoming Atmosphere</h1>
+                <h1>Einladende Atmosphäre</h1>
                 <p>
-                  Step into our studio, and you&rsquo;ll immediately feel at
-                  ease. Our warm and inviting ambiance is designed to provide
-                  you with a comfortable and relaxing experience.
+                  Wenn Sie unser Studio betreten, werden Sie sich sofort
+                  wohlfühlen Leichtigkeit. Unser warmes und einladendes Ambiente
+                  soll Ihnen helfen Ihnen ein komfortables und entspannendes
+                  Erlebnis.
                 </p>
               </li>
               <li>
-                <h1>Personalized Service</h1>
+                <h1>Personalisierter Service</h1>
                 <p>
-                  Your unique beauty deserves a personalized approach. We listen
-                  to your preferences and work closely with you to achieve the
-                  results you desire.
+                  Ihre einzigartige Schönheit verdient eine individuelle
+                  Behandlung. Wir hören zu Wir richten uns nach Ihren Wünschen
+                  und arbeiten eng mit Ihnen zusammen, um das zu erreichen
+                  Ergebnisse, die Sie sich wünschen.
                 </p>
               </li>
               <li>
-                <h1>Passion for Perfection</h1>
+                <h1>Leidenschaft für Perfektion</h1>
                 <p>
-                  We are passionate about what we do, and we strive for
-                  perfection in every detail. We are committed to ensuring that
-                  you leave our studio feeling confident and beautiful.
+                  Wir sind begeistert von dem, was wir tun, und wir streben
+                  danach Perfektion in jedem Detail. Dafür setzen wir uns ein
+                  Sie verlassen unser Studio mit einem selbstbewussten und
+                  schönen Gefühl.
                 </p>
               </li>
               <li>
-                <h1>Discover Your Natural Radiance</h1>
+                <h1>Entdecken Sie Ihre natürliche Ausstrahlung</h1>
                 <p className={styles.description}>
-                  Discover Esthetic Frame, where artistry meets beauty and every
-                  visit is an opportunity to uncover your natural radiance. Our
-                  journey is your journey, and we&rsquo;re excited to share it
-                  with you.
+                  Entdecken Sie Esthetic Frame, wo Kunstfertigkeit auf Schönheit
+                  und alles trifft Der Besuch ist eine Gelegenheit, Ihre
+                  natürliche Ausstrahlung zu entdecken. Unser Reise ist Ihre
+                  Reise, und wir freuen uns, sie mit Ihnen zu teilen mit dir.
                 </p>
               </li>
             </ul>
