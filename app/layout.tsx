@@ -48,9 +48,9 @@ export default function RootLayout({
       <head>
         <Script
           id="cookieyes"
-          type="text/javascript"
           src="https://cdn-cookieyes.com/client_data/d28c0f4d8bfb96a1cace6550/script.js"
-        ></Script>
+          strategy="lazyOnload"
+        />
       </head>
       <body>
         <Navbar />
