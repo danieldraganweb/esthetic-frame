@@ -43,6 +43,18 @@ const Blog = () => {
                 width={post.fields?.image[0].width}
                 height={post.fields?.image[0].height}
                 // layout="responsive"
+                className={` ${styles["transition-opacity"]} ${
+                  styles["opacity-0"]
+                } ${styles["transition-timing-function"]} ${
+                  styles["duration-300"]
+                } ${styles["ease-in-out"]}
+                        ${
+                          loading ? styles["opacity-0"] : styles["opacity-100"]
+                        }`}
+                onLoad={(event) => {
+                  const img = event.target as HTMLImageElement;
+                  img.classList.remove(styles["opacity-0"]);
+                }}
                 style={{
                   borderRadius: "0.5em 0.5em 0 0",
                   boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",

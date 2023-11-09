@@ -37,6 +37,7 @@ function Gallery(props: Props) {
   }, [isSidebarOpen]);
   const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({});
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
+  const [loading, setLoading] = useState(true);
   // useEffect(() => {
   //   if (selectedImage) {
   //     disableScroll.on();
@@ -47,7 +48,7 @@ function Gallery(props: Props) {
 
   return (
     <>
-      {/* {selectedImage && (
+      {selectedImage && (
         <ImageModal
           image={selectedImage}
           onClose={() => setSelectedImage(null)}
@@ -56,7 +57,7 @@ function Gallery(props: Props) {
             (image) => image.id === selectedImage.id
           )}
         />
-      )} */}
+      )}
 
       <main
         className={styles["wrapper"]}
@@ -123,17 +124,34 @@ function Gallery(props: Props) {
                   )} */}
                   <Image
                     onClick={() => setSelectedImage(image)}
-                    onLoad={() =>
-                      setLoadedImages((prev) => ({ ...prev, [image.id]: true }))
-                    }
-                    onLoadingComplete={() =>
-                      setLoadedImages((prev) => ({ ...prev, [image.id]: true }))
-                    }
+                    onLoad={(event) => {
+                      setLoadedImages((prev) => ({
+                        ...prev,
+                        [image.id]: true,
+                      }));
+                      const img = event.target as HTMLImageElement;
+                      img.classList.remove(styles["opacity-0"]);
+                    }}
+                    // onLoadComplete={() =>
+                    //   setLoadedImages((prev) => ({ ...prev, [image.id]: true }))
+                    // }
                     src={image.fields?.image[0].url}
                     alt={image.fields?.Name}
                     width={300}
                     height={300}
-                    className={styles["image"]}
+                    className={`${styles["image"]} ${
+                      styles["transition-opacity"]
+                    } ${styles["opacity-0"]} ${
+                      styles["transition-timing-function"]
+                    } ${styles["duration-300"]} ${styles["ease-in-out"]}
+                            ${
+                              loading
+                                ? styles["opacity-0"]
+                                : styles["opacity-100"]
+                            }`}
+                    onLoadingComplete={(src) =>
+                      src.classList.remove(styles["opacity-0"])
+                    }
                     style={{
                       borderRadius: "0.5em",
                       boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",

@@ -9,7 +9,7 @@ function LogoComponent() {
       <div className={styles.logo}>
         <Link href="/">
           <Image
-            src="/logo.png"
+            src="/Logo.svg"
             alt="logo"
             width={400}
             height={130}
@@ -21,8 +21,6 @@ function LogoComponent() {
             }}
             className={styles["logo-image"]}
           />
-          {/* <h1>ESTHETIC FRAME</h1>
-          <h2>by Alexandra Ivan</h2> */}
         </Link>
       </div>
     </>

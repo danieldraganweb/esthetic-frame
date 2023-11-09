@@ -78,7 +78,27 @@
   }
 }
 
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
 
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+.duration-300 {
+  transition-duration: 2500ms;
+}
+
+.ease-in-out {
+  transition-timing-function: ease-in-out;
+}
 
 .article {
   border: 1px solid $quaternary-color;
