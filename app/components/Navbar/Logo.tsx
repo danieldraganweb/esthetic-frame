@@ -19,7 +19,7 @@ function LogoComponent() {
               objectFit: "contain",
               borderRadius: "1em",
             }}
-            className={styles["logo-image"]}
+            className={styles["logo"]}
           />
         </Link>
       </div>

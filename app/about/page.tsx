@@ -1,8 +1,10 @@
+"use client";
 import React from "react";
 import styles from "./about.module.scss";
 import Image from "next/image";
-
+import { useState } from "react";
 function About() {
+  const [loading, setLoading] = useState(true);
   return (
     <>
       <main>
@@ -21,6 +23,19 @@ function About() {
                   placeholder="blur"
                   unoptimized={true}
                   // layout="responsive"
+                  className={`${styles["image"]} ${
+                    styles["transition-opacity"]
+                  } ${styles["opacity-0"]} ${
+                    styles["transition-timing-function"]
+                  } ${styles["duration-300"]} ${styles["ease-in-out"]}
+                          ${
+                            loading
+                              ? styles["opacity-0"]
+                              : styles["opacity-100"]
+                          }`}
+                  onLoadingComplete={(src) =>
+                    src.classList.remove(styles["opacity-0"])
+                  }
                 ></Image>
                 <div className={styles["team-member-hero"]}>
                   <h1>
