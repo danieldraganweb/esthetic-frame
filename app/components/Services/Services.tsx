@@ -73,7 +73,7 @@ const Services: React.FC<{ className?: string }> = () => {
                   alt="services"
                   width={358}
                   height={300}
-                  sizes="(max-width: 300px) 100vw, 300px"
+                  // sizes="(max-width: 300px) 100vw, 300px"
                   priority={true}
                   // layout="responsive"
                   style={{
@@ -102,7 +102,7 @@ const Services: React.FC<{ className?: string }> = () => {
                   alt="services"
                   width={358}
                   height={300}
-                  sizes="(max-width: 300px) 100vw, 300px"
+                  // sizes="(max-width: 300px) 100vw, 300px"
                   priority={true}
                   // layout="responsive"
                   style={{
@@ -131,7 +131,7 @@ const Services: React.FC<{ className?: string }> = () => {
                   alt="services"
                   width={358}
                   height={300}
-                  sizes="(max-width: 300px) 100vw, 300px"
+                  // sizes="(max-width: 300px) 100vw, 300px"
                   priority={true}
                   style={{
                     objectFit: "cover",
@@ -157,7 +157,7 @@ const Services: React.FC<{ className?: string }> = () => {
                   alt="services"
                   width={358}
                   height={300}
-                  sizes="(max-width: 300px) 100vw, 300px"
+                  // sizes="(max-width: 300px) 100vw, 300px"
                   priority={true}
                   style={{
                     objectFit: "cover",

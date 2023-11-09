@@ -153,12 +153,14 @@ function Navbar() {
                   key="blog"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Blog
+                  Unser Blog
                 </Link>
               </li>
-              <div className={styles["navbar-logo"]}>
-                <Logo />
-              </div>
+              <li>
+                <div className={styles["navbar-logo"]}>
+                  <Logo />
+                </div>
+              </li>
               <li>
                 <Link
                   href="/about"
