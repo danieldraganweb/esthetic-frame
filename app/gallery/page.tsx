@@ -48,7 +48,7 @@ function Gallery(props: Props) {
 
   return (
     <>
-      {selectedImage && (
+      {/* {selectedImage && (
         <ImageModal
           image={selectedImage}
           onClose={() => setSelectedImage(null)}
@@ -57,7 +57,7 @@ function Gallery(props: Props) {
             (image) => image.id === selectedImage.id
           )}
         />
-      )}
+      )} */}
 
       <main
         className={styles["wrapper"]}
