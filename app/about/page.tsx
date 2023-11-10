@@ -36,6 +36,7 @@ function About() {
                   onLoadingComplete={(src) =>
                     src.classList.remove(styles["opacity-0"])
                   }
+                  onLoad={() => setLoading(false)}
                 ></Image>
                 <div className={styles["team-member-hero"]}>
                   <h1>

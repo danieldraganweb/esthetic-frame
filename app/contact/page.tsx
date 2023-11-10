@@ -3,8 +3,10 @@ import React from "react";
 import styles from "./contact.module.scss";
 import ContactFormClientContact from "../components/ContactFormClientContact/ContactFormClientContact";
 import Image from "next/image";
+import { useState } from "react";
 
 function ContactPage() {
+  const [loading, setLoading] = useState(true);
   return (
     <>
       <main className={styles["contact-main"]}>
@@ -23,6 +25,13 @@ function ContactPage() {
               unoptimized={true}
               blurDataURL="/about.jpg"
               placeholder="blur"
+              className={`${styles["about-image"]} ${styles["image"]} ${
+                styles["transition-opacity"]
+              } ${styles["opacity-0"]} ${
+                styles["transition-timing-function"]
+              } ${styles["duration-300"]} ${styles["ease-in-out"]}
+                      ${loading ? styles["opacity-0"] : styles["opacity-100"]}`}
+              onLoad={() => setLoading(false)}
             ></Image>
             <h1 className={styles["about-title"]}>Wir freuen uns auf Sie!</h1>
             <ul className={styles.highlights}>
