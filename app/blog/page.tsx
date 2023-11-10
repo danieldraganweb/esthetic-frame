@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./blog.module.scss";
 import { useBlogPosts } from "../hooks/useAllBlogPosts";
-import { BlogPostContent, BlogPost } from "../types";
+import { BlogPostContent } from "../types";
 import Image from "next/image";
 import Link from "next/link";
 import Loading from "../loading";
@@ -18,10 +18,6 @@ const Blog = () => {
     }
   }, [blogPosts]);
 
-  if (loading) {
-    return <Loading />;
-  }
-
   return (
     <div className={styles["blog-page"]}>
       <div className={styles["blog-header"]}>
@@ -30,6 +26,7 @@ const Blog = () => {
           Hier finden Sie die neuesten Trends und Tipps rund um das Permanent
           Make-up und Microblading
         </p>
+        <p>{blogPosts.length} Artikel</p>
       </div>
       <div className={styles["blog-container"]}>
         {blogPosts.map((post: BlogPostContent) => (
@@ -37,24 +34,20 @@ const Blog = () => {
             <Link href={`/blog/${post.id}`} passHref>
               <Image
                 unoptimized={true}
-                loading="lazy"
+                // loading="lazy"
                 src={post.fields?.image[0].url}
                 alt={post.fields?.name}
                 width={post.fields?.image[0].width}
                 height={post.fields?.image[0].height}
                 // layout="responsive"
-                className={` ${styles["transition-opacity"]} ${
-                  styles["opacity-0"]
-                } ${styles["transition-timing-function"]} ${
-                  styles["duration-300"]
-                } ${styles["ease-in-out"]}
+                className={`${styles["image"]}
+                 ${styles["transition-opacity"]} ${styles["opacity-0"]} ${
+                  styles["transition-timing-function"]
+                } ${styles["duration-300"]} ${styles["ease-in-out"]}
                         ${
                           loading ? styles["opacity-0"] : styles["opacity-100"]
                         }`}
-                onLoad={(event) => {
-                  const img = event.target as HTMLImageElement;
-                  img.classList.remove(styles["opacity-0"]);
-                }}
+                onLoad={() => setLoading(false)}
                 style={{
                   borderRadius: "0.5em 0.5em 0 0",
                   boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",

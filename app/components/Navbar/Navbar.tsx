@@ -157,9 +157,9 @@ function Navbar() {
                 </Link>
               </li>
               <li>
-                <div className={styles["navbar-logo"]}>
-                  <Logo />
-                </div>
+                {/* <div className={styles["navbar-logo"]}> */}
+                <Logo />
+                {/* </div> */}
               </li>
               <li>
                 <Link

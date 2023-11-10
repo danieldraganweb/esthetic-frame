@@ -33,18 +33,21 @@ function About() {
                               ? styles["opacity-0"]
                               : styles["opacity-100"]
                           }`}
-                  onLoadingComplete={(src) =>
-                    src.classList.remove(styles["opacity-0"])
-                  }
                   onLoad={() => setLoading(false)}
                 ></Image>
                 <div className={styles["team-member-hero"]}>
                   <h1>
-                    Ich bin Alexandra Ivan, Gründerin und Permanent
-                    Make-up-Künstlerin bei Esthetic Frame. Ich freue mich sehr,
-                    meine Reise mit Ihnen zu teilen, und ich kann es kaum
-                    erwarten, Ihnen zu helfen, Ihre natürliche Strahlkraft zu
-                    entdecken.
+                    Ich bin{" "}
+                    <strong className={styles["team-member-name"]}>
+                      Alexandra Ivan
+                    </strong>
+                    , Gründerin und Permanent Make-up-Künstlerin bei{" "}
+                    <strong className={styles["team-member-name"]}>
+                      Esthetic Frame
+                    </strong>
+                    . Ich freue mich sehr, meine Reise mit Ihnen zu teilen, und
+                    ich kann es kaum erwarten, Ihnen zu helfen, Ihre natürliche
+                    Strahlkraft zu entdecken.
                   </h1>
                   <h1>
                     Willkommen in der Welt zeitloser Schönheit, wo Leidenschaft
@@ -64,8 +67,8 @@ function About() {
                       placeholder="blur"
                       unoptimized={true}
                     ></Image>
-                    <h1>Sviato Academy</h1>
-                    <p>Absolvent der Permanent Make-up-Akademie</p>
+                    <h2>Sviato Academy</h2>
+                    <p>Absolvent der Permanent Make-up Akademie</p>
                   </div>
                 </div>
               </div>
