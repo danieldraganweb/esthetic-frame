@@ -102,14 +102,14 @@
 }
 
 .star-logo {
-  margin-top: 2em;
+  // margin-top: 2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: auto;
-  margin-bottom: 2em;
+  // margin-bottom: 2em;
 
   img {
     width: 3.5em;
@@ -193,14 +193,14 @@
   }
 
   .star-logo {
-    margin-top: 2em;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: auto;
-    margin-bottom: 2em;
+
 
     img {
       width: 2.5em;
@@ -251,7 +251,7 @@
     box-sizing: border-box;
     cursor: pointer;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 0;
 
 
     li {
@@ -280,7 +280,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 1em;
     gap: 2.5rem;
 
@@ -294,7 +294,11 @@
   }
 
   .team-member-hero {
-    margin: 5rem 0 1rem 0;
+    margin: 3rem 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     h1 {
       margin-bottom: 1em;
@@ -305,7 +309,7 @@
       font-family: $secondary-font;
       letter-spacing: normal;
       padding: 0;
-      font-size: clamp($font-size-tablet, 1vw, $font-size-desktop);
+      font-size: clamp($font-size-mobile-wide, 2vw, $font-size-tablet);
       width: 90%;
       margin: 0 auto;
       margin-bottom: 1rem;
@@ -313,13 +317,13 @@
   }
 
   .star-logo {
-    margin-top: 2em;
+    // margin-top: 2em;
     display: flex;
     flex-direction: column;
     justify-content: center !important;
     align-items: center;
     width: 100%;
-    margin-bottom: 2em;
+    // margin-bottom: 2em;
 
     img {
       width: 2em;
@@ -359,9 +363,7 @@
   .about-container {
     display: flex;
     padding: 0;
-
-
-
+    margin: 0 auto;
 
     li {
       margin-bottom: 0.5em;
@@ -475,6 +477,7 @@
       font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
     }
   }
+
 }
 
 @include respond(2xl) {
