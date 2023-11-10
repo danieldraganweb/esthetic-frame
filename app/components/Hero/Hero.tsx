@@ -1,9 +1,12 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import styles from "./Hero.module.scss";
 import Link from "next/link";
+import { useState } from "react";
 
 const HeroSection: React.FC<{ className?: string }> = () => {
+  const [loading, setLoading] = useState(true);
   return (
     <>
       <main className={styles["hero-section"]}>
@@ -23,8 +26,15 @@ const HeroSection: React.FC<{ className?: string }> = () => {
               style={{
                 objectFit: "contain",
               }}
-              className={styles["hero-image"]}
+              // className={styles["hero-image"]}
               loading="eager"
+              className={`${styles["hero-image"]} ${styles["image"]} ${
+                styles["transition-opacity"]
+              } ${styles["opacity-0"]} ${
+                styles["transition-timing-function"]
+              } ${styles["duration-300"]} ${styles["ease-in-out"]}
+                      ${loading ? styles["opacity-0"] : styles["opacity-100"]}`}
+              onLoad={() => setLoading(false)}
             />
           </div>
           <div className={styles["hero-text-container"]}>

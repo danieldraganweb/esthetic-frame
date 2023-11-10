@@ -21,7 +21,7 @@
     align-items: center;
     box-sizing: border-box;
     width: 100%;
-    padding: 1rem;
+    padding: 2rem;
 
     li {
         list-style: none;
@@ -47,7 +47,7 @@
         font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
         margin-bottom: 0.5em;
         color: $primary-color;
-        text-align: justify;
+        text-align: left;
         line-height: 1.6;
         letter-spacing: normal;
     }

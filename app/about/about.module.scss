@@ -75,11 +75,15 @@
 }
 
 .duration-300 {
-  transition-duration: 2500ms;
+  transition-duration: 1500ms;
 }
 
 .ease-in-out {
   transition-timing-function: ease-in-out;
+}
+
+.transition-timing-function {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-member-hero {
@@ -251,7 +255,7 @@
     box-sizing: border-box;
     cursor: pointer;
     text-align: center;
-    margin-top: 2rem;
+    // margin-top: 2rem;
 
 
     li {
@@ -282,7 +286,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1em;
-    gap: 2.5rem;
+    gap: 1rem;
 
     img {
       width: 40%;
@@ -294,7 +298,7 @@
   }
 
   .team-member-hero {
-    margin: 5rem 0 1rem 0;
+    margin: 1rem 0 1rem 0;
 
     h1 {
       margin-bottom: 1em;
@@ -305,7 +309,7 @@
       font-family: $secondary-font;
       letter-spacing: normal;
       padding: 0;
-      font-size: clamp($font-size-tablet, 1vw, $font-size-desktop);
+      font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
       width: 90%;
       margin: 0 auto;
       margin-bottom: 1rem;
@@ -313,13 +317,13 @@
   }
 
   .star-logo {
-    margin-top: 2em;
+    margin-top: 0em;
     display: flex;
     flex-direction: column;
     justify-content: center !important;
     align-items: center;
     width: 100%;
-    margin-bottom: 2em;
+    margin-bottom: 0em;
 
     img {
       width: 2em;
@@ -393,6 +397,7 @@
     align-items: center;
     margin-bottom: 1em;
     gap: 3rem;
+    margin-top: 2rem;
 
     img {
       width: 35%;
@@ -414,7 +419,7 @@
   }
 
   .team-member-hero {
-    margin: 2rem 0;
+    margin: 0;
 
     h1 {
       margin-bottom: 1em;
@@ -438,7 +443,7 @@
     align-items: center;
     width: 100%;
     height: auto;
-    margin-bottom: 2em;
+    // margin-bottom: 2em;
 
     img {
       width: 2.5em;
@@ -511,6 +516,7 @@
     align-items: center;
     margin-bottom: 1em;
     gap: 4em;
+    margin-top: 0;
 
     img {
       width: 37%;
@@ -550,14 +556,14 @@
   }
 
   .star-logo {
-    // margin-top: 2em;
+    margin-top: 0em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: auto;
-    // margin-bottom: 2em;
+    margin-bottom: 0em;
 
     img {
       width: 3em;
