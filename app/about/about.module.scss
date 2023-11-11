@@ -55,7 +55,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 0.5em;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
   }
 
 }
@@ -87,28 +87,29 @@
 }
 
 .team-member-hero {
-  margin-bottom: 1em;
+  margin: 0.5em 0 2em 0;
 
   h1 {
-    margin-bottom: 0.3em;
+    margin-bottom: 0.5em;
     line-height: 1.7;
     letter-spacing: normal;
-    text-align: center;
-    text-justify: center;
+    text-align: left;
+    text-justify: left;
     font-family: $secondary-font;
-    text-indent: 1em;
+    text-indent: 0.5em;
     font-style: italic;
     font-weight: 400;
-    color: $primary-accent-color;
-    font-size: clamp($font-size-mobile-wide, 5vw, $font-size-tablet);
+    color: $primary-color;
+    font-size: clamp($font-size-tablet, 1.5vw, $font-size-tablet);
     width: 100%;
+    padding: 0 0.5em;
   }
 }
 
 .star-logo {
   width: 100%;
   height: auto;
-  // margin: 1em 0;
+  margin: 1em 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -116,14 +117,7 @@
   width: 100%;
   height: auto;
 
-  .strong {
-    font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
-    text-align: center;
-    font-weight: 400;
-    font-style: italic;
-    color: $primary-color;
-    margin-bottom: 0.5em;
-  }
+
 
   img {
     width: 3.5em;
@@ -131,11 +125,13 @@
   }
 
   h2 {
-    font-size: clamp($font-size-mobile-wide, 2vw, $font-size-desktop-wide);
+    font-size: clamp($font-size-tablet, 2vw, $font-size-desktop-wide);
     text-align: center;
+    margin-bottom: 0.5em;
   }
 
   p {
+    padding: 0 1em;
     line-height: 1.5;
     letter-spacing: normal;
     text-align: center;
@@ -146,12 +142,14 @@
 }
 
 .team-member-name {
-  font-size: clamp($font-size-tablet, 5vw, $font-size-desktop);
+
+
+  font-size: clamp($font-size-tablet, 1.5vw, $font-size-desktop-wide);
   text-align: center;
   font-weight: 600;
   font-style: italic;
-  color: $primary-color;
-  margin-bottom: 0.5em;
+  color: $secondary-accent-color;
+  // margin-bottom: 0.5em;
 
 }
 
@@ -167,6 +165,7 @@
     font-family: $secondary-font;
     line-height: 1.6;
     letter-spacing: normal;
+    padding: 0 1em;
     font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
   }
 }
@@ -323,7 +322,7 @@
   }
 
   .team-member-hero {
-    margin: 1rem 0 1rem 0;
+    margin: 4rem 0 1rem 0;
 
     h1 {
       margin-bottom: 1em;
@@ -341,14 +340,18 @@
     }
   }
 
+  .team-member-name {
+    font-size: clamp($font-size-mobile-wide, 1.5vw, $font-size-desktop-wide);
+  }
+
   .star-logo {
-    // margin-top: 2em;
+    margin-top: 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center !important;
     align-items: center;
     width: 100%;
-    margin-bottom: 0em;
+    margin-bottom: 0;
 
     img {
       width: 2em;
@@ -358,6 +361,7 @@
     h1 {
       font-size: clamp($font-size-tablet, 1vw, $font-size-desktop);
       text-align: center;
+      margin: 0 auto;
     }
 
     p {
@@ -381,6 +385,24 @@
       letter-spacing: normal;
       font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
     }
+  }
+}
+
+@include respond(lg) {
+
+  .team-member-hero {
+    margin: 7rem 0 1rem 0;
+
+
+    h1 {
+      font-size: clamp($font-size-mobile-wide, 2vw, $font-size-tablet);
+
+    }
+  }
+
+  .team-member-name {
+    font-size: clamp($font-size-tablet, 2vw, $font-size-desktop);
+
   }
 }
 
@@ -442,7 +464,7 @@
   }
 
   .team-member-hero {
-    margin: 0;
+    margin: 5rem 0 1rem 0;
 
     h1 {
       margin-bottom: 1em;
@@ -539,7 +561,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1em;
-    gap: 4em;
+    gap: 2em;
     margin-top: 0;
 
     img {
@@ -550,14 +572,14 @@
       margin-bottom: 1em;
     }
 
-    h1 {
-      font-size: clamp($font-size-desktop-wide, 1vw, $font-size-desktop-ultra-wide);
-      margin-bottom: 0.5em;
-      // color: $primary-accent-color;
-      text-align: left;
-      padding: 0;
-      font-style: italic;
-    }
+    // h1 {
+    //   font-size: clamp($font-size-desktop-wide, 1vw, $font-size-desktop-ultra-wide);
+    //   margin-bottom: 0.5em;
+    //   // color: $primary-accent-color;
+    //   text-align: left;
+    //   padding: 0;
+    //   font-style: italic;
+    // }
   }
 
   .team-member-hero {
@@ -572,7 +594,7 @@
       text-justify: center;
       font-family: $secondary-font;
       letter-spacing: normal;
-      font-size: clamp($font-size-desktop, 1vw, $font-size-desktop-ultra-wide);
+      font-size: clamp($font-size-desktop, 1vw, $font-size-desktop);
       width: 100%;
       padding: 0;
 
