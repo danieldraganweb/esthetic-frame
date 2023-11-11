@@ -5,6 +5,7 @@ import Link from "next/link";
 import styles from "./Services.module.scss";
 import ScrollHorizontalIcon from "../SvgHorizontalScrollIcon";
 import CubeSVG from "../CubeSVG";
+import GoogleReviews from "../GoogleReviews/GoogleReviews";
 
 const Services: React.FC<{ className?: string }> = () => {
   const handleScrollLeft = () => {
@@ -59,7 +60,12 @@ const Services: React.FC<{ className?: string }> = () => {
               </li>
             </ul>
           </div>
+          <GoogleReviews />
+          <div className={styles["services-scroll-container-svg"]}>
+            <ScrollHorizontalIcon />
+          </div>
         </div>
+
         <div className={styles["services-container"]} id="services-container">
           <div
             className={styles["services-title-container-2"]}
