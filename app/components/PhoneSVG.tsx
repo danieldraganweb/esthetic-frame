@@ -4,8 +4,8 @@ import styles from "../components/Contact/Contact.module.scss";
 const PhoneSVG = () => {
   return (
     <svg
-      width="20px"
-      height="20px"
+      width="21px"
+      height="21px"
       viewBox="-0.54 0 31.251 31.251"
       xmlns="http://www.w3.org/2000/svg"
       fill="#000000"
