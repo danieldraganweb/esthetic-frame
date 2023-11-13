@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
                 </ul>
               </div>
             </div>
-            <NewsletterForm />
+            {/* <NewsletterForm /> */}
           </div>
           <AllGoogleReviews />
           <div className={styles.footerLinks}>
