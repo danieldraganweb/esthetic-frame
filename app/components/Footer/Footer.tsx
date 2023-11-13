@@ -7,6 +7,7 @@ import Contact from "../Contact/Contact";
 import WhatsappSVG from "../SocialMedia/WhatsappSVG";
 import MessengerSVG from "../SocialMedia/MessengerSVG";
 import NewsletterForm from "../Newsletter Form/NewsletterForm";
+import AllGoogleReviews from "../GoogleReviews/AllGoogleReviews";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -71,7 +72,9 @@ const Footer: React.FC = () => {
             </div>
             <NewsletterForm />
           </div>
+          <AllGoogleReviews />
           <div className={styles.footerLinks}>
+            {/* <AllGoogleReviews /> */}
             <ul>
               <li>
                 <Link href="newsletter" className={styles.footerLinksItem}>
@@ -93,6 +96,7 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
+
           <div className={styles.footerLegal}>
             <p>ESTHETIC FRAME</p>
             <p>
