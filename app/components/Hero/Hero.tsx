@@ -40,11 +40,11 @@ const HeroSection: React.FC<{ className?: string }> = () => {
           <div className={styles["hero-text-container"]}>
             <div className={styles["hero-text-overlay"]}>
               <h1 className={styles["hero-title"]}>
-                Steigere deine Schönheit mit unserem Permanent Make-up
+                Steigere deine Schönheit mit unserem Permanenten Make-up
               </h1>
               <p className={styles["hero-subtitle"]}>
                 Erlebe die Bequemlichkeit und das Selbstbewusstsein eines
-                makellosen Make-ups, das den ganzen Tag, jeden Tag hält!
+                makellosen Make-ups, das den ganzen Taghält!
               </p>
               <p
                 className={styles["hero-subtitle"]}
@@ -56,11 +56,13 @@ const HeroSection: React.FC<{ className?: string }> = () => {
               </p>
               <div className={styles["hero-button-container"]}>
                 <Link href="/book">
-                  <button className={styles["hero-btn-1"]}>Jetzt Buchen</button>
+                  <button className={styles["hero-btn-1"]}>
+                    <span>Jetzt Buchen </span>
+                  </button>
                 </Link>
                 <Link href="/blog">
                   <button className={styles["hero-btn-2"]}>
-                    Weitere Informationen
+                    <span>Weitere Informationen</span>
                   </button>
                 </Link>
               </div>
