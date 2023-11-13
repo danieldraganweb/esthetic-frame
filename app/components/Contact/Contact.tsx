@@ -72,8 +72,8 @@ function Contact() {
                 {" "}
                 <strong>Öffnungszeiten:</strong>
               </h1>
-              <p>Montag - Freitag: 9:00 - 18:00</p>
-              <p>Samstag: 9:00 - 15:00</p>
+              <p>Montag - Freitag: 9:00 - 16:00</p>
+              <p>Samstag: Geschlossen</p>
               <p>Sonntag: Geschlossen</p>
             </div>
           </div>

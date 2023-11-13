@@ -40,6 +40,7 @@
 }
 
 
+
 .footerSocial {
     display: flex;
     flex-direction: column;
@@ -64,9 +65,9 @@
     margin-bottom: 0.5em;
 
     h1 {
-        color: $secondary-color;
+        color: $primary-color;
         font-weight: 500;
-        font-size: clamp($font-size-mobile-wide, 5vw, $font-size-tablet);
+        font-size: clamp($font-size-tablet, 5vw, $font-size-desktop);
         margin-bottom: 0.5em;
         text-align: left;
         font-family: $primary-font;
@@ -97,6 +98,7 @@
 
     svg:hover {
         cursor: pointer;
+        transform: translate3d(0, -0.3em, 0)
     }
 }
 
@@ -120,9 +122,15 @@
         text-align: left;
         font-family: $primary-font;
         line-height: 2.5;
-        color: $secondary-color;
+        color: $primary-color;
         font-weight: 500;
         font-size: clamp($font-size-mobile-wide, 3vw, $font-size-tablet);
+    }
+
+    li:hover {
+        cursor: pointer;
+        color: $secondary-color;
+
     }
 }
 
@@ -136,9 +144,14 @@
     h1 {
         text-align: center;
         font-family: $primary-font;
-        color: $secondary-color;
+        color: $primary-color;
         font-weight: 500;
         font-size: clamp($font-size-mobile-wide, 3vw, $font-size-tablet);
+    }
+
+    h1:hover {
+        cursor: pointer;
+        color: $secondary-color;
     }
 }
 
@@ -248,7 +261,7 @@
         cursor: pointer;
 
         h1 {
-            color: $secondary-color;
+            color: $primary-color;
             font-weight: 500;
             font-size: clamp($font-size-mobile-wide, 5vw, $font-size-tablet);
             margin-bottom: 0.5em;
@@ -312,7 +325,7 @@
             text-align: left;
             font-family: $primary-font;
             line-height: 2.5;
-            color: $secondary-color;
+            color: $primary-color;
             font-weight: 500;
             cursor: pointer;
             font-size: clamp($font-size-mobile-wide, 5vw, $font-size-tablet);
@@ -329,7 +342,7 @@
         h1 {
             text-align: center;
             font-family: $primary-font;
-            color: $secondary-color;
+            color: $primary-color;
             font-weight: 500;
             font-size: clamp($font-size-mobile-wide, 5vw, $font-size-tablet);
             cursor: pointer;
