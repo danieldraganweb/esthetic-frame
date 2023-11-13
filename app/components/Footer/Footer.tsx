@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
             <div className={styles.footerSocialIconsAndLinks}>
               <div className={styles.footerSocialIcons}>
                 <div className={styles.footerSocialText}>
-                  <h1>Folgen Uns</h1>
+                  <h1>Folgen Sie Uns</h1>
                 </div>
                 <InstagramSVG />
                 <FacebookSVG />

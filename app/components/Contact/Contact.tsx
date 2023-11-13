@@ -13,7 +13,7 @@ function Contact() {
         <div className={styles["contact-info"]}>
           <div className={styles["contact-info-text-image"]}>
             <div className={styles["contact-info-text"]}>
-              <h1>Kontaktiere Uns</h1>
+              <h1>Kontaktiere Sie Uns</h1>
               <h3>Wir würden gerne von Ihnen hören!</h3>
               <h3>
                 Wir interessieren uns immer für das Feedback unserer Kunden,
@@ -62,7 +62,7 @@ function Contact() {
                     target="_blank"
                   >
                     {" "}
-                    Alserbachstraße 5, 1010, Wien
+                    Alserbachstraße 5, 1090, Wien
                   </Link>
                 </div>
               </li>

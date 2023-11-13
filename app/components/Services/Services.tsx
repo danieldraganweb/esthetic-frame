@@ -174,7 +174,7 @@ const Services: React.FC<{ className?: string }> = () => {
                   placeholder="blur"
                 />
                 <h1 className={styles["services-title-4"]}>
-                  Augenbrauenpigmentierung
+                  Augenbrauen Pigmentierung
                 </h1>
                 <p className={styles["services-subtitle-4"]}>
                   Unsere permanenten Augenbrauenpigmentierungs-Services sind
@@ -203,10 +203,10 @@ const Services: React.FC<{ className?: string }> = () => {
                   placeholder="blur"
                 />
                 <h1 className={styles["services-title-4"]}>
-                  Wimpern-Microblading
+                  Wimpern Microblading
                 </h1>
                 <p className={styles["services-subtitle-4"]}>
-                  Unsere permanenten Wimpern-Microblading-Services bieten eine
+                  Unsere permanenten Wimpern Microblading Services bieten eine
                   Vielzahl von Stilen und Farben, um Ihren Bedürfnissen gerecht
                   zu werden.
                 </p>
