@@ -63,9 +63,10 @@
     margin-bottom: 0.5em;
 
     h1 {
-        font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
+        color: $secondary-color;
+        font-weight: 500;
+        font-size: clamp($font-size-mobile-wide, 5vw, $font-size-tablet);
         margin-bottom: 0.5em;
-        color: $primary-color;
         text-align: left;
         font-family: $primary-font;
     }
@@ -86,8 +87,8 @@
     // padding: 0 1em;
 
     svg {
-        width: 2em;
-        height: 2em;
+        width: 2.5em;
+        height: 2.5em;
         transition: all 0.3s ease-in-out;
         // padding: 0.3em;
     }
@@ -116,7 +117,9 @@
         text-align: left;
         font-family: $primary-font;
         line-height: 2.5;
-        font-size: clamp($font-size-mobile, 1vw, $font-size-tablet);
+        color: $secondary-color;
+        font-weight: 500;
+        font-size: clamp($font-size-mobile-wide, 5vw, $font-size-tablet);
     }
 }
 
@@ -130,7 +133,9 @@
     h1 {
         text-align: center;
         font-family: $primary-font;
-        font-size: clamp($font-size-mobile, 1vw, $font-size-tablet);
+        color: $secondary-color;
+        font-weight: 500;
+        font-size: clamp($font-size-mobile-wide, 5vw, $font-size-tablet);
     }
 }
 
@@ -237,11 +242,14 @@
     .footerSocialText {
         text-align: left;
         margin-bottom: 0.5em;
+        cursor: pointer;
 
         h1 {
-            font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
+            color: $secondary-color;
+            font-weight: 500;
+            font-size: clamp($font-size-mobile-wide, 5vw, $font-size-tablet);
             margin-bottom: 0.5em;
-            color: $primary-color;
+            cursor: pointer;
             text-align: left;
             font-family: $primary-font;
         }
@@ -262,10 +270,12 @@
         padding: 0;
 
         svg {
-            width: 2em;
-            height: 2em;
+            width: 2.5rem;
+            height: 2.5rem;
             transition: all 0.3s ease-in-out;
             // padding: 0.3em;
+            cursor: pointer;
+
         }
 
         svg:hover {
@@ -299,7 +309,10 @@
             text-align: left;
             font-family: $primary-font;
             line-height: 2.5;
-            font-size: clamp($font-size-mobile, 1vw, $font-size-tablet);
+            color: $secondary-color;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: clamp($font-size-mobile-wide, 5vw, $font-size-tablet);
         }
     }
 
@@ -313,7 +326,10 @@
         h1 {
             text-align: center;
             font-family: $primary-font;
-            font-size: clamp($font-size-mobile, 1vw, $font-size-tablet);
+            color: $secondary-color;
+            font-weight: 500;
+            font-size: clamp($font-size-mobile-wide, 5vw, $font-size-tablet);
+            cursor: pointer;
         }
     }
 

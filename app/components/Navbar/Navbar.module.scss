@@ -141,7 +141,7 @@
     letter-spacing: 0.05em;
     color: $primary-color;
     box-sizing: border-box;
-    animation: fade-in-top 1s ease-in-out;
+    // animation: fade-in-top 1s ease-in-out;
 
     li {
       font-size: clamp($font-size-tablet, 1vw, $font-size-desktop-wide);
