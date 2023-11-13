@@ -445,7 +445,7 @@
   .services-title-container-2 {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 80%;
+    grid-auto-columns: 70%;
     gap: 1rem;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
@@ -612,10 +612,27 @@
     max-width: 1100px;
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 32%;
+    grid-auto-columns: 45%;
     gap: 1.4em;
     overflow-x: scroll;
     overscroll-behavior-inline: contain;
+  }
+}
+
+@include respond(lg) {
+  .services-title-container-2 {
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 37%;
+    gap: 1.4em;
+    overflow-x: scroll;
+    overscroll-behavior-inline: contain;
+  }
+
+  .services-scroll-container-svg {
+    display: none;
   }
 }
 
