@@ -17,8 +17,8 @@ const GoogleReviews = () => {
               key={index}
               src={`/${image}`}
               alt={`Image ${index}`}
-              width={300}
-              height={450}
+              width={450}
+              height={300}
               className={styles["google-review-image"]}
               layout="responsive"
             />
