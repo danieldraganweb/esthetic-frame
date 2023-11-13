@@ -1,24 +1,18 @@
+"use client";
 import React from "react";
-import Iframe from "react-iframe";
 import styles from "./NewsletterForm.module.scss";
 
 const NewsletterForm = () => {
   return (
     <div className={styles["newsletter-form-container"]}>
-      <Iframe
-        url="https://airtable.com/embed/appsz3SqYl4ft3Vqv/shrnxnmjMaizQmjTF?backgroundColor=teal"
-        width="100%"
-        height="650px"
-        id="myId"
+      <iframe
         className={styles["newsletter-form-iframe"]}
-        display="initial"
-        position="relative"
-        allowFullScreen
-        styles={{
-          border: "1px solid #ccc",
-          overflow: "hidden",
-        }}
-      />
+        src="https://airtable.com/embed/appsz3SqYl4ft3Vqv/pag1Y1YKAksnBhxaU/form"
+        onWheel={() => {}}
+        width="100%"
+        height="800px"
+        style={{ background: "transparent", border: "1px solid #ccc" }}
+      ></iframe>
     </div>
   );
 };
