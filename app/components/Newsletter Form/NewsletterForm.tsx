@@ -7,7 +7,7 @@ const NewsletterForm = () => {
     <div className={styles["newsletter-form-container"]}>
       <iframe
         className={styles["newsletter-form-iframe"]}
-        src="https://airtable.com/embed/appsz3SqYl4ft3Vqv/pag1Y1YKAksnBhxaU/form"
+        src="https://airtable.com/embed/appsz3SqYl4ft3Vqv/pagHlzAWcjrFnWj5E/form"
         onWheel={() => {}}
         width="100%"
         height="800px"
