@@ -22,21 +22,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // padding: 0 1em;
-    // background-color: $quinary-color;
     box-sizing: border-box;
     width: 100%;
     max-width: 1100px;
     border-top: 1px solid $quaternary-color;
     margin: 0 auto;
     box-sizing: border-box;
-    // margin-top: 1em;
     border-radius: 0.5em;
-    // background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(/pinkcloud.jpg);
-    // background: url(/pinkcloud.jpg);
     background-color: #000000;
-    background-image: linear-gradient(315deg, #000000 0%, #ffffff 44%);
-
+    background-image: linear-gradient(315deg, #000000 0%, #ffffff 34%);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -289,13 +283,13 @@
     border-top: 2px solid $quaternary-color;
     border-width: 70%;
     padding-top: 1em;
-    text-decoration: underline;
+    text-decoration: underline $secondary-color;
     line-height: 2;
 
     a {
-
+        color: $secondary-color;
         font-family: $primary-font;
-        color: $primary-color;
+        padding-bottom: 0.2rem;
         text-decoration: none;
         margin-bottom: 1em;
         font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
@@ -319,6 +313,7 @@
 .footerLinksItem {
     // display: block;
     margin-bottom: 0.5rem;
+    color: $secondary-color;
 }
 
 .footerLegal {
@@ -327,7 +322,7 @@
 
     p {
         font-style: italic;
-        color: $primary-color;
+        color: $secondary-accent-color;
         font-size: clamp($font-size-mobile-wide, 5vw, $font-size-mobile-wide);
     }
 }
@@ -352,13 +347,13 @@
         flex-direction: column;
         align-items: center;
         padding: 0;
-        // background-color: $quinary-color;
         box-sizing: border-box;
         width: 100%;
         max-width: 1100px;
         border-top: 1px solid $quaternary-color;
         margin: 0 auto;
         box-sizing: border-box;
+        background-image: linear-gradient(315deg, #000000 0%, #ffffff 44%);
     }
 
     .footerSocial {
@@ -486,12 +481,12 @@
         line-height: 1.5;
 
         a {
-
+            text-decoration: underline $secondary-color;
             font-family: $primary-font;
-            color: $primary-color;
-            text-decoration: none;
+            color: $secondary-color;
             margin-bottom: 1em;
             font-size: clamp($font-size-mobile, 1vw, $font-size-tablet);
+            padding-bottom: 0.2rem;
         }
 
         ul {
@@ -522,7 +517,7 @@
 
         p {
             font-style: italic;
-            color: $primary-color;
+            color: $secondary-accent-color;
             font-size: clamp($font-size-mobile, 2vw, $font-size-mobile-wide);
         }
     }

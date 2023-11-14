@@ -18,25 +18,87 @@
 
 .navbar-button-container {
   button {
-    background-color: $primary-color;
-    color: $secondary-color;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 1.5em;
-    font-size: $font-size-mobile;
-    width: 100%;
-    box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.3);
-  }
-
-  .button:hover {
-    transform: scale(1.02);
-    background-color: $primary-color;
+    position: relative;
+    margin: 0;
+    padding: 0.8em 1em;
+    outline: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    border: none;
+    background-color: #333;
+    border-radius: 2rem;
+    color: rgba($secondary-color, 1);
+    font-weight: 300;
+    font-size: clamp($font-size-mobile, 2vw, $font-size-mobile-wide);
+    font-family: $primary-font;
+    z-index: 0;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
   }
 
-  .button:active {
-    transform: scale(1.01);
-    transition: all 0.2s ease-out;
+  button:hover {
+    animation: sh0 0.5s ease-in-out both;
+    color: $primary-accent-color;
+  }
+
+  @keyframes sh0 {
+    0% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+
+    25% {
+      transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+
+    50% {
+      transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+
+    75% {
+      transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+
+    100% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  }
+
+  button:hover span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+  }
+
+  button::before,
+  button::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 2rem;
+    background: #fff;
+    opacity: 0;
+    transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
+    z-index: -1;
+    transform: translate(100%, -25%) translate3d(0, 0, 0);
+  }
+
+  button:hover::before,
+  button:hover::after {
+    opacity: 0.15;
+    transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+  }
+
+  button:hover::before {
+    transform: translate3d(50%, 0, 0) scale(0.9);
+  }
+
+  button:hover::after {
+    transform: translate(50%, 0) scale(1.1);
   }
 }
 
@@ -269,25 +331,87 @@
   .navbar-button-container {
 
     button {
-      background-color: $primary-color;
-      color: $secondary-color;
-      padding: 10px 15px;
+      position: relative;
+      margin: 0;
+      padding: 0.8em 1em;
+      outline: none;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
       border: none;
-      border-radius: 1.5em;
-      font-size: $font-size-mobile;
-      width: 100%;
-      box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.3);
+
+      background-color: #333;
+      border-radius: 1023em;
+      color: #fff;
+      font-weight: 300;
+      font-size: 18px;
+      font-family: inherit;
+      z-index: 0;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
     }
 
     button:hover {
-      transform: scale(1.02);
-      background-color: $primary-color;
-      cursor: pointer;
+      animation: sh0 0.5s ease-in-out both;
     }
 
-    button:active {
-      transform: scale(1.01);
-      transition: all 0.2s ease-out;
+    @keyframes sh0 {
+      0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+      }
+
+      25% {
+        transform: rotate(3deg) translate3d(0, 0, 0);
+      }
+
+      50% {
+        transform: rotate(-3deg) translate3d(0, 0, 0);
+      }
+
+      75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+      }
+
+      100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+      }
+    }
+
+    button:hover span {
+      animation: storm 0.7s ease-in-out both;
+      animation-delay: 0.06s;
+    }
+
+    button::before,
+    button::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #fff;
+      opacity: 0;
+      transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
+      z-index: -1;
+      transform: translate(100%, -25%) translate3d(0, 0, 0);
+    }
+
+    button:hover::before,
+    button:hover::after {
+      opacity: 0.15;
+      transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+    }
+
+    button:hover::before {
+      transform: translate3d(50%, 0, 0) scale(0.9);
+    }
+
+    button:hover::after {
+      transform: translate(50%, 0) scale(1.1);
     }
   }
 
@@ -464,26 +588,87 @@
 
   .navbar-button-container {
     button {
-      background-color: lighten($primary-color, $amount: 20%);
-      color: $secondary-color;
-      padding: 10px 15px;
+      position: relative;
+      margin: 0;
+      padding: 0.8em 1em;
+      outline: none;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
       border: none;
-      border-radius: 1.5em;
-      box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
-      font-size: $font-size-tablet;
-      width: 100%;
+
+      background-color: #333;
+      border-radius: 1023em;
+      color: #fff;
+      font-weight: 300;
+      font-size: 18px;
+      font-family: inherit;
+      z-index: 0;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
     }
 
     button:hover {
-      transform: translateY(0, -0.2em);
-      background-color: $primary-color;
-      color: $secondary-color;
-      cursor: pointer;
+      animation: sh0 0.5s ease-in-out both;
     }
 
-    button:active {
-      // transform: scale(1.01);
-      transition: all 0.2s ease-out;
+    @keyframes sh0 {
+      0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+      }
+
+      25% {
+        transform: rotate(3deg) translate3d(0, 0, 0);
+      }
+
+      50% {
+        transform: rotate(-3deg) translate3d(0, 0, 0);
+      }
+
+      75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+      }
+
+      100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+      }
+    }
+
+    button:hover span {
+      animation: storm 0.7s ease-in-out both;
+      animation-delay: 0.06s;
+    }
+
+    button::before,
+    button::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #fff;
+      opacity: 0;
+      transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
+      z-index: -1;
+      transform: translate(100%, -25%) translate3d(0, 0, 0);
+    }
+
+    button:hover::before,
+    button:hover::after {
+      opacity: 0.15;
+      transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+    }
+
+    button:hover::before {
+      transform: translate3d(50%, 0, 0) scale(0.9);
+    }
+
+    button:hover::after {
+      transform: translate(50%, 0) scale(1.1);
     }
   }
 
@@ -591,26 +776,87 @@
     width: 100%;
 
     button {
-      background-color: lighten($color: $primary-color, $amount: 10%);
-      color: $secondary-color;
-      padding: 15px 20px;
+      position: relative;
+      margin: 0;
+      padding: 0.8em 1em;
+      outline: none;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
       border: none;
-      border-radius: 2.5em;
-      font-size: $font-size-tablet;
-      width: 100%;
-      box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.11);
+
+      background-color: #333;
+      border-radius: 1023em;
+      color: #fff;
+      font-weight: 300;
+      font-size: 18px;
+      font-family: inherit;
+      z-index: 0;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
     }
 
     button:hover {
-      transform: translateY(0, -0.2em);
-      background-color: $primary-color;
-      color: $secondary-color;
-      cursor: pointer;
+      animation: sh0 0.5s ease-in-out both;
     }
 
-    button:active {
-      // transform: scale(1.01);
-      transition: all 0.2s ease-out;
+    @keyframes sh0 {
+      0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+      }
+
+      25% {
+        transform: rotate(3deg) translate3d(0, 0, 0);
+      }
+
+      50% {
+        transform: rotate(-3deg) translate3d(0, 0, 0);
+      }
+
+      75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+      }
+
+      100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+      }
+    }
+
+    button:hover span {
+      animation: storm 0.7s ease-in-out both;
+      animation-delay: 0.06s;
+    }
+
+    button::before,
+    button::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #fff;
+      opacity: 0;
+      transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
+      z-index: -1;
+      transform: translate(100%, -25%) translate3d(0, 0, 0);
+    }
+
+    button:hover::before,
+    button:hover::after {
+      opacity: 0.15;
+      transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+    }
+
+    button:hover::before {
+      transform: translate3d(50%, 0, 0) scale(0.9);
+    }
+
+    button:hover::after {
+      transform: translate(50%, 0) scale(1.1);
     }
   }
 }
