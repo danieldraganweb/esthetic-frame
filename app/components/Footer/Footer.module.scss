@@ -289,7 +289,7 @@
     a {
         color: $secondary-color;
         font-family: $primary-font;
-        padding-bottom: 0.2rem;
+        margin-bottom: 1.2rem;
         text-decoration: none;
         margin-bottom: 1em;
         font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
@@ -302,6 +302,8 @@
 
     a:hover {
         cursor: pointer;
+        color: #ffffff;
+        transform: scale(1.1);
 
     }
 

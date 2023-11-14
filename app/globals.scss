@@ -8,6 +8,7 @@
 :root {
   background-color: $secondary-color;
   color: $primary-color;
+  margin: 0 auto;
 }
 
 html,
@@ -16,6 +17,7 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   padding-top: 55px;
+  margin: 0 auto;
 
   ::-webkit-scrollbar {
     background-color: $quinary-color;

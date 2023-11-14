@@ -4,6 +4,11 @@
 @use "./app/styles/utils/_functions" as *;
 
 // Navbar mobile
+
+.navbar-container {
+  max-width: 1100px;
+}
+
 .navbar {
   margin: 0 auto;
   box-sizing: border-box;
@@ -13,6 +18,7 @@
   margin: 0 auto;
   background-color: $secondary-color;
   z-index: 1000;
+  // max-width: 1100px;
 
 }
 
@@ -33,10 +39,11 @@
     color: rgba($secondary-color, 1);
     font-weight: 300;
     font-size: clamp($font-size-mobile, 2vw, $font-size-mobile-wide);
-    font-family: $primary-font;
+    font-family: $secondary-font;
     z-index: 0;
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+    letter-spacing: 0.05em;
   }
 
   button:hover {
@@ -325,10 +332,13 @@
     background-color: $secondary-color;
     padding: 0 1rem;
     z-index: 1000;
+    max-width: 2500px;
+    padding: 0 2rem;
 
   }
 
   .navbar-button-container {
+    box-sizing: border-box;
 
     button {
       position: relative;
@@ -343,7 +353,7 @@
       border: none;
 
       background-color: #333;
-      border-radius: 1023em;
+      border-radius: 13em;
       color: #fff;
       font-weight: 300;
       font-size: 18px;
@@ -460,9 +470,10 @@
 
   .navLinks {
     width: 100%;
+    max-width: 1100px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     list-style: none;
     letter-spacing: 0.05em;
@@ -470,6 +481,7 @@
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0px;
+    overflow: hidden;
     // background-color: brown;
 
     a {

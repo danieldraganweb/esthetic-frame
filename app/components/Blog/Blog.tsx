@@ -72,19 +72,19 @@ const BlogComponent: React.FC<{ className?: string }> = () => {
               </div>
             ))}
           </div>
-          <div className={styles["blog-scroll-container"]}>
+          <div className={styles["blog-scroll-btn-container"]}>
             <button
               className={styles["blog-scroll-button"]}
               onClick={handleScrollLeft}
             >
-              {"<"}
+              <span>{"<"}</span>
             </button>
             <ScrollHorizontalIcon />
             <button
               className={styles["blog-scroll-button"]}
               onClick={handleScrollRight}
             >
-              {">"}
+              <span>{">"}</span>
             </button>
           </div>
           <div className={styles["blog-btn-container"]}>
