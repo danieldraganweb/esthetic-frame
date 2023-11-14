@@ -49,7 +49,7 @@
     margin-top: -2.8em;
     padding: 1rem 0.5em 1rem 0.5em;
     font-style: italic;
-    animation: slideInFromLeft 3s forwards;
+    animation: slideInFromLeft 2s forwards;
     margin-bottom: 1rem;
 
     @keyframes slideInFromLeft {
@@ -82,7 +82,7 @@
     text-wrap: wrap;
     padding: 0 1em;
     line-height: 1.6;
-    animation: slideInFromRight 3s forwards;
+    animation: slideInFromRight 2s forwards;
   }
 
   @keyframes slideInFromRight {
@@ -235,7 +235,7 @@
       font-style: italic;
       margin-top: 0px;
       background-color: transparent;
-      animation: slideInFromLeft 3s forwards;
+      animation: slideInFromLeft 2s forwards;
     }
 
     @keyframes slideInFromLeft {

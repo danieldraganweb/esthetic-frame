@@ -30,7 +30,7 @@
     box-sizing: border-box;
     border-radius: 0.5em;
     background-color: #000000;
-    background-image: linear-gradient(315deg, $tertiary-color 0%, #ffffff 54%);
+    background-image: linear-gradient(315deg, $tertiary-color 0%, $secondary-color 34%);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -355,7 +355,7 @@
         border-top: 1px solid $quaternary-color;
         margin: 0 auto;
         box-sizing: border-box;
-        background-image: linear-gradient(315deg, $tertiary-color 0%, #ffffff 54%);
+        background-image: linear-gradient(315deg, $tertiary-color 0%, $secondary-color 54%);
     }
 
     .footerSocial {
@@ -522,7 +522,9 @@
         p {
             font-style: italic;
             color: $secondary-accent-color;
-            font-size: clamp($font-size-mobile, 2vw, $font-size-mobile-wide);
+            font-size: clamp($font-size-desktop, 1vw, $font-size-desktop-wide);
+            color: #000000;
+            text-shadow: 0 0 20px $secondary-color;
         }
     }
 
