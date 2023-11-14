@@ -72,12 +72,14 @@
   cursor: pointer;
   text-align: center;
 
+
   h1 {
-    font-size: $font-size-mobile-wide;
+    font-size: $font-size-desktop;
     margin-bottom: 1em;
     color: $primary-accent-color;
     text-align: center;
     font-style: italic;
+    padding: 0 2rem;
   }
 
   p {
@@ -89,6 +91,8 @@
     letter-spacing: normal;
     font-family: $secondary-font;
     line-height: 1.7;
+    padding: 0 2rem;
+
   }
 
   li+li {
@@ -217,7 +221,6 @@
 
     p {
       margin-bottom: 1.5em;
-
       font-size: $font-size-tablet;
       text-align: center;
       font-family: $primary-font;
