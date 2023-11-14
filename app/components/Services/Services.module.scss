@@ -230,7 +230,7 @@
   border-radius: 0.5rem;
   gap: 2em;
   overflow-x: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 
 
   .span {
@@ -239,7 +239,7 @@
 
   button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 1em 2em 1em 2em;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
@@ -254,6 +254,7 @@
     position: relative;
     z-index: 1;
     margin: 1em 0 1em 0;
+    font-weight: bold;
 
   }
 
@@ -310,7 +311,7 @@
   width: 100%;
   max-width: 1100px;
   padding: 0 1em;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 
 
   button {
@@ -328,7 +329,7 @@
     border-radius: 12rem;
     color: $primary-color;
     font-weight: 300;
-    font-size: clamp($font-size-tablet, 1vw, $font-size-desktop-wide);
+    font-size: clamp($font-size-mobile-wide, 1vw, $font-size-desktop);
     font-family: inherit;
     z-index: 0;
     overflow: hidden;

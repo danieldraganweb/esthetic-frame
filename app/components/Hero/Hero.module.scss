@@ -27,7 +27,7 @@
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  // background-color: lighten($quaternary-color, $amount: 10%);
+  background-color: lighten($quaternary-color, $amount: 10%);
   border-radius: 0 0 0.5em 0.5em;
   border-top: none;
 
@@ -35,7 +35,7 @@
 
 
   .hero-title {
-    font-size: clamp($font-size-desktop-wide, 9vw, $font-size-desktop-ultra-wide);
+    font-size: clamp($font-size-desktop, 5vw, $font-size-desktop-ultra-wide);
     font-weight: 400;
     color: $primary-accent-color;
     display: flex;
@@ -46,29 +46,30 @@
     max-width: 768px;
     text-align: start;
     box-sizing: border-box;
-    margin-top: -3em;
-    padding: 1rem 0.25em;
+    margin-top: -2.8em;
+    padding: 1rem 0.5em 1rem 0.5em;
     font-style: italic;
-    animation: slideInFromLeft 2s forwards;
-    background: $secondary-color;
-
+    animation: slideInFromLeft 3s forwards;
+    margin-bottom: 1rem;
 
     @keyframes slideInFromLeft {
       0% {
         transform: translateX(-100%);
         opacity: 0;
+        background: transparent;
       }
 
       100% {
         transform: translateX(0);
         opacity: 1;
+        background: $secondary-color;
       }
     }
 
   }
 
   .hero-subtitle {
-    font-size: clamp($font-size-mobile-wide, 1vw, $font-size-desktop);
+    font-size: clamp($font-size-mobile-wide, 1.5vw, $font-size-desktop);
     font-weight: 400;
     color: $primary-color;
     margin-bottom: 0.5em;
@@ -79,20 +80,22 @@
     margin: 0 auto;
     margin-top: 1em;
     text-wrap: wrap;
-    padding: 0 0.5em;
+    padding: 0 1em;
     line-height: 1.6;
-    animation: slideInFromRight 2s forwards;
+    animation: slideInFromRight 3s forwards;
   }
 
   @keyframes slideInFromRight {
     0% {
       transform: translateX(100%);
       opacity: 0;
+
     }
 
     100% {
       transform: translateX(0);
       opacity: 1;
+
     }
   }
 }
@@ -232,6 +235,21 @@
       font-style: italic;
       margin-top: 0px;
       background-color: transparent;
+      animation: slideInFromLeft 3s forwards;
+    }
+
+    @keyframes slideInFromLeft {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+
+      }
     }
 
     .hero-subtitle {

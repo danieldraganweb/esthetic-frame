@@ -53,45 +53,75 @@
   background-color: transparent;
   color: $primary-color;
 
-  button {
-    background-color: $secondary-color;
-    color: $primary-color;
-    border: 1px solid $primary-color;
-    border-radius: 1.7em;
-    font-size: clamp($font-size-mobile, 3vw, $font-size-tablet);
-    display: inline-block;
-    font-family: $primary-font;
-    font-weight: 400;
-    margin: 1em 0;
-    box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
-    padding: 1em 2.5em 1em 2.5em;
-    display: inline-block;
-    background: url(/contact-bg3.jpg);
-  }
+  // button {
+  //   background-color: $secondary-color;
+  //   color: $primary-color;
+  //   border: 1px solid $primary-color;
+  //   border-radius: 1.7em;
+  //   font-size: clamp($font-size-mobile, 3vw, $font-size-tablet);
+  //   display: inline-block;
+  //   font-family: $primary-font;
+  //   font-weight: 400;
+  //   margin: 1em 0;
+  //   box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+  //   padding: 1em 2.5em 1em 2.5em;
+  //   display: inline-block;
+  //   background: url(/contact-bg3.jpg);
+  // }
 
-  button:hover,
-  button:focus {
-    transform: scale(1.02);
-    background: $secondary-color;
-    cursor: pointer;
+  // button:hover,
+  // button:focus {
+  //   transform: scale(1.02);
+  //   background: $secondary-color;
+  //   cursor: pointer;
+  //   color: $primary-color;
+  // }
+
+  // button:active {
+  //   transform: scale(0.98);
+  //   background: $secondary-color;
+  //   color: $primary-color;
+  // }
+
+  // button:disabled {
+  //   background: $secondary-color;
+  //   color: $primary-color;
+  //   cursor: not-allowed;
+  // }
+
+  // button:visited {
+  //   background: url(/contact-bg3.jpg);
+
+  // }
+  button {
+    background: url(/contact-bg3.jpg);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: clamp($font-size-mobile-wide, 1.5vw, $font-size-tablet);
+    width: 10em;
+    border-radius: 1rem;
     color: $primary-color;
+    box-shadow: 0 0.4rem $tertiary-color;
+    cursor: pointer;
+    width: max-content;
+    letter-spacing: 0.05rem;
   }
 
   button:active {
-    transform: scale(0.98);
+    color: white;
+    box-shadow: 0 0.2rem #dfd9d9;
+    transform: translateY(0.2rem);
+  }
+
+  button:hover:not(:disabled) {
     background: $secondary-color;
     color: $primary-color;
+    // text-shadow: 0 0.1rem #bcb4b4;
   }
 
   button:disabled {
-    background: $secondary-color;
-    color: $primary-color;
-    cursor: not-allowed;
-  }
-
-  button:visited {
-    background: url(/contact-bg3.jpg);
-
+    cursor: auto;
+    color: grey;
   }
 
   // button {
