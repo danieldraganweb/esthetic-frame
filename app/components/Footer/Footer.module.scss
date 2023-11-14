@@ -30,7 +30,7 @@
     box-sizing: border-box;
     border-radius: 0.5em;
     background-color: #000000;
-    background-image: linear-gradient(315deg, #000000 0%, #ffffff 34%);
+    background-image: linear-gradient(315deg, $tertiary-color 0%, #ffffff 54%);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -283,11 +283,11 @@
     border-top: 2px solid $quaternary-color;
     border-width: 70%;
     padding-top: 1em;
-    text-decoration: underline $secondary-color;
+    text-decoration: underline $primary-color;
     line-height: 2;
 
     a {
-        color: $secondary-color;
+        color: $primary-color;
         font-family: $primary-font;
         margin-bottom: 1.2rem;
         text-decoration: none;
@@ -302,7 +302,7 @@
 
     a:hover {
         cursor: pointer;
-        color: #ffffff;
+        transform: translateY(-0.3em);
         transform: scale(1.1);
 
     }
@@ -355,7 +355,7 @@
         border-top: 1px solid $quaternary-color;
         margin: 0 auto;
         box-sizing: border-box;
-        background-image: linear-gradient(315deg, #000000 0%, #ffffff 44%);
+        background-image: linear-gradient(315deg, $tertiary-color 0%, #ffffff 54%);
     }
 
     .footerSocial {
@@ -483,12 +483,13 @@
         line-height: 1.5;
 
         a {
-            text-decoration: underline $secondary-color;
+            text-decoration: underline $primary-color;
             font-family: $primary-font;
-            color: $secondary-color;
+            color: $primary-color;
             margin-bottom: 1em;
             font-size: clamp($font-size-mobile, 1vw, $font-size-tablet);
             padding-bottom: 0.2rem;
+            line-height: 2;
         }
 
         ul {
@@ -498,6 +499,7 @@
 
         a:hover {
             cursor: pointer;
+            transform: translateY(-0.3em);
 
         }
 
