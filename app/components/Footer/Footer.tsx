@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Link from "next/link";
 import styles from "./Footer.module.scss";
 import InstagramSVG from "../SocialMedia/InstagramSVG";
@@ -8,9 +9,16 @@ import WhatsappSVG from "../SocialMedia/WhatsappSVG";
 import MessengerSVG from "../SocialMedia/MessengerSVG";
 import NewsletterForm from "../Newsletter Form/NewsletterForm";
 import AllGoogleReviews from "../GoogleReviews/AllGoogleReviews";
+import Logo from "../Navbar/Logo";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+
+  const [formOpen, setFormOpen] = useState(false);
+
+  const toggleForm = () => {
+    setFormOpen(!formOpen);
+  };
   return (
     <>
       <main className={styles["footer-main"]}>
@@ -19,6 +27,21 @@ const Footer: React.FC = () => {
             <Contact />
           </div>
           <div className={styles.footerSocial}>
+            <div
+              className={`${styles.NewsletterForm} ${
+                formOpen ? styles.open : styles.closed
+              }`}
+            >
+              <Logo />
+              <div className={styles.footerReviews}>
+                <AllGoogleReviews />
+              </div>
+              <button onClick={toggleForm}>
+                Abonnieren Sie unseren Newsletter
+              </button>
+              <NewsletterForm />
+            </div>
+
             <div className={styles.footerSocialIconsAndLinks}>
               <div className={styles.footerSocialIcons}>
                 <div className={styles.footerSocialText}>
@@ -70,11 +93,8 @@ const Footer: React.FC = () => {
                 </ul>
               </div>
             </div>
-            {/* <NewsletterForm /> */}
           </div>
-          <AllGoogleReviews />
           <div className={styles.footerLinks}>
-            {/* <AllGoogleReviews /> */}
             <ul>
               <li>
                 <Link href="newsletter" className={styles.footerLinksItem}>

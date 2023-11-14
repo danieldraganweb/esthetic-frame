@@ -68,7 +68,7 @@ function Navbar() {
           <Logo />
           <div className={styles["navbar-button-container"]}>
             <Link href="/book">
-              <button className={styles["navbar-button"]}>Book</button>
+              <button className={styles["navbar-button"]}>Buchen</button>
             </Link>
           </div>
           {menuOpen && (

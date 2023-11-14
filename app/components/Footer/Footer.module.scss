@@ -32,19 +32,139 @@
     box-sizing: border-box;
     // margin-top: 1em;
     border-radius: 0.5em;
-    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(/pinkcloud.jpg);
-    background: url(/pinkcloud.jpg);
+    // background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(/pinkcloud.jpg);
+    // background: url(/pinkcloud.jpg);
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #ffffff 44%);
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+.FooterReviews {
+    max-height: 150px;
+}
 
+.NewsletterForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    iframe {
+        display: none;
+    }
+
+
+    button {
+        position: relative;
+        margin: 0;
+        padding: 0.8em 1.2em;
+        outline: none;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border: none;
+        // text-transform: uppercase;
+        background-color: $secondary-color;
+        border-radius: 10px;
+        color: $primary-color;
+        font-weight: 300;
+        font-size: 18px;
+        font-family: $primary-font;
+        z-index: 0;
+        overflow: hidden;
+        transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    button:hover {
+        animation: sh0 0.5s ease-in-out both;
+        background-color: $primary-color;
+        color: $secondary-color;
+    }
+
+    @keyframes sh0 {
+        0% {
+            transform: rotate(0deg) translate3d(0, 0, 0);
+        }
+
+        25% {
+            transform: rotate(3deg) translate3d(0, 0, 0);
+        }
+
+        50% {
+            transform: rotate(-3deg) translate3d(0, 0, 0);
+        }
+
+        75% {
+            transform: rotate(1deg) translate3d(0, 0, 0);
+        }
+
+        100% {
+            transform: rotate(0deg) translate3d(0, 0, 0);
+        }
+    }
+
+    button:hover span {
+        animation: storm 0.7s ease-in-out both;
+        animation-delay: 0.06s;
+    }
+
+    button::before,
+    button::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: #fff;
+        opacity: 0;
+        transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
+        z-index: -1;
+        transform: translate(100%, -25%) translate3d(0, 0, 0);
+    }
+
+    button:hover::before,
+    button:hover::after {
+        opacity: 0.15;
+        transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+    }
+
+    button:hover::before {
+        transform: translate3d(50%, 0, 0) scale(0.9);
+    }
+
+    button:hover::after {
+        transform: translate(50%, 0) scale(1.1);
+    }
+
+
+
+    &.open {
+        iframe {
+            display: flex;
+            height: 40rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 0.5em;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+}
 
 .footerSocial {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     box-sizing: border-box;
     width: 100%;
     text-align: center;
@@ -61,16 +181,17 @@
 }
 
 .footerSocialText {
-    text-align: left;
-    margin-bottom: 0.5em;
+    top: 0;
+    // margin-bottom: 0.5em;
 
     h1 {
         color: $primary-color;
         font-weight: 500;
-        font-size: clamp($font-size-tablet, 5vw, $font-size-desktop);
+        font-size: clamp($font-size-mobile-wide, 3vw, $font-size-desktop);
         margin-bottom: 0.5em;
         text-align: left;
         font-family: $primary-font;
+        // margin-top: 3rem;
     }
 
     h1:hover {
@@ -88,6 +209,7 @@
     gap: 0.5em;
     line-height: 1.6;
     // padding: 0 1em;
+    margin-bottom: 1.2rem;
 
     svg {
         width: 2.5em;
@@ -109,7 +231,7 @@
     align-items: flex-start;
     width: 100%;
     gap: 1.5em;
-    margin-left: 1.5rem;
+    margin-left: 5.5rem;
 }
 
 .footer-links {
@@ -121,10 +243,10 @@
     li {
         text-align: left;
         font-family: $primary-font;
-        line-height: 2.5;
+        line-height: 3.5;
         color: $primary-color;
         font-weight: 500;
-        font-size: clamp($font-size-mobile-wide, 3vw, $font-size-tablet);
+        font-size: clamp($font-size-mobile, 1vw, $font-size-tablet);
     }
 
     li:hover {
@@ -146,7 +268,7 @@
         font-family: $primary-font;
         color: $primary-color;
         font-weight: 500;
-        font-size: clamp($font-size-mobile-wide, 3vw, $font-size-tablet);
+        font-size: clamp($font-size-mobile, 1vw, $font-size-tablet);
     }
 
     h1:hover {
@@ -176,7 +298,7 @@
         color: $primary-color;
         text-decoration: none;
         margin-bottom: 1em;
-        font-size: clamp($font-size-mobile, 1vw, $font-size-tablet);
+        font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
     }
 
     ul {
@@ -263,7 +385,7 @@
         h1 {
             color: $primary-color;
             font-weight: 500;
-            font-size: clamp($font-size-mobile-wide, 5vw, $font-size-tablet);
+            font-size: clamp($font-size-mobile, 5vw, $font-size-tablet);
             margin-bottom: 0.5em;
             cursor: pointer;
             text-align: left;
@@ -280,9 +402,8 @@
         height: auto;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         align-items: flex-start;
-        gap: 1.5em;
         padding: 0;
 
         svg {
@@ -307,8 +428,8 @@
         align-items: flex-start;
         width: 100%;
         gap: 4.5em;
-        padding: 2em 0;
-        margin-top: 2em;
+        // padding: 2em 0;
+        margin-top: 0;
     }
 
     .footer-links {
@@ -328,7 +449,7 @@
             color: $primary-color;
             font-weight: 500;
             cursor: pointer;
-            font-size: clamp($font-size-mobile-wide, 5vw, $font-size-tablet);
+            font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
         }
     }
 
@@ -344,7 +465,7 @@
             font-family: $primary-font;
             color: $primary-color;
             font-weight: 500;
-            font-size: clamp($font-size-mobile-wide, 5vw, $font-size-tablet);
+            font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
             cursor: pointer;
         }
     }
@@ -362,7 +483,7 @@
         border-width: 70%;
         padding-top: 1em;
         text-decoration: underline;
-        line-height: 2;
+        line-height: 1.5;
 
         a {
 
