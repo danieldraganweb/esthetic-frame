@@ -4,6 +4,7 @@ import styles from "./about.module.scss";
 import Image from "next/image";
 import { useState } from "react";
 import GoogleReviews from "../components/GoogleReviews/GoogleReviews";
+
 function About() {
   const [loading, setLoading] = useState(true);
   return (
@@ -136,7 +137,6 @@ function About() {
           </div>
         </div>
       </main>
-      <GoogleReviews />
     </>
   );
 }

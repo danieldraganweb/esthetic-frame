@@ -19,7 +19,7 @@ const HeroSection: React.FC<{ className?: string }> = () => {
               width={518}
               height={777}
               priority={true}
-              layout="responsive"
+              // layout="responsive"
               blurDataURL="/Hero.jpg"
               placeholder="blur"
               // sizes="(max-width: 1100px) 100vw, 600px"
