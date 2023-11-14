@@ -59,11 +59,11 @@
     border-radius: 0.5rem;
 
     h1 {
-        font-size: clamp($font-size-tablet, 1.5vw, $font-size-desktop);
+        font-size: clamp($font-size-desktop-ultra-wide, 1vw, $font-size-desktop-wide);
         font-weight: 500;
         text-align: center;
-        padding: 1em 0 0 0;
-        line-height: 2;
+        padding: 1em 0 0.7rem 0;
+        line-height: 1;
         // text-wrap: nowrap;
     }
 
@@ -90,9 +90,6 @@
     scroll-snap-align: center;
     scroll-padding-inline: 1rem;
     scroll-snap-type: x mandatory;
-
-
-
 }
 
 .blog-scroll-btn-container {
@@ -113,7 +110,7 @@
     button {
         display: inline-block;
         padding: 1em 2em 1em 2em;
-        font-size: clamp($font-size-mobile-wide, 1vw, $font-size-desktop);
+        font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
         font-weight: bold;
         text-align: center;
         text-decoration: none;
@@ -329,7 +326,7 @@
         border-radius: 12rem;
         color: $primary-color;
         font-weight: 300;
-        font-size: clamp($font-size-mobile-wide, 3vw, $font-size-desktop);
+        font-size: clamp($font-size-mobile-wide, 3vw, $font-size-tablet);
         font-family: inherit;
         z-index: 0;
         overflow: hidden;

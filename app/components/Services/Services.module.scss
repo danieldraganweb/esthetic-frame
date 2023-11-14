@@ -329,7 +329,7 @@
     border-radius: 12rem;
     color: $primary-color;
     font-weight: 300;
-    font-size: clamp($font-size-mobile-wide, 1vw, $font-size-desktop);
+    font-size: clamp($font-size-mobile-wide, 3vw, $font-size-tablet);
     font-family: inherit;
     z-index: 0;
     overflow: hidden;

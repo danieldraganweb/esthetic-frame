@@ -146,7 +146,7 @@
   align-items: center;
   width: 100%;
   margin: 1em 0;
-  padding: 0 0.5em;
+  padding: 0 1em 1em;
   gap: 1em;
 
 
@@ -154,11 +154,11 @@
     background-color: lighten($primary-color, $amount: 10%);
     color: $secondary-color;
     border-radius: 12em;
-    font-size: clamp(0.7rem, 1vw, 1rem);
+    font-size: clamp($font-size-mobile, 1vw, $font-size-desktop);
     display: inline-block;
     font-family: $primary-font;
     box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
-    padding: 1rem 2rem 1rem 2rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
     margin-top: 1rem;
   }
 
@@ -172,7 +172,7 @@
     font-family: $primary-font;
     font-weight: 400;
     box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
-    padding: 1rem 2rem 1rem 2rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
     margin-top: 1rem;
   }
 
@@ -290,7 +290,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    margin: 1em 0 0 0;
+    margin: 2em 0 0 0;
     gap: 2em;
 
 

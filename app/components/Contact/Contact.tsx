@@ -13,7 +13,7 @@ function Contact() {
         <div className={styles["contact-info"]}>
           <div className={styles["contact-info-text-image"]}>
             <div className={styles["contact-info-text"]}>
-              <h1>Kontaktiere Sie Uns</h1>
+              <h1>Kontaktieren Sie Uns</h1>
               <h3>Wir würden gerne von Ihnen hören!</h3>
               <h3>
                 Wir interessieren uns immer für das Feedback unserer Kunden,
@@ -45,10 +45,9 @@ function Contact() {
                 </div>
                 <div className={styles["contact-info-links-email-text"]}>
                   <h2>E-mail</h2>
-                  <Link href="estheticframe@proton.me" target="_blank">
-                    {" "}
+                  <a href="mailto:estheticframe@proton.me">
                     estheticframe@proton.me
-                  </Link>
+                  </a>
                 </div>
               </li>
               <li>
