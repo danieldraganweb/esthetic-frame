@@ -95,13 +95,13 @@ const Services: React.FC<{ className?: string }> = () => {
                   3D Härchentechnik
                 </h1>
                 <p className={styles["services-subtitle-2"]}>
-                  Erreichen Sie perfekt geformte Augenbrauen mit unseren
-                  Microblading-Services. Wir verwenden die neuesten Techniken,
-                  um Ihnen die besten Ergebnisse zu bieten.
+                  Erleben Sie die perfekte Definition Ihrer Augenbrauen mit
+                  unserer innovativen 3D Haarchentechnik-Technik! Jeder feine
+                  Strich wird präzise eingefügt, um ein ultra-natürliches
+                  Aussehen zu erzielen.
                 </p>
               </Link>
             </div>
-
             <div className={styles["service-item"]}>
               <Link href="/blog/recsJXpKwrkjRcw6F">
                 <Image
@@ -124,9 +124,9 @@ const Services: React.FC<{ className?: string }> = () => {
                   “Aquarellippen” Permanent Make-up
                 </h1>
                 <p className={styles["services-subtitle-4"]}>
-                  Unsere permanenten Lippenstift-Services sind perfekt für
-                  diejenigen, die einen natürlichen Kussmund ohne die Mühe des
-                  täglichen Schminkens haben möchten.
+                  Aquarelle Lippen - für natürliche Schönheit, die begeistert!
+                  Unsere Mikropigmentierung der Lippen verleiht Ihnen einen
+                  subtilen und natürlichen Look.
                 </p>
               </Link>
             </div>
@@ -152,9 +152,10 @@ const Services: React.FC<{ className?: string }> = () => {
                   Schattierte Augenbrauen “Powder Brows”
                 </h1>
                 <p className={styles["services-subtitle-4"]}>
-                  Unsere permanenten Augenbrauenpigmentierungs-Services sind
-                  perfekt für diejenigen, die natürliche Augenbrauen ohne die
-                  Mühe des täglichen Schminkens haben möchten.
+                  Entdecken Sie die Welt der natürlichen Schönheit mit unserer
+                  mikropigmentierten Puder-Technik! Unsere Experten verleihen
+                  Ihren Augenbrauen ein natürliches, pudriges Aussehen, das
+                  perfekt zu Ihrem Gesicht passt.
                 </p>
               </Link>
             </div>
