@@ -15,13 +15,13 @@ function About() {
             <div className={styles["team-member-container"]}>
               <div className={styles["team-image-container"]}>
                 <Image
-                  src="/team-member-1.jpg"
+                  src="/team-member.webp"
                   alt="Team Member 1"
                   width={500}
                   height={750}
                   // sizes="(max-width: 500px) 100vw, 500px"
                   loading="lazy"
-                  blurDataURL="/team-member-1.jpg"
+                  blurDataURL="/team-member.webp"
                   placeholder="blur"
                   unoptimized={true}
                   // layout="responsive"
