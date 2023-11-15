@@ -74,16 +74,16 @@
 
 
   h1 {
-    font-size: $font-size-desktop;
-    margin-bottom: 1em;
+    font-size: $font-size-tablet;
+    margin-bottom: 0.5rem;
     color: $primary-accent-color;
     text-align: center;
     font-style: italic;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
   }
 
   p {
-    margin-bottom: 1.5em;
+    margin-bottom: 1.5rem;
     font-size: $font-size-mobile-wide;
     text-align: left;
     font-family: $primary-font;
@@ -91,7 +91,7 @@
     letter-spacing: normal;
     font-family: $secondary-font;
     line-height: 1.7;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
 
   }
 
@@ -190,6 +190,19 @@
     justify-content: center;
     align-items: center;
     gap: 2em;
+  }
+
+  .about-image-container {
+    margin-top: 0.5em;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 1.5rem;
+      margin-bottom: 1em;
+      padding: 1rem;
+    }
   }
 
   .about-container {
