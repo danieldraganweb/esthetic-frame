@@ -334,6 +334,9 @@
     z-index: 1000;
     max-width: 2500px;
     padding: 0 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
   }
 
@@ -450,6 +453,7 @@
     // border: 1px solid $quaternary-color;
     box-sizing: border-box;
     border-radius: 0.5em;
+    position: relative;
 
   }
 

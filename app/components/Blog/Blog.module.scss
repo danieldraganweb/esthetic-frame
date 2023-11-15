@@ -253,12 +253,12 @@
         text-align: start;
         width: 100%;
         max-width: 1100px;
-        padding: 0 0 0.3em 0.3em;
-        margin: 0.5em 0 1em 0;
+        padding: 0 1rem 1rem 1rem;
+        margin: 0.5em 0 0 0;
     }
 
     p {
-        padding: 0 0 0.3em 0.5em;
+        padding: 0 0 0 1rem;
         font-family: $primary-font;
     }
 
@@ -472,7 +472,8 @@
             font-size: clamp($font-size-desktop, 1vw, $font-size-desktop-wide);
             font-weight: 500;
             text-align: center;
-            padding: 1em 0.3em;
+            padding: 0 1rem 1rem 1rem;
+            margin: 0.5em 0 0 0;
         }
 
         p {
@@ -674,10 +675,6 @@
         scroll-snap-align: center;
         scroll-padding-inline: 1rem;
         scroll-snap-type: x mandatory;
-
-
-
-
     }
 
     .services-scroll-button {
@@ -696,12 +693,12 @@
             text-align: start;
             width: 100%;
             max-width: 1100px;
-            padding: 0 0 0.3em 0.3em;
-            margin: 0.5em 0 1em 0;
+            padding: 0 1rem 1rem 1rem;
+            margin: 0.5em 0 0 0;
         }
 
         p {
-            padding: 0 0 0.3em 0.5em;
+            padding: 0 0 0.3em 1rem;
             font-family: $primary-font;
         }
 
@@ -831,12 +828,12 @@
             text-align: start;
             width: 100%;
             max-width: 1100px;
-            padding: 0 0 0.3em 0.3em;
-            margin: 0.5em 0 1em 0;
+            padding: 0 0.5rem 0.3em 1rem;
+            margin: 0.5em 0 0 0;
         }
 
         p {
-            padding: 0 0 0.3em 0.5em;
+            padding: 0 0 0.3em 1rem;
             font-family: $primary-font;
         }
     }
@@ -959,10 +956,11 @@
             width: 100%;
             max-width: 1100;
             // margin-bottom: 1em;
+
         }
 
         p {
-            padding: 0 0 0.3em 0.5em;
+            padding: 0 0 0.3em 1rem;
             font-family: $primary-font;
         }
     }
@@ -1057,7 +1055,8 @@
             font-size: clamp($font-size-desktop-ultra-wide, 1vw, $font-size-desktop-ultra-ultra-ultra-wide);
             font-weight: 500;
             text-align: center;
-            padding: 1em 0 0.3em 0;
+            padding: 0 0 1rem 3rem;
+            margin: 0.5em 0 0 0;
         }
 
         p {
@@ -1099,10 +1098,11 @@
             text-align: start;
             width: 100%;
             max-width: 1100;
+            padding: 0 1rem 1rem 1rem;
         }
 
         p {
-            padding: 0 0 0.3em 0.5em;
+            padding: 0 0 0.5em 1rem;
             font-family: $primary-font;
         }
 
