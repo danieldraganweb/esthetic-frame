@@ -6,17 +6,21 @@ import ContactFormClientContact from "./components/ContactFormClientContact/Cont
 import BlogComponent from "./components/Blog/Blog";
 import CookiePolicyAlert from "./components/CookiePolicies/CookiePolicy";
 import FacebookPixel from "./components/FacebookPixel/FacebookPixel";
+import Error from "./error";
+import { ErrorBoundary } from "react-error-boundary";
 
 export default function Home() {
   return (
     <>
       <main className={styles.main}>
-        <HeroSection className={styles.hero} />
-        <Services className={styles.services} />
-        <ContactFormClientContact className={styles.contactForm} />
-        <BlogComponent className={styles.blog} />
-        <CookiePolicyAlert />
-        <FacebookPixel />
+        <ErrorBoundary fallback={Error as any}>
+          <HeroSection className={styles.hero} />
+          <Services className={styles.services} />
+          <ContactFormClientContact className={styles.contactForm} />
+          <BlogComponent className={styles.blog} />
+          <CookiePolicyAlert />
+          <FacebookPixel />
+        </ErrorBoundary>
       </main>
     </>
   );
