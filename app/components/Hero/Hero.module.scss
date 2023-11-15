@@ -320,6 +320,8 @@
 
     button:hover {
       animation: sh0 0.5s ease-in-out both;
+      background-color: $primary-color;
+      color: $primary-accent-color;
     }
 
     @keyframes sh0 {

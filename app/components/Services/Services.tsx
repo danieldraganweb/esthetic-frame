@@ -210,9 +210,9 @@ const Services: React.FC<{ className?: string }> = () => {
                   Wimpernkranzverdichtung
                 </h1>
                 <p className={styles["services-subtitle-4"]}>
-                  Unsere permanenten Wimpern Microblading Services bieten eine
-                  Vielzahl von Stilen und Farben, um Ihren Bedürfnissen gerecht
-                  zu werden.
+                  Wer eine besonders natürliche Betonung der Augen bevorzugt,
+                  entscheidet sich für eine Optimierung der Wimpern durch die
+                  Betonung des Wimpernkranzes.
                 </p>
               </Link>
             </div>

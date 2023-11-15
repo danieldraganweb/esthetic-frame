@@ -324,8 +324,9 @@
 
     p {
         font-style: italic;
-        color: $secondary-accent-color;
-        font-size: clamp($font-size-mobile-wide, 5vw, $font-size-mobile-wide);
+        color: $primary-color;
+        font-size: clamp($font-size-tablet, 5vw, $font-size-desktop);
+        // text-shadow: 0 0 20px $secondary-color;
     }
 }
 
@@ -524,7 +525,7 @@
             color: $secondary-accent-color;
             font-size: clamp($font-size-desktop, 1vw, $font-size-desktop-wide);
             color: #000000;
-            text-shadow: 0 0 20px $secondary-color;
+            // text-shadow: 0 0 20px $secondary-color;
         }
     }
 
