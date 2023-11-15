@@ -1,5 +1,6 @@
 import "./globals.scss";
 import type { Metadata } from "next";
+import Head from "next/head";
 import {
   Cormorant_Garamond,
   Roboto,
@@ -32,7 +33,7 @@ const cinzel_decorative = Cinzel_Decorative({
 
 export const metadata: Metadata = {
   title: "Esthetic Frame by Alexandra Ivan",
-  description: "Permanent makeup and microblading in Austria, Vienna",
+  description: "Permanent makeup and microblading studio in Austria, Vienna",
 };
 
 export default function RootLayout({
@@ -41,24 +42,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="de"
-      className={`${cormorant_garamond.variable} ${roboto.variable} ${cinzel_decorative.variable}`}
-    >
-      <head>
+    <>
+      <html
+        lang="de"
+        className={`${cormorant_garamond.variable} ${roboto.variable} ${cinzel_decorative.variable}`}
+      >
+        <Head>
+          <link rel="icon" href="/favicon.ico" />
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </Head>
         <Script
           id="cookieyes"
           src="https://cdn-cookieyes.com/client_data/d28c0f4d8bfb96a1cace6550/script.js"
           strategy="lazyOnload"
         />
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
-      <body>
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
-    </html>
+        <body>
+          <Navbar />
+          {children}
+          <Footer />
+        </body>
+      </html>
+    </>
   );
 }

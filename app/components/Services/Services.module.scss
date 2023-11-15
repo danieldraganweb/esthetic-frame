@@ -151,13 +151,13 @@
   scroll-snap-type: inline mandatory;
 
   h1 {
-    font-size: clamp($font-size-desktop, 2vw, $font-size-desktop);
+    font-size: clamp($font-size-tablet, 2vw, $font-size-desktop);
     font-weight: 600;
     color: $primary-color;
     margin-bottom: 0.5em;
     padding-left: 0.1em;
     display: inline-block;
-    border-bottom: 2px solid $quinary-color;
+    text-decoration: underline solid $quinary-color;
     border-width: contain;
     line-height: 1.5;
   }
