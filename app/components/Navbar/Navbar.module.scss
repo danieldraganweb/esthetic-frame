@@ -7,6 +7,7 @@
 
 .navbar-container {
   max-width: 1100px;
+  margin: 0 auto;
 }
 
 .navbar {
@@ -18,94 +19,53 @@
   margin: 0 auto;
   background-color: $secondary-color;
   z-index: 1000;
-  // max-width: 1100px;
 
 }
 
 .navbar-button-container {
+  box-sizing: border-box;
+
   button {
-    position: relative;
-    margin: 0;
-    padding: 0.8em 1em;
-    outline: none;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    border: none;
-    background-color: #333;
-    border-radius: 2rem;
-    color: rgba($secondary-color, 1);
-    font-weight: 300;
-    font-size: clamp($font-size-mobile, 2vw, $font-size-mobile-wide);
+    background-color: lighten($color: $primary-color, $amount: 10%);
+    color: $secondary-color;
+    padding: 0.7rem 1.2rem;
+    border-radius: 12rem;
+    font-size: $font-size-mobile;
     font-family: $secondary-font;
-    z-index: 0;
-    overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
-    letter-spacing: 0.05em;
   }
 
   button:hover {
-    animation: sh0 0.5s ease-in-out both;
+    transform: translateY(-0.2em);
+    background-color: $primary-color;
     color: $primary-accent-color;
+    cursor: pointer;
+    transition-duration: 0.3s backwards;
+    box-shadow: 0 1em 1.5em rgba(0, 0, 0, 0.5);
   }
 
-  @keyframes sh0 {
-    0% {
-      transform: rotate(0deg) translate3d(0, 0, 0);
-    }
-
-    25% {
-      transform: rotate(3deg) translate3d(0, 0, 0);
-    }
-
-    50% {
-      transform: rotate(-3deg) translate3d(0, 0, 0);
-    }
-
-    75% {
-      transform: rotate(1deg) translate3d(0, 0, 0);
-    }
-
-    100% {
-      transform: rotate(0deg) translate3d(0, 0, 0);
-    }
+  button:active {
+    transform: translateY(0.2em);
+    transition: all 0.2s ease-out;
+    box-shadow: none;
   }
 
-  button:hover span {
-    animation: storm 0.7s ease-in-out both;
-    animation-delay: 0.06s;
+  button:focus {
+    outline: none;
   }
 
-  button::before,
-  button::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 10px;
-    height: 10px;
-    border-radius: 2rem;
-    background: #fff;
-    opacity: 0;
-    transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
-    z-index: -1;
-    transform: translate(100%, -25%) translate3d(0, 0, 0);
+  button:disabled {
+    background-color: $septenary-color;
+    color: $secondary-color;
+    cursor: not-allowed;
   }
 
-  button:hover::before,
-  button:hover::after {
-    opacity: 0.15;
-    transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+  button:not(:hover) {
+    transform: translateY(0);
+    transition-duration: 0.3s backwards;
   }
 
-  button:hover::before {
-    transform: translate3d(50%, 0, 0) scale(0.9);
-  }
-
-  button:hover::after {
-    transform: translate(50%, 0) scale(1.1);
+  button:disabled:hover {
+    transform: translateY(0);
   }
 }
 
@@ -140,7 +100,7 @@
   }
 
   .logo {
-    width: 150px;
+    width: 140px;
     height: 100px;
     margin: 0 auto;
     display: flex;
@@ -150,20 +110,13 @@
     margin-top: 0;
 
     img {
-      width: 150px;
-      height: 100px;
+      width: 100%;
+      height: auto;
       margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: relative;
-      letter-spacing: 3px;
-      border-radius: 1em;
+      border-radius: 1rem;
       font-family: $secondary-font;
       margin-top: 0.28em;
     }
-
-
   }
 
   svg {
@@ -174,7 +127,6 @@
   }
 
   .hamburger-container {
-    // margin-top: 0.7em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -182,7 +134,6 @@
     cursor: pointer;
     width: 3.5em;
     height: 3.5em;
-    border: 1px solid $quaternary-color;
     box-shadow: 0 0.4em 0.5em rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     align-items: center;
@@ -190,12 +141,23 @@
   }
 
   .burgerMenuButton {
-    // background-color: aquamarine;
-    width: 41%;
-    display: flex;
-    flex-basis: 100%;
-    align-items: center;
+    button {
+      width: 41%;
+      display: flex;
+      flex-basis: 100%;
+      align-items: center;
+    }
 
+    button:hover button:focus {
+      transform: translateY(-0.2em);
+      transition: all 0.2s ease-in;
+      box-shadow: 0 0.4em 0.5em rgba(0, 0, 0, 0.1);
+    }
+
+    button:active {
+      transform: translateY(0.2em);
+      transition: all 0.2s ease-out;
+    }
   }
 
 
@@ -238,7 +200,6 @@
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      // background-color: $secondary-color;
       background-color: rgba($secondary-color, 1);
       position: fixed;
       margin: 0 auto;
@@ -250,7 +211,6 @@
       right: 0;
       justify-content: space-evenly;
       align-items: center;
-      // margin-bottom: 0;
       margin-top: 5.5rem;
       border-radius: 0.5em;
       padding-left: 1em;
@@ -262,20 +222,13 @@
       height: 100vh;
       scroll-behavior: smooth;
       gap: 2em;
-      // animation: fade-in-top 1.5s ease-in-out;
-
     }
-
-
-
-
   }
 
   .navLinks a:hover {
     transition: all 0.3s ease-in;
     color: $primary-accent-color;
     cursor: pointer;
-    transition: all 0.3s ease-in;
     transform: translateY(-0.2em);
   }
 
@@ -330,13 +283,10 @@
     width: 100%;
     margin: 0 auto;
     background-color: $secondary-color;
-    padding: 0 1rem;
     z-index: 1000;
-    max-width: 2500px;
-    padding: 0 2rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    max-width: 1100px;
+    padding: 0rem;
+    height: 130px;
 
   }
 
@@ -344,87 +294,7 @@
     box-sizing: border-box;
 
     button {
-      position: relative;
-      margin: 0;
-      padding: 0.8em 1em;
-      outline: none;
-      text-decoration: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      border: none;
-
-      background-color: #333;
-      border-radius: 13em;
-      color: #fff;
-      font-weight: 300;
-      font-size: 18px;
-      font-family: inherit;
-      z-index: 0;
-      overflow: hidden;
-      transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
-    }
-
-    button:hover {
-      animation: sh0 0.5s ease-in-out both;
-    }
-
-    @keyframes sh0 {
-      0% {
-        transform: rotate(0deg) translate3d(0, 0, 0);
-      }
-
-      25% {
-        transform: rotate(3deg) translate3d(0, 0, 0);
-      }
-
-      50% {
-        transform: rotate(-3deg) translate3d(0, 0, 0);
-      }
-
-      75% {
-        transform: rotate(1deg) translate3d(0, 0, 0);
-      }
-
-      100% {
-        transform: rotate(0deg) translate3d(0, 0, 0);
-      }
-    }
-
-    button:hover span {
-      animation: storm 0.7s ease-in-out both;
-      animation-delay: 0.06s;
-    }
-
-    button::before,
-    button::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background: #fff;
-      opacity: 0;
-      transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
-      z-index: -1;
-      transform: translate(100%, -25%) translate3d(0, 0, 0);
-    }
-
-    button:hover::before,
-    button:hover::after {
-      opacity: 0.15;
-      transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
-    }
-
-    button:hover::before {
-      transform: translate3d(50%, 0, 0) scale(0.9);
-    }
-
-    button:hover::after {
-      transform: translate(50%, 0) scale(1.1);
+      padding: 1rem 1.8rem;
     }
   }
 
@@ -443,50 +313,33 @@
   .navbar-desktop {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100px;
-    height: 100px;
     max-width: 1100px;
     margin: 0 auto;
-    // border: 1px solid $quaternary-color;
     box-sizing: border-box;
     border-radius: 0.5em;
-    position: relative;
-
   }
-
 
   .navbar-links {
     width: 100%;
     max-width: 1100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    letter-spacing: 0.05em;
-    color: $primary-color;
     box-sizing: border-box;
-    cursor: pointer;
   }
 
   .navLinks {
     width: 100%;
-    max-width: 1100px;
+    max-width: 100dvw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    list-style: none;
     letter-spacing: 0.05em;
     color: $primary-color;
+    padding: 0;
+    padding: 0 1rem;
     box-sizing: border-box;
-    margin: 0 auto;
-    padding: 0px;
-    overflow: hidden;
-    // background-color: brown;
 
     a {
       font-size: $font-size-mobile-wide;
@@ -497,7 +350,8 @@
   .navLinks a:hover {
     color: $primary-accent-color;
     cursor: pointer;
-    // transform: translateY(-0.2em);
+    transform: translateY(-0.2em);
+    transition: all 0.4s ease-in-out;
 
   }
 
@@ -506,8 +360,7 @@
     cursor: pointer;
     transform: translateY(-0.2em);
     transition: all 0.4s ease-in-out;
-    // border-bottom: 1px solid $primary-accent-color;
-    // padding-bottom: 0.2em;
+
   }
 
   .navLinks a:active {
@@ -517,39 +370,20 @@
 
 
   .logo {
-    width: 200px;
+    width: 180px;
     height: 100px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-family: $secondary-font;
-    // margin-top: 0.28em;
-
-    img {
-      width: 200px;
-      height: 110px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: relative;
-      letter-spacing: 3px;
-      border-radius: 1em;
-      font-family: $secondary-font;
-    }
   }
 }
-
 
 //Desktop
 
 @include respond(xl) {
   .navbar {
     padding: 0;
-    box-sizing: border-box;
-    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 
   .navbar-mobile {
@@ -561,144 +395,31 @@
   }
 
   .navbar-desktop {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100px;
-    max-width: 1100px;
-    margin: 0 auto;
-    margin-top: 1em;
-    box-sizing: border-box;
-    border-radius: 0.5em;
-    padding: 0px;
+    padding: 0 1rem;
   }
 
   .logo {
     width: 200px;
     height: 100px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    letter-spacing: 3px;
-    border-radius: 1em;
-    font-family: $secondary-font;
 
 
     img {
       width: 200px;
       height: 100px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: relative;
-      letter-spacing: 3px;
-      border-radius: 1em;
-      font-family: $secondary-font;
     }
   }
 
   .navbar-button-container {
+    box-sizing: border-box;
+
     button {
-      position: relative;
-      margin: 0;
-      padding: 0.8em 1em;
-      outline: none;
-      text-decoration: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: $font-size-tablet;
 
-      background-color: #333;
-      border-radius: 1023em;
-      color: #fff;
-      font-weight: 300;
-      font-size: 18px;
-      font-family: inherit;
-      z-index: 0;
-      overflow: hidden;
-      transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
-    }
-
-    button:hover {
-      animation: sh0 0.5s ease-in-out both;
-    }
-
-    @keyframes sh0 {
-      0% {
-        transform: rotate(0deg) translate3d(0, 0, 0);
-      }
-
-      25% {
-        transform: rotate(3deg) translate3d(0, 0, 0);
-      }
-
-      50% {
-        transform: rotate(-3deg) translate3d(0, 0, 0);
-      }
-
-      75% {
-        transform: rotate(1deg) translate3d(0, 0, 0);
-      }
-
-      100% {
-        transform: rotate(0deg) translate3d(0, 0, 0);
-      }
-    }
-
-    button:hover span {
-      animation: storm 0.7s ease-in-out both;
-      animation-delay: 0.06s;
-    }
-
-    button::before,
-    button::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background: #fff;
-      opacity: 0;
-      transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
-      z-index: -1;
-      transform: translate(100%, -25%) translate3d(0, 0, 0);
-    }
-
-    button:hover::before,
-    button:hover::after {
-      opacity: 0.15;
-      transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
-    }
-
-    button:hover::before {
-      transform: translate3d(50%, 0, 0) scale(0.9);
-    }
-
-    button:hover::after {
-      transform: translate(50%, 0) scale(1.1);
     }
   }
 
   .navbar-links {
-    width: 100%;
-    max-width: 1100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    letter-spacing: 0.05em;
-    color: $primary-color;
-    box-sizing: border-box;
     cursor: pointer;
   }
 
@@ -706,22 +427,21 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     list-style: none;
     letter-spacing: 0.05em;
     color: $primary-color;
     box-sizing: border-box;
     margin: 0 auto;
-    gap: 2em;
+    gap: 1rem;
     height: 100px;
+    padding: 0 1rem;
 
     a {
       font-size: $font-size-tablet;
     }
   }
-
-
 
   .navLinks a:hover {
     color: $primary-accent-color;
@@ -740,30 +460,6 @@
   .navLinks a:active {
     transition: all 0.4s ease-in;
     transform: translateY(0.2em);
-  }
-
-  .navbar-button-container {
-    button {
-      background-color: $primary-color;
-      color: $secondary-color;
-      padding: 8px 12px;
-      border: none;
-      border-radius: 1.5em;
-      font-size: $font-size-mobile;
-      width: 100%;
-      box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.3);
-    }
-
-    button:hover {
-      transform: scale(1.02);
-      background-color: $primary-color;
-      cursor: pointer;
-    }
-
-    button:active {
-      transform: scale(1.01);
-      transition: all 0.2s ease-out;
-    }
   }
 }
 
@@ -788,91 +484,7 @@
     display: none;
   }
 
-  .navbar-button-container {
-    width: 100%;
-
-    button {
-      position: relative;
-      margin: 0;
-      padding: 0.8em 1em;
-      outline: none;
-      text-decoration: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      border: none;
-
-      background-color: #333;
-      border-radius: 1023em;
-      color: #fff;
-      font-weight: 300;
-      font-size: 18px;
-      font-family: inherit;
-      z-index: 0;
-      overflow: hidden;
-      transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
-    }
-
-    button:hover {
-      animation: sh0 0.5s ease-in-out both;
-    }
-
-    @keyframes sh0 {
-      0% {
-        transform: rotate(0deg) translate3d(0, 0, 0);
-      }
-
-      25% {
-        transform: rotate(3deg) translate3d(0, 0, 0);
-      }
-
-      50% {
-        transform: rotate(-3deg) translate3d(0, 0, 0);
-      }
-
-      75% {
-        transform: rotate(1deg) translate3d(0, 0, 0);
-      }
-
-      100% {
-        transform: rotate(0deg) translate3d(0, 0, 0);
-      }
-    }
-
-    button:hover span {
-      animation: storm 0.7s ease-in-out both;
-      animation-delay: 0.06s;
-    }
-
-    button::before,
-    button::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background: #fff;
-      opacity: 0;
-      transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
-      z-index: -1;
-      transform: translate(100%, -25%) translate3d(0, 0, 0);
-    }
-
-    button:hover::before,
-    button:hover::after {
-      opacity: 0.15;
-      transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
-    }
-
-    button:hover::before {
-      transform: translate3d(50%, 0, 0) scale(0.9);
-    }
-
-    button:hover::after {
-      transform: translate(50%, 0) scale(1.1);
-    }
+  .navbar-desktop {
+    padding: 0px;
   }
 }

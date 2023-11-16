@@ -3,10 +3,11 @@ import React from "react";
 import Image from "next/image";
 import styles from "./Hero.module.scss";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const HeroSection: React.FC<{ className?: string }> = () => {
+const HeroSection = () => {
   const [loading, setLoading] = useState(true);
+
   return (
     <>
       <main className={styles["hero-section"]}>
@@ -15,18 +16,16 @@ const HeroSection: React.FC<{ className?: string }> = () => {
             <Image
               unoptimized={true}
               src="/Hero.jpg"
-              alt="Permanent Make-up lady photo"
+              alt="Permanent Make-up photo of a lady in Vienna Austria"
               width={518}
               height={777}
               priority={true}
-              // layout="responsive"
               blurDataURL="/Hero.jpg"
               placeholder="blur"
               // sizes="(max-width: 1100px) 100vw, 600px"
               style={{
                 objectFit: "contain",
               }}
-              // className={styles["hero-image"]}
               loading="eager"
               className={`${styles["hero-image"]} ${styles["image"]} ${
                 styles["transition-opacity"]
@@ -56,12 +55,12 @@ const HeroSection: React.FC<{ className?: string }> = () => {
               </p>
               <div className={styles["hero-button-container"]}>
                 <Link href="/book">
-                  <button className={styles["hero-btn-1"]}>
+                  <button className={styles["hero-btn-1"]} aria-label="Buchen">
                     <span>Jetzt Buchen </span>
                   </button>
                 </Link>
                 <Link href="/blog">
-                  <button className={styles["hero-btn-2"]}>
+                  <button className={styles["hero-btn-2"]} aria-label="Blog">
                     <span>Weitere Informationen</span>
                   </button>
                 </Link>
@@ -75,3 +74,26 @@ const HeroSection: React.FC<{ className?: string }> = () => {
 };
 
 export default HeroSection;
+
+// const options = {
+//   root: null, // relative to document viewport
+//   rootMargin: "100px", // margin around root. Values are similar to css property. Unitless values not allowed
+//   threshold: 1, // visible amount of item shown in relation to root
+// };
+// const heroText = document.querySelector(".hero-title") as HTMLElement;
+// document.addEventListener("DOMContentLoaded", (event) => {
+//   if (heroText) {
+//     const observer = new IntersectionObserver((entries) => {
+//       entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//           console.log(entry);
+//           entry.target.classList.add(".visible");
+//         } else {
+//           entry.target.classList.remove(".visible");
+//         }
+//       });
+//     }, options);
+
+//     observer.observe(heroText);
+//   }
+// });

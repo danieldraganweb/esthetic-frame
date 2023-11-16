@@ -69,7 +69,9 @@ function Navbar() {
             <Logo />
             <div className={styles["navbar-button-container"]}>
               <Link href="/book">
-                <button className={styles["navbar-button"]}>Buchen</button>
+                <button className={styles["navbar-button"]} aria-label="Buchen">
+                  Buchen
+                </button>
               </Link>
             </div>
             {menuOpen && (
@@ -183,7 +185,10 @@ function Navbar() {
                 <li>
                   <div className={styles["navbar-button-container"]}>
                     <Link href="/book">
-                      <button className={styles["navbar-button"]}>
+                      <button
+                        className={styles["navbar-button"]}
+                        aria-label="Buchen"
+                      >
                         Buchen
                       </button>
                     </Link>

@@ -7,19 +7,10 @@ import Image from "next/image";
 import disableScroll from "disable-scroll";
 import OpenMenuSVG from "../components/OpenMenuSVG";
 import CloseMenuSVG from "../components/CloseMenuSVG";
-import { useMediaQuery } from "react-responsive";
-// import Loading from "../components/Loading/Loading";
-import ImageModal from "../components/ImageModal/ImageModal";
 
 type Props = {};
 
 function Gallery(props: Props) {
-  const isDesktopOrLaptop = useMediaQuery({ minWidth: 1224 });
-  const isBigScreen = useMediaQuery({ minWidth: 1824 });
-  const isTabletOrMobile = useMediaQuery({ maxWidth: 768 });
-  const isPortrait = useMediaQuery({ orientation: "portrait" });
-  const isRetina = useMediaQuery({ minResolution: "2dppx" });
-
   const [category, setCategory] = useState<string | undefined>();
   const { images } = useGalleryImages();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -38,33 +29,10 @@ function Gallery(props: Props) {
   const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({});
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
   const [loading, setLoading] = useState(true);
-  // useEffect(() => {
-  //   if (selectedImage) {
-  //     disableScroll.on();
-  //   } else {
-  //     disableScroll.off();
-  //   }
-  // }, [selectedImage]);
 
   return (
     <>
-      {/* {selectedImage && (
-        <ImageModal
-          image={selectedImage}
-          onClose={() => setSelectedImage(null)}
-          images={images}
-          selectedIndex={images.findIndex(
-            (image) => image.id === selectedImage.id
-          )}
-        />
-      )} */}
-
-      <main
-        className={styles["wrapper"]}
-        // onLoad={() => {
-        //   <Loading />;
-        // }}
-      >
+      <main className={styles["wrapper"]}>
         <div className={styles["gallery-container"]}>
           <div className={styles["sidebar-container"]}>
             <div className={styles["gallery-title-container"]}>
@@ -117,24 +85,7 @@ function Gallery(props: Props) {
               )
               .map((image: GalleryImage) => (
                 <div key={image.id} className={styles.image}>
-                  {/* {!loadedImages[image.id] && (
-                    <div className={styles.loader}>
-                      <Loading />
-                    </div>
-                  )} */}
                   <Image
-                    onClick={() => setSelectedImage(image)}
-                    onLoad={(event) => {
-                      setLoadedImages((prev) => ({
-                        ...prev,
-                        [image.id]: true,
-                      }));
-                      const img = event.target as HTMLImageElement;
-                      img.classList.remove(styles["opacity-0"]);
-                    }}
-                    // onLoadComplete={() =>
-                    //   setLoadedImages((prev) => ({ ...prev, [image.id]: true }))
-                    // }
                     src={image.fields?.image[0].url}
                     alt={image.fields?.Name}
                     width={300}
@@ -159,6 +110,15 @@ function Gallery(props: Props) {
                     blurDataURL={image.fields?.image[0].thumbnails.small.url}
                     placeholder="blur"
                     unoptimized
+                    onClick={() => setSelectedImage(image)}
+                    onLoad={(event) => {
+                      setLoadedImages((prev) => ({
+                        ...prev,
+                        [image.id]: true,
+                      }));
+                      const img = event.target as HTMLImageElement;
+                      img.classList.remove(styles["opacity-0"]);
+                    }}
                   />
                 </div>
               ))}
