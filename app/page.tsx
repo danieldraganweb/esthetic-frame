@@ -14,10 +14,10 @@ export default function Home() {
     <>
       <main className={styles.main}>
         <ErrorBoundary fallback={Error as any}>
-          <HeroSection className={styles.hero} />
-          <Services className={styles.services} />
-          <ContactFormClientContact className={styles.contactForm} />
-          <BlogComponent className={styles.blog} />
+          <HeroSection />
+          <Services />
+          <ContactFormClientContact />
+          <BlogComponent />
           <CookiePolicyAlert />
           <FacebookPixel />
         </ErrorBoundary>
