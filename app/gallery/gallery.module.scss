@@ -194,8 +194,8 @@
         cursor: pointer;
         transition: all 0.3s ease-in-out;
         display: inline-block;
-        font-size: clamp($font-size-mobile, 1.5vw, $font-size-mobile-wide);
-        color: rgba($primary-color, 0.8);
+        font-size: $font-size-mobile-wide;
+        color: rgba($primary-color, 1);
         font-family: $secondary-font;
         width: 100%;
         animation: fade-in-top 2.5s ease-in-out;
