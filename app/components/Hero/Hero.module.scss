@@ -3,8 +3,13 @@
 @use "./app/styles/utils/_mixins" as *;
 @use "./app/styles/utils/_functions" as *;
 
-// Mobile first
 
+
+// Mobile first
+.hero-section {
+  width: 100%;
+  max-width: 1100px;
+}
 
 .hero-container {
   width: 100%;
@@ -30,27 +35,29 @@
   background-color: lighten($quaternary-color, $amount: 10%);
   border-radius: 0 0 0.5em 0.5em;
   border-top: none;
+  position: relative;
 
 
 
 
   .hero-title {
-    font-size: clamp($font-size-desktop, 5vw, $font-size-desktop-ultra-wide);
+    font-size: clamp($font-size-desktop-wide, 5vw, $font-size-desktop-ultra-ultra-wide);
     font-weight: 400;
-    color: $primary-accent-color;
+    color: $primary-color;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     max-width: 768px;
     text-align: start;
     box-sizing: border-box;
-    margin-top: -2.8em;
+    margin-top: -8.5rem;
     padding: 1rem 0.5em 1rem 0.5em;
     font-style: italic;
     animation: slideInFromLeft 2s forwards;
     margin-bottom: 1rem;
+    height: 137px;
 
     @keyframes slideInFromLeft {
       0% {
@@ -62,11 +69,24 @@
       100% {
         transform: translateX(0);
         opacity: 1;
-        background: $secondary-color;
+        background: transparent;
       }
     }
 
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $secondary-color;
+      opacity: 0.55;
+      z-index: -1; // Put the background behind the text
+    }
   }
+
+
 
   .hero-subtitle {
     font-size: clamp($font-size-mobile-wide, 1.5vw, $font-size-desktop);
@@ -154,12 +174,12 @@
     background-color: lighten($primary-color, $amount: 10%);
     color: $secondary-color;
     border-radius: 12em;
-    font-size: clamp($font-size-mobile, 1vw, $font-size-desktop);
-    display: inline-block;
+    font-size: clamp($font-size-mobile, 1vw, $font-size-mobile-wide);
     font-family: $primary-font;
     box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
-    padding: 1rem 1.5rem 1rem 1.5rem;
+    padding: 1rem 1.2rem;
     margin-top: 1rem;
+    text-wrap: nowrap;
   }
 
   .hero-btn-2 {
@@ -167,19 +187,21 @@
     color: $primary-color;
     border: 1px solid $quaternary-color;
     border-radius: 12em;
-    font-size: clamp(0.7rem, 1vw, 1rem);
-    display: inline-block;
     font-family: $primary-font;
     font-weight: 400;
     box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
-    padding: 1rem 1.5rem 1rem 1.5rem;
+    font-size: clamp($font-size-mobile, 1vw, $font-size-mobile-wide);
+    padding: 1rem 1.2rem;
     margin-top: 1rem;
+    text-wrap: nowrap;
   }
 
   span {
-    font-size: clamp($font-size-mobile, 1vw, $font-size-desktop);
+    font-size: $font-size-mobile;
   }
 }
+
+
 
 @include respond(md) {
   .hero-section {
@@ -210,7 +232,6 @@
     align-items: center;
     width: 50%;
     flex-basis: 50%;
-    max-width: 1024px;
     box-sizing: border-box;
     background-color: $secondary-color;
     margin-bottom: 0px;
@@ -221,7 +242,7 @@
     .hero-title {
       font-size: clamp($font-size-desktop-wide, 5vw, $font-size-desktop-ultra-ultra-wide);
       font-weight: 400;
-      color: $primary-accent-color;
+      color: lighten($color: $primary-color, $amount: 10%);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -230,12 +251,13 @@
       max-width: 1100px;
       text-align: start;
       box-sizing: border-box;
-      // margin-top: 0.5em;
       padding: 0;
       font-style: italic;
       margin-top: 0px;
-      background-color: transparent;
+      background: transparent;
       animation: slideInFromLeft 2s forwards;
+      height: auto;
+      font-weight: 500;
     }
 
     @keyframes slideInFromLeft {
@@ -291,14 +313,14 @@
     align-items: center;
     width: 100%;
     margin: 2em 0 0 0;
-    gap: 2em;
+    padding: 0;
+    gap: 1em;
 
 
-
-    .hero-btn-1.button {
+    .hero-btn-1 {
       position: relative;
       margin: 0;
-      padding: 0.8em 1em;
+      padding: 1rem 1.5rem;
       outline: none;
       text-decoration: none;
       display: flex;
@@ -306,12 +328,10 @@
       align-items: center;
       cursor: pointer;
       border: none;
-      text-transform: uppercase;
       background-color: #333;
-      border-radius: 10px;
+      border-radius: 12rem;
       color: #fff;
       font-weight: 300;
-      font-size: 18px;
       font-family: inherit;
       z-index: 0;
       overflow: hidden;
@@ -381,10 +401,10 @@
       transform: translate(50%, 0) scale(1.1);
     }
 
-    .hero-btn-2.button {
+    .hero-btn-2 {
       position: relative;
       margin: 0;
-      padding: 0.8em 1em;
+      padding: 1rem 1.5rem;
       outline: none;
       text-decoration: none;
       display: flex;
@@ -392,16 +412,16 @@
       align-items: center;
       cursor: pointer;
       border: none;
-      text-transform: uppercase;
-      background-color: #333;
-      border-radius: 10px;
-      color: #fff;
+      background-color: $secondary-color;
+      color: $primary-color;
+      border-radius: 12rem;
       font-weight: 300;
-      font-size: 18px;
       font-family: inherit;
       z-index: 0;
       overflow: hidden;
       transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+      border: 1px solid $primary-color;
+      box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
     }
 
     button:hover {
@@ -464,7 +484,14 @@
     button:hover::after {
       transform: translate(50%, 0) scale(1.1);
     }
+
+    button:active {
+      transform: scale(0.9);
+
+    }
   }
+
+
 }
 
 @include respond(xl) {
@@ -485,13 +512,15 @@
     // border: 1px solid $quaternary-color;
 
     .hero-title {
-      font-size: clamp($font-size-desktop-ultra-ultra-wide, 5vw, $font-size-desktop-ultra-ultra-wide);
+      font-size: clamp($font-size-desktop-ultra-wide, 5vw, $font-size-desktop-ultra-ultra-wide);
       font-weight: 400;
       font-style: italic;
-      line-height: 1.2;
+      line-height: 1.5;
       margin-top: 0px;
       margin-bottom: 1em;
       font-style: italic;
+      width: 90%;
+      font-weight: 400;
     }
 
     .hero-subtitle {
@@ -521,180 +550,8 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    margin: 1em 0 0 0;
+    margin: 1rem 0 0 0;
     gap: 1.5rem;
     margin-top: 3rem;
-
-
-
-    .hero-btn-1.button {
-      position: relative;
-      margin: 0;
-      padding: 0.8em 1em;
-      outline: none;
-      text-decoration: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      border: none;
-      text-transform: uppercase;
-      background-color: #333;
-      border-radius: 10px;
-      color: #fff;
-      font-weight: 300;
-      font-size: 18px;
-      font-family: inherit;
-      z-index: 0;
-      overflow: hidden;
-      transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
-    }
-
-    button:hover {
-      animation: sh0 0.5s ease-in-out both;
-    }
-
-    @keyframes sh0 {
-      0% {
-        transform: rotate(0deg) translate3d(0, 0, 0);
-      }
-
-      25% {
-        transform: rotate(3deg) translate3d(0, 0, 0);
-      }
-
-      50% {
-        transform: rotate(-3deg) translate3d(0, 0, 0);
-      }
-
-      75% {
-        transform: rotate(1deg) translate3d(0, 0, 0);
-      }
-
-      100% {
-        transform: rotate(0deg) translate3d(0, 0, 0);
-      }
-    }
-
-    button:hover span {
-      animation: storm 0.7s ease-in-out both;
-      animation-delay: 0.06s;
-    }
-
-    button::before,
-    button::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background: #fff;
-      opacity: 0;
-      transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
-      z-index: -1;
-      transform: translate(100%, -25%) translate3d(0, 0, 0);
-    }
-
-    button:hover::before,
-    button:hover::after {
-      opacity: 0.15;
-      transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
-    }
-
-    button:hover::before {
-      transform: translate3d(50%, 0, 0) scale(0.9);
-    }
-
-    button:hover::after {
-      transform: translate(50%, 0) scale(1.1);
-    }
-
-    .hero-btn-2.button {
-      position: relative;
-      margin: 0;
-      padding: 0.8em 1em;
-      outline: none;
-      text-decoration: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      border: none;
-      text-transform: uppercase;
-      background-color: #333;
-      border-radius: 10px;
-      color: #fff;
-      font-weight: 300;
-      font-size: 18px;
-      font-family: inherit;
-      z-index: 0;
-      overflow: hidden;
-      transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
-    }
-
-    button:hover {
-      animation: sh0 0.5s ease-in-out both;
-      background-color: lighten($primary-color, $amount: 10%);
-      color: $primary-accent-color;
-    }
-
-    @keyframes sh0 {
-      0% {
-        transform: rotate(0deg) translate3d(0, 0, 0);
-      }
-
-      25% {
-        transform: rotate(3deg) translate3d(0, 0, 0);
-      }
-
-      50% {
-        transform: rotate(-3deg) translate3d(0, 0, 0);
-      }
-
-      75% {
-        transform: rotate(1deg) translate3d(0, 0, 0);
-      }
-
-      100% {
-        transform: rotate(0deg) translate3d(0, 0, 0);
-      }
-    }
-
-    button:hover span {
-      animation: storm 0.7s ease-in-out both;
-      animation-delay: 0.06s;
-    }
-
-    button::before,
-    button::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background: #fff;
-      opacity: 0;
-      transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
-      z-index: -1;
-      transform: translate(100%, -25%) translate3d(0, 0, 0);
-    }
-
-    button:hover::before,
-    button:hover::after {
-      opacity: 0.15;
-      transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
-    }
-
-    button:hover::before {
-      transform: translate3d(50%, 0, 0) scale(0.9);
-    }
-
-    button:hover::after {
-      transform: translate(50%, 0) scale(1.1);
-    }
   }
 }
