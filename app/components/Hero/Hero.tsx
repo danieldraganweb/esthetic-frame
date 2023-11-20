@@ -15,12 +15,12 @@ const HeroSection = () => {
           <div className={styles["hero-image-container"]}>
             <Image
               unoptimized={true}
-              src="/Hero.jpg"
+              src="/Hero.webp"
               alt="Permanent Make-up photo of a lady in Vienna Austria"
-              width={518}
-              height={777}
+              width={486}
+              height={729}
               priority={true}
-              blurDataURL="/Hero.jpg"
+              blurDataURL="/Hero.webp"
               placeholder="blur"
               // sizes="(max-width: 1100px) 100vw, 600px"
               style={{
@@ -39,11 +39,11 @@ const HeroSection = () => {
           <div className={styles["hero-text-container"]}>
             <div className={styles["hero-text-overlay"]}>
               <h1 className={styles["hero-title"]}>
-                Steigere deine Schönheit mit unserem Permanenten Make-up
+                Steigern Sie Ihre Schönheit mit unserem Permanenten Make-up
               </h1>
               <p className={styles["hero-subtitle"]}>
-                Erlebe die Bequemlichkeit und das Selbstbewusstsein eines
-                makellosen Make-ups, das den ganzen Taghält!
+                Erleben Sie Bequemlichkeit und das Selbstbewusstsein eines
+                makellosen Make-ups, das den ganzen Tag hält!
               </p>
               <p
                 className={styles["hero-subtitle"]}

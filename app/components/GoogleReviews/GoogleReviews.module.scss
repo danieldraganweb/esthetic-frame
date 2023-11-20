@@ -304,10 +304,6 @@
 
 
         img {
-            width: 100%;
-            height: 100%;
-            max-width: 300px;
-            max-height: 450px;
             object-fit: cover;
             // border: 2px solid $quaternary-color;
             border-radius: 0.5rem;
@@ -322,13 +318,12 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        overflow-x: hidden;
         padding: 0;
         gap: 1.7rem;
 
         img {
             width: 100%;
-            height: 100%;
+            height: auto;
         }
     }
 
@@ -336,3 +331,5 @@
         appearance: none;
     }
 }
+
+@include respond(xl) {}

@@ -130,6 +130,7 @@
     width: 100%;
     height: auto;
     border-radius: 0.5em 0.5em 0 0;
+    filter: brightness(1.1);
   }
 }
 
@@ -316,6 +317,9 @@
     padding: 0;
     gap: 1em;
 
+    span {
+      font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
+    }
 
     .hero-btn-1 {
       position: relative;
@@ -336,6 +340,7 @@
       z-index: 0;
       overflow: hidden;
       transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+
     }
 
     button:hover {
@@ -553,5 +558,9 @@
     margin: 1rem 0 0 0;
     gap: 1.5rem;
     margin-top: 3rem;
+
+    span {
+      font-size: clamp($font-size-tablet, 1vw, $font-size-desktop);
+    }
   }
 }
