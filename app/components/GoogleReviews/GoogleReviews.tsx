@@ -20,7 +20,7 @@ const GoogleReviews = () => {
               width={450}
               height={300}
               className={styles["google-review-image"]}
-              layout="responsive"
+              // layout="responsive"
             />
           ))}
         </div>

@@ -30,33 +30,26 @@ const Services: React.FC<{ className?: string }> = () => {
         <div className={styles["services-title-container-1"]}>
           <div className={styles["service-section"]}>
             <h1 className={styles["section-title"]}>
-              Enthülle deine wahre Schönheit mit unseren Dienstleistungen
+              Enthüllen Sie wahre Schönheit mit unseren Dienstleistungen
             </h1>
             <h2 className={styles["section-description"]}>
-              Erlebe die transformative Kraft unserer Permanent
+              Erleben Sie die transformative Kraft unserer Permanent
               Make-up-Dienstleistungen. Unser Team von Experten wird deine
               natürlichen Merkmale verbessern und dir einen makellosen und
               langanhaltenden Look verleihen.
             </h2>
-            {/* <h2 className={styles["section-description"]}></h2> */}
             <ul className={styles["service-list"]}>
               <li className={styles["service-list-item"]}>
                 <CubeSVG />
-                <h3 className={styles["section-option"]}>
-                  Steigere dein Selbstvertrauen mit natürlichen Ergebnissen
-                </h3>
+                Steigern Sie Ihr Selbstvertrauen mit natürlichen Ergebnissen
               </li>
               <li className={styles["service-list-item"]}>
                 <CubeSVG />
-                <h3 className={styles["section-option"]}>
-                  Erreiche mühelose Schönheit mit unseren Expertentechniken
-                </h3>
+                Erreichen Sie mühelose Schönheit mit unseren Expertentechniken
               </li>
               <li className={styles["service-list-item"]}>
                 <CubeSVG />
-                <h3 className={styles["section-option"]}>
-                  Spare Zeit und sieh jeden Tag großartig aus
-                </h3>
+                Sparen Sie Zeit und sieh jeden Tag großartig aus
               </li>
             </ul>
           </div>
@@ -222,20 +215,25 @@ const Services: React.FC<{ className?: string }> = () => {
           <button
             className={styles["services-scroll-button"]}
             onClick={handleScrollLeft}
+            aria-label="Scrollen Sie nach links"
           >
-            <span>{"<"}</span>
+            <span aria-label="Scrollen Sie nach links">{"<"}</span>
           </button>
           <ScrollHorizontalIcon />
           <button
             className={styles["services-scroll-button"]}
             onClick={handleScrollRight}
+            aria-label="Scrollen Sie nach rechts"
           >
-            <span>{">"}</span>
+            <span aria-label="Scrollen Sie nach rechts">{">"}</span>
           </button>
         </div>
         <div className={styles["services-btn-container"]}>
           <Link href="/services">
-            <button className={styles["services-button"]}>
+            <button
+              className={styles["services-button"]}
+              aria-label="Alle Dienstleistungen"
+            >
               Alle Dienstleistungen
             </button>
           </Link>
