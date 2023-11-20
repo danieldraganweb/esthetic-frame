@@ -17,7 +17,7 @@ const BlogComponent: React.FC<{ className?: string }> = () => {
       new Date(a.fields?.published ?? "").getTime()
     );
   });
-  const limitedBlogPosts = sortedBlogPosts.slice(0, 12);
+  const limitedBlogPosts = sortedBlogPosts.slice(0, 6);
 
   const handleScrollLeft = () => {
     const container = document.getElementById("blog-scroll-container");
