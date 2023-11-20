@@ -32,6 +32,7 @@
     border-radius: 12rem;
     font-size: $font-size-mobile;
     font-family: $secondary-font;
+    transition: all 0.3s ease-in-out;
   }
 
   button:hover {

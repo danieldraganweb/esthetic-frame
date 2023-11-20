@@ -1,10 +1,11 @@
-import React, { useState, useRef } from "react";
 import styles from "./Blog.module.scss";
 import { useBlogPosts } from "../../hooks/useAllBlogPosts";
 import { BlogPostContent } from "../../types";
 import Image from "next/image";
 import ScrollHorizontalIcon from "../SvgHorizontalScrollIcon";
 import Link from "next/link";
+import RightArrow from "../RightArrow";
+import LeftArrow from "../LeftArrow";
 
 const BlogComponent: React.FC<{ className?: string }> = () => {
   const { blogPosts } = useBlogPosts();
@@ -76,20 +77,29 @@ const BlogComponent: React.FC<{ className?: string }> = () => {
             <button
               className={styles["blog-scroll-button"]}
               onClick={handleScrollLeft}
+              aria-label="Scrollen Sie nach links"
             >
-              <span>{"<"}</span>
+              <span>
+                <LeftArrow />
+              </span>
             </button>
             <ScrollHorizontalIcon />
             <button
               className={styles["blog-scroll-button"]}
               onClick={handleScrollRight}
+              aria-label="Scrollen Sie nach rechts"
             >
-              <span>{">"}</span>
+              <span>
+                <RightArrow />
+              </span>
             </button>
           </div>
           <div className={styles["blog-btn-container"]}>
             <Link href="/blog" passHref>
-              <button className={styles["blog-button"]}>
+              <button
+                className={styles["blog-button"]}
+                aria-label="Alle Beiträge anzeigen"
+              >
                 Alle Beiträge anzeigen
               </button>
             </Link>
