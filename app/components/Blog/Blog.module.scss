@@ -31,13 +31,14 @@
     ::-webkit-scrollbar {
         background-color: $quinary-color;
         width: 100%;
-        height: 0.5em;
-        border-radius: 5px;
+        height: 0.7rem;
+        border-radius: 1rem;
     }
 
     /* Track */
     ::-webkit-scrollbar-track {
-        background: $quaternary-color;
+        background: darken($color: $quaternary-color, $amount: 15%);
+        border-radius: 1rem;
     }
 
     /* Handle */
@@ -55,16 +56,15 @@
 .blog-title-container {
     width: 100%;
     max-width: 1100px;
-    // margin-bottom: 1em;
+    margin-bottom: 1rem;
     border-radius: 0.5rem;
 
     h1 {
-        font-size: clamp($font-size-desktop-ultra-wide, 1vw, $font-size-desktop-wide);
+        font-size: clamp($font-size-desktop-wide, 1vw, $font-size-desktop-wide);
         font-weight: 500;
         text-align: center;
         padding: 1em 0 0.7rem 0;
         line-height: 1;
-        // text-wrap: nowrap;
     }
 
     p {
@@ -100,16 +100,15 @@
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
-    margin-top: 1em;
     border-radius: 0.5rem;
     gap: 2em;
     overflow-x: auto;
-    margin-bottom: 0.5rem;
+    margin: 0.5rem 0;
 
 
     button {
         display: inline-block;
-        padding: 1em 2em 1em 2em;
+        padding: 0.5rem 1rem;
         font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
         font-weight: bold;
         text-align: center;
@@ -522,7 +521,7 @@
 
         button {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 0.5rem 1rem;
             font-size: 16px;
             font-weight: bold;
             text-align: center;
@@ -748,6 +747,12 @@
         padding: 0 1em;
         margin-top: 2em;
 
+        ::-webkit-scrollbar {
+            background-color: $quinary-color;
+            width: 100%;
+            height: 0.7rem;
+            border-radius: 1rem;
+        }
 
     }
 
@@ -770,6 +775,8 @@
             margin-bottom: 1em;
         }
     }
+
+
 
     .blog-title-container {
         width: 100%;
@@ -812,7 +819,7 @@
 
     .blog-scroll-btn-container {
         button {
-            padding: 1em 2.5em 1em 2.5em;
+            padding: 0.5rem 1rem;
         }
     }
 

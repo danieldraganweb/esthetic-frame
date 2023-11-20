@@ -6,6 +6,8 @@ import ScrollHorizontalIcon from "../SvgHorizontalScrollIcon";
 import CubeSVG from "../CubeSVG";
 import GoogleReviews from "../GoogleReviews/GoogleReviews";
 import AllGoogleReviews from "../GoogleReviews/AllGoogleReviews";
+import RightArrow from "../RightArrow";
+import LeftArrow from "../LeftArrow";
 
 const Services: React.FC<{ className?: string }> = () => {
   const handleScrollLeft = () => {
@@ -217,7 +219,9 @@ const Services: React.FC<{ className?: string }> = () => {
             onClick={handleScrollLeft}
             aria-label="Scrollen Sie nach links"
           >
-            <span aria-label="Scrollen Sie nach links">{"<"}</span>
+            <span aria-label="Scrollen Sie nach links">
+              <LeftArrow />
+            </span>
           </button>
           <ScrollHorizontalIcon />
           <button
@@ -225,7 +229,9 @@ const Services: React.FC<{ className?: string }> = () => {
             onClick={handleScrollRight}
             aria-label="Scrollen Sie nach rechts"
           >
-            <span aria-label="Scrollen Sie nach rechts">{">"}</span>
+            <span aria-label="Scrollen Sie nach rechts">
+              <RightArrow />
+            </span>
           </button>
         </div>
         <div className={styles["services-btn-container"]}>
