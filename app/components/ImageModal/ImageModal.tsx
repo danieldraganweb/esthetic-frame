@@ -5,6 +5,7 @@ import Image from "next/image";
 import RightArrow from "../RightArrow";
 import LeftArrow from "../LeftArrow";
 import CloseMenuSVG from "../CloseMenuSVG";
+import ImageModalLoader from "./ImageModalLoader";
 
 type Props = {
   image: GalleryImage;
@@ -19,6 +20,7 @@ const ImageModal: React.FC<Props> = ({
   images,
   selectedIndex,
 }) => {
+  const [isLoading, setIsLoading] = useState(true);
   const [currentImage, setCurrentImage] = useState(image);
   const [currentIndex, setCurrentIndex] = useState(selectedIndex);
 
@@ -52,6 +54,7 @@ const ImageModal: React.FC<Props> = ({
             className={styles["image-modal"]}
             onClick={(e) => e.stopPropagation()}
           >
+            {isLoading && <ImageModalLoader />}
             <button onClick={handlePrev}>
               <LeftArrow />
             </button>
@@ -62,6 +65,7 @@ const ImageModal: React.FC<Props> = ({
               width={currentImage.fields?.image[0].width}
               height={currentImage.fields?.image[0].height}
               className={styles["modal-image"]}
+              onLoad={() => setIsLoading(false)}
             />
             <button onClick={handleNext}>
               <RightArrow />
