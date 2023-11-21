@@ -87,7 +87,7 @@ const Services: React.FC<{ className?: string }> = () => {
                   placeholder="blur"
                 />
                 <h1 className={styles["services-title-2"]}>
-                  3D Härchentechnik
+                  3D Härchentechnik Permanent Make-up
                 </h1>
                 <p className={styles["services-subtitle-2"]}>
                   Erreichen Sie perfekt geformte Augenbrauen mit unseren
@@ -202,7 +202,7 @@ const Services: React.FC<{ className?: string }> = () => {
                   placeholder="blur"
                 />
                 <h1 className={styles["services-title-4"]}>
-                  Wimpernkranzverdichtung
+                  Wimpernkranzverdichtung Permanent Make-up
                 </h1>
                 <p className={styles["services-subtitle-4"]}>
                   Wer eine besonders natürliche Betonung der Augen bevorzugt,

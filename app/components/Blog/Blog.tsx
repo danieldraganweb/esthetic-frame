@@ -67,7 +67,7 @@ const BlogComponent: React.FC<{ className?: string }> = () => {
                     {post.fields?.name}
                   </h2>
                   <p className={styles["article-date"]}>
-                    Published on {post.fields?.published}
+                    {post.fields?.published}
                   </p>
                 </Link>
               </div>
