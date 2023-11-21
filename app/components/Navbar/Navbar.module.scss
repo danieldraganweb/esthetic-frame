@@ -8,6 +8,7 @@
 .navbar-container {
   max-width: 1100px;
   margin: 0 auto;
+
 }
 
 .navbar {
@@ -19,6 +20,7 @@
   margin: 0 auto;
   background-color: $secondary-color;
   z-index: 1000;
+  padding: 1rem 0;
 
 }
 
@@ -28,7 +30,7 @@
   button {
     background-color: lighten($color: $primary-color, $amount: 10%);
     color: $secondary-color;
-    padding: 0.7rem 1.2rem;
+    padding: 0.7rem 0.9rem;
     border-radius: 12rem;
     font-size: $font-size-mobile;
     font-family: $secondary-font;
@@ -102,7 +104,7 @@
 
   .logo {
     width: 140px;
-    height: 100px;
+    height: auto;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -135,7 +137,7 @@
     cursor: pointer;
     width: 3.5em;
     height: 3.5em;
-    box-shadow: 0 0.4em 0.5em rgba(0, 0, 0, 0.1);
+    // box-shadow: 0 0.4em 0.5em rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     align-items: center;
     margin-right: 17px;
@@ -212,7 +214,7 @@
       right: 0;
       justify-content: space-evenly;
       align-items: center;
-      margin-top: 5.5rem;
+      margin-top: 5.7rem;
       border-radius: 0.5em;
       padding-left: 1em;
       padding-right: 1em;
@@ -372,7 +374,7 @@
 
   .logo {
     width: 180px;
-    height: 100px;
+    height: auto;
   }
 }
 
@@ -401,12 +403,12 @@
 
   .logo {
     width: 200px;
-    height: 100px;
+    height: auto;
 
 
     img {
       width: 200px;
-      height: 100px;
+      height: auto;
     }
   }
 
@@ -474,6 +476,7 @@
 
   .logo {
     width: 200px;
+    height: auto;
     // margin-left: 12em;
   }
 
