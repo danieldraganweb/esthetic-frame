@@ -13,7 +13,6 @@ function LogoComponent() {
             alt="logo"
             width={400}
             height={130}
-            sizes="100vw"
             priority={true}
             style={{
               objectFit: "contain",

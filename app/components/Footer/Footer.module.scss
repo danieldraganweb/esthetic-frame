@@ -29,8 +29,7 @@
     margin: 0 auto;
     box-sizing: border-box;
     border-radius: 0.5em;
-    background-color: #000000;
-    background-image: linear-gradient(315deg, $tertiary-color 0%, $secondary-color 34%);
+    background-image: linear-gradient(315deg, $quinary-color 0%, $secondary-color 34%);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -233,6 +232,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-top: 0.3rem;
 
     li {
         text-align: left;
@@ -241,12 +241,14 @@
         color: $primary-color;
         font-weight: 500;
         font-size: clamp($font-size-mobile, 1vw, $font-size-tablet);
+        transition: all 0.3s ease-in-out;
     }
 
     li:hover {
         cursor: pointer;
-        color: $secondary-color;
-
+        color: $primary-color;
+        margin-left: 0.5rem;
+        transition: all 0.3s ease-in-out;
     }
 }
 
@@ -263,11 +265,14 @@
         color: $primary-color;
         font-weight: 500;
         font-size: clamp($font-size-mobile, 1vw, $font-size-tablet);
+        transition: all 0.3s ease-in-out;
     }
 
     h1:hover {
         cursor: pointer;
-        color: $secondary-color;
+        color: $primary-color;
+        transform: translateY(-0.3em);
+        transition: all 0.3s ease-in-out;
     }
 }
 
@@ -325,7 +330,7 @@
     p {
         font-style: italic;
         color: $primary-color;
-        font-size: clamp($font-size-tablet, 5vw, $font-size-desktop);
+        font-size: clamp($font-size-mobile, 1vw, $font-size-tablet);
         // text-shadow: 0 0 20px $secondary-color;
     }
 }
@@ -356,7 +361,7 @@
         border-top: 1px solid $quaternary-color;
         margin: 0 auto;
         box-sizing: border-box;
-        background-image: linear-gradient(315deg, $tertiary-color 0%, $secondary-color 54%);
+        background-image: linear-gradient(315deg, $quinary-color 0%, $secondary-color 54%);
     }
 
     .footerSocial {
@@ -439,13 +444,9 @@
         align-items: flex-start;
 
         li {
-            display: flex;
-            flex-direction: row;
-            text-align: left;
-            font-family: $primary-font;
+
             line-height: 2.5;
             color: $primary-color;
-            font-weight: 500;
             cursor: pointer;
             font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
         }
@@ -460,7 +461,7 @@
 
         h1 {
             text-align: center;
-            font-family: $primary-font;
+            font-family: $tertiary-color;
             color: $primary-color;
             font-weight: 500;
             font-size: clamp($font-size-mobile-wide, 1vw, $font-size-tablet);
@@ -523,7 +524,7 @@
         p {
             font-style: italic;
             color: $secondary-accent-color;
-            font-size: clamp($font-size-desktop, 1vw, $font-size-desktop-wide);
+            font-size: clamp($font-size-mobile, 1vw, $font-size-tablet);
             color: #000000;
             // text-shadow: 0 0 20px $secondary-color;
         }
