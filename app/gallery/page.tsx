@@ -7,10 +7,12 @@ import Image from "next/image";
 import disableScroll from "disable-scroll";
 import OpenMenuSVG from "../components/OpenMenuSVG";
 import CloseMenuSVG from "../components/CloseMenuSVG";
+import ImageModal from "../components/ImageModal/ImageModal";
 
 type Props = {};
 
 function Gallery(props: Props) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [category, setCategory] = useState<string | undefined>();
   const { images } = useGalleryImages();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -78,6 +80,19 @@ function Gallery(props: Props) {
             </div>
           </div>
           <div className={styles["image-container"]}>
+            {selectedImage && (
+              <ImageModal
+                onClose={() => {
+                  setSelectedImage(null);
+                  setIsModalOpen(false);
+                }}
+                image={selectedImage}
+                images={images}
+                selectedIndex={images.findIndex(
+                  (image) => image.id === selectedImage.id
+                )}
+              />
+            )}
             {images
               .filter(
                 (image: GalleryImage) =>
@@ -90,7 +105,9 @@ function Gallery(props: Props) {
                     alt={image.fields?.Name}
                     width={300}
                     height={300}
-                    className={`${styles["image"]} ${
+                    className={`${
+                      styles["image"]
+                    } {isModalOpen ? styles['no-hover'] : ''} ${
                       styles["transition-opacity"]
                     } ${styles["opacity-0"]} ${
                       styles["transition-timing-function"]
@@ -109,8 +126,11 @@ function Gallery(props: Props) {
                     }}
                     blurDataURL={image.fields?.image[0].thumbnails.small.url}
                     placeholder="blur"
-                    unoptimized
-                    onClick={() => setSelectedImage(image)}
+                    unoptimized={true}
+                    onClick={() => {
+                      setSelectedImage(image);
+                      setIsModalOpen(true);
+                    }}
                     onLoad={(event) => {
                       setLoadedImages((prev) => ({
                         ...prev,
