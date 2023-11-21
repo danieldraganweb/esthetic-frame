@@ -87,6 +87,11 @@
         transform: scale(1.03);
         transition: all 0.3s ease-in-out;
     }
+
+    .image-container img.no-hover:hover {
+        transform: none;
+        filter: none;
+    }
 }
 
 .transition-opacity {
@@ -215,9 +220,6 @@
     button+button {
         margin-left: 0;
     }
-
-
-
 }
 
 
@@ -391,7 +393,9 @@
         }
 
         &:hover .image-container img:not(:hover) {
-            opacity: 0.55;
+            // opacity: 0.25;
+            transition: all 0.3s ease-in-out;
+            transform: scale(0.90);
             transition: all 0.3s ease-in-out;
         }
     }
@@ -461,7 +465,7 @@
         }
 
         &:hover .image-container img:not(:hover) {
-            opacity: 0.55;
+            transform: scale(0.90);
             transition: all 0.3s ease-in-out;
         }
     }
@@ -540,8 +544,15 @@
         }
 
         &:hover .image-container img:not(:hover) {
-            opacity: 0.55;
+            transform: scale(0.90);
             transition: all 0.3s ease-in-out;
+            // filter: blur(5.5px);
+        }
+
+        &:active.image-container img:not(:hover) {
+            transform: scale(0.90);
+            transition: all 0.3s ease-in-out;
+            filter: blur(5.5px);
         }
     }
 
@@ -576,6 +587,11 @@
         img:hover {
             transform: scale(1.05);
             transition: all 0.3s ease-in-out;
+        }
+
+        .image-container img.no-hover:hover {
+            transform: none;
+            filter: none;
         }
     }
 
