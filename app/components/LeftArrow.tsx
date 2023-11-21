@@ -16,7 +16,7 @@ const LeftArrow = () => {
           width="24.00"
           height="24.00"
           rx="12"
-          fill="#ffffff"
+          fill="transparent"
           strokeWidth="0"
         ></rect>
       </g>
@@ -27,7 +27,7 @@ const LeftArrow = () => {
       ></g>
       <g id="SVGRepo_iconCarrier">
         {" "}
-        <rect width="24" height="24" fill="white"></rect>{" "}
+        <rect width="24" height="24" fill="transparent"></rect>{" "}
         <path
           d="M14.5 17L9.5 12L14.5 7"
           stroke="#000000"
