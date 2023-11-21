@@ -16,7 +16,7 @@ const RightArrow = () => {
           width="24.00"
           height="24.00"
           rx="12"
-          fill="#ffffff"
+          fill="transparent"
           strokeWidth="0"
         ></rect>
       </g>
@@ -26,7 +26,7 @@ const RightArrow = () => {
         strokeLinejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
-        <rect width="24" height="24" fill="white"></rect>
+        <rect width="24" height="24" fill="transparent"></rect>
         <path
           d="M9.5 7L14.5 12L9.5 17"
           stroke="#000000"

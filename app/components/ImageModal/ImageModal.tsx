@@ -6,6 +6,7 @@ import RightArrow from "../RightArrow";
 import LeftArrow from "../LeftArrow";
 import CloseMenuSVG from "../CloseMenuSVG";
 import ImageModalLoader from "./ImageModalLoader";
+import disableScroll from "disable-scroll";
 
 type Props = {
   image: GalleryImage;
@@ -55,27 +56,26 @@ const ImageModal: React.FC<Props> = ({
             onClick={(e) => e.stopPropagation()}
           >
             {isLoading && <ImageModalLoader />}
-            <button onClick={handlePrev}>
+            <button onClick={handlePrev} aria-label="Vorherige">
               <LeftArrow />
             </button>
             <Image
-              loading="lazy"
               src={currentImage.fields?.image[0].url}
               alt={currentImage.fields?.Name}
               width={currentImage.fields?.image[0].width}
               height={currentImage.fields?.image[0].height}
               className={styles["modal-image"]}
               onLoad={() => setIsLoading(false)}
+              blurDataURL={currentImage.fields?.image[0].thumbnails.large.url}
+              placeholder="blur"
+              unoptimized={true}
+              priority={true}
             />
-            <button onClick={handleNext}>
+            <button onClick={handleNext} aria-label="Nächste">
               <RightArrow />
             </button>
           </div>
         </div>
-        {/* <button onClick={onClose}>
-          <CloseMenuSVG />
-        </button>{" "}
-        Close button */}
       </div>
     </>
   );
