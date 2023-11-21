@@ -8,6 +8,7 @@ function FacebookSVG() {
       <Link
         href="https://www.facebook.com/profile.php?id=100090236323668"
         target="_blank"
+        aria-label="Facebook"
       >
         <svg
           width="24px"

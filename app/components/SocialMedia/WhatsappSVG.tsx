@@ -10,6 +10,7 @@ function WhatsappSVG() {
           href="https://wa.me/+4368120562535"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Whatsapp"
         >
           <svg
             height="24px"

@@ -45,6 +45,7 @@ function MessengerSVG() {
         href="https://www.facebook.com/103574185998288"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Facebook Messenger"
       >
         <svg
           height="24px"

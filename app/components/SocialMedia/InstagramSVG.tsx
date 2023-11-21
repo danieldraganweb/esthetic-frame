@@ -5,7 +5,11 @@ import styles from "../Footer/Footer.module.scss";
 function InstagramSVG() {
   return (
     <div className={styles.footerSocialIconsItem}>
-      <Link href="https://www.instagram.com/esthetic_frame/" target="_blank">
+      <Link
+        href="https://www.instagram.com/esthetic_frame/"
+        target="_blank"
+        aria-label="Instagram"
+      >
         <svg
           width="24px"
           height="24px"
