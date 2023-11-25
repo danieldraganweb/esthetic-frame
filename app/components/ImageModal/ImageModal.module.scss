@@ -27,7 +27,6 @@
 .image-modal {
     position: fixed;
     max-width: 100%;
-    max-height: 100%;
     overflow: hidden;
     max-width: 1000px; // adjust as needed
     max-height: 1000px; // adjust as needed
@@ -38,16 +37,29 @@
     align-items: center;
     z-index: 1002;
     gap: 1rem;
+    border-radius: 1rem;
+    box-sizing: border-box;
 
 
     svg {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
         background-color: transparent;
-        // fill: white;
-        height: 95px;
-        width: 95px;
+        height: 55px;
+        width: 55px;
 
         path {
             stroke: white;
+        }
+    }
+
+    svg:hover,
+    svg:active,
+    svg:focus {
+        path {
+            stroke: $primary-color;
         }
     }
 
@@ -68,18 +80,18 @@
     }
 
     button:nth-child(1) {
-        top: 82%; // position the "Previous" button at the top
-        left: 0; // position the "Previous" button on the left
-        background-color: transparent;
+        top: 45%; // position the "Previous" button at the top
+        left: 1%; // position the "Previous" button on the left
+        background-color: rgba(0, 0, 0, 0.4);
         cursor: pointer;
         position: fixed;
         z-index: 1001;
     }
 
     button:nth-child(3) {
-        top: 82%; // position the "Next" button at the top
-        right: 0; // position the "Next" button on the right
-        background-color: transparent;
+        top: 45%; // position the "Next" button at the top
+        right: 1%; // position the "Next" button on the right
+        background-color: rgba(0, 0, 0, 0.4);
         cursor: pointer;
         position: fixed;
         z-index: 1001;
@@ -88,9 +100,25 @@
     button:nth-child(1):hover,
     button:nth-child(3):hover,
     button button:hover {
-        background-color: transparent;
+        background-color: rgba(255, 255, 255, 0.4);
         transition: all 0.5s ease-in-out;
+        transform: scale(1.05);
+    }
 
+    button:nth-child(1):active,
+    button:nth-child(3):active,
+    button button:active {
+        background-color: rgba(255, 255, 255, 0.4);
+        transition: all 0.5s ease-in-out;
+        transform: scale(0.9);
+    }
+
+    button:nth-child(1):disabled,
+    button:nth-child(3):disabled,
+    button:disabled {
+        background-color: $septenary-color;
+        transition: all 0.5s ease-in-out;
+        cursor: not-allowed;
     }
 
     @keyframes button-opacity-transition {
@@ -152,14 +180,22 @@
     }
 }
 
-@include respond(sm) {
+@include respond(xs) {
     .backdrop {
         padding: 0;
     }
 
     .image-modal {
-        padding: 0;
-        width: 100vw;
+        padding: 1.5rem;
+        width: 100dvw;
+        height: auto;
+        border-radius: 1rem;
+
+        svg {
+            background-color: transparent;
+            height: 35px;
+            width: 35px;
+        }
 
         button {
             position: fixed;
@@ -168,25 +204,171 @@
         }
 
         button:nth-child(1) {
-            top: 40%; // position the "Previous" button at the top
-            left: 0; // position the "Previous" button on the left
-            background-color: transparent;
+            top: 45%; // position the "Previous" button at the top
+            left: 1%; // position the "Previous" button on the left
             cursor: pointer;
         }
 
         button:nth-child(3) {
-            top: 40%; // position the "Next" button at the top
-            right: 0; // position the "Next" button on the right
-            background-color: transparent;
+            top: 45%; // position the "Next" button at the top
+            right: 1%; // position the "Next" button on the right
             cursor: pointer;
         }
 
         button:nth-child(1):hover,
         button:nth-child(3):hover,
         button button:hover {
-            background-color: transparent;
+            background-color: rgba(255, 255, 255, 0.4);
+            transition: all 0.5s ease-in-out;
+            transform: scale(1.1);
+        }
+
+        .modal-image {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 1rem;
+            padding: 0 2rem 1rem 2rem;
+        }
+    }
+}
+
+@include respond(sm) {
+    .backdrop {
+        padding: 0;
+    }
+
+    .image-modal {
+        width: 100vw;
+        border-radius: 1rem;
+
+        button {
+            position: fixed;
+            padding: 1rem;
+            margin: 0 0.5rem;
+        }
+
+        button:nth-child(1) {
+            top: 45%; // position the "Previous" button at the top
+            left: 1%; // position the "Previous" button on the left
+            cursor: pointer;
+        }
+
+        button:nth-child(3) {
+            top: 45%; // position the "Next" button at the top
+            right: 1%; // position the "Next" button on the right
+            cursor: pointer;
+        }
+
+        button:nth-child(1):hover,
+        button:nth-child(3):hover,
+        button button:hover {
+
+            transition: all 0.5s ease-in-out;
+            transform: scale(1.1);
+        }
+    }
+}
+
+
+
+@include respond(md) {
+    .backdrop {
+        padding: 0;
+    }
+
+    .image-modal {
+        padding: 0;
+        width: 100vw;
+        height: auto;
+        border-radius: 1rem;
+        object-fit: contain;
+
+        button {
+
+            margin: 0 0.5rem;
+        }
+
+        button:nth-child(1) {
+            top: 45%; // position the "Previous" button at the top
+            left: 0; // position the "Previous" button on the left
+        }
+
+        button:nth-child(3) {
+            top: 45%; // position the "Next" button at the top
+            right: 0; // position the "Next" button on the right
+        }
+
+        button:nth-child(1):hover,
+        button:nth-child(3):hover,
+        button button:hover {
             transition: all 0.5s ease-in-out;
             transform: scale(1.5);
         }
+    }
+
+    .modal-image {
+        width: 60%;
+        height: auto;
+        object-fit: contain;
+        padding: 8.5rem;
+        border-radius: 1rem;
+    }
+}
+
+@include respond(xl) {
+    .backdrop {
+        padding: 0;
+    }
+
+    .image-modal {
+        padding: 0;
+        width: 100vw;
+        height: auto;
+        border-radius: 1rem;
+
+
+
+        svg {
+            height: 35px;
+            width: 35px;
+        }
+
+        button {
+
+            margin: 0 0.5rem;
+        }
+
+        button:nth-child(1) {
+            top: 45%; // position the "Previous" button at the top
+            left: 20%; // position the "Previous" button on the left
+        }
+
+        button:nth-child(3) {
+            top: 45%; // position the "Next" button at the top
+            right: 20%; // position the "Next" button on the right
+        }
+
+        button:nth-child(1):hover,
+        button:nth-child(3):hover,
+        button button:hover {
+            transition: all 0.3s ease-in-out;
+            transform: scale(1.1);
+        }
+
+        button:nth-child(1):active,
+        button:nth-child(3):active,
+        button button:active {
+            transition: all 0.3s ease-in-out;
+            transform: scale(0.7);
+        }
+    }
+
+    .modal-image {
+        width: 80% !important;
+        height: auto;
+        object-fit: contain;
+        padding: 3.5rem;
+        border-radius: 1rem;
     }
 }
