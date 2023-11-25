@@ -13,7 +13,7 @@ function ContactPage() {
         <div className={styles["about-container"]}>
           <div className={styles["banner"]}>
             <h2 className={styles["about-title"]} id="about-title">
-              Willkommen bei Esthetic Frame! ~ Wir freuen uns auf Sie!
+              ~ Willkommen bei Esthetic Frame! ~ Wir freuen uns auf Sie! ~
             </h2>
           </div>
           <div className={styles["about-image-container"]}>
