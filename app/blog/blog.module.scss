@@ -12,6 +12,8 @@
   width: 100%;
   max-width: 1100px;
   padding: 0 1em;
+  margin-top: 1rem;
+  box-sizing: border-box;
 }
 
 .blog-header {
@@ -169,16 +171,26 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     margin: 0 auto;
     width: 100%;
     max-width: 1100px;
     padding: 0;
-    margin-top: 2em;
     gap: 1em;
+    margin-top: 0.5rem;
   }
 
   .blog-header {
+    // margin: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 1rem;
+
     h1 {
       font-size: clamp($font-size-desktop, 5vw, $font-size-desktop-wide);
       font-weight: 500;
@@ -243,7 +255,7 @@
     width: 100%;
     max-width: 1100px;
     padding: 0;
-    margin-top: 2em;
+    margin-top: 1rem;
     gap: 1em;
 
   }
@@ -355,7 +367,7 @@
     width: 100%;
     max-width: 1100px;
     padding: 0;
-    margin-top: 2em;
+    margin-top: 3rem;
     gap: 1em;
   }
 
@@ -442,6 +454,7 @@
 
 
 @include respond(2xl) {
+
   .blog-header {
     h1 {
       font-size: clamp($font-size-desktop, 5vw, $font-size-desktop-wide);

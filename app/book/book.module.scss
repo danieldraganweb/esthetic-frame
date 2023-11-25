@@ -11,18 +11,40 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 3em;
+    margin-top: 1rem;
     margin-bottom: 3em;
+    padding: 0 1rem;
 
 
     .airtable-embed {
+        width: 100%;
         border: none;
         border-radius: 0.5em;
         text-align: center;
         background-color: $quaternary-color;
         border-radius: 0.5em;
         border: 1px solid $quaternary-color;
-
+        height: 1550px;
     }
 
+}
+
+@include respond(lg) {
+    .book-container {
+        margin-top: 2rem;
+    }
+
+    .airtable-embed {
+        height: 1500px;
+
+        iframe {
+            height: 1500px;
+        }
+    }
+}
+
+@include respond(xl) {
+    .book-container {
+        margin-top: 3rem;
+    }
 }

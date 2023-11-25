@@ -28,6 +28,44 @@
   }
 }
 
+
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 1rem;
+
+  h2 {
+    margin: 0;
+    // background-color: $primary-accent-color;
+    font-size: clamp(1rem, 5vw, 2.5rem);
+    color: lighten($color: $primary-color, $amount: 10%);
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    // width: 3000px;
+  }
+
+  .about-title {
+    animation: scrollBanner 27s linear infinite;
+    text-align: center;
+  }
+
+  @keyframes scrollBanner {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+
 .transition-opacity {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -91,7 +129,7 @@
     letter-spacing: normal;
     font-family: $secondary-font;
     line-height: 1.7;
-    padding: 0 1.5rem;
+    padding: 0 0.5rem;
 
   }
 
@@ -190,18 +228,31 @@
     justify-content: center;
     align-items: center;
     gap: 2em;
+
   }
 
   .about-image-container {
-    margin-top: 0.5em;
+    margin-top: 0;
+    border-radius: 1rem;
+    width: 100%;
+    padding: 0 1rem;
 
     img {
       width: 100%;
       height: auto;
       object-fit: cover;
-      border-radius: 1.5rem;
-      margin-bottom: 1em;
-      padding: 1rem;
+      border-radius: 1rem;
+      margin: 1rem 0;
+
+    }
+  }
+
+  .banner {
+    padding: 0;
+    margin-top: 1rem;
+
+    h2 {
+      padding: 1rem 1rem;
     }
   }
 
@@ -222,7 +273,7 @@
     box-sizing: border-box;
     cursor: pointer;
     text-align: center;
-    margin-top: 2rem;
+    // margin-top: 1rem;
 
     h1 {
       font-size: $font-size-desktop-wide;
@@ -290,5 +341,26 @@
     width: 100%;
     max-width: 1100px;
     padding: 0;
+  }
+}
+
+/* Desktop styles */
+
+@include respond(lg) {
+  .banner {
+    padding: 0;
+    margin: 1rem 0 0 0;
+
+    h2 {
+      padding: 1rem;
+    }
+  }
+
+  .about-image-container {
+    margin-top: 0;
+
+    img {
+      margin: 0;
+    }
   }
 }

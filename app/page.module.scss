@@ -4,7 +4,7 @@
 @use './app/styles/utils/_functions' as *;
 
 .main {
-  padding: 0 1em;
+  padding: 0 2em;
   margin: 0 auto;
   width: 100%;
 }
@@ -23,6 +23,6 @@
 @media screen and (min-width: 1024px) {
   .main {
     padding: 0 2em;
-    margin-top: 2em;
+    margin-top: 3em;
   }
 }

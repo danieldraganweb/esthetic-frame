@@ -20,13 +20,15 @@ const Blog = () => {
 
   return (
     <div className={styles["blog-page"]}>
-      <div className={styles["blog-header"]}>
-        <h1 className={styles["blog-title"]}>Blog</h1>
+      <div className={styles["blog-header"]} id="blog-header">
+        <h1 className={styles["blog-title"]} id="blog-title">
+          Blog
+        </h1>
+        <p>{blogPosts.length} Artikel</p>
         <p>
           Hier finden Sie die neuesten Trends und Tipps rund um das Permanent
           Make-up und Microblading
         </p>
-        <p>{blogPosts.length} Artikel</p>
       </div>
       <div className={styles["blog-container"]}>
         {blogPosts.map((post: BlogPostContent) => (

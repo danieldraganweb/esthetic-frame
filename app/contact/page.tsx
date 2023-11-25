@@ -11,6 +11,11 @@ function ContactPage() {
     <>
       <main className={styles["contact-main"]}>
         <div className={styles["about-container"]}>
+          <div className={styles["banner"]}>
+            <h2 className={styles["about-title"]} id="about-title">
+              Willkommen bei Esthetic Frame! ~ Wir freuen uns auf Sie!
+            </h2>
+          </div>
           <div className={styles["about-image-container"]}>
             <Image
               src="/about.jpg"
@@ -30,10 +35,7 @@ function ContactPage() {
                       ${loading ? styles["opacity-0"] : styles["opacity-100"]}`}
               onLoad={() => setLoading(false)}
             ></Image>
-            <h1 className={styles["about-title"]}>
-              Willkommen bei Esthetic Frame!
-            </h1>
-            <h1 className={styles["about-title"]}>Wir freuen uns auf Sie!</h1>
+
             <ul className={styles.highlights}>
               <li className={styles["hero"]}>
                 <h1>Entdecken Sie Ihre natürliche Ausstrahlung</h1>
