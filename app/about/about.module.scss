@@ -389,6 +389,9 @@
 }
 
 @include respond(lg) {
+  .about-container {
+    margin-top: 2rem;
+  }
 
   .team-member-hero {
     margin: 7rem 0 1rem 0;
@@ -531,7 +534,7 @@
 @include respond(2xl) {
   .about-container {
     display: flex;
-    margin-top: 2em;
+    margin-top: 3em;
 
     li {
       margin-bottom: 0.5em;
@@ -571,15 +574,6 @@
       border-radius: 0.5em;
       margin-bottom: 1em;
     }
-
-    // h1 {
-    //   font-size: clamp($font-size-desktop-wide, 1vw, $font-size-desktop-ultra-wide);
-    //   margin-bottom: 0.5em;
-    //   // color: $primary-accent-color;
-    //   text-align: left;
-    //   padding: 0;
-    //   font-style: italic;
-    // }
   }
 
   .team-member-hero {

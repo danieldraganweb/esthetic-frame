@@ -10,11 +10,12 @@ function Booking() {
         src="https://airtable.com/embed/appsz3SqYl4ft3Vqv/pagA9aUA4mhKrTllN/form"
         onWheel={() => {}}
         width="100%"
-        height="1100px"
+        height="1200"
         style={{
           background: "transparent",
           border: "1px solid #ccc",
           borderRadius: "0.5rem",
+          overflow: "hidden",
         }}
       ></iframe>
     </div>
