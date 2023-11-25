@@ -27,6 +27,8 @@ const ImageModal: React.FC<Props> = ({
 
   useEffect(() => {
     setCurrentImage(images[currentIndex]);
+    console.log("currentIndex:", currentIndex);
+    console.log("images.length:", images.length);
   }, [currentIndex, images]);
 
   const handlePrev = () => {
@@ -56,7 +58,11 @@ const ImageModal: React.FC<Props> = ({
             onClick={(e) => e.stopPropagation()}
           >
             {isLoading && <ImageModalLoader />}
-            <button onClick={handlePrev} aria-label="Vorherige">
+            <button
+              onClick={handlePrev}
+              aria-label="Vorherige"
+              disabled={currentIndex === 0}
+            >
               <LeftArrow />
             </button>
             <Image
@@ -71,7 +77,11 @@ const ImageModal: React.FC<Props> = ({
               unoptimized={true}
               priority={true}
             />
-            <button onClick={handleNext} aria-label="Nächste">
+            <button
+              onClick={handleNext}
+              aria-label="Nächste"
+              disabled={currentIndex === images.length - 1}
+            >
               <RightArrow />
             </button>
           </div>

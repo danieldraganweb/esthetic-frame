@@ -45,9 +45,9 @@ function Contact() {
                 </div>
                 <div className={styles["contact-info-links-email-text"]}>
                   <h2>E-mail</h2>
-                  <a href="mailto:estheticframe@proton.me">
-                    estheticframe@proton.me
-                  </a>
+                  <Link href="mailto:estheticframe@proton.me">
+                    info@estheticframe.at
+                  </Link>
                 </div>
               </li>
               <li>

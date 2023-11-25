@@ -42,7 +42,7 @@ function About() {
                     <strong className={styles["team-member-name"]}>
                       Alexandra Ivan
                     </strong>
-                    , Gründerin und Permanent Make-up-Künstlerin bei{" "}
+                    , Gründerin und Permanent Make-up Künstlerin bei{" "}
                     <strong className={styles["team-member-name"]}>
                       Esthetic Frame
                     </strong>
