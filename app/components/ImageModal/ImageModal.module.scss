@@ -80,7 +80,7 @@
     }
 
     button:nth-child(1) {
-        top: 45%; // position the "Previous" button at the top
+        top: 47%; // position the "Previous" button at the top
         left: 1%; // position the "Previous" button on the left
         background-color: rgba(0, 0, 0, 0.4);
         cursor: pointer;
@@ -89,7 +89,7 @@
     }
 
     button:nth-child(3) {
-        top: 45%; // position the "Next" button at the top
+        top: 47%; // position the "Next" button at the top
         right: 1%; // position the "Next" button on the right
         background-color: rgba(0, 0, 0, 0.4);
         cursor: pointer;
@@ -341,12 +341,12 @@
 
         button:nth-child(1) {
             top: 45%; // position the "Previous" button at the top
-            left: 20%; // position the "Previous" button on the left
+            left: 15%; // position the "Previous" button on the left
         }
 
         button:nth-child(3) {
             top: 45%; // position the "Next" button at the top
-            right: 20%; // position the "Next" button on the right
+            right: 15%; // position the "Next" button on the right
         }
 
         button:nth-child(1):hover,
@@ -370,5 +370,54 @@
         object-fit: contain;
         padding: 3.5rem;
         border-radius: 1rem;
+    }
+}
+
+@include respond(2xl) {
+    .backdrop {
+        padding: 0;
+    }
+
+    .image-modal {
+        padding: 0;
+        width: 100vw;
+        height: auto;
+        border-radius: 1rem;
+
+
+
+        svg {
+            height: 35px;
+            width: 35px;
+        }
+
+        button {
+
+            margin: 0 0.5rem;
+        }
+
+        button:nth-child(1) {
+            top: 45%; // position the "Previous" button at the top
+            left: 27%; // position the "Previous" button on the left
+        }
+
+        button:nth-child(3) {
+            top: 45%; // position the "Next" button at the top
+            right: 27%; // position the "Next" button on the right
+        }
+
+        button:nth-child(1):hover,
+        button:nth-child(3):hover,
+        button button:hover {
+            transition: all 0.3s ease-in-out;
+            transform: scale(1.1);
+        }
+
+        button:nth-child(1):active,
+        button:nth-child(3):active,
+        button button:active {
+            transition: all 0.3s ease-in-out;
+            transform: scale(0.7);
+        }
     }
 }
