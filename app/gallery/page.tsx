@@ -8,6 +8,7 @@ import disableScroll from "disable-scroll";
 import OpenMenuSVG from "../components/OpenMenuSVG";
 import CloseMenuSVG from "../components/CloseMenuSVG";
 import ImageModal from "../components/ImageModal/ImageModal";
+import { useMediaQuery } from "react-responsive";
 
 type Props = {};
 
@@ -20,14 +21,18 @@ function Gallery(props: Props) {
     new Set(images.map((image: GalleryImage) => image.fields.Category))
   );
 
-  // Disable scrolling when sidebar is open
+  const isMobileQuery = useMediaQuery({ maxWidth: 768 });
+
+  const [isMobile, setIsMobile] = useState(false);
+  //Disable scrolling when sidebar is open
   useEffect(() => {
-    if (isSidebarOpen) {
+    if (isSidebarOpen && isMobileQuery) {
       disableScroll.on();
     } else {
       disableScroll.off();
     }
-  }, [isSidebarOpen]);
+  }, [isSidebarOpen, isMobileQuery]);
+
   const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({});
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
   const [loading, setLoading] = useState(true);
@@ -80,19 +85,20 @@ function Gallery(props: Props) {
             </div>
           </div>
           <div className={styles["image-container"]}>
-            {selectedImage && (
-              <ImageModal
-                onClose={() => {
-                  setSelectedImage(null);
-                  setIsModalOpen(false);
-                }}
-                image={selectedImage}
-                images={images}
-                selectedIndex={images.findIndex(
-                  (image) => image.id === selectedImage.id
-                )}
-              />
-            )}
+            {selectedImage &&
+              isModalOpen && ( // Add parentheses here
+                <ImageModal
+                  onClose={() => {
+                    setSelectedImage(null);
+                    setIsModalOpen(false);
+                  }}
+                  image={selectedImage}
+                  images={images}
+                  selectedIndex={images.findIndex(
+                    (image) => image.id === selectedImage.id
+                  )}
+                />
+              )}
             {images
               .filter(
                 (image: GalleryImage) =>
