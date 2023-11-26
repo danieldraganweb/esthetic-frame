@@ -5,7 +5,6 @@ import styles from "./GoogleReviews.module.scss";
 const images = ["Review 1.svg", "Review 2.svg", "Review 3.svg"];
 
 const GoogleReviews = () => {
-  console.log("GoogleReviews");
   return (
     <div className={styles["main"]}>
       <h1 className={styles["google-reviews-title"]}>Zufriedene Kunden</h1>

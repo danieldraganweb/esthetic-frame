@@ -7,7 +7,7 @@ function Booking() {
     <div className={styles["book-container"]}>
       <iframe
         className="airtable-embed"
-        src="https://airtable.com/embed/appsz3SqYl4ft3Vqv/pagA9aUA4mhKrTllN/form"
+        src="https://airtable.com/embed/appsz3SqYl4ft3Vqv/pagPSBcLdyjdGO25R/form"
         onWheel={() => {}}
         width="100%"
         height="1200"
