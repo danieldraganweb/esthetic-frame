@@ -61,7 +61,7 @@
     }
 
     100% {
-      transform: translateX(-100%);
+      transform: translateX(-110%);
     }
   }
 }
@@ -363,7 +363,7 @@
     }
 
     .about-title {
-      animation: scrollBanner 27s linear infinite;
+      animation: scrollBanner 33s linear infinite;
       text-align: center;
     }
   }
@@ -375,6 +375,4 @@
       margin: 0;
     }
   }
-
-
 }
