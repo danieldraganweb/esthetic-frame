@@ -35,32 +35,32 @@ export const metadata: Metadata = {
   title: "Esthetic Frame by Alexandra Ivan",
   description: "Permanent makeup and microblading studio in Austria, Vienna",
 };
-const data = {
-  event: {
-    token:
-      "03AGdBq25n2b9M2X5bK7PZ6KZf7JU0Z8E7u4JH2J8B9Ou4O6G9U6JU2P7N6K7PZ6KZf7JU0Z8E7u4JH2J8B9Ou4O6G9U6JU2P7N",
-    siteKey: "6Ldjnh4pAAAAABo7csbvpnlKF8MpQYeMCg8Cz19P",
-    expectedAction: "homepage",
-  },
-}; // Replace {} with your actual data object
+// const data = {
+//   event: {
+//     token:
+//       "",
+//     siteKey: "6Ldjnh4pAAAAABo7csbvpnlKF8MpQYeMCg8Cz19P",
+//     expectedAction: "homepage",
+//   },
+// }; // Replace {} with your actual data object
 
-fetch(
-  "https://recaptchaenterprise.googleapis.com/v1/projects/esthetic-frame-1701156317748/assessments?key=YOUR_API_KEY",
-  {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  }
-)
-  .then((response) => response.json())
-  .then((data) => {
-    console.log("Success:", data);
-  })
-  .catch((error) => {
-    console.error("Error:", error);
-  });
+// fetch(
+//   "https://recaptchaenterprise.googleapis.com/v1/projects/esthetic-frame-1701156317748/assessments?key=YOUR_API_KEY",
+//   {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify(data),
+//   }
+// )
+//   .then((response) => response.json())
+//   .then((data) => {
+//     console.log("Success:", data);
+//   })
+//   .catch((error) => {
+//     console.error("Error:", error);
+//   });
 
 export default function RootLayout({
   children,
