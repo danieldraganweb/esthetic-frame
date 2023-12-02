@@ -1,9 +1,9 @@
 import "./globals.scss";
-import type { Metadata } from "next";
-import Head from "next/head";
+import { Metadata } from "next";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Script from "next/script";
+import Head from "next/head";
 import {
   Cormorant_Garamond,
   Roboto,
@@ -35,6 +35,74 @@ export const metadata: Metadata = {
   title: "Esthetic Frame by Alexandra Ivan",
   description: "Permanent makeup and microblading studio in Austria, Vienna",
 };
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <>
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="ESTHETIC FRAME by Alexandra Ivan" />
+        <meta
+          property="og:description"
+          content="Permanenten Make-up Studio, Vienna, Austria"
+        />
+        <meta property="og:image" content="/Logo.svg" />
+        <meta property="og:url" content="estheticframe.at" />
+        <meta property="og:type" content="website" />
+        <meta name="author" content="Alexandra Ivan" />
+      </Head>
+      {/* <Script
+          src="https://www.google.com/recaptcha/enterprise.js?render=6Ldjnh4pAAAAABo7csbvpnlKF8MpQYeMCg8Cz19P"
+          async
+          defer
+        ></Script> */}
+      <Script
+        src={`https://www.google.com/recaptcha/enterprise.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+        async
+        defer
+      />
+      <Script
+        id="cookieyes"
+        src="https://cdn-cookieyes.com/client_data/d28c0f4d8bfb96a1cace6550/script.js"
+        strategy="lazyOnload"
+      />
+      <Script
+        src="https://www.google.com/recaptcha/enterprise.js?render=6Ldjnh4pAAAAABo7csbvpnlKF8MpQYeMCg8Cz19P"
+        async
+        defer
+      />
+      {/* <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="gtag-config" strategy="afterInteractive">
+        {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');
+`}
+      </Script> */}
+      <html
+        lang="de"
+        className={`${cormorant_garamond.variable} ${roboto.variable} ${cinzel_decorative.variable}`}
+      >
+        <body>
+          <Navbar />
+          {children}
+          <Footer />
+        </body>
+      </html>
+    </>
+  );
+}
+
 // const data = {
 //   event: {
 //     token:
@@ -61,54 +129,3 @@ export const metadata: Metadata = {
 //   .catch((error) => {
 //     console.error("Error:", error);
 //   });
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <>
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="ESTHETIC FRAME by Alexandra Ivan" />
-        <meta
-          property="og:description"
-          content="Permanenten Make-up Studio, Vienna, Austria"
-        />
-        <meta property="og:image" content="/Logo.svg" />
-        <meta property="og:url" content="estheticframe.at" />
-        <meta property="og:type" content="website" />
-        <meta name="author" content="Alexandra Ivan" />
-
-        <script
-          src="https://www.google.com/recaptcha/enterprise.js?render=6Ldjnh4pAAAAABo7csbvpnlKF8MpQYeMCg8Cz19P"
-          async
-          defer
-        ></script>
-      </Head>
-      <Script
-        id="cookieyes"
-        src="https://cdn-cookieyes.com/client_data/d28c0f4d8bfb96a1cace6550/script.js"
-        strategy="lazyOnload"
-      />
-      <Script
-        src="https://www.google.com/recaptcha/enterprise.js?render=6Ldjnh4pAAAAABo7csbvpnlKF8MpQYeMCg8Cz19P"
-        async
-        defer
-      />
-      <html
-        lang="de"
-        className={`${cormorant_garamond.variable} ${roboto.variable} ${cinzel_decorative.variable}`}
-      >
-        <body>
-          <Navbar />
-          {children}
-          <Footer />
-        </body>
-      </html>
-    </>
-  );
-}
