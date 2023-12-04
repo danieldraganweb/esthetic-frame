@@ -57,11 +57,6 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <meta name="author" content="Alexandra Ivan" />
       </Head>
-      {/* <Script
-          src="https://www.google.com/recaptcha/enterprise.js?render=6Ldjnh4pAAAAABo7csbvpnlKF8MpQYeMCg8Cz19P"
-          async
-          defer
-        ></Script> */}
       <Script
         src={`https://www.google.com/recaptcha/enterprise.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
         async
@@ -77,7 +72,7 @@ export default function RootLayout({
         async
         defer
       />
-      {/* <Script
+      <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
         strategy="afterInteractive"
       />
@@ -88,7 +83,7 @@ export default function RootLayout({
   gtag('js', new Date());
   gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');
 `}
-      </Script> */}
+      </Script>
       <html
         lang="de"
         className={`${cormorant_garamond.variable} ${roboto.variable} ${cinzel_decorative.variable}`}
