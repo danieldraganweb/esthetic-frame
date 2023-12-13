@@ -68,11 +68,18 @@ export default function RootLayout({
         strategy="lazyOnload"
       />
       <Script
-        src="https://www.google.com/recaptcha/enterprise.js?render=6Ldjnh4pAAAAABo7csbvpnlKF8MpQYeMCg8Cz19P"
-        async
-        defer
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
+        strategy="afterInteractive"
       />
-      <Script
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');
+`}
+      </Script>
+      {/* <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
         strategy="afterInteractive"
       />
@@ -83,7 +90,7 @@ export default function RootLayout({
   gtag('js', new Date());
   gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');
 `}
-      </Script>
+      </Script> */}
       <html
         lang="de"
         className={`${cormorant_garamond.variable} ${roboto.variable} ${cinzel_decorative.variable}`}
@@ -97,30 +104,3 @@ export default function RootLayout({
     </>
   );
 }
-
-// const data = {
-//   event: {
-//     token:
-//       "",
-//     siteKey: "6Ldjnh4pAAAAABo7csbvpnlKF8MpQYeMCg8Cz19P",
-//     expectedAction: "homepage",
-//   },
-// }; // Replace {} with your actual data object
-
-// fetch(
-//   "https://recaptchaenterprise.googleapis.com/v1/projects/esthetic-frame-1701156317748/assessments?key=YOUR_API_KEY",
-//   {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify(data),
-//   }
-// )
-//   .then((response) => response.json())
-//   .then((data) => {
-//     console.log("Success:", data);
-//   })
-//   .catch((error) => {
-//     console.error("Error:", error);
-//   });
