@@ -28,8 +28,8 @@
     position: fixed;
     max-width: 100%;
     overflow: hidden;
-    max-width: 1000px; // adjust as needed
-    max-height: 1000px; // adjust as needed
+    max-width: 700px; // adjust as needed
+    max-height: 700px; // adjust as needed
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -283,20 +283,22 @@
         height: auto;
         border-radius: 1rem;
         object-fit: contain;
+        border-radius: 1rem;
 
         button {
 
             margin: 0 0.5rem;
+            cursor: e-resize;
         }
 
         button:nth-child(1) {
             top: 45%; // position the "Previous" button at the top
-            left: 0; // position the "Previous" button on the left
+            left: 5%; // position the "Previous" button on the left
         }
 
         button:nth-child(3) {
             top: 45%; // position the "Next" button at the top
-            right: 0; // position the "Next" button on the right
+            right: 5%; // position the "Next" button on the right
         }
 
         button:nth-child(1):hover,
@@ -308,7 +310,7 @@
     }
 
     .modal-image {
-        width: 60%;
+        width: 100%;
         height: auto;
         object-fit: contain;
         padding: 8.5rem;
@@ -365,7 +367,7 @@
     }
 
     .modal-image {
-        width: 80% !important;
+        width: 100% !important;
         height: auto;
         object-fit: contain;
         padding: 3.5rem;
